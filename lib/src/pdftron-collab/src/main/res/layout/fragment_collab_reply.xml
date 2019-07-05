@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:clipChildren="true"
+    android:clipToPadding="false"
+    android:elevation="16dp"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <FrameLayout
+        android:id="@+id/messages_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/view_horizontal_divider" />
+
+    <FrameLayout
+        android:id="@+id/editor_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

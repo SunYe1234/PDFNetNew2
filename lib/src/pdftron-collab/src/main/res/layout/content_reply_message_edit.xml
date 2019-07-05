@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/replyColorBackgroundPrimary"
+    tools:theme="@style/ReplyBaseTheme.DayNight">
+
+    <View
+        style="?attr/replyEditorEditHeaderTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guide_header_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_text"
+        style="?attr/replyEditorEditHeaderTextStyle"
+        app:layout_constraintBottom_toTopOf="@+id/guide_header_height"
+        app:layout_constraintEnd_toStartOf="@+id/editor_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/editor_close"
+        style="?attr/replyEditorCancelButtonStyle"
+        android:background="?attr/selectableItemBackground"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guide_header_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/replyDividerColor"
+        app:layout_constraintBottom_toTopOf="@+id/guide_header_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/guide_header_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="editor_close, header_text" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_header_height">
+
+        <include layout="@layout/content_reply_message_write" />
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

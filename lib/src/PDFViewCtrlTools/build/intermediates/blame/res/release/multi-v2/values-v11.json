@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/7306d5dc42209e332d3ab26c5df06066/res/values-v11/values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "187"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/7306d5dc42209e332d3ab26c5df06066/res/values-v11/values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "187"
+                    }
+                }
+            ]
+        }
+    ]
+}

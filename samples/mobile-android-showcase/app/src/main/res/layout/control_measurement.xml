@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp">
+
+    <RadioGroup
+        android:id="@+id/measurement_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/item_0"
+            style="@style/RadioButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="0"
+            android:text="@string/measure_distance"
+            android:textColor="@color/selector_colors" />
+
+        <RadioButton
+            android:id="@+id/item_1"
+            style="@style/RadioButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="1"
+            android:text="@string/measure_perimeter"
+            android:textColor="@color/selector_colors" />
+
+        <RadioButton
+            android:id="@+id/item_2"
+            style="@style/RadioButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:tag="2"
+            android:text="@string/measure_area"
+            android:textColor="@color/selector_colors" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/snap_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:checked="false"
+        android:paddingTop="@dimen/padding_medium"
+        android:text="@string/snap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/measurement_tools" />
+
+</android.support.constraint.ConstraintLayout>

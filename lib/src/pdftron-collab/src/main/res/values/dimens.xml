@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Bottom Sheet reply fragment dimensions-->
+    <dimen name="bottom_sheet_reply_header_height">56dp</dimen>
+    <dimen name="bottom_sheet_reply_height">450dp</dimen>
+    <dimen name="bottom_sheet_editor_height">64dp</dimen>
+
+    <dimen name="reply_icon_size">32dp</dimen>
+    <dimen name="message_name_header">24dp</dimen>
+    <dimen name="notification_dot_dimen">10dp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="sample_size">350dp</dimen>
+    <dimen name="sample_margin">28dp</dimen>
+
+</resources>

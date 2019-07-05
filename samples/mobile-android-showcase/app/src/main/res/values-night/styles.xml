@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application day night theme-->
+    <style name="AppTheme.DayNight" parent="AppTheme.Dark"/>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorLightText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

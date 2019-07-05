@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/control_ui_customization"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Switch
+            android:tag="TEXT_ANNOT_CREATE"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginRight="24dp"
+            android:drawableLeft="@drawable/ic_sticky_note" />
+        <Switch
+            android:tag="TEXT_HIGHLIGHT"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginRight="24dp"
+            android:drawableLeft="@drawable/ic_text_highlight" />
+        <Switch
+            android:tag="TEXT_STRIKEOUT"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_text_strikeout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Switch
+            android:tag="SIGNATURE"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginRight="24dp"
+            android:drawableLeft="@drawable/ic_signature" />
+        <Switch
+            android:tag="INK_CREATE"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginRight="24dp"
+            android:drawableLeft="@drawable/ic_freehand"/>
+        <Switch
+            android:tag="TEXT_CREATE"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_freetext" />
+    </LinearLayout>
+
+</LinearLayout>

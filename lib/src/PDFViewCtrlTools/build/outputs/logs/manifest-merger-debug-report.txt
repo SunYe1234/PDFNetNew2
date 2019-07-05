@@ -1,0 +1,61 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:2:1-28:12
+	package
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:4:5-36
+		INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+		INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:6:5-26:19
+provider#com.pdftron.pdf.utils.PDFTronToolsInitializer
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:7:9-10:40
+	android:authorities
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:9:13-65
+	android:exported
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:10:13-37
+	android:name
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:8:13-73
+provider#com.pdftron.pdfnet.PDFNetInitializer
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:12:9-15:35
+	tools:node
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:15:13-32
+	android:authorities
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:14:13-66
+	android:name
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:13:13-64
+provider#com.pdftron.pdf.utils.ShareProvider
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:17:9-25:20
+	android:grantUriPermissions
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:21:13-47
+	android:authorities
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:19:13-72
+	android:exported
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:20:13-37
+	android:name
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:18:13-63
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:22:13-24:58
+	android:resource
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:24:17-55
+	android:name
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml:23:17-67
+uses-sdk
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+		INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml
+		INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/AndroidManifest.xml

@@ -1,0 +1,6 @@
+include ':PDFViewCtrlTools'
+project(':PDFViewCtrlTools').projectDir = new File(rootProject.projectDir, '../../lib/src/PDFViewCtrlTools')
+include ':pdfnet-demo-utils'
+project(':pdfnet-demo-utils').projectDir = new File(rootProject.projectDir, '../../lib/src/pdfnet-demo-utils')
+
+include ':app'

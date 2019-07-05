@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "313067862211",
+    "firebase_url": "https://pdftron-mobile-showcase.firebaseio.com",
+    "project_id": "pdftron-mobile-showcase",
+    "storage_bucket": "pdftron-mobile-showcase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313067862211:android:0107abf2429fb4c3",
+        "android_client_info": {
+          "package_name": "com.pdftron.showcase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313067862211-uho65ktggjuoel0bikg4ddr1olhco8ji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUx4e9GU2j0Z3-B-Ucg8OZn4QCNFH7QMc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

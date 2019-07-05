@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pdftron.demo">
+
+    <application>
+        <provider
+            android:name=".utils.PDFTronDemoInitializer"
+            android:authorities="${applicationId}.pdftron-demo"
+            android:exported="false" />
+
+        <provider
+            android:name="com.pdftron.pdf.utils.PDFTronToolsInitializer"
+            android:authorities="${applicationId}.pdftron-tools"
+            tools:node="remove" />
+
+        <provider
+            android:name="com.pdftron.pdf.utils.ShareProvider"
+            android:authorities="${applicationId}.pdftron.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+</manifest>

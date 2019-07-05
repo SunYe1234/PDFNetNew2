@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/BottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/control_display_mode"
+    android:orientation="vertical"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/container1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/small_text_size"
+            android:gravity="center_vertical"
+            android:text="@string/display_mode_transition"
+            android:id="@+id/title1" />
+
+        <RadioGroup
+            android:id="@+id/rg1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.pdftron.showcase.widgets.RadioButtonFixSize
+                android:tag="0"
+                android:id="@+id/single_display"
+                android:layout_width="@dimen/radio_button_size"
+                android:layout_height="@dimen/radio_button_size"
+                android:drawableTint="@color/selector_colors"
+                android:drawableTop="@drawable/ic_view_mode_single_black_24dp"
+                android:button="@null"
+                style="@style/RadioButtonStyle"
+                android:layout_marginEnd="10dp"
+                />
+            <com.pdftron.showcase.widgets.RadioButtonFixSize
+                android:tag="1"
+                android:layout_width="@dimen/radio_button_size"
+                android:layout_height="@dimen/radio_button_size"
+                android:drawableTint="@color/selector_colors"
+                android:drawableTop="@drawable/ic_view_mode_continuous_black_24dp"
+                android:button="@null"
+                style="@style/RadioButtonStyle"
+                android:layout_marginEnd="10dp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/container2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/container1">
+
+        <TextView android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/small_text_size"
+            android:gravity="center_vertical"
+            android:text="@string/display_mode_layout"
+            android:id="@+id/title2" />
+
+        <RadioGroup
+            android:id="@+id/rg2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.pdftron.showcase.widgets.RadioButtonFixSize
+                android:tag="0"
+                android:id="@+id/single_page"
+                android:layout_width="@dimen/radio_button_size"
+                android:layout_height="@dimen/radio_button_size"
+                style="@style/RadioButtonStyle"
+                android:drawableTint="@color/selector_colors"
+                android:drawableTop="@drawable/ic_view_mode_single_black_24dp"
+                android:button="@null"
+                android:layout_marginEnd="10dp"
+                />
+            <com.pdftron.showcase.widgets.RadioButtonFixSize
+                android:tag="1"
+                android:layout_width="@dimen/radio_button_size"
+                android:layout_height="@dimen/radio_button_size"
+                style="@style/RadioButtonStyle"
+                android:drawableTint="@color/selector_colors"
+                android:drawableTop="@drawable/ic_view_mode_facing_black_24dp"
+                android:button="@null"
+                android:layout_marginEnd="10dp"
+                />
+
+            <com.pdftron.showcase.widgets.RadioButtonFixSize
+                android:tag="2"
+                android:layout_width="@dimen/radio_button_size"
+                android:layout_height="@dimen/radio_button_size"
+                style="@style/RadioButtonStyle"
+                android:drawableTint="@color/selector_colors"
+                android:drawableTop="@drawable/ic_view_mode_cover_black_24dp"
+                android:button="@null"
+                android:layout_marginEnd="10dp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/container3"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/container2">
+
+        <TextView android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/small_text_size"
+            android:text="@string/display_mode_fit"
+            android:gravity="center_vertical"
+            android:id="@+id/title3" />
+
+        <RadioGroup
+            android:id="@+id/rg3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <com.pdftron.showcase.widgets.RadioButtonFixSize
+                android:tag="0"
+                style="@style/RadioButtonStyle"
+                android:layout_width="@dimen/radio_button_size"
+                android:layout_height="@dimen/radio_button_size"
+                android:drawableTint="@color/selector_colors"
+                android:drawableTop="@drawable/ic_fit_width_black_24dp"
+                android:button="@null"
+                android:layout_marginEnd="10dp"
+                />
+            <com.pdftron.showcase.widgets.RadioButtonFixSize
+                android:tag="1"
+                style="@style/RadioButtonStyle"
+                android:id="@+id/fit_page"
+                android:layout_width="@dimen/radio_button_size"
+                android:layout_height="@dimen/radio_button_size"
+                android:drawableTint="@color/selector_colors"
+                android:drawableTop="@drawable/ic_fit_page_black_24dp"
+                android:button="@null"
+                android:layout_marginEnd="10dp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

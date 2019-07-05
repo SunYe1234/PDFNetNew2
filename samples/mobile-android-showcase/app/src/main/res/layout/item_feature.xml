@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/card_view_margin_left"
+    android:layout_marginEnd="@dimen/card_view_margin_right"
+    android:layout_marginBottom="8dp"
+    android:clipChildren="false"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/item_feature_width"
+            android:layout_height="@dimen/item_feature_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            style="@style/RobotoTextViewStyle"
+            android:id="@+id/nameLabel"
+            android:layout_width="@dimen/item_feature_width"
+            android:layout_height="@dimen/item_feature_title_height"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="3"
+            android:paddingStart="12dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="14dp"
+            android:text="@string/password_protected_document"
+            android:textSize="@dimen/small_text_size"
+            app:autoSizeMaxTextSize="@dimen/small_text_size"
+            app:autoSizeTextType="uniform" />
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

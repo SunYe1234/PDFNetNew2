@@ -1,0 +1,173 @@
+<api>
+<package name="com.pdftron.collab.webviewerserver"
+>
+<class name="BlackBoxConnection"
+ extends="WebSocketListener"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BlackBoxConnection"
+ type="com.pdftron.collab.webviewerserver.BlackBoxConnection"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="applicationContext" type="android.content.Context">
+</parameter>
+</constructor>
+<method name="onClosed"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="webSocket" type="WebSocket">
+</parameter>
+<parameter name="code" type="int">
+</parameter>
+<parameter name="reason" type="java.lang.String">
+</parameter>
+</method>
+<method name="onClosing"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="webSocket" type="WebSocket">
+</parameter>
+<parameter name="code" type="int">
+</parameter>
+<parameter name="reason" type="java.lang.String">
+</parameter>
+</method>
+<method name="onFailure"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="webSocket" type="WebSocket">
+</parameter>
+<parameter name="t" type="java.lang.Throwable">
+</parameter>
+<parameter name="response" type="Response">
+</parameter>
+</method>
+<method name="onMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="webSocket" type="WebSocket">
+</parameter>
+<parameter name="text" type="java.lang.String">
+</parameter>
+</method>
+<method name="onOpen"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="webSocket" type="WebSocket">
+</parameter>
+<parameter name="response" type="Response">
+</parameter>
+</method>
+<method name="sendAnnotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="java.lang.String">
+</parameter>
+<parameter name="annotations" type="java.util.ArrayList&lt;AnnotationEntity&gt;">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</method>
+<method name="start"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="wvsRoot" type="java.lang.String">
+</parameter>
+<parameter name="wvsFileUrl" type="java.lang.String">
+</parameter>
+<parameter name="wvsShareId" type="java.lang.String">
+</parameter>
+</method>
+<method name="start"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="wvsRoot" type="java.lang.String">
+</parameter>
+<parameter name="wvsFileUrl" type="java.lang.String">
+</parameter>
+<parameter name="wvsShareId" type="java.lang.String">
+</parameter>
+<parameter name="userId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</method>
+<method name="stop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+</api>

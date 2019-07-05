@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_feature_width">160dp</dimen>
+    <dimen name="item_feature_height">220dp</dimen>
+    <dimen name="item_feature_title_height">75dp</dimen>
+    <dimen name="bottomsheet_button_width">350dp</dimen>
+</resources>

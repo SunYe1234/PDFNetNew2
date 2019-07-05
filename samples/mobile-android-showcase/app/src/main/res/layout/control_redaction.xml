@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/BottomSheetStyle"
+    android:id="@+id/control_view_mode"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="24dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.pdftron.showcase.widgets.ButtonFixSize
+            android:id="@+id/text_redact"
+            style="@style/RadioButtonStyle"
+            android:drawableTint="@color/selector_colors"
+            android:drawableTop="@drawable/ic_text_fields_black_24dp"
+            android:button="@null"
+            android:layout_width="@dimen/radio_button_size"
+            android:layout_height="@dimen/radio_button_size"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="60dp" />
+
+        <com.pdftron.showcase.widgets.ButtonFixSize
+            android:id="@+id/rect_redact"
+            style="@style/RadioButtonStyle"
+            android:drawableTint="@color/selector_colors"
+            android:drawableTop="@drawable/ic_select_rectangular_black_24dp"
+            android:button="@null"
+            android:layout_width="@dimen/radio_button_size"
+            android:layout_height="@dimen/radio_button_size"
+            android:layout_marginEnd="60dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkText"
+            android:text="@string/redact_text"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkText"
+            android:text="@string/redact_rect"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+</LinearLayout>

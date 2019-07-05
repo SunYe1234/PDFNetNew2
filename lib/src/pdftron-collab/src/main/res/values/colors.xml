@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="notification_color">#D32F2F</color>
+
+    <!-- Reply message avatar colors -->
+    <color name="avatar_color_red">#F44336</color>
+    <color name="avatar_color_pink">#E91E63</color>
+    <color name="avatar_color_violet">#9C27B0</color>
+    <color name="avatar_color_blue">#3F51B5</color>
+    <color name="avatar_color_cyan">#009688</color>
+    <color name="avatar_color_green">#4CAF50</color>
+    <color name="avatar_color_light_green">#8BC34A</color>
+    <color name="avatar_color_yellow">#FFC107</color>
+    <color name="avatar_color_orange">#FF5722</color>
+
+</resources>

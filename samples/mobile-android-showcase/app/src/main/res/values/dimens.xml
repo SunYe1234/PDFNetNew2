@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="topBarOffset">10dp</dimen>
+    <dimen name="Category_list_offset">30dp</dimen>
+    <dimen name="category_detail_view_offset">18dp</dimen>
+
+    <dimen name="extra_small_text_size">14sp</dimen>
+    <dimen name="small_text_size">16sp</dimen>
+    <dimen name="medium_text_size">18sp</dimen>
+    <dimen name="large_text_size">28sp</dimen>
+    <dimen name="extra_large_text_size">32sp</dimen>
+
+    <dimen name="recyclerd_view_margin_top">16dp</dimen>
+    <dimen name="card_cell_space">25dp</dimen>
+    <dimen name="card_view_margin">6dp</dimen>
+    <dimen name="card_view_margin_top">12dp</dimen>
+    <dimen name="card_view_margin_bottom">45dp</dimen>
+    <dimen name="card_view_margin_left">6dp</dimen>
+    <dimen name="card_view_margin_right">6dp</dimen>
+    <dimen name="card_detail_view_margin_top">10dp</dimen>
+    <dimen name="card_detail_view_margin_bottom">10dp</dimen>
+    <dimen name="card_detail_view_margin">16dp</dimen>
+
+    <dimen name="home_header">16dp</dimen>
+
+    <dimen name="thumbTextPadding">25dp</dimen>
+
+    <dimen name="switchMinWidth">104dp</dimen>
+    <dimen name="switchMinHeight">44dp</dimen>
+
+    <dimen name="switchMaxWidth">120dp</dimen>
+    <dimen name="switchMaxHeight">60dp</dimen>
+
+    <dimen name="switchHeight">44dp</dimen>
+    <dimen name="switchWidth">103dp</dimen>
+    <dimen name="switchPadding">2dip</dimen>
+
+    <dimen name="switchIcon">24dp</dimen>
+    <dimen name="radio_button_icon_size">30dp</dimen>
+    <dimen name="radio_button_drawable_padding">10dp</dimen>
+    <dimen name="radio_button_size">50dp</dimen>
+    <dimen name="decoration_height">25dp</dimen>
+    <dimen name="button_radius">4dp</dimen>
+
+    <dimen name="item_feature_width">144dp</dimen>
+    <dimen name="item_feature_height">198dp</dimen>
+    <dimen name="item_feature_title_height">68dp</dimen>
+    <dimen name="item_feature_detail_height">136dp</dimen>
+    <dimen name="content_text_top_margin">24dp</dimen>
+
+    <dimen name="bottomsheet_button_width">0dp</dimen>
+</resources>

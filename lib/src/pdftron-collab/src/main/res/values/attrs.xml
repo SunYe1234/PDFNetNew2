@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BaseCollabViewer">
+        <!-- Reference to the theme that will be used by the reply dialog. Theme must
+             extend ReplyBaseTheme.DayNight, if not specified then ReplyBaseTheme.DayNight is used
+             by default. -->
+        <attr name="replyTheme" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ReplyStyle">
+        <!-- Base Attributes-->
+        <attr name="replyColorBackgroundPrimary" format="color" />
+        <attr name="replyColorBackgroundSecondary" format="color" />
+        <attr name="replyIconColor" format="color" />
+        <attr name="replyDividerColor" format="color" />
+        <attr name="replyEditorSendButtonColor" format="color" />
+        <attr name="replyEditorCancelButtonColor" format="color" />
+        <attr name="replySmallTextSize" format="dimension" />
+        <attr name="replyMediumTextSize" format="dimension" />
+        <attr name="replyLargeTextSize" format="dimension" />
+
+        <!-- Header -->
+        <attr name="replyHeaderContainerStyle" format="reference" />
+        <attr name="replyCloseButtonStyle" format="reference" />
+        <attr name="replyListButtonStyle" format="reference" />
+        <attr name="replyTitleStyle" format="reference" />
+
+        <!-- Messages -->
+        <attr name="replyMessagesContainerStyle" format="reference" />
+        <attr name="replyMessageUsernameStyle" format="reference" />
+        <attr name="replyMessageDateStyle" format="reference" />
+        <attr name="replyMessageCommentStyle" format="reference" />
+        <attr name="replyMessageActionIconStyle" format="reference" />
+
+        <!-- Preview -->
+        <attr name="replyPreviewTextStyle" format="reference" />
+        <attr name="replyPreviewIconStyle" format="reference" />
+
+        <!-- Editor -->
+        <attr name="replyEditorContainerStyle" format="reference" />
+        <attr name="replyEditorSendButtonStyle" format="reference" />
+        <attr name="replyEditorEditTextStyle" format="reference" />
+        <attr name="replyEditorCancelButtonStyle" format="reference" />
+        <attr name="replyEditorEditHeaderTextStyle" format="reference" />
+
+    </declare-styleable>
+
+</resources>

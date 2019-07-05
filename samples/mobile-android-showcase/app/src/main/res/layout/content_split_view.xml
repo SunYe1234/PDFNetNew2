@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/BottomSheetStyle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/splitView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/leftTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/left"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <LinearLayout
+                            android:id="@+id/bytesTransferL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bytes_transferred"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+                                android:id="@+id/stream_byte_transferred"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="3dp"
+                                android:text="@string/_0"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mb"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <com.pdftron.pdf.PDFViewCtrl
+                            android:id="@+id/left_ctrl_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="vertical|horizontal" />
+
+                        <WebView
+                            android:id="@+id/left_web_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarL"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="100dp"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:maxHeight="20dip"
+                            android:minHeight="15dip"
+                            android:paddingLeft="20dp"
+                            android:paddingEnd="20dp"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/progress_bar_limit"
+                            android:secondaryProgress="100"
+                            android:visibility="gone" />
+
+                        <com.pdftron.pdf.controls.ThumbnailSlider
+                            android:id="@+id/thumbnailSliderL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/LightGrey" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rightTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/right"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <LinearLayout
+                            android:id="@+id/bytesTransferR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bytes_transferred"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/no_stream_byte_transferred"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingEnd="3dp"
+                                android:text="@string/_0"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mb"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/LightGrey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <com.pdftron.pdf.PDFViewCtrl
+                            android:id="@+id/right_ctrl_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="vertical|horizontal" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarR"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="100dp"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:maxHeight="20dip"
+                            android:minHeight="15dip"
+                            android:paddingLeft="20dp"
+                            android:paddingEnd="20dp"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/progress_bar_limit"
+                            android:secondaryProgress="100"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarRCircle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:minWidth="50dp"
+                            android:minHeight="50dp"
+                            android:visibility="gone" />
+
+                        <com.pdftron.pdf.controls.ThumbnailSlider
+                            android:id="@+id/thumbnailSliderR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/connect_status"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/Red"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/not_connected"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textSize="@dimen/medium_text_size"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

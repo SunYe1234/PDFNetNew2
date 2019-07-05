@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    style="?attr/replyHeaderContainerStyle"
+    android:background="?attr/replyColorBackgroundSecondary"
+    tools:theme="@style/ReplyBaseTheme.DayNight">
+
+    <ImageView
+        android:id="@+id/header_close"
+        style="?attr/replyCloseButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.pdftron.collab.ui.view.NotificationImageButton
+        android:id="@+id/header_list"
+        style="?attr/replyListButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_title"
+        style="?attr/replyTitleStyle"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/header_list"
+        app:layout_constraintStart_toEndOf="@+id/header_close"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Comments" />
+
+</android.support.constraint.ConstraintLayout>
+

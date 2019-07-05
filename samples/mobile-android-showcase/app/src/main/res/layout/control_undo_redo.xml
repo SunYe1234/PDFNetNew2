@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:theme="@style/BottomSheetStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp">
+
+    <com.pdftron.showcase.widgets.ButtonFixSize
+        android:id="@+id/undo"
+        android:layout_width="@dimen/radio_button_size"
+        android:layout_height="@dimen/radio_button_size"
+        android:drawableTint="@color/selector_colors"
+        android:drawableTop="@drawable/ic_undo_black_24dp"
+        android:layout_marginEnd="30dp"
+        style="@style/RadioButtonStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/undo_title"
+        android:layout_marginTop="5dp"
+        android:layout_width="@dimen/radio_button_size"
+        android:layout_height="wrap_content"
+        android:text="@string/undo"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorDarkText"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/undo"/>
+
+    <com.pdftron.showcase.widgets.ButtonFixSize
+        android:id="@+id/redo"
+        android:layout_width="@dimen/radio_button_size"
+        android:layout_height="@dimen/radio_button_size"
+        android:drawableTint="@color/selector_colors"
+        android:drawableTop="@drawable/ic_redo_black_24dp"
+        android:layout_marginStart="30dp"
+        style="@style/RadioButtonStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/undo"/>
+
+    <TextView
+        android:id="@+id/redo_title"
+        android:layout_marginTop="5dp"
+        android:layout_width="@dimen/radio_button_size"
+        android:layout_height="wrap_content"
+        android:text="@string/redo"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorDarkText"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/redo"
+        app:layout_constraintTop_toBottomOf="@+id/redo"/>
+
+</android.support.constraint.ConstraintLayout>

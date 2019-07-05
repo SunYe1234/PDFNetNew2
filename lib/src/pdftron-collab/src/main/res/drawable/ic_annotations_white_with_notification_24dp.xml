@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_annotations_white_24dp" />
+
+    <!-- inner circle -->
+    <item
+        android:gravity="top|right"
+        android:right="2dp"
+        android:top="2dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/notification_color" />
+            <size
+                android:width="@dimen/notification_dot_dimen"
+                android:height="@dimen/notification_dot_dimen" />
+        </shape>
+    </item>
+</layer-list>

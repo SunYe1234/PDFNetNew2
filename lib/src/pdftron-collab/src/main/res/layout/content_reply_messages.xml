@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_list"
+    android:clipToPadding="false"
+    android:overScrollMode="always"
+    android:scrollbars="vertical"
+    style="?attr/replyMessagesContainerStyle"
+    tools:theme="@style/ReplyBaseTheme.DayNight"
+    tools:listitem="@layout/item_annot_list_content"/>

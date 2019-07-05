@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Focused and pressed -->
+    <item android:color="@color/colorDarkText" android:state_pressed="true" />
+
+
+    <!-- Default color -->
+    <item android:color="@color/colorLightText" />
+
+</selector>

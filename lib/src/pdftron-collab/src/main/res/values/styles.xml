@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomSheetReplyStyle" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+    </style>
+
+    <!-- Collab Reply Theme -->
+    <style name="ReplyBaseTheme.DayNight" parent="ReplyBaseTheme.Day"/>
+
+    <style name="ReplyBaseTheme.Day" parent="ReplyBaseStyle">
+        <!-- Component wide attributes -->
+        <item name="replyColorBackgroundPrimary">#FFFFFF</item>
+        <item name="replyColorBackgroundSecondary">#FFFFFF</item>
+        <item name="replyIconColor">#808080</item>
+        <item name="replyDividerColor">#FFCCCCCC</item>
+        <item name="replyEditorSendButtonColor">#00A4E4</item>
+        <item name="replyEditorCancelButtonColor">#EA7350</item>
+    </style>
+
+    <style name="ReplyPopupTheme">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:itemBackground">?attr/replyColorBackgroundPrimary</item>
+    </style>
+
+    <!--
+        Base Annotation Reply UI Styles
+    -->
+    <!-- Collab Reply Style-->
+    <style name="ReplyBaseStyle" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+
+        <!-- Base attributes used in both day and night themes-->
+        <item name="replySmallTextSize">14sp</item>
+        <item name="replyMediumTextSize">18sp</item>
+        <item name="replyLargeTextSize">20sp</item>
+
+        <!--
+            Reply View Styles are used to define specific attributes for each view in
+            the reply Component.
+        -->
+        <!-- Style used by header views -->
+        <item name="replyHeaderContainerStyle">@style/ReplyHeaderContainerStyle</item>
+        <item name="replyCloseButtonStyle">@style/ReplyHeaderCloseButtonStyle</item>
+        <item name="replyListButtonStyle">@style/ReplyHeaderListButtonStyle</item>
+        <item name="replyTitleStyle">@style/ReplyHeaderTitleStyle</item>
+
+        <!-- Style used by preview views -->
+        <item name="replyPreviewTextStyle">@style/ReplyPreviewTextStyle</item>
+        <item name="replyPreviewIconStyle">@style/ReplyPreviewIconStyle</item>
+
+        <!-- Style used by reply message views -->
+        <item name="replyMessagesContainerStyle">@style/ReplyMessagesContainerStyle</item>
+        <item name="replyMessageUsernameStyle">@style/ReplyMessageUsernameStyle</item>
+        <item name="replyMessageDateStyle">@style/ReplyMessageDateStyle</item>
+        <item name="replyMessageCommentStyle">@style/ReplyMessageCommentStyle</item>
+        <item name="replyMessageActionIconStyle">@style/ReplyMessageActionIconStyle</item>
+
+        <!-- Style used by reply editor -->
+        <item name="replyEditorContainerStyle">@style/ReplyEditorContainerStyle</item>
+        <item name="replyEditorSendButtonStyle">@style/ReplyEditorSendButtonStyle</item>
+        <item name="replyEditorCancelButtonStyle">@style/ReplyEditorCancelButtonStyle</item>
+        <item name="replyEditorEditTextStyle">@style/ReplyEditorEditTextStyle</item>
+        <item name="replyEditorEditHeaderTextStyle">@style/ReplyEditorEditHeaderTextStyle</item>
+    </style>
+
+    <style name="ReplyHeaderIconStyle">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:tint">?attr/replyIconColor</item>
+        <item name="android:background">?attr/actionBarItemBackground</item>
+    </style>
+
+    <!-- Reply Header Styles -->
+    <style name="ReplyHeaderContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_sheet_reply_header_height</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:background">?attr/replyColorBackgroundSecondary</item>
+    </style>
+
+    <style name="ReplyHeaderCloseButtonStyle" parent="ReplyHeaderIconStyle">
+        <item name="android:src">@drawable/ic_close_black_24dp</item>
+    </style>
+
+    <style name="ReplyHeaderListButtonStyle" parent="ReplyHeaderIconStyle">
+        <item name="android:src">@drawable/ic_list_black_24dp</item>
+    </style>
+
+    <style name="ReplyHeaderTitleStyle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:maxLength">21</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">?attr/replyLargeTextSize</item>
+    </style>
+
+    <!-- Reply Preview Styles -->
+    <style name="ReplyPreviewTextStyle" parent="Base.TextAppearance.AppCompat.Small">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">?attr/replySmallTextSize</item>
+    </style>
+
+    <style name="ReplyPreviewIconStyle">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+    </style>
+
+    <!-- Reply Message Styles -->
+    <style name="ReplyMessagesContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?attr/replyColorBackgroundPrimary</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="ReplyMessageUsernameStyle" parent="Base.TextAppearance.AppCompat.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">?attr/replySmallTextSize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ReplyMessageDateStyle" parent="Base.TextAppearance.AppCompat.Caption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">?attr/replySmallTextSize</item>
+    </style>
+
+    <style name="ReplyMessageCommentStyle" parent="Base.TextAppearance.AppCompat.Small">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">?attr/replySmallTextSize</item>
+    </style>
+
+    <style name="ReplyMessageActionIconStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginStart">19dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:background">?attr/actionBarItemBackground</item>
+        <item name="android:src">@drawable/ic_overflow_black_24dp</item>
+        <item name="android:tint">?attr/replyIconColor</item>
+    </style>
+
+    <!-- Reply Editor Styles -->
+    <style name="ReplyEditorContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_sheet_editor_height</item>
+        <item name="android:background">?attr/replyColorBackgroundPrimary</item>
+    </style>
+
+    <style name="ReplyEditorSendButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:text">@string/reply_post</item>
+        <item name="android:textColor">?attr/replyEditorSendButtonColor</item>
+        <item name="android:textSize">?attr/replySmallTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">?attr/replyEditorSendButtonColor</item>
+        <item name="strokeColor">?attr/replyEditorSendButtonColor</item>
+    </style>
+
+    <style name="ReplyEditorCancelButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:text">@string/cancel_edit_message</item>
+        <item name="android:textColor">?attr/replyEditorCancelButtonColor</item>
+        <item name="android:textSize">?attr/replySmallTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">?attr/replyEditorCancelButtonColor</item>
+        <item name="strokeColor">?attr/replyEditorCancelButtonColor</item>
+    </style>
+
+    <style name="ReplyEditorEditHeaderTextStyle" parent="Base.TextAppearance.AppCompat.Small">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:text">@string/reply_editor_edit_subtitle</item>
+        <item name="android:background">?attr/replyColorBackgroundSecondary</item>
+    </style>
+
+    <style name="ReplyEditorEditTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:hint">@string/reply_editor_write_hint</item>
+        <item name="android:textColorHint">?android:attr/textColorSecondary</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">?attr/replyMediumTextSize</item>
+        <item name="android:inputType">textAutoCorrect|textAutoComplete|textMultiLine|textCapSentences</item>
+        <item name="android:maxHeight">88dp</item>
+    </style>
+
+</resources>

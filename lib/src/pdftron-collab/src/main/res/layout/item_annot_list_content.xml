@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:minHeight="75dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="14dp"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_annotation_highlight_black_24dp" />
+
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/date"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Title that is very long and would not fit on a phone" />
+
+        <TextView
+            android:id="@+id/last_comment"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="llantur an usu. Pro virtute erroribus neglegentur eu, sed tollit insolens contentiones ex" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2019-2-21" />
+
+    <com.pdftron.collab.ui.view.UnreadNotificationView
+        android:id="@+id/notification_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/content_container"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+</android.support.constraint.ConstraintLayout>

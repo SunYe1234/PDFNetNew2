@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-v14/radio_checked_right.xml",
+        "source": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/drawable-v14/radio_checked_right.xml"
+    },
+    {
+        "merged": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-v14/radio_unchecked_right.xml",
+        "source": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/drawable-v14/radio_unchecked_right.xml"
+    },
+    {
+        "merged": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-v14/radio_checked_left.xml",
+        "source": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/drawable-v14/radio_checked_left.xml"
+    },
+    {
+        "merged": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-v14/radio_unchecked_left.xml",
+        "source": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/drawable-v14/radio_unchecked_left.xml"
+    }
+]

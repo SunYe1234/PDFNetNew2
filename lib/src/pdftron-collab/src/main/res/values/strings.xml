@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Reply bottom sheet strings -->
+    <string name="reply_post">Post</string>
+    <string name="reply_editor_write_hint">Write your comment</string>
+    <string name="reply_editor_edit_subtitle">Editing comment</string>
+
+    <!-- Toast messages -->
+    <string name="toast_no_selected_annot">Could not get selected annotation</string>
+
+    <!-- Annotation list strings-->
+    <string name="page_number_item">Page %d</string>
+    <string name="action_sort_annotlist_by_reply_date">By reply date</string>
+    <string name="cancel_edit_message">Cancel</string>
+</resources>

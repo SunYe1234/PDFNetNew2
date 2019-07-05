@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Side nav ids-->
+    <item name="item_viewer" type="id" />
+    <item name="item_recent" type="id" />
+    <item name="item_favorites" type="id" />
+    <item name="item_folder_list" type="id" />
+    <item name="item_file_list" type="id" />
+    <item name="item_external_storage" type="id" />
+    <item name="item_system_file_picker" type="id" />
+    <item name="item_settings" type="id" />
+    <item name="item_exit" type="id" />
+
+    <item name="menu_overflow_button" type="id"/>
+
+    <item name="fragment_toolbar" type="id" />
+    <item name="fragment_app_bar" type="id" />
+    <item name="fragment_content" type="id" />
+
+    <!--Toolbar ids-->
+    <item name="action_open_file" type="id" />
+    <item name="action_open_url" type="id" />
+
+</resources>

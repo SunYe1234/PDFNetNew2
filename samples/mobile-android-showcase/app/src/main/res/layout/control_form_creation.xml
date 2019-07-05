@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/BottomSheetStyle"
+    android:id="@+id/control_view_mode"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <com.pdftron.showcase.widgets.ButtonFixSize
+        android:id="@+id/text_field"
+        style="@style/RadioButtonStyle"
+        android:drawableTint="@color/selector_colors"
+        android:drawableTop="@drawable/ic_text_fields_black_24dp"
+        android:button="@null"
+        android:layout_width="@dimen/radio_button_size"
+        android:layout_height="@dimen/radio_button_size"
+        android:layout_marginRight="30dp" />
+
+    <com.pdftron.showcase.widgets.ButtonFixSize
+        android:id="@+id/checkbox"
+        style="@style/RadioButtonStyle"
+        android:drawableTint="@color/selector_colors"
+        android:drawableTop="@drawable/ic_check_box_black_24dp"
+        android:button="@null"
+        android:layout_width="@dimen/radio_button_size"
+        android:layout_height="@dimen/radio_button_size"
+        android:layout_marginRight="30dp" />
+
+    <com.pdftron.showcase.widgets.ButtonFixSize
+        android:id="@+id/signature"
+        style="@style/RadioButtonStyle"
+        android:drawableTint="@color/selector_colors"
+        android:drawableTop="@drawable/ic_annotation_signature_black_24dp"
+        android:button="@null"
+        android:layout_width="@dimen/radio_button_size"
+        android:layout_height="@dimen/radio_button_size"
+        android:layout_marginRight="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkText"
+            android:text="@string/text"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkText"
+            android:text="@string/tools_qm_form_checkbox"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkText"
+            android:text="@string/annot_signature"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"  />
+    </LinearLayout>
+</LinearLayout>

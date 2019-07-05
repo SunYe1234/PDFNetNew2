@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ReplyBaseTheme.DayNight" parent="ReplyBaseTheme.Night"/>
+
+    <style name="ReplyBaseTheme.Night" parent="ReplyBaseStyle">
+        <!-- Component wide attributes -->
+        <item name="replyColorBackgroundPrimary">#2e2e2e</item>
+        <item name="replyColorBackgroundSecondary">#222222</item>
+        <item name="replyIconColor">#FFFFFF</item>
+        <item name="replyDividerColor">#FFCCCCCC</item>
+        <item name="replyEditorSendButtonColor">#00A4E4</item>
+        <item name="replyEditorCancelButtonColor">#EA7350</item>
+
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#979797</item>
+    </style>
+
+</resources>

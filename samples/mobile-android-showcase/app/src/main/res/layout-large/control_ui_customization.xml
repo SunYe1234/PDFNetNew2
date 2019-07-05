@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/control_ui_customization"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+
+        <Switch
+            android:id="@+id/sticky_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_sticky_note"
+            android:onClick="onClick"
+            android:tag="TEXT_ANNOT_CREATE"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/text_highlight"/>
+
+        <Switch
+            android:id="@+id/text_highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_text_highlight"
+            android:onClick="onClick"
+            android:tag="TEXT_HIGHLIGHT"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/sticky_note"
+            app:layout_constraintRight_toLeftOf="@id/text_strikeout"/>
+
+        <Switch
+            android:id="@+id/text_strikeout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_text_strikeout"
+            android:onClick="onClick"
+            android:tag="TEXT_STRIKEOUT"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/text_highlight"
+            app:layout_constraintRight_toLeftOf="@id/signature"/>
+
+        <Switch
+            android:id="@+id/signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_signature"
+            android:onClick="onClick"
+            android:tag="SIGNATURE"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/text_strikeout"
+            app:layout_constraintRight_toLeftOf="@id/ink"/>
+
+        <Switch
+            android:id="@+id/ink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_freehand"
+            android:onClick="onClick"
+            android:tag="INK_CREATE"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/signature"
+            app:layout_constraintRight_toLeftOf="@id/freetext"/>
+
+        <Switch
+            android:id="@+id/freetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:drawableLeft="@drawable/ic_freetext"
+            android:onClick="onClick"
+            android:tag="TEXT_CREATE"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ink"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

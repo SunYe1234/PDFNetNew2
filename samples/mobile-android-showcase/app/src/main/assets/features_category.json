@@ -1,0 +1,1272 @@
+{
+  "categories":[
+    {
+      "name": "Viewing",
+      "features": [
+        {
+          "id": "CompleteReader",
+          "name": "Viewer",
+          "category": "Viewer",
+          "description": "demo, sample",
+          "tags": [
+            "demo",
+            "sample",
+            "showcase",
+            "doc",
+            "file",
+            "page",
+            "pdf",
+            "display",
+            "edit",
+            "read",
+            "view",
+            "annot",
+            "tool",
+            "page",
+            "layout",
+            "control",
+            "ctrl",
+            "bookmark",
+            "thumbnail",
+            "mode",
+            "continuous",
+            "single",
+            "facing",
+            "cover",
+            "reflow",
+            "rotat",
+            "night",
+            "outline",
+            "note",
+            "comment",
+            "highlight",
+            "strike",
+            "signature",
+            "freehand",
+            "free",
+            "form text",
+            "freeform",
+            "grab",
+            "drag",
+            "pan"
+          ],
+          "imageName": "viewer",
+          "relatedFeatures": [
+            "View Modes",
+            "Zoom/Display Modes",
+            "Progressive/Complex Rendering",
+            "Text Search",
+            "Bookmark",
+            " Outline List",
+            "User Interface Customization",
+            "Annotation Toolbar",
+            " Annotation List",
+            " Page Manipulation"
+          ],
+          "cardDescription": "View, annotate, and manipulate PDF documents with the fully-featured document viewer.",
+          "link": "https://www.pdftron.com/documentation/android/guides/getting-started/using-fragment",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "codeSnippet": [
+            "Bundle args = PdfViewCtrlTabFragment.createBasicPdfViewCtrlTabBundle(context, fileUri, password);",
+            "PdfViewCtrlTabHostFragment mPdfViewCtrlTabHostFragment = PdfViewCtrlTabHostFragment.newInstance(args);",
+            "FragmentTransaction ft = getSupportFragmentManager().beginTransaction();",
+            "ft.replace(R.id.fragment_container, mPdfViewCtrlTabHostFragment, null);",
+            "ft.commit();"
+          ]
+        },
+        {
+          "id":"OfficeToPDF",
+          "name":"View Office Files",
+          "category":"Conversion",
+          "imageName":"office_to_pdf",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["convert","office","doc","docx","xlsx","pptx",".pub","word","excel","powerpoint","publisher", "microsoft"],
+          "description":"view office format in viewer",
+          "cardDescription": "View office files in the document viewer.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/non-pdf",
+          "codeSnippet":[
+            "public void convertFromOffice(PDFViewCtrl pdfViewCtrl, File officeFile)",
+            "		throws FileNotFoundException, PDFNetException {",
+            "	Uri nonPdfUri = Uri.fromFile(officeFile);",
+            "	DocumentConversion documentConversion = pdfViewCtrl.openNonPDFUri(nonPdfUri, null);",
+            "}"
+          ]
+        },
+        {
+          "id":"BookmarkList",
+          "name":"Bookmark",
+          "category":"Viewer",
+          "imageName":"bookmark",
+          "relatedFeatures":["Complete Reader", "Outline List", "Annotation List"],
+          "tags": ["add","bookmark","flag","mark","save","list","display","doc","file","pdf","page","view"],
+          "description":"save, page",
+          "cardDescription": "Add bookmarks to your document to conveniently navigate to an important page.",
+          "link": "https://www.pdftron.com/documentation/android/guides/viewer-components/user-bookmarks-a",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "codeSnippet": [
+            "private PDFViewCtrl mPdfViewCtrl;",
+            "// ...",
+            "public void showUserBookmarksDialog(FragmentManager fragmentManager) {",
+            "   UserBookmarkDialogFragment fragment = UserBookmarkDialogFragment.newInstance();",
+            "   fragment.setPdfViewCtrl(mPdfViewCtrl);",
+            "",
+            "   // Set a custom style for this fragment",
+            "   fragment.setStyle(DialogFragment.STYLE_NO_TITLE, R.style.CustomAppTheme);",
+            "",
+            "   // Show the dialog",
+            "   fragment.show(fragmentManager, \"user_bookmarks_dialog\");",
+            "}"
+          ]
+        },
+        {
+          "id":"TextSearch",
+          "name":"Text Search",
+          "category":"Viewer",
+          "imageName":"text_search",
+          "description":"search",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["keyword","phrase","text","word","find","search","component","engine","doc","file","pdf","view","bar"],
+          "cardDescription": "Type in keywords to search text in the document.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/find-text-a",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "codeSnippet": [
+            "private PDFViewCtrl mPdfViewCtrl;",
+            "@Override ",
+            "protected void onCreate(Bundle savedInstanceState) {",
+            "   super.onCreate(savedInstanceState);",
+            "   // Set up the search controls in our activity",
+            "   final SearchToolbar searchToolbar = findViewById(R.id.searchtoolbar);",
+            "   final FindTextOverlay searchOverlay = findViewById(R.id.find_text_view);",
+            "",
+            "   searchOverlay.setPdfViewCtrl(mPdfViewCtrl);",
+            "   searchToolbar.setSearchToolbarListener(new SearchToolbar.SearchToolbarListener() {",
+            "       @Override",
+            "       public void onExitSearch() {",
+            "           searchToolbar.setVisibility(View.GONE);",
+            "           searchOverlay.setVisibility(View.GONE);",
+            "           searchOverlay.exitSearchMode();",
+            "       }",
+            "       @Override",
+            "       public void onClearSearchQuery() {",
+            "         searchOverlay.cancelFindText();",
+            "       }",
+            "       @Override",
+            "       public void onSearchQuerySubmit(String s) {",
+            "         searchOverlay.queryTextSubmit(s);",
+            "       }",
+            "       @Override",
+            "       public void onSearchQueryChange(String s) {",
+            "         searchOverlay.setSearchQuery(s);",
+            "       }",
+            "       @Override",
+            "       public void onSearchOptionsItemSelected(MenuItem menuItem, String s) {",
+            "           int id = menuItem.getItemId();",
+            "           if (id == R.id.action_match_case) {",
+            "               boolean isChecked = menuItem.isChecked();",
+            "               searchOverlay.setSearchMatchCase(!isChecked);",
+            "               searchOverlay.resetFullTextResults();",
+            "               menuItem.setChecked(!isChecked);",
+            "           } else if (id == R.id.action_whole_word) {",
+            "               boolean isChecked = menuItem.isChecked();",
+            "               searchOverlay.setSearchWholeWord(!isChecked);",
+            "               searchOverlay.resetFullTextResults();",
+            "               menuItem.setChecked(!isChecked);",
+            "           }",
+            "       }",
+            "   });",
+            "}"
+          ]
+        },
+        {
+          "id":"DocOutline",
+          "name":"Document Outline",
+          "category":"Viewer",
+          "imageName":"outline",
+          "relatedFeatures":["Complete Reader", "Bookmark List", "Annotation List", "Page Manipulation"],
+          "tags": ["framework","outline","summary","synopsis","list","table","content","doc","file","pdf","see","view"],
+          "description":"doc, outline",
+          "cardDescription": "View the outline of this document. This acts as a table of contents to jump to a section quickly.",
+          "link": "https://www.pdftron.com/documentation/android/guides/viewer-components/outline-a",
+          "codeSnippet": [
+            "private PDFViewCtrl mPdfViewCtrl;",
+            "// ...",
+            "public void showOutlineDialog(FragmentManager fragmentManager) {",
+            "   OutlineDialogFragment outlineDialogFragment = OutlineDialogFragment.newInstance()",
+            "   .setPdfViewCtrl(mPdfViewCtrl);",
+            "",
+            "   // Set a custom style for this fragment",
+            "   outlineDialogFragment.setStyle(DialogFragment.STYLE_NO_TITLE, R.style.CustomAppTheme);",
+            "",
+            "   // Show the dialog",
+            "   outlineDialogFragment.show(fragmentManager, \"outline_dialog\");",
+            "}"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        },
+        {
+          "id":"DisplayMode",
+          "name":"Zoom/Display Modes",
+          "category":"Viewer",
+          "imageName":"display_mode",
+          "tags": ["page","transition","layout","continuous","facing","fit","height","display","pinch","render","present","enlarge","shrink","size","zoom","mode","doc","file","pdf","change","modify","view"],
+          "description":"continuous, fit, facing",
+          "cardDescription": "View how documents are displayed in the viewer. Choose a mode to preview its state.",
+          "relatedFeatures":["Complete Reader"],
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/page-presentation-mode",
+          "codeSnippet":[
+            "",
+            "mPdfViewCtrl.setPagePresentationMode(PDFViewCtrl.PagePresentationMode.FACING);",
+            "mPdfViewCtrl.setPageViewMode(PDFViewCtrl.PageViewMode.FIT_PAGE);",
+            ""
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. Select a display mode to change the code. For more detail, you can visit our documentation.",
+          "codeSnippets": [
+            {
+              "id": "e_trn_single_page",
+              "code": [
+                "mPdfViewCtrl.setPagePresentationMode(PDFViewCtrl.PagePresentationMode.SINGLE)",
+                ""
+              ]
+            },
+            {
+              "id": "FACING",
+              "code": [
+                "mPdfViewCtrl.setPagePresentationMode(PDFViewCtrl.PagePresentationMode.FACING)",
+                ""
+              ]
+            },
+            {
+              "id": "FACING_COVER",
+              "code": [
+                "mPdfViewCtrl.setPagePresentationMode(PDFViewCtrl.PagePresentationMode.FACING_COVER)",
+                ""
+              ]
+            },
+            {
+              "id": "SINGLE_CONT",
+              "code": [
+                "mPdfViewCtrl.setPagePresentationMode(PDFViewCtrl.PagePresentationMode.SINGLE_CONT)",
+                ""
+              ]
+            },
+            {
+              "id": "FACING_CONT",
+              "code": [
+                "mPdfViewCtrl.setPagePresentationMode(PDFViewCtrl.PagePresentationMode.FACING_CONT)",
+                ""
+              ]
+            },
+            {
+              "id": "FACING_COVER_CONT",
+              "code": [
+                "mPdfViewCtrl.setPagePresentationMode(PDFViewCtrl.PagePresentationMode.FACING_COVER_CONT)",
+                ""
+              ]
+            },
+            {
+              "id": "FIT_WIDTH",
+              "code": [
+                "mPdfViewCtrl.setPageViewMode(PDFViewCtrl.PageViewMode.FIT_WIDTH)",
+                ""
+              ]
+            },
+            {
+              "id": "FIT_PAGE",
+              "code": [
+                "mPdfViewCtrl.setPageViewMode(PDFViewCtrl.PageViewMode.FIT_PAGE)",
+                ""
+              ]
+            }]
+        },
+        {
+          "id":"Overprint",
+          "name":"Overprint",
+          "category":"Viewer",
+          "imageName":"overprint",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["overprint","print","view","transparent","transparency","trans","clear"],
+          "description":"Overprint",
+          "cardDescription": "Overprint displays the document in a way that simulates the behavior of an actual printer, allowing users to view the document as intended by the document creator.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFViewCtrl.html#setOverprint(com.pdftron.pdf.PDFViewCtrl.OverPrintMode)",
+          "codeSnippet":[
+            "public void enableOverprint(PDFViewCtrl pdfViewCtrl) throws PDFNetException {",
+            "  pdfViewCtrl.setOverprint(PDFViewCtrl.OverPrintMode.ON);",
+            "}"
+          ]
+        },
+        {
+          "id":"DocumentTabbedViewer",
+          "name":"Multi-Tabbed Viewer",
+          "category":"Viewer",
+          "imageName":"tabbed_viewer",
+          "description":"multiple, document",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["doc","file","pdf","tab","see","open","view","many","more","multiple"],
+          "cardDescription": "Open more than one document at a time.",
+          "link": "https://www.pdftron.com/documentation/android/guides/getting-started/using-fragment",
+          "codeSnippet":[
+            "// Enable tabbed viewer in ViewerConfig",
+            "ViewerConfig config = new ViewerConfig.Builder()",
+            " .multiTabEnabled(true)",
+            " .build();",
+            "",
+            "// Initialize your document viewer with a ViewerConfig when you open a document",
+            "DocumentActivity.openDocument(context, localFilePath, config);"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. Select the amount of tabs opened to make restrictions. For more detail, you can visit our documentation."
+        }
+      ],
+      "type":"",
+      "description": "viewing mode includes ........."
+    },
+    {
+      "name":"Annotation",
+      "features":[
+        {
+          "name":"Document Collaboration",
+          "id":"DocumentCollaboration",
+          "imageName":"collab",
+          "category":"Annotation",
+          "relatedFeatures":["Complete Reader", "Annotation Toolbar", "Annotation list"],
+          "tags": ["annotation","list","doc","file","pdf","comment","note","change","edit","modify","collab","sync","markup"],
+          "description": "view, annotation",
+          "cardDescription": "A demo of the real-time document annotation collaboration capability.",
+          "link": "https://www.pdftron.com/documentation/android/guides/collab/setup-a",
+          "codeSnippet":[
+            "public CollabViewerTabHostFragment createViewerFragment(FragmentActivity activity,",
+            "        Uri fileUri, ViewerConfig viewerConfig) {",
+            "    return CollabViewerBuilder.withUri(fileUri)",
+            "            .usingConfig(viewerConfig)",
+            "            .build(activity);",
+            "}"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        },
+        {
+          "name":"Annotation List",
+          "id":"AnnotationList",
+          "imageName":"annotation_list",
+          "category":"Annotation",
+          "relatedFeatures":["Complete Reader", "Annotation Toolbar", "Outline list", "Bookmark List"],
+          "tags": ["annotation","list","doc","file","pdf","comment","note","change","edit","modify"],
+          "description": "view, annotation, list",
+          "cardDescription": "View a list of all annotations in a document. ",
+          "link": "https://www.pdftron.com/documentation/android/guides/viewer-components/annotation-list-a",
+          "codeSnippet":[
+            "private PDFViewCtrl mPdfViewCtrl;",
+            "// ...",
+            "public void showAnnotationDialog(FragmentManager fragmentManager) {",
+            "   AnnotationDialogFragment annotationDialogFragment = AnnotationDialogFragment.newInstance();",
+            "   annotationDialogFragment.setPdfViewCtrl(mPdfViewCtrl);",
+            "",
+            "   // Set a custom style for this fragment",
+            "   annotationDialogFragment.setStyle(DialogFragment.STYLE_NO_TITLE, R.style.CustomAppTheme);",
+            "",
+            "   // Show the dialog",
+            "   annotationDialogFragment.show(fragmentManager, \"annotation_dialog\");",
+            "}"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        },
+        {
+          "id":"AnnotationToolbar",
+          "name":"Annotation Toolbar",
+          "category":"Annotation",
+          "imageName":"annotation_toolbar",
+          "relatedFeatures":["Complete Reader", "Annotation List", "User Interface Customization"],
+          "description":"edit, toolbar",
+          "tags":["note","comment","annot","highlight","strike","signature","freehand","free","form text","freeform","grab","drag","tool","edit","show","hide","enable","disable"],
+          "cardDescription": "Create annotations using the annotation toolbar.",
+          "link": "https://www.pdftron.com/documentation/android/guides/viewer-components/annotation-toolbar-a",
+          "codeSnippet": [
+            "private ToolManager mToolManager;",
+            "private AnnotationToolbar mAnnotationToolbar;",
+            "// ...",
+            "public void setupAnnotationToolbar() {",
+            "   mAnnotationToolbar = findViewById(R.id.annotationToolbar);",
+            "",
+            "   // Remember to initialize your ToolManager before calling setup",
+            "   mAnnotationToolbar.setup(mToolManager);",
+            "   mAnnotationToolbar.show();",
+            "}"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. Open the annotation toolbar to change the code to fit your project. For more detail, you can visit our documentation."
+        },
+        {
+          "id":"UndoRedo",
+          "name":"Undo and Redo",
+          "category":"Annotation",
+          "imageName":"undo_redo",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["note","comment","annot","highlight","strike","signature","freehand","free","form text","freeform","grab","drag","tool","edit","show","hide","enable","disable","undo","redo"],
+          "description":"undo and redo",
+          "cardDescription": "Undo and redo any documentation modifications. Try creating annotations or any other modifications in the PDF viewer then tap the buttons below.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/undo-redo",
+          "codeSnippet":[
+            "public String undo(ToolManager toolManager) {",
+            "	return toolManager.getUndoRedoManger().undo();",
+            "}",
+            "",
+            "public String redo(ToolManager toolManager) {",
+            "	return toolManager.getUndoRedoManger().redo();",
+            "}"
+          ]
+        },
+        {
+          "id":"Measurement",
+          "name":"Measurement",
+          "category":"Viewer",
+          "imageName":"measurement",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["annot","ruler","measure","line","distance","blueprint","snapping"],
+          "description":"measurement tool",
+          "cardDescription": "Measure distance, perimeter and area in a document. Pick a tool below and drag to create a measurement annotation.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/tools/javadoc/reference/com/pdftron/pdf/tools/RulerCreate.html",
+          "codeSnippet":[
+            "public void setRulerTool(ToolManager toolManager) {",
+            "  ToolManager.Tool tool = toolManager.createTool(ToolManager.ToolMode.RULER_CREATE, null);",
+            "  toolManager.setTool(tool);",
+            "}"
+          ]
+        },
+        {
+          "name":"Rubber Stamp",
+          "id":"RubberStamp",
+          "imageName":"rubber_stamp",
+          "category":"Annotation",
+          "relatedFeatures":["Complete Reader", "Annotation Toolbar"],
+          "tags": ["annotation","stamp","doc","file","pdf","comment"],
+          "description": "view, edit, annotation",
+          "cardDescription": "Create stamps from presets or define your own stamps. Click the button below then click anywhere on the document to start.",
+          "link": "https://www.pdftron.com/api/android/tools/javadoc/reference/com/pdftron/pdf/tools/RubberStampCreate.html",
+          "codeSnippet":[
+            "public void setRubberStampTool(ToolManager toolManager) {",
+            "  ToolManager.Tool tool = toolManager.createTool(ToolManager.ToolMode.RUBBER_STAMPER, null);",
+            "  toolManager.setTool(tool);",
+            "}"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"PDF Form",
+      "features":[
+        {
+          "id":"FormFilling",
+          "name":"Form Filling",
+          "imageName":"form",
+          "category":"FormSupport",
+          "description": "form, field",
+          "relatedFeatures":["Complete Reader"],
+          "cardDescription": "Fill form fields with user inputs.",
+          "link": "https://www.pdftron.com/documentation/android/guides/form-filling/form-filling?searchTerm=form",
+          "tags": ["doc","file","form","report","pdf","field","fill","input"],
+          "codeSnippet": [
+            "// By default, editing and creating form fields in the drop-in",
+            "// components DocumentActivity and PdfViewCtrlTabHostFragment are automatically enabled ",
+            "// Here is a sample to disable form filling",
+            "ToolManager.ToolMode[] toolModes = {ToolManager.ToolMode.FORM_FILL};",
+            "ToolManagerBuilder tmBuilder = ToolManagerBuilder.from().disableToolModes(toolModes);",
+            "",
+            "// Add ToolManagerBuilder to your ViewerConfig",
+            "ViewerConfig config = new ViewerConfig.Builder()",
+            "	.fullscreenModeEnabled(true)",
+            "	.multiTabEnabled(true)",
+            "	// ...",
+            "	.toolManagerBuilder(tmBuilder)",
+            "	.build();",
+            "",
+            "// Initialize your document viewer with a ViewerConfig when you open a document",
+            "DocumentActivity.openDocument(context, localFilePath, config);"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        },
+        {
+          "id":"FormCreation",
+          "name":"Form Creation",
+          "category":"FormSupport",
+          "imageName":"form_creation",
+          "relatedFeatures":["Complete Reader", "Form Filling"],
+          "tags": ["form","field","create","pdf","check","signature","text"],
+          "description":"Create new form fields for users to fill directly.",
+          "cardDescription": "Create new form fields such as text fields, checkboxes, and signatures.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/form-filling/form-filling",
+          "codeSnippet":[
+            "// Set the tool in the ToolManager to the form text field creation tool",
+            "public void setFormTextFieldTool(ToolManager toolManager) {",
+            "  ToolManager.Tool tool = toolManager.createTool(ToolManager.ToolMode.FORM_TEXT_FIELD_CREATE, null);",
+            "  toolManager.setTool(tool);",
+            "}",
+            "",
+            "// Set the tool in the ToolManager to the form checkbox creation tool",
+            "public void setFormCheckboxTool(ToolManager toolManager) {",
+            "  ToolManager.Tool tool = toolManager.createTool(ToolManager.ToolMode.FORM_CHECKBOX_CREATE, null);",
+            "  toolManager.setTool(tool);",
+            "}",
+            "",
+            "// Set the tool in the ToolManager to the form signature field creation tool",
+            "public void setFormSignatureTool(ToolManager toolManager) {",
+            "  ToolManager.Tool tool = toolManager.createTool(ToolManager.ToolMode.FORM_SIGNATURE_CREATE, null);",
+            "  toolManager.setTool(tool);",
+            "}"
+          ]
+        },
+        {
+          "id":"DigitalSignature",
+          "name":"Digital Signature",
+          "category":"FormSupport",
+          "imageName":"digital_signature",
+          "relatedFeatures":["Complete Reader", "Form Filling"],
+          "tags": ["form","field","signature","digital","pdf","sig","sign","signing"],
+          "description":"digital signature",
+          "cardDescription": "Digitally sign with a specific keystore and password. Tap the signature field to sign.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/tools/digi-sig-tool",
+          "codeSnippet":[
+            "ToolManagerBuilder tmBuilder = ToolManagerBuilder.from()",
+            "  .setUseDigitalSignature(true)",
+            "  .setDigitalSignatureKeystorePath(\"my_keystore_path\")",
+            "  .setDigitalSignatureKeystorePassword(\"my_keystore_password\");",
+            "ViewerConfig.Builder builder = new ViewerConfig.Builder();",
+            "ViewerConfig config = builder.toolManagerBuilder(tmBuilder).build();"
+          ]
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Edit & Manipulate",
+      "features":[
+        {
+          "id":"GeneralManipulation",
+          "name":"Document Manipulation",
+          "imageName":"page_viewer",
+          "category":"Document Manipulation",
+          "relatedFeatures":["Complete Reader", "Outline list"],
+          "description":"edit, document",
+          "cardDescription": "Open the thumbnail browser to navigate, rearrange, add and remove pages.",
+          "link": "https://www.pdftron.com/documentation/android/guides/viewer-components/thumbnails-view-a",
+          "tags": ["arrange","manipulat","rearrange","remove","edit","modify","doc","thumbnail","browse","view","page"],
+          "codeSnippet": [
+            "private PDFViewCtrl mPdfViewCtrl;",
+            "// ...",
+            "public void showThumbnailsFragment(FragmentManager fragmentManager) {",
+            "   ThumbnailsViewFragment fragment = ThumbnailsViewFragment.newInstance();",
+            "   fragment.setPdfViewCtrl(mPdfViewCtrl);",
+            "",
+            "   // Show the dialog",
+            "   fragment.show(fragmentManager, \"thumbnails_view_dialog\");",
+            "}"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        },
+        {
+          "id":"PageGenerator",
+          "name":"New Page Generator",
+          "category":"Document Manipulation",
+          "imageName":"add_page",
+          "relatedFeatures":["Complete Reader", "Document Manipulation"],
+          "tags": ["open","code","doc","file","pdf","page","generate","view","add","grid","line","blank"],
+          "description":"new page generator",
+          "cardDescription": "Add a new custom page to a document.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/add-page",
+          "codeSnippet":[
+            "void addPagesToNewDocument(FragmentManager fragmentManager, final String folder) {",
+            "	AddPageDialogFragment addPageDialogFragment = AddPageDialogFragment.newInstance();",
+            "	addPageDialogFragment.setOnCreateNewDocumentListener(new AddPageDialogFragment.OnCreateNewDocumentListener() {",
+            "		@Override",
+            "		public void onCreateNewDocument(PDFDoc doc, String title) {",
+            "			if (doc == null || title == null) {",
+            "				return;",
+            "			}",
+            "			if (!FilenameUtils.isExtension(title, \"pdf\")) {",
+            "				title = title + \".pdf\";",
+            "			}",
+            "			File documentFile = new File(folder, title);",
+            "			try {",
+            "				SDFDoc.SaveMode saveModes[] = new SDFDoc.SaveMode[]{SDFDoc.SaveMode.REMOVE_UNUSED};",
+            "				doc.save(documentFile.getAbsolutePath(), saveModes, null);",
+            "			} catch (PDFNetException e) {",
+            "				e.printStackTrace();",
+            "			} finally {",
+            "				try {",
+            "					doc.close();",
+            "				} catch (PDFNetException e) {",
+            "					e.printStackTrace();",
+            "				}",
+            "			}",
+            "		}",
+            "	});",
+            "	addPageDialogFragment.show(fragmentManager, \"add_page_dialog\");",
+            "}"
+          ]
+        },
+        {
+          "id":"Redaction",
+          "name":"Redaction",
+          "category":"Document Manipulation",
+          "imageName":"redaction",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["open","code","doc","file","pdf","redact","view","redaction","annot"],
+          "description":"content redaction",
+          "cardDescription": "Use redaction to remove sensitive content within documents. Select a redaction tool below then tap and drag to redact content.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/tools/redaction-tool",
+          "codeSnippet":[
+            "public void setTextRedactionTool(ToolManager toolManager) {",
+            "	ToolManager.Tool tool = toolManager.createTool(ToolManager.ToolMode.TEXT_REDACTION, null);",
+            "	toolManager.setTool(tool);",
+            "}",
+            "",
+            "public void setRectangularRedactionTool(ToolManager toolManager) {",
+            "	ToolManager.Tool tool = toolManager.createTool(ToolManager.ToolMode.RECT_REDACTION, null);",
+            "	toolManager.setTool(tool);",
+            "}"
+          ]
+        },
+        {
+          "id":"Cropping",
+          "name":"Page Cropping",
+          "category":"Document manipulation",
+          "imageName":"cropping",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["open","code","doc","file","pdf","crop","view","manual","auto"],
+          "description":"cropping",
+          "cardDescription": "Manually or automatically crop pages in a document, or remove existing page cropping.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/crop-pages",
+          "codeSnippet":[
+            "public void showUserCropDialog(PDFViewCtrl pdfViewCtrl, FragmentManager fragmentManager) {",
+            "	UserCropDialogFragment fragment = UserCropDialogFragment.newInstance();",
+            "	fragment.setPdfViewCtrl(pdfViewCtrl);",
+            "	// Set a custom style for this dialog",
+            "	fragment.setStyle(DialogFragment.STYLE_NO_TITLE, R.style.CustomAppTheme);",
+            "	// Show the dialog",
+            "	fragment.show(fragmentManager, \"user_crop_pages_dialog\");",
+            "}"
+          ]
+        },
+        {
+          "id":"PageLabel",
+          "name":"Modify Page Labels",
+          "category":"Document Manipulation",
+          "imageName":"pagelabel",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["page", "label", "number"],
+          "description":"pagelabel",
+          "cardDescription": "Modify the page labels on any document.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PageLabel.html",
+          "codeSnippet":[
+            "public void showPageLabelSettingsDialog(FragmentManager fragmentManager, int fromPage, int toPage, int pageCount) {",
+            "    PageLabelDialog dialog = PageLabelDialog.newInstance(fromPage, toPage, pageCount);",
+            "    dialog.setStyle(DialogFragment.STYLE_NO_TITLE, R.style.CustomAppTheme);",
+            "    dialog.show(fragmentManager, PageLabelDialog.TAG);",
+            "}"
+          ]
+        },
+        {
+          "id":"Watermark",
+          "name":"Watermark",
+          "category":"Document Manipulation",
+          "imageName":"watermark",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["watermark", "stamp"],
+          "description":"watermark",
+          "cardDescription": "Add a watermark to any document.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/Stamper.html",
+          "codeSnippet":[
+            "public void showWatermakDialog(PDFViewCtrl pdfViewCtrl, ",
+            "							   FragmentManager fragmentManager) {",
+            "    WatermarkDialog fragment = WatermarkDialog.newInstance(pdfViewCtrl);",
+            "    fragment.show(fragmentManager);",
+            "}"
+          ]
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Parsing & Extraction",
+      "features":[
+        {
+          "id":"TextExtraction",
+          "name":"Text Extraction",
+          "category":"extraction",
+          "imageName":"text_extract",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["extract","text"],
+          "description":"extraction",
+          "cardDescription": "The sample illustrates the text extraction capabilities.",
+          "codeSnippetDescription": "Below is the source code to help you get started on how to perform text extraction. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/samples/android/java/TextExtractTest?platforms=android",
+          "codeSnippet":[
+            "public String extractText(PDFViewCtrl pdfViewCtrl, int pageNum) {",
+              "	PDFDoc pdfDoc = pdfViewCtrl.getDoc();",
+              "	TextExtractor txt = new TextExtractor();",
+              "	try {",
+              "		pdfViewCtrl.docLockRead();",
+              "		shouldUnlockRead = true;",
+              "		// extract text",
+              "		Page page = pdfDoc.getPage(pageNum);",
+              "		txt.begin(page);",
+              "		return txt.getAsText();",
+              "	} catch (Exception ex) {",
+              "		ex.printStackTrace();",
+              "	} finally {",
+              "		if (shouldUnlockRead) {",
+              "			pdfViewCtrl.docUnlockRead();",
+              "		}",
+              "		txt.destroy();",
+              "	}",
+              "	return \"\";",
+              "}"
+          ]
+        },
+        {
+          "id":"FormExtraction",
+          "name":"Form Extraction",
+          "category":"extraction",
+          "imageName":"form_extract",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["extract","form", "field", "xfdf"],
+          "description":"extraction",
+          "cardDescription": "The sample illustrates the form extraction capabilities. Change a field to start.",
+          "codeSnippetDescription": "Below is the source code to help you get started on how to perform form extraction. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/samples/android/java/FDFTest?platforms=android",
+          "codeSnippet":[
+            "    @Override",
+            "    public void onAnnotationsModified(Map<Annot, Integer> annots, Bundle extra) {",
+            "        for (Annot annot : annots.keySet()) {",
+            "            try {",
+            "                if (annot.isValid()) {",
+            "                    if (annot.getType() == Annot.e_Widget) {",
+            "                        Widget widget = new Widget(annot);",
+            "                        Field field = widget.getField();",
+            "                        String name = field.getName();",
+            "                        String fieldValueStr = \"\";",
+            "                        int fieldType = field.getType();",
+            "                        if (fieldType == Field.e_check) {",
+            "                            fieldValueStr = \"\" + field.getValueAsBool();",
+            "                        } else if (fieldType == Field.e_text) {",
+            "                            fieldValueStr = field.getValueAsString();",
+            "                        }",
+            "                        // do something with name and fieldValueStr",
+            "                    }",
+            "                }",
+            "            } catch (Exception ex) {",
+            "                ex.printStackTrace();",
+            "            }",
+            "        }",
+            "    }"
+          ]
+        },
+        {
+          "id":"XfdfExtraction",
+          "name":"Annotation Extraction",
+          "category":"extraction",
+          "imageName":"xfdf_extract",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["extract","annotation", "annot", "xfdf"],
+          "description":"extraction",
+          "cardDescription": "The sample illustrates the annotation (XFDF) extraction capabilities. Add an annotation to start.",
+          "codeSnippetDescription": "Below is the source code to help you get started on how to perform annotation extraction. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/annotation-syncing",
+          "codeSnippet":[
+            "public void subscribeToLocalChange(ToolManager toolManager) {",
+            "	toolManager.enableAnnotManager(\"12345-67890-ABCD-EFGH\", new AnnotManager.AnnotManagerListener() {",
+            "	@Override",
+            "	public void onLocalChange(String action, String xfdfCommand) {",
+            "		// do something with xfdfCommand",
+            "	}",
+            "}"
+          ]
+        },
+        {
+          "id":"ImageExtraction",
+          "name":"Image Extraction",
+          "category":"extraction",
+          "imageName":"image_extract",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["extract","image", "content"],
+          "description":"extraction",
+          "cardDescription": "The following images are extracted from this PDF. Tap on any image to open the PNG file.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/samples/android/java/ImageExtractTest?platforms=android",
+          "codeSnippet":[
+            "    public static void ImageExtract(ElementReader reader) throws PDFNetException {",
+            "        Element element;",
+            "        while ((element = reader.next()) != null) {",
+            "            switch (element.getType()) {",
+            "                case Element.e_image:",
+            "                case Element.e_inline_image: {",
+            "                    Matrix2D ctm = element.getCTM();",
+            "                    double x2 = 1, y2 = 1;",
+            "                    ctm.multPoint(x2, y2);",
+            "                    if (element.getType() == Element.e_image) {",
+            "                        Image image = new Image(element.getXObject());",
+            "                        String fname = \"image_extract1_\" + image_counter;",
+            "                        String path = Utils.createExternalFile(fname).getAbsolutePath();",
+            "                        image.export(path);",
+            "                        String path2 = Utils.createExternalFile(fname + \".tif\").getAbsolutePath();",
+            "                        image.exportAsTiff(path2);",
+            "                        String path3 = Utils.createExternalFile(fname + \".png\").getAbsolutePath();",
+            "                        image.exportAsPng(path3);",
+            "                    }",
+            "                }",
+            "                break;",
+            "                case Element.e_form:        // Process form XObjects",
+            "                    reader.formBegin();",
+            "                    ImageExtract(reader);",
+            "                    reader.end();",
+            "                    break;",
+            "            }",
+            "        }",
+            "    }"
+          ]
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Conversion",
+      "features":[
+        {
+          "id":"HtmlToPDF",
+          "name":"HTML To PDF",
+          "category":"Conversion",
+          "imageName":"html_to_pdf",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["convert","HTML","webpage","HTML2PDF","web","HTML"],
+          "description":"converting HTML to PDF",
+          "cardDescription": "Convert a web page to a PDF document.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/html-to-pdf",
+          "codeSnippet":[
+            "public void convertFromHtml(Context context, String url, Uri folder, String outputFileName) {",
+            "	HTML2PDF.fromUrl(context, url, folder, outputFileName, new HTML2PDF.HTML2PDFListener() {",
+            "		@Override",
+            "		public void onConversionFinished(String pdfOutput, boolean isLocal) {",
+            "			// Handle callback when conversion finished",
+            "		}",
+            "",
+            "		@Override",
+            "		public void onConversionFailed(String error) {",
+            "			// Handle callback if conversion failed",
+            "		}",
+            "	});",
+            "}"
+          ]
+        },
+        {
+          "id":"PDFToImage",
+          "name":"PDF To Image",
+          "category":"Conversion",
+          "imageName":"pdf_to_image",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["convert","image", "png", "pdf"],
+          "description":"converting PDF to Image",
+          "cardDescription": "The following images are converted from each page of this PDF. Tap on any image to open the PNG file.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/samples/android/java/PDFDrawTest?platforms=android",
+          "codeSnippet":[
+            "    private ArrayList<String> pdfToImage(@NonNull PDFDoc inDoc, File outDir) throws PDFNetException {",
+            "        ArrayList<String> results = new ArrayList<>();",
+            "        PDFDraw draw = new PDFDraw();",
+            "        boolean shouldUnlock = false;",
+            "        try {",
+            "            draw.setDPI(92.0);",
+            "            inDoc.lock();",
+            "            shouldUnlock = true;",
+            "            // convert pages",
+            "            PageIterator itr = inDoc.getPageIterator();",
+            "            while (itr.hasNext()) {",
+            "                Page pg = itr.next();",
+            "                File pngFile = File.createTempFile(\"tmp\", \".png\", outDir);",
+            "                draw.export(pg, pngFile.getAbsolutePath());",
+            "                results.add(pngFile.getAbsolutePath());",
+            "            }",
+            "        } catch (Exception ex) {",
+            "            ex.printStackTrace();",
+            "        } finally {",
+            "            if (shouldUnlock) {",
+            "                inDoc.unlock();",
+            "            }",
+            "        }",
+            "        return results;",
+            "    }"
+          ]
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Creation",
+      "features":[
+        {
+          "id":"Flatten",
+          "name":"Flatten",
+          "category":"Viewer",
+          "imageName":"flatten",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["flatten","annot","form","view"],
+          "description":"flatten",
+          "cardDescription": "Flatten annotations, form fields, and links in the document.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFDoc.html#flattenAnnotationsAdvanced(com.pdftron.pdf.PDFDoc.FlattenMode[])",
+          "codeSnippet":[
+            "public void flattenPdf(PDFDoc doc) {",
+            "	ViewerUtils.flattenDoc(doc);",
+            "}"
+          ]
+        },
+        {
+          "id":"Merging",
+          "name":"File Merging",
+          "category":"Viewer",
+          "imageName":"merging",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["open","code","doc","file","pdf","merge","edit","combine"],
+          "description":"combining files",
+          "cardDescription": "Merge pages from multiple PDF documents into one PDF.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFDoc.html#importPages(com.pdftron.pdf.Page[],%20boolean)",
+          "codeSnippet":[
+            "public File merge(List<Uri> filesToMerge, File outputFolder, String outputFilename) {",
+            "  // Define the merged document and output files",
+            "  PDFDoc mergedDoc = null;",
+            "  PDFDoc inDoc = null;",
+            "  File mergedFile = null;",
+            "  ",
+            "  boolean shouldUnlockRead = false;",
+            "  try {",
+            "  // Create merged document so we can pages to it",
+            "  mergedDoc = new PDFDoc();",
+            "  mergedDoc.initSecurityHandler();",
+            "  for (Uri file : filesToMerge) {",
+            "    // Add pages from inDoc to merged doc",
+            "    inDoc = new PDFDoc(file.getPath());",
+            "    inDoc.lockRead();",
+            "    addPages(inDoc, mergedDoc);",
+            "  ",
+            "    // Close and unlock inDoc",
+            "    inDoc.unlockRead();",
+            "    shouldUnlockRead = false;",
+            "    Utils.closeQuietly(inDoc);",
+            "    inDoc = null;",
+            "  }",
+            "  // Create the output merged file",
+            "  mergedFile = new File(outputFolder, outputFilename);",
+            "  mergedDoc.save(mergedFile.getAbsolutePath(), SDFDoc.SaveMode.REMOVE_UNUSED, null);",
+            "  } catch (PDFNetException e) {",
+            "    e.printStackTrace();",
+            "  } finally {",
+            "    if (shouldUnlockRead) {",
+            "      Utils.unlockReadQuietly(inDoc);",
+            "    }",
+            "    Utils.closeQuietly(inDoc);",
+            "    Utils.closeQuietly(mergedDoc);",
+            "  }",
+            "  return mergedFile;",
+            "}",
+            "",
+            "// Add pages from one file to another",
+            "private void addPages(PDFDoc inDoc, PDFDoc mergedDoc) throws PDFNetException {",
+            "  // Grab the pages from the input doc",
+            "  Page[] copyPages = new Page[inDoc.getPageCount()];",
+            "  PageIterator iterator = inDoc.getPageIterator();",
+            "  int j = 0;",
+            "  while (iterator.hasNext()) {",
+            "    copyPages[j++] = iterator.next();",
+            "  }",
+            "  Page[] importedPages = mergedDoc.importPages(copyPages, true);",
+            "",
+            "  // Add imported pages to the output doc's page sequence",
+            "  for (Page page : importedPages) {",
+            "    mergedDoc.pagePushBack(page);",
+            "  }",
+            "}"
+          ]
+        },
+        {
+
+          "id":"PageDiffing",
+          "name":"Compare Page",
+          "category":"Viewer",
+          "imageName":"compare",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["diff", "compare"],
+          "description":"compare PDF pages",
+          "cardDescription": "Compare PDF page.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFDoc.html",
+          "codeSnippet":[
+            "PDFDoc diff(PDFDoc pdfDoc1, PDFDoc pdfDoc2,",
+            "            @ColorInt int color1, @ColorInt int color2, int blendMode) throws Exception {",
+            "    Page page1 = pdfDoc1.getPage(1);",
+            "    Page page2 = pdfDoc2.getPage(1);",
+            "",
+            "    PDFDoc outDoc = new PDFDoc();",
+            "    outDoc.diff(page1, Utils.color2ColorPt(color1), page2, Utils.color2ColorPt(color2), blendMode);",
+            "    return outDoc;",
+            "}"
+          ]
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Performance",
+      "features":[
+        {
+          "id":"Streaming",
+          "name":"Streaming",
+          "category":"Viewer",
+          "imageName":"streaming",
+          "relatedFeatures":["Complete Reader"],
+          "description":"stream, large, file",
+          "tags": ["demand","link","online","stream","url","big","large","doc","file","pdf","open","read"],
+          "cardDescription": "Streaming is able to download only the pages a user views on demand. ",
+          "link": "https://www.pdftron.com/documentation/android/guides/viewer/view-online-pdfs?searchTerm=url",
+          "codeSnippet": [
+            "PDFViewCtrl.HTTPRequestOptions httpRequestOptions = new PDFViewCtrl.HTTPRequestOptions();",
+            "httpRequestOptions.restrictDownloadUsage(true);",
+            "mPdfViewCtrl.openUrlAsync(\"http://example.com/sample.pdf\", \"cache_path\", \"password\", httpRequestOptions);"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        },
+        {
+          "id":"ComplexRendering",
+          "name":"Progressive Rendering",
+          "category":"Viewer",
+          "imageName":"complex_rendering",
+          "description":"complex, render",
+          "relatedFeatures":["Complete Reader"],
+          "codeSnippetDescription": "Below is the source code to help you get started. Select a document type to change the code. For more detail, you can visit our documentation.",
+          "tags": ["complex","complicate","elaborate","progressive","big","detail","large","doc","file","pdf","generate","open","read","render","see","view","math","music","architect","blueprint","draw","plan"],
+          "cardDescription": "Complex files may be composed of multiple image parts. Progressive rendering is able to gradually render each part at a time.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFViewCtrl.html#setProgressiveRendering(boolean,%20int,%20int)",
+          "codeSnippet": [
+            "PdfViewCtrl.setProgressiveRendering(boolean progressive, int delay_ms, int interval_ms)",
+            ""
+          ]
+        },
+        {
+          "id":"FastRendering",
+          "name":"Fast Rendering",
+          "category":"Viewer",
+          "imageName":"fast_rendering",
+          "description":"fast, render",
+          "relatedFeatures":["Complete Reader"],
+          "codeSnippetDescription": "Below is the source code to help you get started. Select a document type to change the code. For more detail, you can visit our documentation.",
+          "tags": ["complex","complicate","elaborate","progressive","big","detail","large","doc","file","pdf","generate","open","read","render","see","view","math","music","architect","blueprint","draw","plan"],
+          "cardDescription": "Fast rendering is able to refine from a low quality image to a final result using embedded thumbnails.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/PDFViewCtrl.html#setupThumbnails(boolean,%20boolean,%20boolean,%20int,%20long,%20double)",
+          "codeSnippet":[
+            "PdfViewCtrl.setupThumbnails (boolean use_embedded, boolean generate_at_runtime, boolean use_disk_cache, int thumb_max_side_length, long max_abs_cache_size, double max_perc_cache_size)",
+            ""
+          ]
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Customization",
+      "features":[
+        {
+          "id":"UiCustomization",
+          "name":"User Interface Customization",
+          "category":"Viewer",
+          "imageName":"ui",
+          "description":"custom, annotation, toolbar",
+          "relatedFeatures":["Complete Reader", "Annotation Toolbar"],
+          "tags": ["icon","ui","user","interface","custom","tailor","change","edit","modify","replace","annot","tool","doc","file","pdf","view"],
+          "cardDescription": "You can show or hide any icons in the viewer. Toggle between the icons to customize the toolbar and quick menu.",
+          "link": "https://www.pdftron.com/documentation/android/guides/annotation/disable-annot-create-edit",
+          "codeSnippet":[
+            "mToolManager.disableToolMode(new ToolMode[]{",
+            "   ToolManager.ToolMode.ARROW_CREATE,",
+            "   ToolManager.ToolMode.TEXT_HIGHLIGHT}",
+            ");"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. Toggle on the icons to customize your own tools. For more detail, you can visit our documentation."
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Accessibility",
+      "features":[
+        {
+          "id":"ViewingMode",
+          "name":"Page Coloring Mode",
+          "category":"Viewer",
+          "description":"day, night, custom",
+          "imageName":"color",
+          "tags": ["day","night","invert","custom","color","colour","change","modify","doc","file","pdf","view","mode"],
+          "relatedFeatures":["Complete Reader"],
+          "cardDescription": "Customize the color mode of the viewer. Choose a mode to preview.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/night-mode",
+          "codeSnippetDescription": "Below is the source code to help you get started. Select a color viewing mode to change the code. For more detail, you can visit our documentation.",
+          "codeSnippet": [
+            "",
+            "mPdfViewCtrl.setColorPostProcessMode(PDFRasterizer.e_postprocess_none);",
+            ""
+          ],
+          "codeSnippets": [
+            {
+              "id": "PDFRasterizer.e_postprocess_none",
+              "code": [
+                "mPdfViewCtrl.setColorPostProcessMode(PDFRasterizer.e_postprocess_none)",
+                ""
+              ]
+            },
+            {
+              "id": "PDFRasterizer.e_postprocess_night_mode",
+              "code": [
+                "mPdfViewCtrl.setColorPostProcessMode(PDFRasterizer.e_postprocess_night_mode)",
+                ""
+              ]
+            },
+            {
+              "id": "PDFRasterizer.e_postprocess_invert",
+              "code": [
+                "mPdfViewCtrl.setColorPostProcessMode(PDFRasterizer.e_postprocess_invert)",
+                ""
+              ]
+            },
+            {
+              "id": "PDFRasterizer.e_postprocess_gradient_map",
+              "code": [
+                "mPdfViewCtrl.setColorPostProcessMode(PDFRasterizer.e_postprocess_gradient_map)",
+                ""
+              ]
+            }]
+        },
+        {
+          "id":"Reflow",
+          "name":"Reading Mode",
+          "category":"Viewer",
+          "imageName":"reflow",
+          "description":"read, mode",
+          "tags": ["read","reflow","mode","doc","file","pdf","view"],
+          "relatedFeatures":["Complete Reader", "Zoom/Display Modes"],
+          "cardDescription": "Enable Reading Mode (Reflow) to help readers focus on plain text.",
+          "link": "https://www.pdftron.com/documentation/android/guides/basics/reflow",
+          "codeSnippet": [
+            "ReflowControl reflowControl = (ReflowControl) findViewById(R.id.reflow_pager);",
+            "reflowControl.setup(pdfDoc);"
+          ],
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation."
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Security",
+      "features":[
+        {
+          "id":"PasswordProtectedDocument",
+          "name":"Password-Protected Document",
+          "category":"Viewer",
+          "imageName":"password",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["access","decrypt","drm","digital","rights","manage","encrypt","extract","restrict","open","secur","set","censor","protect","code","key","password","pin","doc","file","pdf","embed","view"],
+          "description":"encryption",
+          "cardDescription": "Encrypt documents to restrict access. Enter the password <b>123</b> to open the document.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/samples/android/java/EncTest?platforms=android",
+          "codeSnippet":[
+            "// In order to open saved PDF you will need a user password 'test'.",
+            "SecurityHandler new_handler = new SecurityHandler();",
+            "",
+            "// Set a new password required to open a document",
+            "String user_password = \"test\";",
+            "new_handler.changeUserPassword(user_password);",
+            "",
+            "// Set Permissions",
+            "new_handler.setPermission(SecurityHandler.e_print, true);",
+            "new_handler.setPermission(SecurityHandler.e_extract_content, false);",
+            "",
+            "// Note: document takes the ownership of new_handler.",
+            "doc.setSecurityHandler(new_handler);",
+            "",
+            "// Save the changes.",
+            "doc.save((Utils.createExternalFile(\"secured.pdf\").getAbsolutePath()), SDFDoc.SaveMode.NO_FLAGS, null);"
+          ]
+        }
+      ],
+      "type":""
+    },
+    {
+      "name":"Advanced",
+      "features":[
+        {
+          "id":"Optimizer",
+          "name":"Optimizer",
+          "category":"Advanced",
+          "imageName":"optimize",
+          "relatedFeatures":["Complete Reader", "Flatten"],
+          "tags": ["optimize","shrink","compress", "size", "reduce"],
+          "description":"optimize",
+          "cardDescription": "Reduce a document's file size by creating an optimized copy of the document.",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/api/android/pdfnet/javadoc/reference/com/pdftron/pdf/Optimizer.html",
+          "codeSnippet":[
+            "// Simple optimization sample",
+            "public void optimizePdf(String filePath, String outputPath) throws PDFNetException {",
+            "	PDFDoc doc = new PDFDoc(filePath);",
+            "	doc.initSecurityHandler();",
+            "	Optimizer.optimize(doc);",
+            "	doc.save(outputPath, SDFDoc.SaveMode.LINEARIZED, null);",
+            "	doc.close();",
+            "}"
+          ]
+        },
+        {
+          "id":"PDFLayer",
+          "name":"PDF Layer Separation",
+          "category":"Advanced",
+          "imageName":"pdf_layer",
+          "relatedFeatures":["Complete Reader"],
+          "tags": ["layer","separation","ocg"],
+          "description":"pdf layer",
+          "cardDescription": "A demo of the PDF layer separation capabilities (Optional Content Groups).",
+          "codeSnippetDescription": "Below is the source code to help you get started. For more detail, you can visit our documentation.",
+          "link": "https://www.pdftron.com/documentation/samples/android/java/PDFLayersTest?platforms=android",
+          "codeSnippet":[
+            "public void getLayers(PdfLayerViewModel pdfLayerViewModel, PDFViewCtrl pdfViewCtrl, PDFDoc pdfDoc) throws PDFNetException {",
+            "    boolean shouldUnlockRead = false;",
+            "    try {",
+            "        pdfViewCtrl.docLockRead();",
+            "        shouldUnlockRead = true;",
+            "        ArrayList<PdfLayerViewModel.LayerInfo> layers = pdfLayerViewModel.getLayers(pdfViewCtrl, pdfDoc);",
+            "        // do something with layers",
+            "    } catch (Exception e) {",
+            "        e.printStackTrace();",
+            "    } finally {",
+            "        if (shouldUnlockRead) {",
+            "            pdfViewCtrl.docUnlockRead();",
+            "        }",
+            "    }",
+            "}",
+            "",
+            "public void setLayer(PdfLayerViewModel pdfLayerViewModel, Group group, boolean checked, PDFViewCtrl pdfViewCtrl) throws PDFNetException {",
+            "    pdfLayerViewModel.setLayerCheckedChange(pdfViewCtrl, group, checked);",
+            "}"
+          ]
+        }
+      ],
+      "type":""
+    }
+  ]
+}

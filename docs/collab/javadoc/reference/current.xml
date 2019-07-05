@@ -1,0 +1,7608 @@
+<api>
+<package name="com.pdftron.collab"
+>
+<class name="DataRepository"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="addDocumentUnread"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="addDocumentUnreadImpl"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="close"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAnnotations"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+</method>
+<method name="getDocument"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInstance"
+ return="com.pdftron.collab.DataRepository"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="application" type="android.app.Application">
+</parameter>
+</method>
+<method name="getLastAnnotations"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getReplies"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotationId" type="java.lang.String">
+</parameter>
+</method>
+<method name="getUser"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removeDocumentUnread"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="removeDocumentUnreadImpl"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="sendAnnotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="java.lang.String">
+</parameter>
+<parameter name="xfdfJSON" type="java.lang.String">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</method>
+<method name="setCustomService"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="connection" type="com.pdftron.collab.service.CustomService">
+</parameter>
+</method>
+<method name="updateActiveAnnotation"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="userId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="updateActiveAnnotationImpl"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="userId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="updateAnnotationUnreads"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="updateAnnotationUnreadsImpl"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.db"
+>
+<class name="CollabDatabase"
+ extends="RoomDatabase"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CollabDatabase"
+ type="com.pdftron.collab.db.CollabDatabase"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="annotationDao"
+ return="com.pdftron.collab.db.dao.AnnotationDao"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="documentDao"
+ return="com.pdftron.collab.db.dao.DocumentDao"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDatabaseCreated"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInstance"
+ return="com.pdftron.collab.db.CollabDatabase"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="lastAnnotationDao"
+ return="com.pdftron.collab.db.dao.LastAnnotationDao"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="replyDao"
+ return="com.pdftron.collab.db.dao.ReplyDao"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="userDao"
+ return="com.pdftron.collab.db.dao.UserDao"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="DATABASE_NAME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;pdftron-collab.db&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.pdftron.collab.db.converter"
+>
+<class name="DateConverter"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="DateConverter"
+ type="com.pdftron.collab.db.converter.DateConverter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="toDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="timestamp" type="java.lang.Long">
+</parameter>
+</method>
+<method name="toTimestamp"
+ return="java.lang.Long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="date" type="java.util.Date">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.db.dao"
+>
+<interface name="AnnotationDao"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="delete"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="deleteAll"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAnnotationSync"
+ return="com.pdftron.collab.db.entity.AnnotationEntity"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAnnotations"
+ return="&lt;any&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAnnotationsSync"
+ return="java.util.List&lt;com.pdftron.collab.db.entity.AnnotationEntity&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+</method>
+<method name="insert"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotationEntity" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+<method name="insertAnnotations"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotationEntities" type="java.util.List&lt;com.pdftron.collab.db.entity.AnnotationEntity&gt;">
+</parameter>
+</method>
+<method name="resetUnreadCount"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="update"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="xfdf" type="java.lang.String">
+</parameter>
+<parameter name="action" type="java.lang.String">
+</parameter>
+<parameter name="contents" type="java.lang.String">
+</parameter>
+<parameter name="yPos" type="double">
+</parameter>
+<parameter name="color" type="int">
+</parameter>
+<parameter name="opacity" type="float">
+</parameter>
+<parameter name="date" type="java.util.Date">
+</parameter>
+</method>
+<method name="updateReply"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="replyAuthor" type="java.lang.String">
+</parameter>
+<parameter name="replyContents" type="java.lang.String">
+</parameter>
+<parameter name="replyDate" type="java.util.Date">
+</parameter>
+</method>
+<method name="updateUnreads"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="unreads" type="java.lang.String">
+</parameter>
+<parameter name="count" type="int">
+</parameter>
+</method>
+</interface>
+<interface name="DocumentDao"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="deleteAll"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDocument"
+ return="&lt;any&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDocumentSync"
+ return="com.pdftron.collab.db.entity.DocumentEntity"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="getDocumentsSync"
+ return="java.util.List&lt;com.pdftron.collab.db.entity.DocumentEntity&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="insert"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="documentEntity" type="com.pdftron.collab.db.entity.DocumentEntity">
+</parameter>
+</method>
+<method name="updateUnreads"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="unreads" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<interface name="LastAnnotationDao"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="deleteAll"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastAnnotations"
+ return="&lt;any&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastAnnotationsSync"
+ return="java.util.List&lt;com.pdftron.collab.db.entity.LastAnnotationEntity&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="insert"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="lastAnnotationEntity" type="com.pdftron.collab.db.entity.LastAnnotationEntity">
+</parameter>
+</method>
+</interface>
+<interface name="ReplyDao"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="delete"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="deleteAll"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplySync"
+ return="com.pdftron.collab.db.entity.ReplyEntity"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="getReplies"
+ return="&lt;any&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="getReplySync"
+ return="com.pdftron.collab.db.entity.ReplyEntity"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="getSortedRepliesSync"
+ return="java.util.List&lt;com.pdftron.collab.db.entity.ReplyEntity&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="insert"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replyEntity" type="com.pdftron.collab.db.entity.ReplyEntity">
+</parameter>
+</method>
+<method name="insertReplies"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replyEntities" type="java.util.List&lt;com.pdftron.collab.db.entity.ReplyEntity&gt;">
+</parameter>
+</method>
+<method name="update"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="contents" type="java.lang.String">
+</parameter>
+<parameter name="page" type="int">
+</parameter>
+<parameter name="date" type="java.util.Date">
+</parameter>
+</method>
+</interface>
+<interface name="UserDao"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="deleteAll"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUser"
+ return="&lt;any&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUserSync"
+ return="com.pdftron.collab.db.entity.UserEntity"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="insert"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="userEntity" type="com.pdftron.collab.db.entity.UserEntity">
+</parameter>
+</method>
+<method name="update"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="activeAnnotation" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.pdftron.collab.db.entity"
+>
+<class name="AnnotationEntity"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.model.Annotation">
+</implements>
+<constructor name="AnnotationEntity"
+ type="com.pdftron.collab.db.entity.AnnotationEntity"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getAt"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAuthorId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAuthorName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContents"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCreationDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDocumentId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInReplyTo"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyAuthor"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyContents"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOpacity"
+ return="float"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPage"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParent"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getType"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreadCount"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreads"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getXfdf"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getYPos"
+ return="double"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAt"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="at" type="java.lang.String">
+</parameter>
+</method>
+<method name="setAuthorId"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="authorId" type="java.lang.String">
+</parameter>
+</method>
+<method name="setAuthorName"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="authorName" type="java.lang.String">
+</parameter>
+</method>
+<method name="setColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="color" type="int">
+</parameter>
+</method>
+<method name="setContents"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="contents" type="java.lang.String">
+</parameter>
+</method>
+<method name="setCreationDate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="creationDate" type="java.util.Date">
+</parameter>
+</method>
+<method name="setDate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="date" type="java.util.Date">
+</parameter>
+</method>
+<method name="setDocumentId"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+</method>
+<method name="setId"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="setInReplyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inReplyTo" type="java.lang.String">
+</parameter>
+</method>
+<method name="setLastReplyAuthor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="lastReplyAuthor" type="java.lang.String">
+</parameter>
+</method>
+<method name="setLastReplyContents"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="lastReplyContents" type="java.lang.String">
+</parameter>
+</method>
+<method name="setLastReplyDate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="lastReplyDate" type="java.util.Date">
+</parameter>
+</method>
+<method name="setOpacity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="opacity" type="float">
+</parameter>
+</method>
+<method name="setPage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="page" type="int">
+</parameter>
+</method>
+<method name="setParent"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="java.lang.String">
+</parameter>
+</method>
+<method name="setType"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="int">
+</parameter>
+</method>
+<method name="setUnreadCount"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="unreadCount" type="int">
+</parameter>
+</method>
+<method name="setUnreads"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="unreads" type="java.lang.String">
+</parameter>
+</method>
+<method name="setXfdf"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="xfdf" type="java.lang.String">
+</parameter>
+</method>
+<method name="setYPos"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="yPos" type="double">
+</parameter>
+</method>
+</class>
+<class name="DocumentEntity"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.model.Document">
+</implements>
+<constructor name="DocumentEntity"
+ type="com.pdftron.collab.db.entity.DocumentEntity"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="shareId" type="java.lang.String">
+</parameter>
+<parameter name="date" type="java.lang.Long">
+</parameter>
+<parameter name="unreads" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getDate"
+ return="java.lang.Long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getShareId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreads"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LastAnnotationEntity"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.model.LastAnnotation">
+</implements>
+<constructor name="LastAnnotationEntity"
+ type="com.pdftron.collab.db.entity.LastAnnotationEntity"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="xfdf" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getXfdf"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ReplyEntity"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.model.Reply">
+</implements>
+<constructor name="ReplyEntity"
+ type="com.pdftron.collab.db.entity.ReplyEntity"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getAuthorId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAuthorName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContents"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCreationDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInReplyTo"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPage"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAuthorId"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="authorId" type="java.lang.String">
+</parameter>
+</method>
+<method name="setAuthorName"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="authorName" type="java.lang.String">
+</parameter>
+</method>
+<method name="setContents"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="contents" type="java.lang.String">
+</parameter>
+</method>
+<method name="setCreationDate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="creationDate" type="java.util.Date">
+</parameter>
+</method>
+<method name="setDate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="date" type="java.util.Date">
+</parameter>
+</method>
+<method name="setId"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="setInReplyTo"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inReplyTo" type="java.lang.String">
+</parameter>
+</method>
+<method name="setPage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="page" type="int">
+</parameter>
+</method>
+</class>
+<class name="UserEntity"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.model.User">
+</implements>
+<constructor name="UserEntity"
+ type="com.pdftron.collab.db.entity.UserEntity"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="date" type="java.lang.Long">
+</parameter>
+<parameter name="activeAnnotation" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getActiveAnnotation"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDate"
+ return="java.lang.Long"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.model"
+>
+<interface name="Annotation"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getAt"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAuthorId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAuthorName"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getColor"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContents"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCreationDate"
+ return="java.util.Date"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDate"
+ return="java.util.Date"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDocumentId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInReplyTo"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyAuthor"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyContents"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyDate"
+ return="java.util.Date"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOpacity"
+ return="float"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPage"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParent"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getType"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreadCount"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreads"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getXfdf"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getYPos"
+ return="double"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="Document"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getDate"
+ return="java.lang.Long"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getShareId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreads"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="LastAnnotation"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getXfdf"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="Reply"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getAuthorId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAuthorName"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContents"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCreationDate"
+ return="java.util.Date"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDate"
+ return="java.util.Date"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getInReplyTo"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPage"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="User"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getActiveAnnotation"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDate"
+ return="java.lang.Long"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getId"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getName"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+</package>
+<package name="com.pdftron.collab.service"
+>
+<interface name="CustomService"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="addAnnotation"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotation" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+<method name="addAnnotations"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotations" type="java.util.HashMap&lt;java.lang.String, com.pdftron.collab.db.entity.AnnotationEntity&gt;">
+</parameter>
+</method>
+<method name="addDocument"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+</method>
+<method name="addDocument"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="entity" type="com.pdftron.collab.db.entity.DocumentEntity">
+</parameter>
+</method>
+<method name="addUser"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="userId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</method>
+<method name="cleanup"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+</method>
+<method name="deleteAnnotation"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="modifyAnnotation"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotation" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+<method name="sendAnnotation"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="java.lang.String">
+</parameter>
+<parameter name="annotations" type="java.util.ArrayList&lt;com.pdftron.collab.db.entity.AnnotationEntity&gt;">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class name="CustomServiceUtils"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CustomServiceUtils"
+ type="com.pdftron.collab.service.CustomServiceUtils"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="addAnnotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotation" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+<method name="addAnnotations"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotations" type="java.util.HashMap&lt;java.lang.String, com.pdftron.collab.db.entity.AnnotationEntity&gt;">
+</parameter>
+</method>
+<method name="addDocument"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+</method>
+<method name="addDocument"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="entity" type="com.pdftron.collab.db.entity.DocumentEntity">
+</parameter>
+</method>
+<method name="addUser"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="userId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</method>
+<method name="cleanup"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+</method>
+<method name="deleteAnnotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="modifyAnnotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="db" type="com.pdftron.collab.db.CollabDatabase">
+</parameter>
+<parameter name="annotation" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.annotlist"
+>
+<class name="CollabAnnotationListFragment"
+ extends="AnnotationDialogFragment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CollabAnnotationListFragment"
+ type="com.pdftron.collab.ui.annotlist.CollabAnnotationListFragment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getSortOrder"
+ return="BaseAnnotationSortOrder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="args" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="getSorter"
+ return="BaseAnnotationListSorter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="newBundle"
+ return="android.os.Bundle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+</method>
+<method name="newBundle"
+ return="android.os.Bundle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+<parameter name="isReadOnly" type="boolean">
+</parameter>
+<parameter name="isRtl" type="boolean">
+</parameter>
+<parameter name="annotationListSortOrder" type="com.pdftron.collab.ui.annotlist.CollabAnnotationListSortOrder">
+</parameter>
+</method>
+<method name="newInstance"
+ return="com.pdftron.collab.ui.annotlist.CollabAnnotationListFragment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onCreate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onCreateOptionsMenu"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menu" type="android.view.Menu">
+</parameter>
+<parameter name="inflater" type="android.view.MenuInflater">
+</parameter>
+</method>
+<method name="onCreateView"
+ return="android.view.View"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inflater" type="android.view.LayoutInflater">
+</parameter>
+<parameter name="container" type="android.view.ViewGroup">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onDestroyView"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onOptionsItemSelected"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="android.view.MenuItem">
+</parameter>
+</method>
+<method name="onViewCreated"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="view" type="android.view.View">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+</class>
+<class name="CollabAnnotationListSortOrder"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getType"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getValue"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="com.pdftron.collab.ui.annotlist.CollabAnnotationListSortOrder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.pdftron.collab.ui.annotlist.CollabAnnotationListSortOrder[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="value"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="CollabAnnotationListSorter"
+ extends="<any>"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CollabAnnotationListSorter"
+ type="com.pdftron.collab.ui.annotlist.CollabAnnotationListSorter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sortOrder" type="BaseAnnotationSortOrder">
+</parameter>
+</constructor>
+<method name="getAnnotationList"
+ return="com.pdftron.collab.ui.annotlist.model.list.AnnotationList"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="mPdfViewCtrl" type="PDFViewCtrl">
+</parameter>
+<parameter name="list" type="java.util.List&lt;com.pdftron.collab.db.entity.AnnotationEntity&gt;">
+</parameter>
+</method>
+<method name="getComparator"
+ return="java.util.Comparator&lt;com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListContent&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="TAG"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="CollabAnnotationListSorter.Factory"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Factory"
+ type="com.pdftron.collab.ui.annotlist.CollabAnnotationListSorter.Factory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="sortOrder" type="BaseAnnotationSortOrder">
+</parameter>
+</constructor>
+<method name="create"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="modelClass" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.annotlist.component"
+>
+<class name="AnnotationListUIComponent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIComponent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AnnotationListUIComponent"
+ type="com.pdftron.collab.ui.annotlist.component.AnnotationListUIComponent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+<parameter name="lifecycleOwner" type="LifecycleOwner">
+</parameter>
+<parameter name="uiViewModel" type="com.pdftron.collab.ui.annotlist.component.AnnotationListViewModel">
+</parameter>
+<parameter name="annotViewModel" type="com.pdftron.collab.viewmodel.AnnotationViewModel">
+</parameter>
+<parameter name="mPdfViewCtrl" type="PDFViewCtrl">
+</parameter>
+<parameter name="sorter" type="com.pdftron.collab.ui.annotlist.CollabAnnotationListSorter">
+</parameter>
+</constructor>
+<method name="inflateUIView"
+ return="com.pdftron.collab.ui.annotlist.component.view.AnnotationListUIView"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</method>
+<field name="TAG"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="AnnotationListViewModel"
+ extends="ViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AnnotationListViewModel"
+ type="com.pdftron.collab.ui.annotlist.component.AnnotationListViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getAnnotationListObservable"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setAnnotationList"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotItems" type="com.pdftron.collab.ui.annotlist.model.list.AnnotationList">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.annotlist.component.view"
+>
+<class name="AnnotationListEvent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIEvent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="AnnotationListEvent.Type"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.pdftron.collab.ui.annotlist.component.view.AnnotationListEvent.Type"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.pdftron.collab.ui.annotlist.component.view.AnnotationListEvent.Type[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AnnotationListUIView"
+ extends="com.pdftron.collab.ui.base.component.BaseUIView"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AnnotationListUIView"
+ type="com.pdftron.collab.ui.annotlist.component.view.AnnotationListUIView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</constructor>
+<method name="setAnnotList"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotList" type="com.pdftron.collab.ui.annotlist.model.list.AnnotationList">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.annotlist.model.list"
+>
+<class name="AnnotationList"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AnnotationList"
+ type="com.pdftron.collab.ui.annotlist.model.list.AnnotationList"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="get"
+ return="com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListItem"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="position" type="int">
+</parameter>
+</method>
+<method name="size"
+ return="int"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.annotlist.model.list.item"
+>
+<class name="AnnotationListContent"
+ extends="AnnotationDialogFragment.AnnotationInfo"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListItem">
+</implements>
+<constructor name="AnnotationListContent"
+ type="com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListContent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="int">
+</parameter>
+<parameter name="pageNum" type="int">
+</parameter>
+<parameter name="content" type="java.lang.String">
+</parameter>
+<parameter name="author" type="java.lang.String">
+</parameter>
+<parameter name="creationDate" type="java.util.Date">
+</parameter>
+<parameter name="annotation" type="Annot">
+</parameter>
+<parameter name="y2" type="double">
+</parameter>
+<parameter name="lastReplyComment" type="java.lang.String">
+</parameter>
+<parameter name="lastReplyDate" type="java.util.Date">
+</parameter>
+<parameter name="lastReplyAuthor" type="java.lang.String">
+</parameter>
+<parameter name="color" type="int">
+</parameter>
+<parameter name="opacity" type="float">
+</parameter>
+<parameter name="unreadCount" type="int">
+</parameter>
+</constructor>
+<method name="getColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCreationDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyAuthor"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyComment"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastReplyDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getOpacity"
+ return="float"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreadCount"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isHeader"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="AnnotationListHeader"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListItem">
+</implements>
+<constructor name="AnnotationListHeader"
+ type="com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListHeader"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="headerKey" type="T">
+</parameter>
+</constructor>
+<method name="getHeaderKey"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHeaderString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isHeader"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="mHeaderKey"
+ type="T"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="AnnotationListHeader.HeaderData"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getHeaderTitle"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="AnnotationListItem"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="isHeader"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="LAYOUT_CONTENT"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="1"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="LAYOUT_HEADER"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="0"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</interface>
+<class name="DayDate"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListHeader.HeaderData">
+</implements>
+<implements name="java.lang.Comparable">
+</implements>
+<constructor name="DayDate"
+ type="com.pdftron.collab.ui.annotlist.model.list.item.DayDate"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="date" type="java.util.Date">
+</parameter>
+<parameter name="dateFormat" type="com.pdftron.collab.utils.date.AnnotationListDateFormat">
+</parameter>
+</constructor>
+<method name="compareTo"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="that" type="com.pdftron.collab.ui.annotlist.model.list.item.DayDate">
+</parameter>
+</method>
+<method name="getHeaderTitle"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="PageNumber"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.ui.annotlist.model.list.item.AnnotationListHeader.HeaderData">
+</implements>
+<implements name="java.lang.Comparable">
+</implements>
+<constructor name="PageNumber"
+ type="com.pdftron.collab.ui.annotlist.model.list.item.PageNumber"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="page" type="int">
+</parameter>
+<parameter name="format" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="compareTo"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="that" type="com.pdftron.collab.ui.annotlist.model.list.item.PageNumber">
+</parameter>
+</method>
+<method name="getHeaderTitle"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.base.component"
+>
+<class name="BaseUIComponent"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BaseUIComponent"
+ type="com.pdftron.collab.ui.base.component.BaseUIComponent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+<parameter name="lifecycleOwner" type="LifecycleOwner">
+</parameter>
+<parameter name="model" type="VM">
+</parameter>
+<parameter name="observable" type="&lt;any&gt;">
+</parameter>
+</constructor>
+<method name="getObservable"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="inflateUIView"
+ return="V"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</method>
+<field name="mDisposables"
+ type="CompositeDisposable"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mSubject"
+ type="&lt;any&gt;"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mView"
+ type="V"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="BaseUIEvent"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BaseUIEvent"
+ type="com.pdftron.collab.ui.base.component.BaseUIEvent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventType" type="T">
+</parameter>
+<parameter name="data" type="D">
+</parameter>
+</constructor>
+<method name="getData"
+ return="D"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getEventType"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="BaseUIView"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BaseUIView"
+ type="com.pdftron.collab.ui.base.component.BaseUIView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</constructor>
+<field name="mEventObservable"
+ type="&lt;any&gt;"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mParent"
+ type="android.view.ViewGroup"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.reply.bottomsheet"
+>
+<class name="BottomSheetReplyFragment"
+ extends="DialogFragment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BottomSheetReplyFragment"
+ type="com.pdftron.collab.ui.reply.bottomsheet.BottomSheetReplyFragment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="onCreate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onCreateDialog"
+ return="android.app.Dialog"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onCreateView"
+ return="android.view.View"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inflater" type="android.view.LayoutInflater">
+</parameter>
+<parameter name="container" type="android.view.ViewGroup">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onDestroyView"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onViewCreated"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="view" type="android.view.View">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<field name="TAG"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="BottomSheetReplyFragmentBuilder"
+ extends="<any>"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="build"
+ return="com.pdftron.collab.ui.reply.bottomsheet.BottomSheetReplyFragment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="checkArgs"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="createBundle"
+ return="android.os.Bundle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dest" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="CREATOR"
+ type="&lt;any&gt;"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="ReplyFragment"
+ extends="Fragment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyFragment"
+ type="com.pdftron.collab.ui.reply.bottomsheet.ReplyFragment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getReplyMessageAdapter"
+ return="com.pdftron.collab.ui.reply.component.messages.BaseMessagesUIView.BaseMessagesAdapter"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="messageEventSubject" type="&lt;any&gt;">
+</parameter>
+</method>
+<method name="onCreate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onCreateView"
+ return="android.view.View"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inflater" type="android.view.LayoutInflater">
+</parameter>
+<parameter name="container" type="android.view.ViewGroup">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onDestroyView"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onStop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onViewCreated"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="view" type="android.view.View">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<field name="BUNDLE_ANNOTATION_ID_KEY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;ReplyFragment_Annotation_id&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="BUNDLE_AVATAR_ADAPTER_KEY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;ReplyFragment_avatar_adapter_id&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="BUNDLE_DOCUMENT_ID_KEY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;ReplyFragment_Document_id&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="BUNDLE_THEME_ID_KEY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;ReplyFragment_theme_id&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="BUNDLE_USER_ID_KEY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;ReplyFragment_User_id&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="TAG"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="ReplyFragmentBuilder"
+ extends="<any>"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="asBottomSheet"
+ return="com.pdftron.collab.ui.reply.bottomsheet.BottomSheetReplyFragmentBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="build"
+ return="com.pdftron.collab.ui.reply.bottomsheet.ReplyFragment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="checkArgs"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="createBundle"
+ return="android.os.Bundle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="usingAdapter"
+ return="com.pdftron.collab.ui.reply.bottomsheet.ReplyFragmentBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="adapter" type="com.pdftron.collab.ui.reply.bottomsheet.view.AvatarAdapter">
+</parameter>
+</method>
+<method name="usingTheme"
+ return="com.pdftron.collab.ui.reply.bottomsheet.ReplyFragmentBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replyTheme" type="int">
+</parameter>
+</method>
+<method name="withAnnot"
+ return="com.pdftron.collab.ui.reply.bottomsheet.ReplyFragmentBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+<parameter name="userId" type="java.lang.String">
+</parameter>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dest" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="CREATOR"
+ type="&lt;any&gt;"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.reply.bottomsheet.view"
+>
+<interface name="AvatarAdapter"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="android.os.Parcelable">
+</implements>
+<method name="onBindAvatar"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="avatarContainer" type="android.widget.FrameLayout">
+</parameter>
+<parameter name="replyMessage" type="com.pdftron.collab.ui.reply.model.ReplyMessage">
+</parameter>
+</method>
+<method name="onInflateAvatar"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="avatarContainer" type="android.widget.FrameLayout">
+</parameter>
+</method>
+</interface>
+<class name="InitialsAvatarAdapter"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.ui.reply.bottomsheet.view.AvatarAdapter">
+</implements>
+<constructor name="InitialsAvatarAdapter"
+ type="com.pdftron.collab.ui.reply.bottomsheet.view.InitialsAvatarAdapter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onBindAvatar"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="avatarContainer" type="android.widget.FrameLayout">
+</parameter>
+<parameter name="replyMessage" type="com.pdftron.collab.ui.reply.model.ReplyMessage">
+</parameter>
+</method>
+<method name="onInflateAvatar"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="avatarContainer" type="android.widget.FrameLayout">
+</parameter>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dest" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="CREATOR"
+ type="android.os.Parcelable.Creator"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.reply.component"
+>
+<class name="ReplyEntityMapper"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyEntityMapper"
+ type="com.pdftron.collab.ui.reply.component.ReplyEntityMapper"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="fromEntities"
+ return="java.util.List&lt;com.pdftron.collab.ui.reply.model.ReplyMessage&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replyEntities" type="java.util.List&lt;com.pdftron.collab.db.entity.ReplyEntity&gt;">
+</parameter>
+<parameter name="currentUser" type="com.pdftron.collab.ui.reply.model.User">
+</parameter>
+</method>
+<method name="getInitials"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="str" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="ReplyHeaderUIComponent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIComponent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyHeaderUIComponent"
+ type="com.pdftron.collab.ui.reply.component.ReplyHeaderUIComponent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+<parameter name="lifecycleOwner" type="LifecycleOwner">
+</parameter>
+<parameter name="model" type="com.pdftron.collab.ui.reply.component.ReplyUIViewModel">
+</parameter>
+<parameter name="headerObservable" type="&lt;any&gt;">
+</parameter>
+</constructor>
+<method name="inflateUIView"
+ return="com.pdftron.collab.ui.reply.component.header.BaseHeaderUIView"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</method>
+</class>
+<class name="ReplyInputUIComponent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIComponent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyInputUIComponent"
+ type="com.pdftron.collab.ui.reply.component.ReplyInputUIComponent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+<parameter name="lifecycleOwner" type="LifecycleOwner">
+</parameter>
+<parameter name="model" type="com.pdftron.collab.ui.reply.component.ReplyUIViewModel">
+</parameter>
+<parameter name="observable" type="&lt;any&gt;">
+</parameter>
+</constructor>
+<method name="inflateUIView"
+ return="com.pdftron.collab.ui.reply.component.input.BaseTextInputUIView"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</method>
+</class>
+<class name="ReplyMessagesUIComponent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIComponent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyMessagesUIComponent"
+ type="com.pdftron.collab.ui.reply.component.ReplyMessagesUIComponent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+<parameter name="lifecycleOwner" type="LifecycleOwner">
+</parameter>
+<parameter name="model" type="com.pdftron.collab.ui.reply.component.ReplyUIViewModel">
+</parameter>
+<parameter name="observable" type="&lt;any&gt;">
+</parameter>
+<parameter name="adapter" type="com.pdftron.collab.ui.reply.component.messages.BaseMessagesUIView.BaseMessagesAdapter">
+</parameter>
+</constructor>
+<method name="inflateUIView"
+ return="com.pdftron.collab.ui.reply.component.messages.BaseMessagesUIView"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</method>
+</class>
+<class name="ReplyUIViewModel"
+ extends="ViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyUIViewModel"
+ type="com.pdftron.collab.ui.reply.component.ReplyUIViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getEditMessageLiveData"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHeaderLiveData"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHeaderObservable"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMessagesLiveData"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getMessagesObservable"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPage"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUser"
+ return="com.pdftron.collab.ui.reply.model.User"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getWriteMessageLiveData"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getWriteMessageObservable"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="set"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replyHeader" type="com.pdftron.collab.ui.reply.model.ReplyHeader">
+</parameter>
+<parameter name="replyMessages" type="com.pdftron.collab.ui.reply.model.ReplyMessages">
+</parameter>
+<parameter name="user" type="com.pdftron.collab.ui.reply.model.User">
+</parameter>
+<parameter name="page" type="int">
+</parameter>
+</method>
+<method name="setHasUnreadReplies"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="hasUnreadReplies" type="boolean">
+</parameter>
+</method>
+<method name="setMessages"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newMessages" type="java.util.List&lt;com.pdftron.collab.ui.reply.model.ReplyMessage&gt;">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.reply.component.header"
+>
+<class name="BaseHeaderUIView"
+ extends="com.pdftron.collab.ui.base.component.BaseUIView"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BaseHeaderUIView"
+ type="com.pdftron.collab.ui.reply.component.header.BaseHeaderUIView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</constructor>
+<method name="hidePreviewHeader"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onCloseClicked"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="data" type="com.pdftron.collab.ui.reply.model.ReplyHeader">
+</parameter>
+</method>
+<method name="onListClicked"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="com.pdftron.collab.ui.reply.model.ReplyHeader">
+</parameter>
+</method>
+<method name="setAnnotationPreviewIcon"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="icon" type="int">
+</parameter>
+<parameter name="color" type="int">
+</parameter>
+<parameter name="opacity" type="float">
+</parameter>
+</method>
+<method name="setAnnotationPreviewText"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="content" type="java.lang.String">
+</parameter>
+</method>
+<method name="setHeaderTitle"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="title" type="java.lang.String">
+</parameter>
+</method>
+<method name="setNotificationIcon"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="hasUnreadReplies" type="boolean">
+</parameter>
+</method>
+<method name="showPreviewHeader"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="HeaderEvent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIEvent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="HeaderEvent.Type"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.pdftron.collab.ui.reply.component.header.HeaderEvent.Type"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.pdftron.collab.ui.reply.component.header.HeaderEvent.Type[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.reply.component.input"
+>
+<class name="BaseTextInputUIView"
+ extends="com.pdftron.collab.ui.base.component.BaseUIView"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BaseTextInputUIView"
+ type="com.pdftron.collab.ui.reply.component.input.BaseTextInputUIView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</constructor>
+<method name="clearInput"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="closeMessageEditView"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onMessageEditChanged"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="java.lang.String">
+</parameter>
+</method>
+<method name="onMessageEditFinished"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="newMessage" type="java.lang.String">
+</parameter>
+</method>
+<method name="onMessageWriteChanged"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="java.lang.String">
+</parameter>
+</method>
+<method name="onMessageWriteFinished"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="java.lang.String">
+</parameter>
+</method>
+<method name="onMessagedEditCancelled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="showMessageEditView"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="content" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="InputEvent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIEvent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="InputEvent.Type"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.pdftron.collab.ui.reply.component.input.InputEvent.Type"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.pdftron.collab.ui.reply.component.input.InputEvent.Type[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.reply.component.messages"
+>
+<class name="BaseMessagesUIView"
+ extends="com.pdftron.collab.ui.base.component.BaseUIView"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BaseMessagesUIView"
+ type="com.pdftron.collab.ui.reply.component.messages.BaseMessagesUIView"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="android.view.ViewGroup">
+</parameter>
+</constructor>
+<method name="setMessages"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replyMessages" type="com.pdftron.collab.ui.reply.model.ReplyMessages">
+</parameter>
+</method>
+<method name="setMessagesAdapter"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="adapter" type="com.pdftron.collab.ui.reply.component.messages.BaseMessagesUIView.BaseMessagesAdapter">
+</parameter>
+</method>
+<field name="mBaseMessageAdapter"
+ type="com.pdftron.collab.ui.reply.component.messages.BaseMessagesUIView.BaseMessagesAdapter"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="BaseMessagesUIView.BaseMessagesAdapter"
+ extends="<any>"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BaseMessagesAdapter"
+ type="com.pdftron.collab.ui.reply.component.messages.BaseMessagesUIView.BaseMessagesAdapter"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="eventObservable" type="&lt;any&gt;">
+</parameter>
+</constructor>
+<method name="onMessageDeleteClicked"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="data" type="com.pdftron.collab.ui.reply.model.ReplyMessage">
+</parameter>
+</method>
+<method name="onMessageEditClicked"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="data" type="com.pdftron.collab.ui.reply.model.ReplyMessage">
+</parameter>
+</method>
+<method name="setMessages"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="messages" type="java.util.List&lt;com.pdftron.collab.ui.reply.model.ReplyMessage&gt;">
+</parameter>
+</method>
+</class>
+<class name="MessageEvent"
+ extends="com.pdftron.collab.ui.base.component.BaseUIEvent"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="MessageEvent.Type"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.pdftron.collab.ui.reply.component.messages.MessageEvent.Type"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.pdftron.collab.ui.reply.component.messages.MessageEvent.Type[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.reply.model"
+>
+<interface name="ReplyContent"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getContentString"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContentType"
+ return="com.pdftron.collab.ui.reply.model.ReplyContent.ContentType"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="ReplyContent.ContentType"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.pdftron.collab.ui.reply.model.ReplyContent.ContentType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.pdftron.collab.ui.reply.model.ReplyContent.ContentType[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ReplyHeader"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyHeader"
+ type="com.pdftron.collab.ui.reply.model.ReplyHeader"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="annot" type="Annot">
+</parameter>
+<parameter name="hasUnreadReplies" type="boolean">
+</parameter>
+</constructor>
+<constructor name="ReplyHeader"
+ type="com.pdftron.collab.ui.reply.model.ReplyHeader"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="title" type="java.lang.String">
+</parameter>
+<parameter name="previewContent" type="java.lang.String">
+</parameter>
+<parameter name="previewIcon" type="int">
+</parameter>
+<parameter name="previewIconColor" type="int">
+</parameter>
+<parameter name="previewIconOpacity" type="float">
+</parameter>
+<parameter name="hasUnreadReplies" type="boolean">
+</parameter>
+</constructor>
+<method name="getPreviewContent"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPreviewIcon"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPreviewIconColor"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPreviewIconOpacity"
+ return="float"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTitle"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTitleFromAnnot"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="annot" type="Annot">
+</parameter>
+</method>
+<method name="getTitleFromContent"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="content" type="java.lang.String">
+</parameter>
+<parameter name="type" type="int">
+</parameter>
+</method>
+<method name="hasUnreadReplies"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ReplyInput"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyInput"
+ type="com.pdftron.collab.ui.reply.model.ReplyInput"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="com.pdftron.collab.ui.reply.model.ReplyMessage">
+</parameter>
+</constructor>
+<method name="getMessage"
+ return="com.pdftron.collab.ui.reply.model.ReplyMessage"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ReplyMessage"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyMessage"
+ type="com.pdftron.collab.ui.reply.model.ReplyMessage"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="replyId" type="java.lang.String">
+</parameter>
+<parameter name="user" type="com.pdftron.collab.ui.reply.model.User">
+</parameter>
+<parameter name="reply" type="com.pdftron.collab.ui.reply.model.ReplyContent">
+</parameter>
+<parameter name="timestamp" type="java.util.Date">
+</parameter>
+<parameter name="icon" type="java.lang.String">
+</parameter>
+<parameter name="page" type="int">
+</parameter>
+<parameter name="isEditable" type="boolean">
+</parameter>
+</constructor>
+<method name="getContent"
+ return="com.pdftron.collab.ui.reply.model.ReplyContent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIcon"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPage"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getReplyId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTimestamp"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUser"
+ return="com.pdftron.collab.ui.reply.model.User"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEditable"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ReplyMessageContent"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.ui.reply.model.ReplyContent">
+</implements>
+<constructor name="ReplyMessageContent"
+ type="com.pdftron.collab.ui.reply.model.ReplyMessageContent"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="content" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getContentString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getContentType"
+ return="com.pdftron.collab.ui.reply.model.ReplyContent.ContentType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ReplyMessages"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyMessages"
+ type="com.pdftron.collab.ui.reply.model.ReplyMessages"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="messages" type="java.util.List&lt;com.pdftron.collab.ui.reply.model.ReplyMessage&gt;">
+</parameter>
+</constructor>
+<constructor name="ReplyMessages"
+ type="com.pdftron.collab.ui.reply.model.ReplyMessages"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getMessages"
+ return="java.util.List&lt;com.pdftron.collab.ui.reply.model.ReplyMessage&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="User"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="User"
+ type="com.pdftron.collab.ui.reply.model.User"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getId"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUserName"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.ui.viewer"
+>
+<class name="CollabViewerBuilder"
+ extends="<any>"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="build"
+ return="com.pdftron.collab.ui.viewer.CollabViewerTabHostFragment"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="checkArgs"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="createBundle"
+ return="android.os.Bundle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="usingConfig"
+ return="com.pdftron.collab.ui.viewer.CollabViewerBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="config" type="ViewerConfig">
+</parameter>
+</method>
+<method name="usingTabClass"
+ return="com.pdftron.collab.ui.viewer.CollabViewerBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tabClass" type="java.lang.Class&lt;? extends com.pdftron.collab.ui.viewer.CollabViewerTabFragment&gt;">
+</parameter>
+</method>
+<method name="withUri"
+ return="com.pdftron.collab.ui.viewer.CollabViewerBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="android.net.Uri">
+</parameter>
+<parameter name="password" type="java.lang.String">
+</parameter>
+</method>
+<method name="withUri"
+ return="com.pdftron.collab.ui.viewer.CollabViewerBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="file" type="android.net.Uri">
+</parameter>
+</method>
+<method name="writeToParcel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dest" type="android.os.Parcel">
+</parameter>
+<parameter name="flags" type="int">
+</parameter>
+</method>
+<field name="CREATOR"
+ type="&lt;any&gt;"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="CollabViewerTabFragment"
+ extends="PdfViewCtrlTabFragment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CollabViewerTabFragment"
+ type="com.pdftron.collab.ui.viewer.CollabViewerTabFragment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="getContentLayout"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="initializeCollaboration"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="loadPDFViewCtrlView"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onCreate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onCreateView"
+ return="android.view.View"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inflater" type="android.view.LayoutInflater">
+</parameter>
+<parameter name="container" type="android.view.ViewGroup">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onDestroyView"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onDocumentLoaded"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onQuickMenuClicked"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menuItem" type="QuickMenuItem">
+</parameter>
+</method>
+<method name="onShowQuickMenu"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="quickMenu" type="QuickMenu">
+</parameter>
+<parameter name="annot" type="Annot">
+</parameter>
+</method>
+<method name="onSingleTapConfirmed"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="e" type="android.view.MotionEvent">
+</parameter>
+</method>
+<method name="onViewCreated"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="view" type="android.view.View">
+</parameter>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="setOpenAnnotationListListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.pdftron.collab.ui.viewer.OpenAnnotationListListener">
+</parameter>
+</method>
+<method name="showReplyFragment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="selectedAnnotId" type="java.lang.String">
+</parameter>
+<parameter name="authorId" type="java.lang.String">
+</parameter>
+<parameter name="selectedAnnotPageNum" type="int">
+</parameter>
+</method>
+<field name="BUNDLE_REPLY_THEME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;bundle_tab_reply_style&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="mAnnotationViewModel"
+ type="com.pdftron.collab.viewmodel.AnnotationViewModel"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mDisposables"
+ type="CompositeDisposable"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mDocumentId"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mDocumentViewModel"
+ type="com.pdftron.collab.viewmodel.DocumentViewModel"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mReplyTheme"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="mReplyUiViewModel"
+ type="com.pdftron.collab.ui.reply.component.ReplyUIViewModel"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="CollabViewerTabHostFragment"
+ extends="PdfViewCtrlTabHostFragment"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.pdftron.collab.ui.viewer.OpenAnnotationListListener">
+</implements>
+<constructor name="CollabViewerTabHostFragment"
+ type="com.pdftron.collab.ui.viewer.CollabViewerTabHostFragment"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="addCollabHostListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.pdftron.collab.ui.viewer.CollabViewerTabHostFragment.CollabTabHostListener">
+</parameter>
+</method>
+<method name="addTab"
+ return="TabLayout.Tab"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="args" type="android.os.Bundle">
+</parameter>
+<parameter name="tag" type="java.lang.String">
+</parameter>
+<parameter name="title" type="java.lang.String">
+</parameter>
+<parameter name="fileExtension" type="java.lang.String">
+</parameter>
+<parameter name="password" type="java.lang.String">
+</parameter>
+<parameter name="itemSource" type="int">
+</parameter>
+</method>
+<method name="createAnnotationDialogTab"
+ return="DialogFragmentTab"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="getDefaultTabFragmentClass"
+ return="java.lang.Class&lt;? extends com.pdftron.collab.ui.viewer.CollabViewerTabFragment&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onCreate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="savedInstanceState" type="android.os.Bundle">
+</parameter>
+</method>
+<method name="onPrepareOptionsMenu"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menu" type="android.view.Menu">
+</parameter>
+</method>
+<method name="openAnnotationList"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removeCollabHostListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.pdftron.collab.ui.viewer.CollabViewerTabHostFragment.CollabTabHostListener">
+</parameter>
+</method>
+<method name="removeFragmentListeners"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="fragment" type="Fragment">
+</parameter>
+</method>
+<method name="setFragmentListeners"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="fragment" type="Fragment">
+</parameter>
+</method>
+<field name="mTabFragmentClass"
+ type="java.lang.Class"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="CollabViewerTabHostFragment.CollabTabHostListener"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="canRecreateActivity"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="canShowFileCloseSnackbar"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="canShowFileInFolder"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onExitSearchMode"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onJumpToSdCardFolder"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onLastTabClosed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onNavButtonPressed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onOpenDocError"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onShowFileInFolder"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fileName" type="java.lang.String">
+</parameter>
+<parameter name="filepath" type="java.lang.String">
+</parameter>
+<parameter name="itemSource" type="int">
+</parameter>
+</method>
+<method name="onStartSearchMode"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onTabChanged"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tag" type="java.lang.String">
+</parameter>
+</method>
+<method name="onTabDocumentLoaded"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="tag" type="java.lang.String">
+</parameter>
+</method>
+<method name="onTabHostHidden"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onTabHostShown"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onTabPaused"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="fileInfo" type="FileInfo">
+</parameter>
+<parameter name="isDocModifiedAfterOpening" type="boolean">
+</parameter>
+</method>
+<method name="onToolbarCreateOptionsMenu"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menu" type="android.view.Menu">
+</parameter>
+<parameter name="inflater" type="android.view.MenuInflater">
+</parameter>
+</method>
+<method name="onToolbarOptionsItemSelected"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="android.view.MenuItem">
+</parameter>
+</method>
+<method name="onToolbarPrepareOptionsMenu"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="menu" type="android.view.Menu">
+</parameter>
+</method>
+</interface>
+<interface name="OpenAnnotationListListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="openAnnotationList"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+</package>
+<package name="com.pdftron.collab.utils"
+>
+<class name="JsonUtils"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="JsonUtils"
+ type="com.pdftron.collab.utils.JsonUtils"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="addItemToArray"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonString" type="java.lang.String">
+</parameter>
+<parameter name="item" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="addItemToArrayImpl"
+ return="org.json.JSONArray"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonString" type="java.lang.String">
+</parameter>
+<parameter name="item" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="isValidDeleteEntity"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotJson" type="org.json.JSONObject">
+</parameter>
+</method>
+<method name="isValidInsertEntity"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entity" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+<method name="isValidInsertEntity"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotJson" type="org.json.JSONObject">
+</parameter>
+</method>
+<method name="isValidUpdateEntity"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotJson" type="org.json.JSONObject">
+</parameter>
+</method>
+<method name="parseRetrieveMessage"
+ return="com.pdftron.collab.db.entity.AnnotationEntity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotJson" type="org.json.JSONObject">
+</parameter>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+</method>
+<method name="removeAllItemFromArray"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonString" type="java.lang.String">
+</parameter>
+<parameter name="item" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="removeItemFromArray"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonString" type="java.lang.String">
+</parameter>
+<parameter name="item" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="removeItemFromArrayImpl"
+ return="org.json.JSONArray"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonString" type="java.lang.String">
+</parameter>
+<parameter name="item" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="safeGetJsonArrayLength"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonString" type="java.lang.String">
+</parameter>
+</method>
+<method name="safeRemoveByValue"
+ return="org.json.JSONArray"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonArray" type="org.json.JSONArray">
+</parameter>
+<parameter name="item" type="java.lang.String">
+</parameter>
+</method>
+<method name="safeRemoveFirstByValue"
+ return="org.json.JSONArray"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="jsonArray" type="org.json.JSONArray">
+</parameter>
+<parameter name="item" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="Keys"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Keys"
+ type="com.pdftron.collab.utils.Keys"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<field name="ANNOT_ACTION"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="ANNOT_AUTHOR_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="ANNOT_AUTHOR_NAME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="ANNOT_DOCUMENT_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="ANNOT_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="ANNOT_PARENT"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="ANNOT_XFDF"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="CORE_DATA_ANNOTS"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="CORE_DATA_AUTHOR"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="CORE_DATA_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="CORE_DATA_OP"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="CORE_DATA_PARENT_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="CORE_DATA_XFDF"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DOCUMENT_EXT"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DOCUMENT_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DOCUMENT_SHARE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DOCUMENT_SHARE_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DOCUMENT_URI"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_ANNOTS"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_COLOR"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_CONTENTS"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_CREATION_DATE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_DATE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_FDF"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_IN_REPLY_TO"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_OPACITY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_PAGE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_TYPE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="FDF_YPOS"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="USER_ID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="USER_NAME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_ADD"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_CREATE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_DELETE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_KEY_DATA"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_KEY_END"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_KEY_HB"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_KEY_T"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_MODIFY"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_ACTION_RETRIEVE"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_AID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_ANAME"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_ANNOTS"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_AT"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_AUTHOR"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_DID"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_PARENT_AUTHOR"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="WS_DATA_XFDF"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="XfdfUtils"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="XfdfUtils"
+ type="com.pdftron.collab.utils.XfdfUtils"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="convToAnnotations"
+ return="java.util.ArrayList&lt;com.pdftron.collab.db.entity.AnnotationEntity&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="xfdfJSON" type="java.lang.String">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="deserializeDate"
+ return="java.util.Date"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dateStr" type="java.lang.String">
+</parameter>
+</method>
+<method name="fillAnnotationEntity"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+<method name="parseAnnotationEntity"
+ return="com.pdftron.collab.db.entity.AnnotationEntity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+<parameter name="annotation" type="org.json.JSONObject">
+</parameter>
+</method>
+<method name="parseReplyEntity"
+ return="com.pdftron.collab.db.entity.ReplyEntity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotation" type="com.pdftron.collab.db.entity.AnnotationEntity">
+</parameter>
+</method>
+<method name="parseXfdf"
+ return="java.util.HashMap&lt;java.lang.String, java.lang.Object&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="xfdf" type="java.lang.String">
+</parameter>
+</method>
+<method name="prepareAnnotation"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="java.lang.String">
+</parameter>
+<parameter name="annotationEntities" type="java.util.ArrayList&lt;com.pdftron.collab.db.entity.AnnotationEntity&gt;">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+<exception name="JSONException" type="org.json.JSONException">
+</exception>
+</method>
+<method name="validateXfdf"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="xfdf" type="java.lang.String">
+</parameter>
+</method>
+<method name="wrapDeleteXfdf"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="id" type="java.lang.String">
+</parameter>
+</method>
+<method name="xfdfToAnnotationEntity"
+ return="com.pdftron.collab.db.entity.AnnotationEntity"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotation" type="org.json.JSONObject">
+</parameter>
+</method>
+<field name="XFDF_END"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;&lt;/xfdf&gt;&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="XFDF_START"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot; ?&gt;\n&lt;xfdf xmlns=\&quot;http://ns.adobe.com/xfdf/\&quot; xml:space=\&quot;preserve\&quot;&gt;&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+</package>
+<package name="com.pdftron.collab.utils.date"
+>
+<class name="AnnotationListDateFormat"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getDateString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="date" type="java.util.Date">
+</parameter>
+</method>
+<method name="newInstance"
+ return="com.pdftron.collab.utils.date.AnnotationListDateFormat"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.pdftron.collab.viewmodel"
+>
+<class name="AnnotationViewModel"
+ extends="AndroidViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AnnotationViewModel"
+ type="com.pdftron.collab.viewmodel.AnnotationViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="application" type="android.app.Application">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getAnnotations"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getLastAnnotations"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="sendAnnotation"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="action" type="java.lang.String">
+</parameter>
+<parameter name="xfdfJSON" type="java.lang.String">
+</parameter>
+<parameter name="userName" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="AnnotationViewModel.Factory"
+ extends="ViewModelProvider.NewInstanceFactory"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Factory"
+ type="com.pdftron.collab.viewmodel.AnnotationViewModel.Factory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="application" type="android.app.Application">
+</parameter>
+<parameter name="documentId" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="create"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="modelClass" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</class>
+<class name="DocumentViewModel"
+ extends="AndroidViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="DocumentViewModel"
+ type="com.pdftron.collab.viewmodel.DocumentViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="application" type="android.app.Application">
+</parameter>
+</constructor>
+<method name="getDocument"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUnreadObservable"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="owner" type="LifecycleOwner">
+</parameter>
+</method>
+<method name="getUser"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hasUnreadReplies"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onCleared"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="removeUnread"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="setCustomConnection"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="connection" type="com.pdftron.collab.service.CustomService">
+</parameter>
+</method>
+<method name="updateActiveAnnotation"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="userId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="updateLastRead"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+<method name="updateUnreadAnnotations"
+ return="Completable"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="docId" type="java.lang.String">
+</parameter>
+<parameter name="annotId" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="ReplyViewModel"
+ extends="AndroidViewModel"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ReplyViewModel"
+ type="com.pdftron.collab.viewmodel.ReplyViewModel"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="application" type="android.app.Application">
+</parameter>
+<parameter name="annotationId" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getReplies"
+ return="&lt;any&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="ReplyViewModel.Factory"
+ extends="ViewModelProvider.NewInstanceFactory"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Factory"
+ type="com.pdftron.collab.viewmodel.ReplyViewModel.Factory"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="application" type="android.app.Application">
+</parameter>
+<parameter name="annotationId" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="create"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="modelClass" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</class>
+</package>
+</api>
