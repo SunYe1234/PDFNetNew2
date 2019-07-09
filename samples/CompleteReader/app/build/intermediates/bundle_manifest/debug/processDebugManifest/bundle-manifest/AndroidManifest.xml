@@ -38,6 +38,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.pdftron.completereader.loginSignup.RegisterActivity" />
+        <activity android:name="com.pdftron.completereader.loginSignup.DashboardActivity" />
+        <activity android:name="com.pdftron.completereader.CompleteReaderActivity" />
         <activity
             android:name="com.pdftron.pdf.controls.DiffActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"

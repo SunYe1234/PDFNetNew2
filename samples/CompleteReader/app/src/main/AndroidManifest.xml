@@ -31,6 +31,9 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".loginSignup.RegisterActivity"/>
+        <activity android:name=".loginSignup.DashboardActivity"/>
+        <activity android:name=".CompleteReaderActivity"/>
 
         <activity
             android:name="com.pdftron.pdf.controls.DiffActivity"

@@ -33,15 +33,15 @@ public final class R {
 
         public static final int CropOverlayView = 0x7f090002;
         public static final int ImageView_image = 0x7f090004;
-        public static final int bitmap_margin = 0x7f09005c;
-        public static final int off = 0x7f090253;
-        public static final int on = 0x7f090255;
-        public static final int onTouch = 0x7f090256;
+        public static final int bitmap_margin = 0x7f09005f;
+        public static final int off = 0x7f090260;
+        public static final int on = 0x7f090262;
+        public static final int onTouch = 0x7f090263;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int crop_image_view = 0x7f0c0056;
+        public static final int crop_image_view = 0x7f0c0059;
     }
     public static final class string {
         private string() {}

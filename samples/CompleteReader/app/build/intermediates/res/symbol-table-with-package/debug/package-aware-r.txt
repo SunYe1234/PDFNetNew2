@@ -898,6 +898,9 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
 color controls_annot_style_markup_text
 color controls_annot_style_preview_bg
 color controls_annotation_toolbar_background
@@ -962,6 +965,10 @@ color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color light_gray
+color main_black_color
+color main_blue_color
+color main_divider_color
+color main_normal_black_color
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1090,6 +1097,7 @@ color tooltip_background_light
 color turquoise
 color undo_redo_flashing_box
 color violet
+color windowBackground
 color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -1671,6 +1679,8 @@ drawable controls_toolbar_dropshadow
 drawable controls_toolbar_spinner_selected
 drawable controls_toolbar_spinner_selected_blue
 drawable controls_toolbar_spinner_selected_dark
+drawable corner6_gray
+drawable corner_gray
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1683,6 +1693,7 @@ drawable fab_add
 drawable fab_menu_label_background
 drawable fastscroller_handle
 drawable file_generic
+drawable folder
 drawable goto_sd_card
 drawable graphpage2_135dp
 drawable graphpage2_regular
@@ -1814,6 +1825,7 @@ drawable ic_outline_black_24dp
 drawable ic_outline_white_24dp
 drawable ic_overflow_black_24dp
 drawable ic_overflow_white_24dp
+drawable ic_pack
 drawable ic_palette_black_24dp
 drawable ic_pan_black_24dp
 drawable ic_phone_android_black_48dp
@@ -1856,6 +1868,7 @@ drawable ic_thumbnails_grid_black_24dp
 drawable ic_translate_black_24dp
 drawable ic_undo_black_24dp
 drawable ic_undo_white_24dp
+drawable ic_unfolded
 drawable ic_vertical_align_bottom_black_24dp
 drawable ic_vertical_align_bottom_white_24dp
 drawable ic_view_list_white_24dp
@@ -1906,6 +1919,7 @@ drawable page_jump_button_disabled
 drawable page_jump_button_neutral
 drawable page_number_indicator_bg
 drawable paragraph_sign
+drawable pdf
 drawable permissions
 drawable permissions_land
 drawable quickmenu_bg_rect
@@ -1933,6 +1947,8 @@ drawable search_prev_press
 drawable seek_thumb
 drawable seek_track_material
 drawable select
+drawable select_pdf_back
+drawable select_viewer_state
 drawable selector_color_primary_text
 drawable selector_color_secondary_text
 drawable selector_grid_item_bg
@@ -1946,6 +1962,7 @@ drawable serif_a_letter_black
 drawable simple_reader
 drawable single_vert_line_bg
 drawable star
+drawable stroke_blue
 drawable tab_widget_bg
 drawable text_select_handle_left
 drawable text_select_handle_right
@@ -2022,6 +2039,9 @@ id action_viewmode
 id action_whole_word
 id actions
 id activity_chooser_view_content
+id activity_dashboard
+id activity_main
+id activity_register
 id add
 id add_color_btn
 id add_custom_stamp_fab
@@ -2076,8 +2096,11 @@ id btn_thickness1
 id btn_thickness2
 id btn_thickness3
 id btn_thickness4
+id button1
 id buttonGoToSdCard
+id buttonLogin
 id buttonPanel
+id buttonRegister
 id button_cancel
 id button_controls_annot_style_toolbar_1
 id button_controls_annot_style_toolbar_2
@@ -2254,6 +2277,7 @@ id controls_thumbnails_view_toolbar_layout
 id coordinator
 id coordinator_layout
 id cover_view
+id cpbLoad
 id create_stamp_dialog_toolbar
 id crop_all_button
 id crop_evenodd_button
@@ -2322,6 +2346,9 @@ id dot_layout
 id down
 id drawer_layout
 id drawing_view
+id editEmail
+id editName
+id editPassword
 id editText
 id edit_btn
 id edit_query
@@ -2427,6 +2454,7 @@ id icon_preview
 id icon_textview
 id ifRoom
 id image
+id imageView
 id image_PDF
 id image_crop_border
 id image_crop_view
@@ -2471,6 +2499,7 @@ id item_view_mode_picker_modebtn_layout
 id item_view_mode_picker_nightmode_button
 id item_view_mode_picker_sepiamode_button
 id item_viewer
+id ivLargeImage
 id labeled
 id largeLabel
 id layer_list
@@ -2494,6 +2523,7 @@ id list
 id listMode
 id list_item
 id lock_image_view
+id lvGuide
 id main_group
 id manual_crop_root_layout
 id marquee
@@ -2816,6 +2846,7 @@ id showHome
 id showTitle
 id show_more_title
 id show_password
+id show_pdf
 id simpleReaderButton
 id simpleReaderImage
 id simpleReaderLayout
@@ -2871,6 +2902,7 @@ id tab_layout
 id tab_pdfviewctrl_close_button
 id tab_pdfviewctrl_text
 id tabhost
+id table
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -2882,6 +2914,7 @@ id textSpacerNoTitle
 id textStart
 id textTitle
 id textView
+id textView1
 id text_color_layout
 id text_color_preview
 id text_color_textivew
@@ -2984,12 +3017,15 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvLocate
+id tvPosition
 id undo
 id undo_title
 id uniform
 id unlabeled
 id up
 id useLogo
+id vGuide
 id valueView
 id video_view
 id viewMode_scrollView
@@ -2998,6 +3034,7 @@ id view_offset_helper
 id view_opacity
 id view_pager
 id view_thickness
+id viewpager
 id visible
 id visualizer
 id webpage_PDF
@@ -3060,9 +3097,12 @@ layout abc_tooltip
 layout actionbar_indeterminate_progress
 layout activity_complete_reader
 layout activity_complete_reader_settings
+layout activity_dashboard
 layout activity_diff_tool
 layout activity_document
 layout activity_main
+layout activity_main1
+layout activity_register
 layout alert_dialog_with_checkbox
 layout annot_view_layout
 layout breadcrumb
@@ -3186,6 +3226,8 @@ layout fragment_view_mode_color_mode_row
 layout fragment_view_mode_picker_dialog
 layout gridview_item_file_list
 layout header_item
+layout item_viewpage_image
+layout listitem_guide
 layout listview_header_view_mode_picker_list
 layout listview_item_file_list
 layout listview_item_portfolio_list
@@ -3217,6 +3259,8 @@ layout recyclerview_item_rubber_stamp
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout show_dire
+layout show_pdf
 layout simple_image_spinner_dropdown_item
 layout simple_image_spinner_item
 layout simple_reader_preview

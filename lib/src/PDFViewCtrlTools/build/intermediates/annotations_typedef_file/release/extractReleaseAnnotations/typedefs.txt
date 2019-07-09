@@ -1,3 +1,0 @@
-D com/pdftron/pdf/dialog/ViewModePickerDialogFragment$EntryControlType
-D com/pdftron/pdf/dialog/ViewModePickerDialogFragment$EntryItemId
-D com/pdftron/pdf/utils/AnalyticsHandlerAdapter$NEXT_ACTION

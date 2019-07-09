@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    >
+
+
+
+    <!--<cn.xiaolong.pdfiumpdfviewer.pdf.PhotoViewPager-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerInParent="true"></cn.xiaolong.pdfiumpdfviewer.pdf.PhotoViewPager>-->
+
+    <!--<ListView-->
+        <!--android:id="@+id/lvGuide"-->
+        <!--android:layout_width="200px"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="none" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/vGuide"-->
+        <!--android:layout_width="50px"-->
+        <!--android:layout_height="180px"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toRightOf="@id/lvGuide"-->
+        <!--android:background="@drawable/corner_gray"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:src="@drawable/select_viewer_state" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tvPosition"-->
+        <!--android:layout_width="120px"-->
+        <!--android:layout_height="50px"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="60px"-->
+        <!--android:layout_marginTop="30px"-->
+        <!--android:background="@color/main_blue_color"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@color/main_black_color"-->
+        <!--&lt;!&ndash;android:textSize="23px"&ndash;&gt;-->
+        <!--android:visibility="gone" />!&#45;&#45;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/photoGraphBtn2"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--android:background="@mipmap/icon"-->
+        <!--android:drawablePadding="50dip"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:textColor="@color/main_blue_color"-->
+        <!--android:textSize="18sp" />-->
+
+    <!---->
+    <!--<TableLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:stretchColumns="*">-->
+
+        <!--<TableRow>-->
+            <!--<Button-->
+                <!--android:text="("-->
+                <!--android:id="@+id/btn_LeftParenthesis"-->
+                <!--android:layout_width="1dip"-->
+                <!--android:background="@mipmap/icon">-->
+            <!--</Button>-->
+            <!--<Button-->
+                <!--android:text=")"-->
+                <!--android:id="@+id/btn_RightParenthesis"-->
+                <!--android:layout_width="1dip"-->
+                <!--android:background="@mipmap/icon"-->
+                <!--&gt;</Button>-->
+
+        <!--</TableRow>-->
+        <!--<TableRow>-->
+            <!--<Button-->
+                <!--android:text="7"-->
+                <!--android:id="@+id/btn_7"-->
+                <!--android:layout_width="1dip"-->
+                <!--android:background="@mipmap/icon"></Button>-->
+            <!--<Button-->
+                <!--android:text="8"-->
+                <!--android:id="@+id/btn_8"-->
+                <!--android:layout_width="1dip"-->
+                <!--android:background="@mipmap/icon"-->
+                <!--&gt;</Button>-->
+
+        <!--</TableRow>-->
+
+    <!--</TableLayout>-->
+
+
+
+    <!--<cn.xiaolong.pdfiumpdfviewer.pdf.CircleProgressBar-->
+        <!--android:id="@+id/cpbLoad"-->
+        <!--android:layout_width="200px"-->
+        <!--android:layout_height="200px"-->
+        <!--android:layout_centerInParent="true" />-->
+    <!--<Button-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="@android:dimen/app_icon_size"-->
+        <!--android:layout_height="@android:dimen/app_icon_size"-->
+
+        <!--android:drawableLeft="@mipmap/icon"-->
+        <!--android:text="Button"-->
+        <!--android:drawablePadding="50dip"-->
+        <!--android:onClick="startShowPdfActivity"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:paddingLeft="20dip"-->
+        <!--android:gravity="center_vertical"-->
+
+   <!--/>-->
+    <!--<Button-->
+        <!--android:id="@+id/message"-->
+        <!--android:layout_width="200dip"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:drawableLeft="@drawable/icon"-->
+        <!--android:paddingLeft="100dip"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:drawablePadding="10dip"-->
+        <!--android:text="短信查看"-->
+        <!--android:layout_toRightOf="@+id/button"-->
+        <!--android:layout_toEndOf="@+id/button"-->
+        <!--android:layout_marginLeft="55dp"-->
+        <!--android:layout_marginStart="55dp"-->
+        <!--android:layout_alignParentTop="true" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+
+            >
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal|center_vertical"></TableLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <!--<Button-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="60dip"-->
+        <!--android:layout_height="60dip"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:drawableTop="@drawable/ic_unfolded"-->
+        <!--android:gravity="center"-->
+        <!--android:text="pdf"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginLeft="63dp"-->
+        <!--android:layout_marginStart="63dp"-->
+        <!--android:layout_marginTop="125dp" />-->
+
+
+</LinearLayout>

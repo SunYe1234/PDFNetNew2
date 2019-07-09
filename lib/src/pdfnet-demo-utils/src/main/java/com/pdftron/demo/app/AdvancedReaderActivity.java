@@ -171,6 +171,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     private static final int SELECT_NAVIGATION_ITEM_DELAY = 250; // ms
     private static final int TEACH_NAVIGATION_DRAWER_DELAY = 500; // ms
 
+    private static final String exPdfsPath="/storage/0403-0201/PDFs/";
+
+
     private Fragment mCurrentFragment;
     private Fragment mLastAddedBrowserFragment;
     private PdfViewCtrlTabHostFragment mPdfViewCtrlTabHostFragment;
@@ -230,12 +233,15 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             return;
         }
 
-        File user_app_folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-                getApplicationContext().getResources().getString(R.string.app_name));
-        File download_folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        //File user_app_folder = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
+               // getApplicationContext().getResources().getString(R.string.app_name));
+        //File user_app_folder = Environment.getExternalStoragePublicDirectory(exPdfsPath);
+        //File user_app_folder = new File(exPdfsPath);
+        //File download_folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        //File download_folder = new File(exPdfsPath);
         PDFNetConfig config = PDFNetConfig.getDefaultConfig();
-        config.addExtraResourcePaths(user_app_folder);
-        config.addExtraResourcePaths(download_folder);
+//        config.addExtraResourcePaths(user_app_folder);
+//        config.addExtraResourcePaths(download_folder);
         try {
             AppUtils.initializePDFNetApplication(getApplicationContext(), config);
         } catch (Exception ex) {

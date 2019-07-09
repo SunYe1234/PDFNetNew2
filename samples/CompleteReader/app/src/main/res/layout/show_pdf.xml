@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/show_pdf"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<cn.xiaolong.pdfiumpdfviewer.pdf.PhotoViewPager
+    android:id="@+id/viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"></cn.xiaolong.pdfiumpdfviewer.pdf.PhotoViewPager>
+
+    <ListView
+        android:id="@+id/lvGuide"
+        android:layout_width="200px"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:background="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <ImageView
+        android:id="@+id/vGuide"
+        android:layout_width="50px"
+        android:layout_height="180px"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/lvGuide"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/select_viewer_state" />
+
+<TextView
+    android:id="@+id/tvPosition"
+    android:layout_width="120px"
+    android:layout_height="50px"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="60px"
+    android:layout_marginTop="30px"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:textColor="@android:color/black"
+    android:textSize="23px"
+    android:visibility="gone" />
+
+<!--<Button-->
+<!--android:id="@+id/photoGraphBtn1"-->
+<!--android:layout_height="match_parent"-->
+<!--android:layout_width="match_parent"-->
+<!--android:background="@mipmap/icon"-->
+<!--android:drawablePadding="50dip"-->
+<!--android:gravity="center_vertical"-->
+<!--android:textColor="@color/main_blue_color"-->
+<!--android:textSize="18sp" />-->
+
+
+<!--/>-->
+
+
+
+
+
+
+
+
+<!--<Button-->
+<!--android:id="@+id/photoGraphBtn2"-->
+<!--android:layout_height="match_parent"-->
+<!--android:layout_width="match_parent"-->
+<!--android:background="@mipmap/icon"-->
+<!--android:drawablePadding="50dip"-->
+<!--android:gravity="center_vertical"-->
+<!--android:textColor="@color/main_blue_color"-->
+<!--android:textSize="18sp" />-->
+
+<!---->
+<!--<TableLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:stretchColumns="*">-->
+
+<!--<TableRow>-->
+<!--<Button-->
+<!--android:text="("-->
+<!--android:id="@+id/btn_LeftParenthesis"-->
+<!--android:layout_width="1dip"-->
+<!--android:background="@mipmap/icon">-->
+<!--</Button>-->
+<!--<Button-->
+<!--android:text=")"-->
+<!--android:id="@+id/btn_RightParenthesis"-->
+<!--android:layout_width="1dip"-->
+<!--android:background="@mipmap/icon"-->
+<!--&gt;</Button>-->
+
+<!--</TableRow>-->
+<!--<TableRow>-->
+<!--<Button-->
+<!--android:text="7"-->
+<!--android:id="@+id/btn_7"-->
+<!--android:layout_width="1dip"-->
+<!--android:background="@mipmap/icon"></Button>-->
+<!--<Button-->
+<!--android:text="8"-->
+<!--android:id="@+id/btn_8"-->
+<!--android:layout_width="1dip"-->
+<!--android:background="@mipmap/icon"-->
+<!--&gt;</Button>-->
+
+<!--</TableRow>-->
+
+<!--</TableLayout>-->
+
+
+
+<cn.xiaolong.pdfiumpdfviewer.pdf.CircleProgressBar
+    android:id="@+id/cpbLoad"
+    android:layout_width="200px"
+    android:layout_height="200px"
+    android:layout_centerInParent="true" />
+</RelativeLayout>
