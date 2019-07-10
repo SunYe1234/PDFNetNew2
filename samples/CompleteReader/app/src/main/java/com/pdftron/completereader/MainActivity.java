@@ -1,5 +1,6 @@
 package com.pdftron.completereader;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -32,7 +33,18 @@ import com.pdftron.pdf.utils.AppUtils;
 import com.pdftron.pdf.utils.PdfViewCtrlSettingsManager;
 import com.pdftron.pdf.utils.Utils;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Base64;
 
 public class MainActivity extends AppCompatActivity {
     Button LogInButton, RegisterButton ;
@@ -43,10 +55,11 @@ public class MainActivity extends AppCompatActivity {
     SQLiteHelper sqLiteHelper;
     Cursor cursor;
     String TempPassword = "NOT_FOUND" ;
-    String UserName;
+    public static String UserName;
     URL url;
-    public static final String UserEmail = "";
-    public static final String userName="";
+    public static  File UserFolder=null;
+    public static File UsersFile=null;
+    public static String usersNameFileName="UserName.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
 //                Intent intent = new Intent(MainActivity.this, CompleteReaderActivity.class);
 //                startActivity(intent);
+                saveUserNameToFile();
                 openCompleteReaderActivity();
                 // Calling login method.
                 //LoginFunction();
@@ -99,6 +113,74 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    /*
+    save the current user name to username.txt under Files
+     */
+    private void saveUserNameToFile() {
+
+        File fileDir = getFilesDir();
+        String destFileName=UserName+".txt";
+        File destFile=new File(destFileName);
+        long size=destFile.length();
+
+
+        try {
+
+            FileOutputStream outStream=this.openFileOutput(usersNameFileName,Context.MODE_PRIVATE);
+            outStream.write(new String(UserName).getBytes());
+            outStream.flush();
+            outStream.close();
+            //getUserNameFromFile();
+
+             UserFolder=new File("/storage/emulated/0/Download/PDFcps/"+UserName);
+            if (!UserFolder.exists())
+                    UserFolder.mkdir();
+            getUserNameFromFile();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    /*
+        get the  user name stored in username.txt under Files
+         */
+    public  String getUserNameFromFile()
+    {
+        File fileDir = getFilesDir();
+
+        try {
+            File UsersName=new File(getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
+            if (!UsersName.exists())
+                UsersName.createNewFile();
+            FileInputStream inputStream = openFileInput(usersNameFileName);
+            UsersFile=new File(getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
+            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
+            // 一次读一个字符
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String usName="";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
+                // 但如果这两个字符分开显示时，会换两次行。
+                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    usName+=(char)tempchar;
+                }
+
+            }
+            reader.close();
+            return usName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
 
     }
     private void openCompleteReaderActivity() {
@@ -151,6 +233,7 @@ public class MainActivity extends AppCompatActivity {
         // Getting value from All EditText and storing into String Variables.
         EmailHolder = Email.getText().toString();
         PasswordHolder = Password.getText().toString();
+        UserName=Email.getText().toString();
 
         // Checking EditText is empty or no using TextUtils.
         if( TextUtils.isEmpty(EmailHolder) || TextUtils.isEmpty(PasswordHolder)){

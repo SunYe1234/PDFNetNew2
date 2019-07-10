@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jul 09 15:27:06 CEST 2019
+#Wed Jul 10 14:42:40 CEST 2019
 5.base=/Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/build/intermediates/transforms/mergeJniLibs/debug/0
 22.path=lib/armeabi-v7a/libfb_jpegturbo.so
 32.set=ASSET

@@ -137,6 +137,8 @@ import com.pdftron.pdf.utils.cache.UriCacheManager;
 import com.pdftron.pdf.widget.ContentLoadingRelativeLayout;
 import com.pdftron.sdf.SDFDoc;
 
+
+
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONException;
@@ -147,6 +149,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.io.UnsupportedEncodingException;
@@ -173,7 +176,6 @@ import static android.graphics.Color.HSVToColor;
 import static android.graphics.Color.RGBToHSV;
 import static com.pdftron.pdf.config.PDFViewCtrlConfig.MAX_RELATIVE_ZOOM_LIMIT;
 import static com.pdftron.pdf.config.PDFViewCtrlConfig.MIN_RELATIVE_ZOOM_LIMIT;
-
 /**
  * The PdfViewCtrlTabFragment shows {@link com.pdftron.pdf.PDFViewCtrl} out of the box with a various
  * of controls such as {@link com.pdftron.pdf.controls.AnnotationToolbar}, {@link com.pdftron.pdf.controls.ThumbnailSlider},
@@ -5111,9 +5113,45 @@ public class PdfViewCtrlTabFragment extends Fragment implements
         }
     }
 
+
+    /*
+        get the  user name stored in username.txt under Files
+         */
+    public  String getUserNameFromFile()
+    {
+
+        try {
+            File UsersName=new File("/data/user/0/com.pdftron.completereader/files/UserName.txt");
+            if (!UsersName.exists())
+                UsersName.createNewFile();
+            FileInputStream inputStream = new FileInputStream(UsersName);
+            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
+            // 一次读一个字符
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String usName="";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
+                // 但如果这两个字符分开显示时，会换两次行。
+                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    usName+=(char)tempchar;
+                }
+
+            }
+            reader.close();
+            return usName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
     private File getExportDirectory() {
         //File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-        File folder = new File("/storage/emulated/0/Download/PDFcps");
+        String userName=getUserNameFromFile();
+        File folder = new File("/storage/emulated/0/Download/PDFcps/"+userName);
         if (mViewerConfig != null && !Utils.isNullOrEmpty(mViewerConfig.getSaveCopyExportPath())) {
             File tempFolder = new File(mViewerConfig.getSaveCopyExportPath());
             if (tempFolder.exists() && tempFolder.isDirectory()) {
