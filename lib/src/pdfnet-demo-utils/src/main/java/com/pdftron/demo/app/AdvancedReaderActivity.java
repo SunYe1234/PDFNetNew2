@@ -172,6 +172,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     private static final int TEACH_NAVIGATION_DRAWER_DELAY = 500; // ms
 
     private static final String exPdfsPath="/storage/0403-0201/PDFs/";
+    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps";
 
 
     private Fragment mCurrentFragment;

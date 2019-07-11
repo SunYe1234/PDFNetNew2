@@ -1033,7 +1033,7 @@ public class FavoritesViewFragment extends FileBrowserViewFragment implements
         if (item.getItemId() == R.id.menu_file_filter_pdf) {
             mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_PDF);
         }
-        // Uncheck "all" filter on click, and check docx filter
+//         Uncheck "all" filter on click, and check docx filter
         if (item.getItemId() == R.id.menu_file_filter_docx) {
             mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_DOC);
         }

@@ -1054,10 +1054,10 @@ public class RecentViewFragment extends FileBrowserViewFragment implements
         Context context = getContext();
         if (fileMenu != null && context != null) {
             fileMenu.getSubMenu().clearHeader();
-            mFilterAll = menu.findItem(R.id.menu_file_filter_all);
-            mFilterPdf = menu.findItem(R.id.menu_file_filter_pdf);
-            mFilterDocx = menu.findItem(R.id.menu_file_filter_docx);
-            mFilterImage = menu.findItem(R.id.menu_file_filter_image);
+//            mFilterAll = menu.findItem(R.id.menu_file_filter_all);
+//            mFilterPdf = menu.findItem(R.id.menu_file_filter_pdf);
+//            mFilterDocx = menu.findItem(R.id.menu_file_filter_docx);
+//            mFilterImage = menu.findItem(R.id.menu_file_filter_image);
             MiscUtils.keepOnScreenAfterClick(context, mFilterAll);
             MiscUtils.keepOnScreenAfterClick(context, mFilterPdf);
             MiscUtils.keepOnScreenAfterClick(context, mFilterDocx);
@@ -1201,21 +1201,21 @@ public class RecentViewFragment extends FileBrowserViewFragment implements
             handled = true;
         }
         // Check "all" and uncheck other filters
-        if (item.getItemId() == R.id.menu_file_filter_all) {
-            mFilterViewModel.clearFileFilters();
-        }
-        // Uncheck "all" filter on click, and check pdf filter
-        if (item.getItemId() == R.id.menu_file_filter_pdf) {
-            mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_PDF);
-        }
+//        if (item.getItemId() == R.id.menu_file_filter_all) {
+//            mFilterViewModel.clearFileFilters();
+//        }
+//        // Uncheck "all" filter on click, and check pdf filter
+//        if (item.getItemId() == R.id.menu_file_filter_pdf) {
+//            mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_PDF);
+//        }
         // Uncheck "all" filter on click, and check docx filter
-        if (item.getItemId() == R.id.menu_file_filter_docx) {
-            mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_DOC);
-        }
-        // Uncheck "all" filter on click, and check image filter
-        if (item.getItemId() == R.id.menu_file_filter_image) {
-            mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_IMAGE);
-        }
+//        if (item.getItemId() == R.id.menu_file_filter_docx) {
+//            mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_DOC);
+//        }
+//        // Uncheck "all" filter on click, and check image filter
+//        if (item.getItemId() == R.id.menu_file_filter_image) {
+//            mFilterViewModel.toggleFileFilter(Constants.FILE_TYPE_IMAGE);
+//        }
 
         return handled;
     }
