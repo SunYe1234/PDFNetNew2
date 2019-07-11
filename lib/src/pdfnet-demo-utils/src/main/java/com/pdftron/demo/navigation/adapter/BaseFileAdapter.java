@@ -292,10 +292,13 @@ public abstract class BaseFileAdapter<FileInfo extends BaseFileInfo> extends Sim
 
         if (mShowInfoButton) {
             contentViewHolder.imageViewInfoIcon.setVisibility(View.VISIBLE);
-            contentViewHolder.infoButton.setVisibility(View.VISIBLE);
+            //contentViewHolder.infoButton.setVisibility(View.VISIBLE);
+            contentViewHolder.infoButton.setVisibility(View.INVISIBLE);
         } else {
             contentViewHolder.imageViewInfoIcon.setVisibility(View.GONE);
-            contentViewHolder.infoButton.setVisibility(View.GONE);
+            //contentViewHolder.infoButton.setVisibility(View.GONE);
+            contentViewHolder.infoButton.setVisibility(View.INVISIBLE);
+
         }
 
         String fileTitle = file.getFileName();

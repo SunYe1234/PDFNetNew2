@@ -2299,7 +2299,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         reloadBrowser();
     }
 
-    @Override
+//    @Override
     public FileInfoDrawer showFileInfoDrawer(final FileInfoDrawer.Callback callback) {
         FileInfoDrawerFragment fragment = (FileInfoDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.file_info_drawer);
         if (fragment == null) {

@@ -1042,12 +1042,12 @@ public class ExternalStorageViewFragment extends FileBrowserViewFragment impleme
         mode.getMenuInflater().inflate(R.menu.cab_fragment_file_operations, menu);
 
         itemRename = menu.findItem(R.id.cab_file_rename);
-        itemDuplicate = menu.findItem(R.id.cab_file_copy);
-        itemMove = menu.findItem(R.id.cab_file_move);
+//        itemDuplicate = menu.findItem(R.id.cab_file_copy);
+//        itemMove = menu.findItem(R.id.cab_file_move);
         itemDelete = menu.findItem(R.id.cab_file_delete);
-        itemMerge = menu.findItem(R.id.cab_file_merge);
-        itemFavorite = menu.findItem(R.id.cab_file_favorite);
-        itemShare = menu.findItem(R.id.cab_file_share);
+//        itemMerge = menu.findItem(R.id.cab_file_merge);
+//        itemFavorite = menu.findItem(R.id.cab_file_favorite);
+//        itemShare = menu.findItem(R.id.cab_file_share);
         return true;
     }
 
@@ -1144,26 +1144,26 @@ public class ExternalStorageViewFragment extends FileBrowserViewFragment impleme
             }
             return true;
         }
-        if (item.getItemId() == R.id.cab_file_copy) {
-            if (mCurrentRoot != null && mCurrentFolder != null) {
-                // Copying a non-root level item (root level copying is not supported)
-                ExternalFileManager.duplicate(activity, mFileInfoSelectedList.get(0), ExternalStorageViewFragment.this);
-            }
-            return true;
-        }
-        if (item.getItemId() == R.id.cab_file_move) {
-            if (mCurrentRoot != null && mCurrentFolder != null) {
-                // Moving a non-root level item (root level moving is not supported)
-                FilePickerDialogFragment dialogFragment = FilePickerDialogFragment.newInstance(RequestCode.MOVE_FILE_LIST, mCurrentFolder.getUri());
-                dialogFragment.setLocalFolderListener(ExternalStorageViewFragment.this);
-                dialogFragment.setExternalFolderListener(ExternalStorageViewFragment.this);
-                FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager != null) {
-                    dialogFragment.show(fragmentManager, "file_picker_dialog_fragment");
-                }
-            }
-            return true;
-        }
+//        if (item.getItemId() == R.id.cab_file_copy) {
+//            if (mCurrentRoot != null && mCurrentFolder != null) {
+//                // Copying a non-root level item (root level copying is not supported)
+//                ExternalFileManager.duplicate(activity, mFileInfoSelectedList.get(0), ExternalStorageViewFragment.this);
+//            }
+//            return true;
+//        }
+//        if (item.getItemId() == R.id.cab_file_move) {
+//            if (mCurrentRoot != null && mCurrentFolder != null) {
+//                // Moving a non-root level item (root level moving is not supported)
+//                FilePickerDialogFragment dialogFragment = FilePickerDialogFragment.newInstance(RequestCode.MOVE_FILE_LIST, mCurrentFolder.getUri());
+//                dialogFragment.setLocalFolderListener(ExternalStorageViewFragment.this);
+//                dialogFragment.setExternalFolderListener(ExternalStorageViewFragment.this);
+//                FragmentManager fragmentManager = getFragmentManager();
+//                if (fragmentManager != null) {
+//                    dialogFragment.show(fragmentManager, "file_picker_dialog_fragment");
+//                }
+//            }
+//            return true;
+//        }
         if (item.getItemId() == R.id.cab_file_delete) {
             if (mCurrentRoot != null && mCurrentFolder != null) {
                 // Deleting non-root level item(s)
@@ -1174,55 +1174,55 @@ public class ExternalStorageViewFragment extends FileBrowserViewFragment impleme
             }
             return true;
         }
-        if (item.getItemId() == R.id.cab_file_merge) {
-            // Create and show file merge dialog-fragment
-            ArrayList<FileInfo> fileInfoList = new ArrayList<>();
-            for (ExternalFileInfo externalFileInfo : mFileInfoSelectedList) {
-                fileInfoList.add(new FileInfo(BaseFileInfo.FILE_TYPE_EXTERNAL,
-                    externalFileInfo.getAbsolutePath(), externalFileInfo.getFileName(), false, 1));
-            }
-            handleMerge(fileInfoList);
-
-            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_FILEBROWSER,
-                "Merge item clicked", AnalyticsHandlerAdapter.LABEL_EXTERNAL);
-            return true;
-        }
-        if (item.getItemId() == R.id.cab_file_favorite) {
-            int fileType = mFileInfoSelectedList.get(0).isDirectory() ? BaseFileInfo.FILE_TYPE_EXTERNAL_FOLDER : BaseFileInfo.FILE_TYPE_EXTERNAL;
-            FileInfo fileInfo = new FileInfo(fileType, mFileInfoSelectedList.get(0).getAbsolutePath(),
-                mFileInfoSelectedList.get(0).getFileName(), false, 1);
-            handleAddToFavorite(fileInfo);
-
-            finishActionMode();
-            // Update favorite file indicators
-            Utils.safeNotifyDataSetChanged(mAdapter);
-            return true;
-        }
-        if (item.getItemId() == R.id.cab_file_share) {
-            if (mFileInfoSelectedList.size() > 1) {
-                ArrayList<Uri> files = new ArrayList<>();
-                for (ExternalFileInfo file : mFileInfoSelectedList) {
-                    files.add(Uri.parse(file.getAbsolutePath()));
-                }
-                if (mOnPdfFileSharedListener != null) {
-                    Intent intent = Utils.createGenericShareIntents(activity, files);
-                    mOnPdfFileSharedListener.onPdfFileShared(intent);
-                    finishActionMode();
-                } else {
-                    Utils.shareGenericFiles(activity, files);
-                }
-            } else {
-                if (mOnPdfFileSharedListener != null) {
-                    Intent intent = Utils.createGenericShareIntent(activity, mFileInfoSelectedList.get(0).getUri());
-                    mOnPdfFileSharedListener.onPdfFileShared(intent);
-                    finishActionMode();
-                } else {
-                    Utils.shareGenericFile(activity, mFileInfoSelectedList.get(0).getUri());
-                }
-            }
-            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_FILEBROWSER, "Item share clicked", AnalyticsHandlerAdapter.LABEL_SD_CARD);
-            return true;
-        }
+//        if (item.getItemId() == R.id.cab_file_merge) {
+//            // Create and show file merge dialog-fragment
+//            ArrayList<FileInfo> fileInfoList = new ArrayList<>();
+//            for (ExternalFileInfo externalFileInfo : mFileInfoSelectedList) {
+//                fileInfoList.add(new FileInfo(BaseFileInfo.FILE_TYPE_EXTERNAL,
+//                    externalFileInfo.getAbsolutePath(), externalFileInfo.getFileName(), false, 1));
+//            }
+//            handleMerge(fileInfoList);
+//
+//            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_FILEBROWSER,
+//                "Merge item clicked", AnalyticsHandlerAdapter.LABEL_EXTERNAL);
+//            return true;
+//        }
+//        if (item.getItemId() == R.id.cab_file_favorite) {
+//            int fileType = mFileInfoSelectedList.get(0).isDirectory() ? BaseFileInfo.FILE_TYPE_EXTERNAL_FOLDER : BaseFileInfo.FILE_TYPE_EXTERNAL;
+//            FileInfo fileInfo = new FileInfo(fileType, mFileInfoSelectedList.get(0).getAbsolutePath(),
+//                mFileInfoSelectedList.get(0).getFileName(), false, 1);
+//            handleAddToFavorite(fileInfo);
+//
+//            finishActionMode();
+//            // Update favorite file indicators
+//            Utils.safeNotifyDataSetChanged(mAdapter);
+//            return true;
+//        }
+//        if (item.getItemId() == R.id.cab_file_share) {
+//            if (mFileInfoSelectedList.size() > 1) {
+//                ArrayList<Uri> files = new ArrayList<>();
+//                for (ExternalFileInfo file : mFileInfoSelectedList) {
+//                    files.add(Uri.parse(file.getAbsolutePath()));
+//                }
+//                if (mOnPdfFileSharedListener != null) {
+//                    Intent intent = Utils.createGenericShareIntents(activity, files);
+//                    mOnPdfFileSharedListener.onPdfFileShared(intent);
+//                    finishActionMode();
+//                } else {
+//                    Utils.shareGenericFiles(activity, files);
+//                }
+//            } else {
+//                if (mOnPdfFileSharedListener != null) {
+//                    Intent intent = Utils.createGenericShareIntent(activity, mFileInfoSelectedList.get(0).getUri());
+//                    mOnPdfFileSharedListener.onPdfFileShared(intent);
+//                    finishActionMode();
+//                } else {
+//                    Utils.shareGenericFile(activity, mFileInfoSelectedList.get(0).getUri());
+//                }
+//            }
+//            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_FILEBROWSER, "Item share clicked", AnalyticsHandlerAdapter.LABEL_SD_CARD);
+//            return true;
+//        }
 
         return false;
     }
@@ -2080,12 +2080,12 @@ public class ExternalStorageViewFragment extends FileBrowserViewFragment impleme
             activity.getMenuInflater().inflate(R.menu.cab_fragment_file_operations, menu);
 
             itemEdit = menu.findItem(R.id.cab_file_rename);
-            itemDuplicate = menu.findItem(R.id.cab_file_copy);
-            itemMove = menu.findItem(R.id.cab_file_move);
+//            itemDuplicate = menu.findItem(R.id.cab_file_copy);
+//            itemMove = menu.findItem(R.id.cab_file_move);
             itemDelete = menu.findItem(R.id.cab_file_delete);
-            itemMerge = menu.findItem(R.id.cab_file_merge);
-            itemFavorite = menu.findItem(R.id.cab_file_favorite);
-            itemShare = menu.findItem(R.id.cab_file_share);
+//            itemMerge = menu.findItem(R.id.cab_file_merge);
+//            itemFavorite = menu.findItem(R.id.cab_file_favorite);
+//            itemShare = menu.findItem(R.id.cab_file_share);
 
             return true;
         }
@@ -2146,20 +2146,20 @@ public class ExternalStorageViewFragment extends FileBrowserViewFragment impleme
                 ExternalFileManager.rename(activity, mSelectedFile, ExternalStorageViewFragment.this);
                 return true;
             }
-            if (menuItem.getItemId() == R.id.cab_file_copy) {
-                ExternalFileManager.duplicate(activity, mSelectedFile, ExternalStorageViewFragment.this);
-                return true;
-            }
-            if (menuItem.getItemId() == R.id.cab_file_move) {
-                FilePickerDialogFragment dialogFragment = FilePickerDialogFragment.newInstance(RequestCode.MOVE_FILE, mCurrentFolder.getUri());
-                dialogFragment.setLocalFolderListener(ExternalStorageViewFragment.this);
-                dialogFragment.setExternalFolderListener(ExternalStorageViewFragment.this);
-                FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager != null) {
-                    dialogFragment.show(fragmentManager, "file_picker_dialog_fragment");
-                }
-                return true;
-            }
+//            if (menuItem.getItemId() == R.id.cab_file_copy) {
+//                ExternalFileManager.duplicate(activity, mSelectedFile, ExternalStorageViewFragment.this);
+//                return true;
+//            }
+//            if (menuItem.getItemId() == R.id.cab_file_move) {
+//                FilePickerDialogFragment dialogFragment = FilePickerDialogFragment.newInstance(RequestCode.MOVE_FILE, mCurrentFolder.getUri());
+//                dialogFragment.setLocalFolderListener(ExternalStorageViewFragment.this);
+//                dialogFragment.setExternalFolderListener(ExternalStorageViewFragment.this);
+//                FragmentManager fragmentManager = getFragmentManager();
+//                if (fragmentManager != null) {
+//                    dialogFragment.show(fragmentManager, "file_picker_dialog_fragment");
+//                }
+//                return true;
+//            }
             if (menuItem.getItemId() == R.id.cab_file_delete) {
                 if (mCurrentRoot != null && mCurrentFolder != null) {
                     // Deleting non-root level item(s)
@@ -2174,31 +2174,31 @@ public class ExternalStorageViewFragment extends FileBrowserViewFragment impleme
                 }
                 return true;
             }
-            if (menuItem.getItemId() == R.id.cab_file_merge) {
-                // Create and show file merge dialog-fragment
-                handleMerge(new ArrayList<>(Collections.singletonList(getFileInfo())));
-                return true;
-            }
-            if (menuItem.getItemId() == R.id.cab_file_favorite) {
-                int fileType = mSelectedFile.isDirectory() ? BaseFileInfo.FILE_TYPE_EXTERNAL_FOLDER : BaseFileInfo.FILE_TYPE_EXTERNAL;
-                FileInfo fileInfo = new FileInfo(fileType, mSelectedFile.getAbsolutePath(),
-                    mSelectedFile.getFileName(), false, 1);
-                handleAddToFavorite(fileInfo);
-                drawer.invalidate();
-                // Update favorite file indicators
-                Utils.safeNotifyDataSetChanged(mAdapter);
-                return true;
-            }
-            if (menuItem.getItemId() == R.id.cab_file_share) {
-                if (mOnPdfFileSharedListener != null) {
-                    Intent intent = Utils.createGenericShareIntent(activity, mSelectedFile.getUri());
-                    mOnPdfFileSharedListener.onPdfFileShared(intent);
-                } else {
-                    Utils.shareGenericFile(activity, mSelectedFile.getUri());
-                }
-                AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_FILEBROWSER, "Item share clicked", AnalyticsHandlerAdapter.LABEL_SD_CARD);
-                return true;
-            }
+//            if (menuItem.getItemId() == R.id.cab_file_merge) {
+//                // Create and show file merge dialog-fragment
+//                handleMerge(new ArrayList<>(Collections.singletonList(getFileInfo())));
+//                return true;
+//            }
+//            if (menuItem.getItemId() == R.id.cab_file_favorite) {
+//                int fileType = mSelectedFile.isDirectory() ? BaseFileInfo.FILE_TYPE_EXTERNAL_FOLDER : BaseFileInfo.FILE_TYPE_EXTERNAL;
+//                FileInfo fileInfo = new FileInfo(fileType, mSelectedFile.getAbsolutePath(),
+//                    mSelectedFile.getFileName(), false, 1);
+//                handleAddToFavorite(fileInfo);
+//                drawer.invalidate();
+//                // Update favorite file indicators
+//                Utils.safeNotifyDataSetChanged(mAdapter);
+//                return true;
+//            }
+//            if (menuItem.getItemId() == R.id.cab_file_share) {
+//                if (mOnPdfFileSharedListener != null) {
+//                    Intent intent = Utils.createGenericShareIntent(activity, mSelectedFile.getUri());
+//                    mOnPdfFileSharedListener.onPdfFileShared(intent);
+//                } else {
+//                    Utils.shareGenericFile(activity, mSelectedFile.getUri());
+//                }
+//                AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_FILEBROWSER, "Item share clicked", AnalyticsHandlerAdapter.LABEL_SD_CARD);
+//                return true;
+//            }
             return false;
         }
 

@@ -2067,11 +2067,8 @@ id button_controls_annot_style_toolbar_3
 id button_ok
 id buttons
 id cab_action_remove
-id cab_file_copy
 id cab_file_delete
-id cab_file_favorite
 id cab_file_merge
-id cab_file_move
 id cab_file_rename
 id cab_file_share
 id cancel_action
