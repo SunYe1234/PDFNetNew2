@@ -11,6 +11,7 @@
     <item name="item_system_file_picker" type="id" />
     <item name="item_settings" type="id" />
     <item name="item_exit" type="id" />
+    <item name="item_delete_account" type="id" />
 
     <item name="menu_overflow_button" type="id"/>
 

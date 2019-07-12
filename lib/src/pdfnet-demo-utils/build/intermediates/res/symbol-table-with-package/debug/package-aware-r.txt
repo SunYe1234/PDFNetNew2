@@ -1754,6 +1754,7 @@ drawable ic_copy_white_24dp
 drawable ic_custom_color_white_24dp
 drawable ic_custommode_icon
 drawable ic_daymode_icon
+drawable ic_delete_account_24dp
 drawable ic_delete_black_24dp
 drawable ic_delete_white
 drawable ic_delete_white_24dp
@@ -2400,6 +2401,7 @@ id inline_toggle_button
 id invisible
 id italic
 id item_create_folder
+id item_delete_account
 id item_exit
 id item_external_storage
 id item_favorite_files

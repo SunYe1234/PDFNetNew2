@@ -34,9 +34,9 @@ public final class R {
         public static final int CropOverlayView = 0x7f090002;
         public static final int ImageView_image = 0x7f090004;
         public static final int bitmap_margin = 0x7f09005f;
-        public static final int off = 0x7f09025d;
-        public static final int on = 0x7f09025f;
-        public static final int onTouch = 0x7f090260;
+        public static final int off = 0x7f09025e;
+        public static final int on = 0x7f090260;
+        public static final int onTouch = 0x7f090261;
     }
     public static final class layout {
         private layout() {}

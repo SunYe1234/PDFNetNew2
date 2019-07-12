@@ -51,7 +51,7 @@ public final class R {
         public static final int fitStart = 0x7f090197;
         public static final int fitXY = 0x7f090198;
         public static final int focusCrop = 0x7f09019a;
-        public static final int none = 0x7f090251;
+        public static final int none = 0x7f090252;
     }
     public static final class styleable {
         private styleable() {}

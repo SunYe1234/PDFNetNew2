@@ -109,6 +109,7 @@
     <item name="fragment_app_bar" type="id"/>
     <item name="fragment_content" type="id"/>
     <item name="fragment_toolbar" type="id"/>
+    <item name="item_delete_account" type="id"/>
     <item name="item_exit" type="id"/>
     <item name="item_external_storage" type="id"/>
     <item name="item_favorites" type="id"/>
@@ -362,7 +363,7 @@
         <item name="listPreferredItemPaddingRight">@dimen/navigation_drawer_horizontal_margin</item>
         <item name="listPreferredItemHeightSmall">@dimen/navigation_drawer_list_item_height</item>
 
-        <!-- Use a light separator and highlight colour on the dark background -->
+        
         <item name="android:listDivider">@color/navigation_drawer_separator</item>
         <item name="colorControlHighlight">#66ffffff</item>
     </style>

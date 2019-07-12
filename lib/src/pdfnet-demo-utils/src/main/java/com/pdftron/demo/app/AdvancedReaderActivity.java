@@ -102,10 +102,12 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -166,13 +168,14 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     private static final String SAVE_INSTANCE_PROCESSED_FRAGMENT_VIEW_ID = "processed_fragment_view_id";
     private static final String SAVE_INSTANCE_BROWSER_PROCESSED_FRAGMENT_VIEW_ID = "browser_processed_fragment_view_id";
 
+
     public static final int MENU_ITEM_NONE = -1;
 
     private static final int SELECT_NAVIGATION_ITEM_DELAY = 250; // ms
     private static final int TEACH_NAVIGATION_DRAWER_DELAY = 500; // ms
 
     private static final String exPdfsPath="/storage/0403-0201/PDFs/";
-    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps";
+    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps/";
 
 
     private Fragment mCurrentFragment;
@@ -212,6 +215,10 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
     // Disposables for local file download
     private CompositeDisposable mDisposables;
+
+
+    public static String usersNameFileName="UserName.txt";
+
 
     /**
      * Opens the CompleteReader demo app.
@@ -307,6 +314,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         if (Utils.hasStoragePermission(this)) {
             isAppUpdated = isAppUpdated();
         }
+        isAppUpdated=true;
 
         try {
             if (isAppUpdated) {
@@ -1575,7 +1583,12 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             startActivityForResult(new Intent().setClass(this, SettingsActivity.class), RequestCode.SETTINGS);
         } else if (navItemId == R.id.item_exit) {
             finish();
-        } else {
+        }
+        else if (navItemId == R.id.item_delete_account) {
+            deleteUserCopies();
+            finish();
+        }
+        else {
             if (!(mCurrentFragment instanceof LocalFileViewFragment)) {
                 if (mLastAddedBrowserFragment instanceof LocalFileViewFragment) {
                     fragment = mLastAddedBrowserFragment;
@@ -1610,6 +1623,70 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                 reloadBrowser();
             }
         }
+    }
+
+    private void deleteAllFiles(File root) {
+        File files[] = root.listFiles();
+        if (files != null)
+            for (File f : files) {
+                if (f.isDirectory()) { // 判断是否为文件夹
+                    deleteAllFiles(f);
+                    try {
+                        f.delete();
+                    } catch (Exception e) {
+                    }
+                } else {
+                    if (f.exists()) { // 判断是否存在
+                        deleteAllFiles(f);
+                        try {
+                            f.delete();
+                        } catch (Exception e) {
+                        }
+                    }
+                }
+            }
+        root.delete();
+    }
+    private void deleteUserCopies()
+    {
+        File currentUserCpsDirec=new File(usersFolderParentPath+getUserNameFromFile());
+        if (currentUserCpsDirec.isDirectory())
+        {
+            deleteAllFiles(currentUserCpsDirec);
+        }
+
+    }
+
+    private   String getUserNameFromFile()
+    {
+
+        try {
+            File currentUserNameFile=new File(getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
+            if (!currentUserNameFile.exists())
+                currentUserNameFile.createNewFile();
+            FileInputStream inputStream = openFileInput(usersNameFileName);
+            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
+            // 一次读一个字符
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String usName="";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
+                // 但如果这两个字符分开显示时，会换两次行。
+                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    usName+=(char)tempchar;
+                }
+
+            }
+            reader.close();
+            return usName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
     }
 
     private void startFragment(Fragment fragment) {

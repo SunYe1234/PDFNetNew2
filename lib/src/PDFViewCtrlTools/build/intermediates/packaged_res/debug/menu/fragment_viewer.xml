@@ -94,22 +94,22 @@
                 android:id="@id/menu_export_copy"
                 android:title="@string/action_export_original"
                 app:showAsAction="never" />
-            <item
-                android:id="@id/menu_export_flattened_copy"
-                android:title="@string/action_export_flatten"
-                app:showAsAction="never" />
-            <item
-                android:id="@id/menu_export_optimized_copy"
-                android:title="@string/action_export_optimize"
-                app:showAsAction="never" />
-            <item
-                android:id="@id/menu_export_cropped_copy"
-                android:title="@string/action_export_cropped"
-                app:showAsAction="never" />
-            <item
-                android:id="@id/menu_export_password_copy"
-                android:title="@string/action_export_password"
-                app:showAsAction="never" />
+            <!--<item-->
+                <!--android:id="@id/menu_export_flattened_copy"-->
+                <!--android:title="@string/action_export_flatten"-->
+                <!--app:showAsAction="never" />-->
+            <!--<item-->
+                <!--android:id="@id/menu_export_optimized_copy"-->
+                <!--android:title="@string/action_export_optimize"-->
+                <!--app:showAsAction="never" />-->
+            <!--<item-->
+                <!--android:id="@id/menu_export_cropped_copy"-->
+                <!--android:title="@string/action_export_cropped"-->
+                <!--app:showAsAction="never" />-->
+            <!--<item-->
+                <!--android:id="@id/menu_export_password_copy"-->
+                <!--android:title="@string/action_export_password"-->
+                <!--app:showAsAction="never" />-->
         </menu>
     </item>
 
