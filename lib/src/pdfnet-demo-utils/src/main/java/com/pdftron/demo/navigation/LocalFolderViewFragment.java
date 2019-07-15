@@ -213,65 +213,99 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
 
         if (mFileInfoSelectedList.size() > 1) {
             // Multiple selection of files and/or folders
-            itemDelete.setVisible(true);
-            itemDuplicate.setVisible(false);
-            itemEdit.setVisible(false);
-            itemMerge.setVisible(true);
-            itemFavorite.setVisible(false);
-            itemShare.setVisible(true);
+            if (itemDelete!=null)
+                itemDelete.setVisible(true);
+            if (itemDuplicate!=null)
+                itemDuplicate.setVisible(false);
+            if (itemEdit!=null)
+                itemEdit.setVisible(false);
+            if (itemMerge!=null)
+                itemMerge.setVisible(true);
+            if (itemFavorite!=null)
+                itemFavorite.setVisible(false);
+            if (itemShare!=null)
+                itemShare.setVisible(true);
 
             // If only files are selected, allow move action and merge
             itemMove.setVisible(true);
             for (FileInfo file : mFileInfoSelectedList) {
                 if (file.getType() != BaseFileInfo.FILE_TYPE_FILE) {
+                    if (itemMove!=null)
                     itemMove.setVisible(false);
-                    itemMerge.setVisible(false);
-                    itemShare.setVisible(false);
+                    if (itemMerge!=null)
+                        itemMerge.setVisible(false);
+                    if (itemShare!=null)
+                        itemShare.setVisible(false);
                     break;
                 }
             }
         } else {
             switch (mFileInfoSelectedList.get(0).getType()) {
                 case BaseFileInfo.FILE_TYPE_FOLDER:
-                    itemEdit.setVisible(true);
-                    itemDuplicate.setVisible(false);
-                    itemMove.setVisible(false);
-                    itemDelete.setVisible(true);
-                    itemMerge.setVisible(false);
-                    itemFavorite.setVisible(true);
-                    itemShare.setVisible(false);
+                    if (itemEdit!=null)
+                        itemEdit.setVisible(true);
+                    if (itemDuplicate!=null)
+                        itemDuplicate.setVisible(false);
+                    if (itemMove!=null)
+                        itemMove.setVisible(false);
+                    if (itemDelete!=null)
+                        itemDelete.setVisible(true);
+                    if (itemMerge!=null)
+                        itemMerge.setVisible(false);
+                    if (itemFavorite!=null)
+                        itemFavorite.setVisible(true);
+                    if (itemShare!=null)
+                        itemShare.setVisible(false);
                     break;
                 case BaseFileInfo.FILE_TYPE_FILE:
+                    if (itemEdit!=null)
                     itemEdit.setVisible(true);
-                    itemDuplicate.setVisible(true);
-                    itemMove.setVisible(true);
-                    itemDelete.setVisible(true);
-                    itemMerge.setVisible(true);
-                    itemFavorite.setVisible(true);
-                    itemShare.setVisible(true);
+                    if (itemDuplicate!=null)
+                         itemDuplicate.setVisible(true);
+                    if (itemMove!=null)
+                        itemMove.setVisible(true);
+                    if (itemDelete!=null)
+                        itemDelete.setVisible(true);
+                    if (itemMerge!=null)
+                        itemMerge.setVisible(true);
+                    if (itemFavorite!=null)
+                        itemFavorite.setVisible(true);
+                    if (itemShare!=null)
+                        itemShare.setVisible(true);
                     break;
                 default:
-                    itemEdit.setVisible(false);
-                    itemDuplicate.setVisible(false);
-                    itemMove.setVisible(false);
-                    itemDelete.setVisible(false);
-                    itemMerge.setVisible(false);
-                    itemFavorite.setVisible(false);
+                    if (itemEdit!=null)
+                        itemEdit.setVisible(false);
+                    if (itemDuplicate!=null)
+                        itemDuplicate.setVisible(false);
+                    if (itemMove!=null)
+                        itemMove.setVisible(false);
+                    if (itemDelete!=null)
+                        itemDelete.setVisible(false);
+                    if (itemMerge!=null)
+                        itemMerge.setVisible(false);
+                    if (itemFavorite!=null)
+                        itemFavorite.setVisible(false);
                     itemShare.setVisible(false);
                     break;
             }
             if (canAddToFavorite(mFileInfoSelectedList.get(0))) {
+                if (itemFavorite!=null)
                 itemFavorite.setTitle(activity.getString(R.string.action_add_to_favorites));
             } else {
+                if (itemFavorite!=null)
                 itemFavorite.setTitle(activity.getString(R.string.action_remove_from_favorites));
             }
         }
         mode.setTitle(Utils.getLocaleDigits(Integer.toString(mFileInfoSelectedList.size())));
         // Ensure items are always shown
         itemEdit.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        itemDuplicate.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        itemMove.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        itemDelete.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (itemDuplicate!=null)
+            itemDuplicate.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (itemMove!=null)
+            itemMove.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (itemDelete!=null)
+            itemDelete.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         return true;
     }

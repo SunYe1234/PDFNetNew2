@@ -217,7 +217,7 @@
     <string name="error_corrupt_file_message">This file has been damaged. %1$s tried to repair it but could not, so it cannot be opened. Sorry!</string>
     <string name="error_failed_to_open_document_tree">Failed to open folder. Please try again.</string>
     <string name="error_opening_file">Could not open the file</string>
-    <string name="external_storage">SD Card</string>
+    <string name="external_storage">PDFs in SD card</string>
     <string name="fastscroller_handle">fast scroll handler</string>
     <string name="fastscroller_track">fast scroll track</string>
     <string name="file">file</string>

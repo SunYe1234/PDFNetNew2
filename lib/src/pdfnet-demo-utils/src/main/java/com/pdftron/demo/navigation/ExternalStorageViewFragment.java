@@ -1061,70 +1061,103 @@ public class ExternalStorageViewFragment extends FileBrowserViewFragment impleme
         }
         if (mFileInfoSelectedList.size() > 1) {
             // Multiple selection of files
+            if(itemRename!=null)
             itemRename.setVisible(false);
-            itemDuplicate.setVisible(false);
-            itemMove.setVisible(true);
-            itemDelete.setVisible(true);
-            itemMerge.setVisible(true);
-            itemFavorite.setVisible(false);
-            itemShare.setVisible(true);
+            if(itemDuplicate!=null)
+                itemDuplicate.setVisible(false);
+            if(itemMove!=null)
+                itemMove.setVisible(true);
+            if(itemDelete!=null)
+                itemDelete.setVisible(true);
+            if(itemMerge!=null)
+                itemMerge.setVisible(true);
+            if(itemFavorite!=null)
+                itemFavorite.setVisible(false);
+            if(itemShare!=null)
+                itemShare.setVisible(true);
 
             // If only files are selected, allow move action
-            itemMove.setVisible(true);
+            if(itemMove!=null)
+                itemMove.setVisible(true);
             for (ExternalFileInfo file : mFileInfoSelectedList) {
                 if (file.isDirectory()) {
-                    itemMove.setVisible(false);
-                    itemMerge.setVisible(false);
-                    itemShare.setVisible(false);
+                    if(itemMove!=null)
+                        itemMove.setVisible(false);
+                    if(itemMerge!=null)
+                        itemMerge.setVisible(false);
+                    if(itemShare!=null)
+                        itemShare.setVisible(false);
                     break;
                 }
             }
         } else {
             if (mFileInfoSelectedList.size() == 1) {
                 if (mFileInfoSelectedList.get(0).isDirectory()) {
+                    if (itemDuplicate!=null)
                     itemDuplicate.setVisible(false);
-                    itemMove.setVisible(false);
-                    itemMerge.setVisible(false);
-                    itemFavorite.setVisible(true);
-                    itemShare.setVisible(false);
+                    if (itemMove!=null)
+                        itemMove.setVisible(false);
+                    if (itemMerge!=null)
+                        itemMerge.setVisible(false);
+                    if (itemFavorite!=null)
+                        itemFavorite.setVisible(true);
+                    if (itemShare!=null)
+                        itemShare.setVisible(false);
                 } else {
-                    itemDuplicate.setVisible(true);
-                    itemMove.setVisible(true);
-                    itemMerge.setVisible(true);
-                    itemFavorite.setVisible(true);
-                    itemShare.setVisible(true);
+                    if (itemDuplicate!=null)
+                        itemDuplicate.setVisible(true);
+                    if (itemMove!=null)
+                        itemMove.setVisible(true);
+                    if (itemMerge!=null)
+                        itemMerge.setVisible(true);
+                    if (itemFavorite!=null)
+                        itemFavorite.setVisible(true);
+                    if (itemShare!=null)
+                        itemShare.setVisible(true);
                 }
-                itemDelete.setVisible(true);
+                if (itemDelete!=null)
+                    itemDelete.setVisible(true);
                 // Renaming & moving is only supported for non-root level items
                 if (mCurrentRoot != null && mCurrentFolder != null) {
                     itemRename.setVisible(true);
                 } else {
-                    itemRename.setVisible(false);
-                    itemMove.setVisible(false);
+                    if (itemRename!=null)
+                        itemRename.setVisible(false);
+                    if (itemMove!=null)
+                        itemMove.setVisible(false);
                 }
                 // Adjust favorite item
                 FileInfo fileInfo = new FileInfo(BaseFileInfo.FILE_TYPE_EXTERNAL, mFileInfoSelectedList.get(0).getAbsolutePath(),
                     mFileInfoSelectedList.get(0).getFileName(), false, 1);
                 if (canAddToFavorite(fileInfo)) {
-                    itemFavorite.setTitle(activity.getString(R.string.action_add_to_favorites));
+                    if (itemFavorite!=null)
+                        itemFavorite.setTitle(activity.getString(R.string.action_add_to_favorites));
                 } else {
-                    itemFavorite.setTitle(activity.getString(R.string.action_remove_from_favorites));
+                    if (itemFavorite!=null)
+                        itemFavorite.setTitle(activity.getString(R.string.action_remove_from_favorites));
                 }
             }
         }
         // Adjust delete action's title for root vs non-root folder
         if (mCurrentRoot != null && mCurrentFolder != null) {
-            itemDelete.setTitle(getString(R.string.delete));
+            if (itemDelete!=null)
+                itemDelete.setTitle(getString(R.string.delete));
         } else {
-            itemDelete.setTitle(getString(R.string.undo_redo_annot_remove));
-            itemDelete.setIcon(null); // Do not show icon
+            if (itemDelete!=null) {
+                itemDelete.setTitle(getString(R.string.undo_redo_annot_remove));
+                itemDelete.setIcon(null); // Do not show icon
+            }
         }
         mode.setTitle(Utils.getLocaleDigits(Integer.toString(mFileInfoSelectedList.size())));
         // Ensure items are always shown
-        itemRename.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        itemDuplicate.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        itemMove.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        itemDelete.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (itemRename!=null)
+            itemRename.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (itemDuplicate!=null)
+            itemDuplicate.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (itemMove!=null)
+            itemMove.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (itemDelete!=null)
+            itemDelete.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         return true;
     }

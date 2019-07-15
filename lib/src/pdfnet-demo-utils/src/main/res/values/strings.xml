@@ -252,7 +252,7 @@
     <string name="merging_wait">Merging&#8230;</string>
     <string name="removing_access_wait">Removing access&#8230;</string>
     <string name="local_storage">Local Storage</string>
-    <string name="external_storage">SD Card</string>
+    <string name="external_storage">PDFs in SD card</string>
     <string name="system_files">System Files</string>
     <string name="loading_files_wait">Loading files&#8230;</string>
     <string name="updating_file_list_wait">Updating file list&#8230;</string>

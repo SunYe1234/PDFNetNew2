@@ -1097,48 +1097,48 @@ public class LocalFileViewFragment extends FileBrowserViewFragment
             }
         });
 
-        itemClickHelper.setOnItemLongClickListener(new ItemClickHelper.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(RecyclerView parent, View view, int position, long id) {
-
-                FileInfo fileInfo = mAdapter.getItem(position);
-                if (fileInfo == null) {
-                    return false;
-                }
-
-                if (mActionLock || mAdapter.getItemViewType(position) == AllFilesAdapter.VIEW_TYPE_HEADER) {
-                    // locked or Header item - ignore click
-                    return false;
-                }
-
-                closeSearch();
-                if (mActionMode == null) {
-                    mFileInfoSelectedList.add(fileInfo);
-                    mItemSelectionHelper.setItemChecked(position, true);
-
-                    mActionMode = ((AppCompatActivity) getActivity()).startSupportActionMode(LocalFileViewFragment.this);
-                    if (mActionMode != null) {
-                        mActionMode.invalidate();
-                    }
-                } else {
-                    if (mFileInfoSelectedList.contains(fileInfo)) {
-                        mFileInfoSelectedList.remove(fileInfo);
-                        mItemSelectionHelper.setItemChecked(position, false);
-                    } else {
-                        mFileInfoSelectedList.add(fileInfo);
-                        mItemSelectionHelper.setItemChecked(position, true);
-                    }
-
-                    if (mFileInfoSelectedList.isEmpty()) {
-                        finishActionMode();
-                    } else {
-                        mActionMode.invalidate();
-                    }
-                }
-
-                return true;
-            }
-        });
+//        itemClickHelper.setOnItemLongClickListener(new ItemClickHelper.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(RecyclerView parent, View view, int position, long id) {
+//
+//                FileInfo fileInfo = mAdapter.getItem(position);
+//                if (fileInfo == null) {
+//                    return false;
+//                }
+//
+//                if (mActionLock || mAdapter.getItemViewType(position) == AllFilesAdapter.VIEW_TYPE_HEADER) {
+//                    // locked or Header item - ignore click
+//                    return false;
+//                }
+//
+//                closeSearch();
+//                if (mActionMode == null) {
+//                    mFileInfoSelectedList.add(fileInfo);
+//                    mItemSelectionHelper.setItemChecked(position, true);
+//
+//                    mActionMode = ((AppCompatActivity) getActivity()).startSupportActionMode(LocalFileViewFragment.this);
+//                    if (mActionMode != null) {
+//                        mActionMode.invalidate();
+//                    }
+//                } else {
+//                    if (mFileInfoSelectedList.contains(fileInfo)) {
+//                        mFileInfoSelectedList.remove(fileInfo);
+//                        mItemSelectionHelper.setItemChecked(position, false);
+//                    } else {
+//                        mFileInfoSelectedList.add(fileInfo);
+//                        mItemSelectionHelper.setItemChecked(position, true);
+//                    }
+//
+//                    if (mFileInfoSelectedList.isEmpty()) {
+//                        finishActionMode();
+//                    } else {
+//                        mActionMode.invalidate();
+//                    }
+//                }
+//
+//                return true;
+//            }
+//        });
 
         if (Utils.isLollipop()) {
             stickyHeader.setElevation(getResources().getDimensionPixelSize(R.dimen.card_elevation));
