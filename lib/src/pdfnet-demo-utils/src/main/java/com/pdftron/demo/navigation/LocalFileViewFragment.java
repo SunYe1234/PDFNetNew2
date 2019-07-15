@@ -916,114 +916,116 @@ public class LocalFileViewFragment extends FileBrowserViewFragment
         mFabMenu = view.findViewById(R.id.fab_menu);
         stickyHeader = view.findViewById(R.id.sticky_header);
         mHtmlConversionComponent = getHtmlConversionComponent(view);
-        mFabMenu.setClosedOnTouchOutside(true);
+        if(mFabMenu!=null) {
+            mFabMenu.setClosedOnTouchOutside(true);
 
-        if (!Utils.isTablet(getActivity()) & mFabMenu.getLayoutParams() instanceof CoordinatorLayout.LayoutParams) {
-            CoordinatorLayout.LayoutParams clp = (CoordinatorLayout.LayoutParams) mFabMenu.getLayoutParams();
-            clp.setBehavior(new MoveUpwardBehaviour());
-        }
+            if (!Utils.isTablet(getActivity()) & mFabMenu.getLayoutParams() instanceof CoordinatorLayout.LayoutParams) {
+                CoordinatorLayout.LayoutParams clp = (CoordinatorLayout.LayoutParams) mFabMenu.getLayoutParams();
+                clp.setBehavior(new MoveUpwardBehaviour());
+            }
 
-        FloatingActionButton createPDFButton = mFabMenu.findViewById(R.id.blank_PDF);
-        createPDFButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mFabMenu.close(true);
-                AddPageDialogFragment addPageDialogFragment = AddPageDialogFragment.newInstance();
-                addPageDialogFragment.setOnCreateNewDocumentListener(new AddPageDialogFragment.OnCreateNewDocumentListener() {
-                    @Override
-                    public void onCreateNewDocument(PDFDoc doc, String title) {
-                        saveCreatedDocument(doc, title);
-                        AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.EVENT_CREATE_NEW,
-                            AnalyticsParam.createNewParam(AnalyticsHandlerAdapter.CREATE_NEW_ITEM_BLANK_PDF, AnalyticsHandlerAdapter.SCREEN_ALL_DOCUMENTS));
+            FloatingActionButton createPDFButton = mFabMenu.findViewById(R.id.blank_PDF);
+            createPDFButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mFabMenu.close(true);
+                    AddPageDialogFragment addPageDialogFragment = AddPageDialogFragment.newInstance();
+                    addPageDialogFragment.setOnCreateNewDocumentListener(new AddPageDialogFragment.OnCreateNewDocumentListener() {
+                        @Override
+                        public void onCreateNewDocument(PDFDoc doc, String title) {
+                            saveCreatedDocument(doc, title);
+                            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.EVENT_CREATE_NEW,
+                                    AnalyticsParam.createNewParam(AnalyticsHandlerAdapter.CREATE_NEW_ITEM_BLANK_PDF, AnalyticsHandlerAdapter.SCREEN_ALL_DOCUMENTS));
+                        }
+                    });
+                    FragmentManager fragmentManager = getFragmentManager();
+                    if (fragmentManager != null) {
+                        addPageDialogFragment.show(fragmentManager, "create_document_local_file");
                     }
-                });
-                FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager != null) {
-                    addPageDialogFragment.show(fragmentManager, "create_document_local_file");
                 }
-            }
-        });
+            });
 
-        FloatingActionButton imagePDFButton = mFabMenu.findViewById(R.id.image_PDF);
-        imagePDFButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mFabMenu.close(true);
-                mOutputFileUri = ViewerUtils.openImageIntent(LocalFileViewFragment.this);
-            }
-        });
-
-        FloatingActionButton officePDFButton = mFabMenu.findViewById(R.id.office_PDF);
-        officePDFButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentActivity activity = getActivity();
-                FragmentManager fragmentManager = getFragmentManager();
-                if (activity == null || fragmentManager == null) {
-                    return;
+            FloatingActionButton imagePDFButton = mFabMenu.findViewById(R.id.image_PDF);
+            imagePDFButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mFabMenu.close(true);
+                    mOutputFileUri = ViewerUtils.openImageIntent(LocalFileViewFragment.this);
                 }
+            });
 
-                mFabMenu.close(true);
-                mAddDocPdfHelper = new AddDocPdfHelper(activity, fragmentManager, new AddDocPdfHelper.AddDocPDFHelperListener() {
-                    @Override
-                    public void onPDFReturned(String fileAbsolutePath, boolean external) {
-                        Activity activity = getActivity();
-                        if (activity == null) {
-                            return;
-                        }
-
-                        if (fileAbsolutePath == null) {
-                            Utils.showAlertDialog(activity, R.string.dialog_add_photo_document_filename_error_message, R.string.error);
-                            return;
-                        }
-
-                        File file = new File(fileAbsolutePath);
-                        if (external) {
-                            Logger.INSTANCE.LogD(TAG, "external folder selected");
-                            if (mCallbacks != null) {
-                                mCallbacks.onExternalFileSelected(fileAbsolutePath, "");
-                            }
-                        } else {
-                            FileInfo fileInfo = new FileInfo(BaseFileInfo.FILE_TYPE_FILE, file);
-                            addFileToList(fileInfo);
-                            Logger.INSTANCE.LogD(TAG, "inside");
-                            if (mCallbacks != null) {
-                                mCallbacks.onFileSelected(new File(fileAbsolutePath), "");
-                            }
-                        }
-                        if (!external) {
-                            CommonToast.showText(getContext(), getString(R.string.dialog_create_new_document_filename_success) + fileAbsolutePath);
-                        }
-                        AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.EVENT_CREATE_NEW,
-                            AnalyticsParam.createNewParam(AnalyticsHandlerAdapter.CREATE_NEW_ITEM_PDF_FROM_DOCS, AnalyticsHandlerAdapter.SCREEN_ALL_DOCUMENTS));
+            FloatingActionButton officePDFButton = mFabMenu.findViewById(R.id.office_PDF);
+            officePDFButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentActivity activity = getActivity();
+                    FragmentManager fragmentManager = getFragmentManager();
+                    if (activity == null || fragmentManager == null) {
+                        return;
                     }
 
-                    @Override
-                    public void onMultipleFilesSelected(int requestCode, ArrayList<FileInfo> fileInfoList) {
-                        handleMultipleFilesSelected(fileInfoList, AnalyticsHandlerAdapter.SCREEN_ALL_DOCUMENTS);
-                    }
-                });
-                mAddDocPdfHelper.pickFileAndCreate();
+                    mFabMenu.close(true);
+                    mAddDocPdfHelper = new AddDocPdfHelper(activity, fragmentManager, new AddDocPdfHelper.AddDocPDFHelperListener() {
+                        @Override
+                        public void onPDFReturned(String fileAbsolutePath, boolean external) {
+                            Activity activity = getActivity();
+                            if (activity == null) {
+                                return;
+                            }
+
+                            if (fileAbsolutePath == null) {
+                                Utils.showAlertDialog(activity, R.string.dialog_add_photo_document_filename_error_message, R.string.error);
+                                return;
+                            }
+
+                            File file = new File(fileAbsolutePath);
+                            if (external) {
+                                Logger.INSTANCE.LogD(TAG, "external folder selected");
+                                if (mCallbacks != null) {
+                                    mCallbacks.onExternalFileSelected(fileAbsolutePath, "");
+                                }
+                            } else {
+                                FileInfo fileInfo = new FileInfo(BaseFileInfo.FILE_TYPE_FILE, file);
+                                addFileToList(fileInfo);
+                                Logger.INSTANCE.LogD(TAG, "inside");
+                                if (mCallbacks != null) {
+                                    mCallbacks.onFileSelected(new File(fileAbsolutePath), "");
+                                }
+                            }
+                            if (!external) {
+                                CommonToast.showText(getContext(), getString(R.string.dialog_create_new_document_filename_success) + fileAbsolutePath);
+                            }
+                            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.EVENT_CREATE_NEW,
+                                    AnalyticsParam.createNewParam(AnalyticsHandlerAdapter.CREATE_NEW_ITEM_PDF_FROM_DOCS, AnalyticsHandlerAdapter.SCREEN_ALL_DOCUMENTS));
+                        }
+
+                        @Override
+                        public void onMultipleFilesSelected(int requestCode, ArrayList<FileInfo> fileInfoList) {
+                            handleMultipleFilesSelected(fileInfoList, AnalyticsHandlerAdapter.SCREEN_ALL_DOCUMENTS);
+                        }
+                    });
+                    mAddDocPdfHelper.pickFileAndCreate();
+                }
+            });
+
+            // Set up fab for HTML 2 PDF conversion using HTML2PDF, requires KitKat
+            LayoutInflater inflater = LayoutInflater.from(getActivity());
+            @SuppressLint("InflateParams")
+            View btnView = inflater.inflate(R.layout.fab_btn_web_pdf, null);
+            FloatingActionButton webpagePDFButton = btnView.findViewById(R.id.webpage_PDF);
+            // HTML conversion should not be visible if Android version is less than KitKat
+            if (!Utils.isKitKat()) {
+                webpagePDFButton.setVisibility(View.GONE);
             }
-        });
-
-        // Set up fab for HTML 2 PDF conversion using HTML2PDF, requires KitKat
-        LayoutInflater inflater = LayoutInflater.from(getActivity());
-        @SuppressLint("InflateParams")
-        View btnView = inflater.inflate(R.layout.fab_btn_web_pdf, null);
-        FloatingActionButton webpagePDFButton = btnView.findViewById(R.id.webpage_PDF);
-        // HTML conversion should not be visible if Android version is less than KitKat
-        if (!Utils.isKitKat()) {
-            webpagePDFButton.setVisibility(View.GONE);
+            webpagePDFButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mFabMenu.close(true);
+                    convertHtml();
+                }
+            });
+            mFabMenu.addMenuButton(webpagePDFButton);
         }
-        webpagePDFButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mFabMenu.close(true);
-                convertHtml();
-            }
-        });
-        mFabMenu.addMenuButton(webpagePDFButton);
 
         mRecyclerView.initView(mSpanCount);
 

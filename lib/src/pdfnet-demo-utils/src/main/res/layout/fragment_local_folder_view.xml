@@ -119,34 +119,34 @@
 
         </LinearLayout>
 
-        <com.github.clans.fab.FloatingActionMenu
-            android:id="@+id/fab_menu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingRight="@dimen/fab_button_margin"
-            android:paddingLeft="@dimen/fab_button_margin"
-            android:paddingBottom="@dimen/fab_button_margin"
-            app:menu_colorNormal="?attr/colorAccent"
-            app:menu_colorPressed="?attr/colorAccent"
-            app:menu_openDirection="up"
-            app:menu_labels_style="@style/fabMenuLabelStyle"
-            app:menu_backgroundColor="@color/fab_menu_background">
+        <!--<com.github.clans.fab.FloatingActionMenu-->
+            <!--android:id="@+id/fab_menu"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingRight="@dimen/fab_button_margin"-->
+            <!--android:paddingLeft="@dimen/fab_button_margin"-->
+            <!--android:paddingBottom="@dimen/fab_button_margin"-->
+            <!--app:menu_colorNormal="?attr/colorAccent"-->
+            <!--app:menu_colorPressed="?attr/colorAccent"-->
+            <!--app:menu_openDirection="up"-->
+            <!--app:menu_labels_style="@style/fabMenuLabelStyle"-->
+            <!--app:menu_backgroundColor="@color/fab_menu_background">-->
 
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/add_folder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_folder_white_24dp"
-                app:fab_colorNormal="?attr/colorAccent"
-                app:fab_colorPressed="?attr/colorAccent"
-                app:fab_size="mini"
-                app:fab_label="@string/dialog_create_new_folder_title"/>
+            <!--<com.github.clans.fab.FloatingActionButton-->
+                <!--android:id="@+id/add_folder"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:srcCompat="@drawable/ic_folder_white_24dp"-->
+                <!--app:fab_colorNormal="?attr/colorAccent"-->
+                <!--app:fab_colorPressed="?attr/colorAccent"-->
+                <!--app:fab_size="mini"-->
+                <!--app:fab_label="@string/dialog_create_new_folder_title"/>-->
 
-            <include layout="@layout/fab_btn_blank_pdf"/>
-            <include layout="@layout/fab_btn_image_pdf"/>
-            <include layout="@layout/fab_btn_office_pdf"/>
+            <!--<include layout="@layout/fab_btn_blank_pdf"/>-->
+            <!--<include layout="@layout/fab_btn_image_pdf"/>-->
+            <!--<include layout="@layout/fab_btn_office_pdf"/>-->
 
-        </com.github.clans.fab.FloatingActionMenu>
+        <!--</com.github.clans.fab.FloatingActionMenu>-->
     </com.pdftron.pdf.widget.ForegroundCoordinatorLayout>
 
 </LinearLayout>

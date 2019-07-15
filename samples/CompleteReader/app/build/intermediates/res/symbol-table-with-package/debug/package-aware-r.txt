@@ -2046,7 +2046,6 @@ id activity_register
 id add
 id add_color_btn
 id add_custom_stamp_fab
-id add_folder
 id add_page_document_title_input
 id added_colors
 id addpagedialog_doctitle_label
