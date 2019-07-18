@@ -412,6 +412,11 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+
+        <activity android:name="com.pdftron.demo.app.MainActivity" />
+        <activity android:name="com.pdftron.demo.app.RegisterActivity" />
+        <activity android:name="com.pdftron.demo.app.CompleteReaderActivity" />
+
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
             android:authorities="com.pdftron.completereader.lifecycle-trojan"

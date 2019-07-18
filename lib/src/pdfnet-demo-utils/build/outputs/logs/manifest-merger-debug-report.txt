@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:1:1-27:12
-INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:1:1-27:12
-INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:1:1-27:12
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:1:1-30:12
+INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:1:1-30:12
 	package
 		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml
@@ -12,7 +12,7 @@ INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/
 	xmlns:android
 		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:1:11-69
 application
-ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:5:5-26:19
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:5:5-29:19
 provider#com.pdftron.demo.utils.PDFTronDemoInitializer
 ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:6:9-9:40
 	android:authorities
@@ -45,6 +45,18 @@ ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/mai
 		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:23:17-55
 	android:name
 		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:22:17-67
+activity#com.pdftron.demo.app.MainActivity
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:26:9-53
+	android:name
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:26:19-51
+activity#com.pdftron.demo.app.RegisterActivity
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:27:9-57
+	android:name
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:27:19-55
+activity#com.pdftron.demo.app.CompleteReaderActivity
+ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:28:9-63
+	android:name
+		ADDED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml:28:19-61
 uses-sdk
 INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/src/main/AndroidManifest.xml

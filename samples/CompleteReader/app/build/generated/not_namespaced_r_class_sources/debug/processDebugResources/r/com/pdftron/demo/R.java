@@ -907,6 +907,7 @@ public final class R {
         public static final int back_fwd_buttons_disabled_bg = 0x7f060022;
         public static final int back_fwd_buttons_disabled_outline = 0x7f060023;
         public static final int back_fwd_buttons_selected_bg = 0x7f060024;
+        public static final int background = 0x7f060025;
         public static final int background_floating_material_dark = 0x7f060026;
         public static final int background_floating_material_light = 0x7f060027;
         public static final int background_material_dark = 0x7f060028;
@@ -930,6 +931,9 @@ public final class R {
         public static final int cardview_light_background = 0x7f06003a;
         public static final int cardview_shadow_end_color = 0x7f06003b;
         public static final int cardview_shadow_start_color = 0x7f06003c;
+        public static final int colorAccent = 0x7f06003d;
+        public static final int colorPrimary = 0x7f06003e;
+        public static final int colorPrimaryDark = 0x7f06003f;
         public static final int controls_annot_style_markup_text = 0x7f060040;
         public static final int controls_annot_style_preview_bg = 0x7f060041;
         public static final int controls_annotation_toolbar_background = 0x7f060042;
@@ -951,6 +955,7 @@ public final class R {
         public static final int controls_thumbnails_view_page_label_background = 0x7f060052;
         public static final int controls_thumbnails_view_toolbar_bg = 0x7f060053;
         public static final int dark_gray = 0x7f060054;
+        public static final int description_body = 0x7f060055;
         public static final int design_bottom_navigation_shadow_color = 0x7f060056;
         public static final int design_default_color_primary = 0x7f060057;
         public static final int design_default_color_primary_dark = 0x7f060058;
@@ -993,6 +998,10 @@ public final class R {
         public static final int highlighted_text_material_dark = 0x7f06007d;
         public static final int highlighted_text_material_light = 0x7f06007e;
         public static final int light_gray = 0x7f06007f;
+        public static final int main_black_color = 0x7f060080;
+        public static final int main_blue_color = 0x7f060081;
+        public static final int main_divider_color = 0x7f060082;
+        public static final int main_normal_black_color = 0x7f060083;
         public static final int material_blue_grey_800 = 0x7f060084;
         public static final int material_blue_grey_900 = 0x7f060085;
         public static final int material_blue_grey_950 = 0x7f060086;
@@ -1036,6 +1045,7 @@ public final class R {
         public static final int notification_action_color_filter = 0x7f0600ac;
         public static final int notification_icon_bg_color = 0x7f0600ad;
         public static final int notification_material_background_media_default_color = 0x7f0600ae;
+        public static final int open_button = 0x7f0600af;
         public static final int orange = 0x7f0600b0;
         public static final int page_number_indicator_bg = 0x7f0600b1;
         public static final int permission_screen_background = 0x7f0600b2;
@@ -1120,6 +1130,7 @@ public final class R {
         public static final int turquoise = 0x7f060101;
         public static final int undo_redo_flashing_box = 0x7f060102;
         public static final int violet = 0x7f060103;
+        public static final int windowBackground = 0x7f060104;
         public static final int yellow = 0x7f060105;
     }
     public static final class dimen {
@@ -1480,6 +1491,8 @@ public final class R {
         public static final int quick_menu_font_size = 0x7f070160;
         public static final int radio_button_conner_radius = 0x7f070161;
         public static final int rotate_guideline_center_radius = 0x7f070162;
+        public static final int sample_margin = 0x7f070163;
+        public static final int sample_size = 0x7f070164;
         public static final int search_results_separator_thickness = 0x7f070165;
         public static final int second_keyline = 0x7f070166;
         public static final int secondary_text_size = 0x7f070167;
@@ -1671,6 +1684,7 @@ public final class R {
         public static final int border_selected = 0x7f08007f;
         public static final int breadcrumb_bg = 0x7f080080;
         public static final int btn_borderless = 0x7f080081;
+        public static final int button = 0x7f080082;
         public static final int button_text_color_selector = 0x7f080083;
         public static final int checker_background = 0x7f080084;
         public static final int checker_pattern = 0x7f080085;
@@ -1678,6 +1692,7 @@ public final class R {
         public static final int collapsing_toolbar_top_scrim = 0x7f080087;
         public static final int color_grid_selector = 0x7f080088;
         public static final int color_picker_view_background = 0x7f080089;
+        public static final int complete_reader = 0x7f08008a;
         public static final int controls_annotation_dialog_listview_separator_selected_state = 0x7f08008b;
         public static final int controls_annotation_dialog_listview_separator_selector = 0x7f08008c;
         public static final int controls_annotation_toolbar_bg = 0x7f08008d;
@@ -1711,6 +1726,7 @@ public final class R {
         public static final int design_ic_visibility_off = 0x7f0800ab;
         public static final int design_password_eye = 0x7f0800ac;
         public static final int design_snackbar_background = 0x7f0800ad;
+        public static final int diff = 0x7f0800ae;
         public static final int drawer_item_background = 0x7f0800af;
         public static final int fab_add = 0x7f0800b0;
         public static final int fab_menu_label_background = 0x7f0800b1;
@@ -1977,6 +1993,7 @@ public final class R {
         public static final int selector_search_next = 0x7f0801bc;
         public static final int selector_search_prev = 0x7f0801bd;
         public static final int serif_a_letter_black = 0x7f0801be;
+        public static final int simple_reader = 0x7f0801bf;
         public static final int single_vert_line_bg = 0x7f0801c0;
         public static final int star = 0x7f0801c1;
         public static final int tab_widget_bg = 0x7f0801c3;
@@ -2053,6 +2070,8 @@ public final class R {
         public static final int action_whole_word = 0x7f090038;
         public static final int actions = 0x7f090039;
         public static final int activity_chooser_view_content = 0x7f09003a;
+        public static final int activity_main = 0x7f09003c;
+        public static final int activity_register = 0x7f09003d;
         public static final int add = 0x7f09003e;
         public static final int add_color_btn = 0x7f09003f;
         public static final int add_custom_stamp_fab = 0x7f090040;
@@ -2104,7 +2123,9 @@ public final class R {
         public static final int btn_thickness3 = 0x7f090071;
         public static final int btn_thickness4 = 0x7f090072;
         public static final int buttonGoToSdCard = 0x7f090074;
+        public static final int buttonLogin = 0x7f090075;
         public static final int buttonPanel = 0x7f090076;
+        public static final int buttonRegister = 0x7f090077;
         public static final int button_cancel = 0x7f090078;
         public static final int button_controls_annot_style_toolbar_1 = 0x7f090079;
         public static final int button_controls_annot_style_toolbar_2 = 0x7f09007a;
@@ -2165,6 +2186,9 @@ public final class R {
         public static final int colormode_testchars = 0x7f0900b6;
         public static final int colormode_textcolor_selector = 0x7f0900b7;
         public static final int colormode_viewpager = 0x7f0900b8;
+        public static final int completeReaderButton = 0x7f0900b9;
+        public static final int completeReaderImage = 0x7f0900ba;
+        public static final int completeReaderLayout = 0x7f0900bb;
         public static final int compression_color_mode_spinner = 0x7f0900bc;
         public static final int compression_mono_mode_spinner = 0x7f0900bd;
         public static final int compression_quality_spinner = 0x7f0900be;
@@ -2301,6 +2325,9 @@ public final class R {
         public static final int dialog_print_annotations_summary_root_view = 0x7f090142;
         public static final int dialog_rename_file_edit = 0x7f090143;
         public static final int dialog_search_results_progress_bar = 0x7f090144;
+        public static final int diffButton = 0x7f090145;
+        public static final int diffImage = 0x7f090146;
+        public static final int diffLayout = 0x7f090147;
         public static final int diff_annotation_switch_1 = 0x7f090148;
         public static final int diff_annotation_switch_2 = 0x7f090149;
         public static final int diff_blend_layout = 0x7f09014a;
@@ -2334,6 +2361,9 @@ public final class R {
         public static final int down = 0x7f090167;
         public static final int drawer_layout = 0x7f090168;
         public static final int drawing_view = 0x7f090169;
+        public static final int editEmail = 0x7f09016a;
+        public static final int editName = 0x7f09016b;
+        public static final int editPassword = 0x7f09016c;
         public static final int editText = 0x7f09016d;
         public static final int edit_btn = 0x7f09016e;
         public static final int edit_query = 0x7f09016f;
@@ -2817,6 +2847,9 @@ public final class R {
         public static final int shortcut = 0x7f090359;
         public static final int show_more_title = 0x7f09035d;
         public static final int show_password = 0x7f09035e;
+        public static final int simpleReaderButton = 0x7f090360;
+        public static final int simpleReaderImage = 0x7f090361;
+        public static final int simpleReaderLayout = 0x7f090362;
         public static final int smallLabel = 0x7f090363;
         public static final int snackbar_action = 0x7f090364;
         public static final int snackbar_text = 0x7f090365;
@@ -2872,8 +2905,10 @@ public final class R {
         public static final int tag_unhandled_key_listeners = 0x7f09039a;
         public static final int text = 0x7f09039b;
         public static final int text2 = 0x7f09039c;
+        public static final int textMessage = 0x7f09039d;
         public static final int textSpacerNoButtons = 0x7f09039e;
         public static final int textSpacerNoTitle = 0x7f09039f;
+        public static final int textTitle = 0x7f0903a1;
         public static final int textView = 0x7f0903a2;
         public static final int text_color_layout = 0x7f0903a4;
         public static final int text_color_preview = 0x7f0903a5;
@@ -3065,6 +3100,9 @@ public final class R {
         public static final int activity_complete_reader_settings = 0x7f0c001e;
         public static final int activity_diff_tool = 0x7f0c0020;
         public static final int activity_document = 0x7f0c0021;
+        public static final int activity_main = 0x7f0c0022;
+        public static final int activity_main1 = 0x7f0c0023;
+        public static final int activity_register = 0x7f0c0024;
         public static final int alert_dialog_with_checkbox = 0x7f0c0025;
         public static final int annot_view_layout = 0x7f0c0026;
         public static final int breadcrumb = 0x7f0c0027;
@@ -3074,6 +3112,7 @@ public final class R {
         public static final int color_picker_layout_custom = 0x7f0c002b;
         public static final int color_preference_thumbnail = 0x7f0c002c;
         public static final int color_preference_thumbnail_disabled = 0x7f0c002d;
+        public static final int complete_reader_preview = 0x7f0c002e;
         public static final int controls_add_favorite_advanced = 0x7f0c002f;
         public static final int controls_add_favorite_standard = 0x7f0c0030;
         public static final int controls_annot_style_container = 0x7f0c0031;
@@ -3146,6 +3185,7 @@ public final class R {
         public static final int dialog_rename_file = 0x7f0c0074;
         public static final int dialog_text_input = 0x7f0c0075;
         public static final int dialog_undo_redo = 0x7f0c0076;
+        public static final int diff_preview = 0x7f0c0077;
         public static final int fab_btn_blank_pdf = 0x7f0c0078;
         public static final int fab_btn_image_pdf = 0x7f0c0079;
         public static final int fab_btn_office_pdf = 0x7f0c007a;
@@ -3219,6 +3259,7 @@ public final class R {
         public static final int select_dialog_singlechoice_material = 0x7f0c00c0;
         public static final int simple_image_spinner_dropdown_item = 0x7f0c00c3;
         public static final int simple_image_spinner_item = 0x7f0c00c4;
+        public static final int simple_reader_preview = 0x7f0c00c5;
         public static final int simple_spinner_item = 0x7f0c00c6;
         public static final int sticky_header = 0x7f0c00c7;
         public static final int support_simple_spinner_dropdown_item = 0x7f0c00c8;
@@ -3311,6 +3352,8 @@ public final class R {
     public static final class raw {
         private raw() {}
 
+        public static final int diff_doc_1 = 0x7f100000;
+        public static final int diff_doc_2 = 0x7f100001;
         public static final int getting_started = 0x7f100002;
         public static final int pdfnet = 0x7f100003;
         public static final int pdftron_layout_resources = 0x7f100004;
@@ -3480,6 +3523,8 @@ public final class R {
         public static final int character_counter_pattern = 0x7f11009b;
         public static final int clear = 0x7f11009c;
         public static final int columns_count = 0x7f11009d;
+        public static final int complete_reader_msg = 0x7f11009e;
+        public static final int complete_reader_title = 0x7f11009f;
         public static final int controls_add_advanced_color = 0x7f1100a0;
         public static final int controls_add_favorite_color = 0x7f1100a1;
         public static final int controls_annotation_dialog_author = 0x7f1100a2;
@@ -3700,8 +3745,10 @@ public final class R {
         public static final int diff_blend_mode = 0x7f110179;
         public static final int diff_color_title = 0x7f11017a;
         public static final int diff_compare = 0x7f11017b;
+        public static final int diff_msg = 0x7f11017c;
         public static final int diff_options_title = 0x7f11017d;
         public static final int diff_select_file_title = 0x7f11017e;
+        public static final int diff_title = 0x7f11017f;
         public static final int do_not_show_again = 0x7f110180;
         public static final int document = 0x7f110181;
         public static final int document_corrupted_error_message = 0x7f110182;
@@ -3802,6 +3849,8 @@ public final class R {
         public static final int menu_add_options = 0x7f1101e1;
         public static final int merge = 0x7f1101e2;
         public static final int merging_wait = 0x7f1101e3;
+        public static final int missing_license_key = 0x7f1101e4;
+        public static final int missing_license_key_msg = 0x7f1101e5;
         public static final int modify = 0x7f1101e6;
         public static final int more = 0x7f1101e7;
         public static final int moving_wait = 0x7f1101e8;
@@ -4009,6 +4058,8 @@ public final class R {
         public static final int signature_dialog_delete_message = 0x7f1102b2;
         public static final int signature_dialog_delete_title = 0x7f1102b3;
         public static final int signature_new_guide = 0x7f1102b4;
+        public static final int simple_reader_msg = 0x7f1102b5;
+        public static final int simple_reader_title = 0x7f1102b6;
         public static final int snack_bar_file_info_message = 0x7f1102b7;
         public static final int snack_bar_local_folder_read_only = 0x7f1102b8;
         public static final int snack_bar_local_folder_read_only_redirect = 0x7f1102b9;

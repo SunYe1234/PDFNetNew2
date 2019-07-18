@@ -14,6 +14,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.net.Uri;
@@ -42,6 +43,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.pdftron.common.PDFNetException;
 import com.pdftron.demo.R;
@@ -97,6 +99,7 @@ import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.utils.cache.UriCacheManager;
 import com.pdftron.sdf.Obj;
 
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
@@ -109,6 +112,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -118,7 +122,6 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 import static com.pdftron.pdf.controls.PdfViewCtrlTabFragment.BUNDLE_TAB_TITLE;
-
 /**
  * AdvancedReaderActivity is derived from
  * <a target="_blank" href="https://developer.android.com/reference/android/support/v7/app/AppCompatActivity.html">android.support.v7.app.AppCompatActivity</a>
@@ -218,6 +221,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
 
     public static String usersNameFileName="UserName.txt";
+    public String currentUser="";
 
 
     /**
@@ -1584,9 +1588,15 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         } else if (navItemId == R.id.item_exit) {
             finish();
         }
+        //if the button "Delete Account" is clicked
         else if (navItemId == R.id.item_delete_account) {
+            //delete his saved copies first
             deleteUserCopies();
-            finish();
+            //delete his account in the database
+            deleteUserAccount();
+            //finish();
+            backToLogin();
+
         }
         else {
             if (!(mCurrentFragment instanceof LocalFileViewFragment)) {
@@ -1657,6 +1667,71 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
     }
 
+    private void backToLogin()
+    {
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    // delete user account in the SQLite database .
+    public  void DeleteAccountInSQLiteDatabase(){
+
+        String SQLiteDataBaseQueryHolder ;
+        SQLiteHelper sqLiteHelper=new SQLiteHelper(this);
+        Cursor cursor;
+        SQLiteDatabase sqLiteDatabaseObj= openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);;
+
+        // SQLite query to insert data into table.
+        SQLiteDataBaseQueryHolder = "DELETE FROM "+SQLiteHelper.TABLE_NAME+" WHERE "+SQLiteHelper.Table_Column_1_Name+" = '"+currentUser+"';";
+
+        // Executing query.
+        sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
+
+        // Closing SQLite database object.
+        sqLiteDatabaseObj.close();
+
+        // Printing toast message after done inserting.
+        Toast.makeText(AdvancedReaderActivity.this,currentUser+" is deleted Successfully", Toast.LENGTH_LONG).show();
+
+
+
+    }
+    private void deleteUserAccount()
+    {
+        String SQLiteDataBaseQueryHolder ;
+        SQLiteHelper sqLiteHelper=new SQLiteHelper(this);
+        currentUser=getUserNameFromFile();
+        SQLiteDatabase sqLiteDatabaseObj= openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);;
+//        Cursor c = sqLiteDatabaseObj.rawQuery("select name from sqlite_master where type='table' order by name", null);
+//        ArrayList<String> usersBefore=new ArrayList<String>();
+//        while(c.moveToNext()){
+//
+//            String name = c.getString(c.getColumnIndex("name"));
+//            usersBefore.add(name);
+//
+//        }
+
+        // SQLite query to insert data into table.
+        SQLiteDataBaseQueryHolder = "DELETE FROM "+SQLiteHelper.TABLE_NAME+" WHERE "+SQLiteHelper.Table_Column_1_Name+" = '"+currentUser+"';";
+
+        // Executing query.
+        sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
+
+        // Closing SQLite database object.
+        //sqLiteDatabaseObj.close();
+
+        // Printing toast message after done inserting.
+        Toast.makeText(AdvancedReaderActivity.this,currentUser+" is deleted Successfully", Toast.LENGTH_LONG).show();
+//         c=sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME,null,null,null,null,null,null);
+//        ArrayList<String> usersAfter=new ArrayList<String>();
+//        while(c.moveToNext()){
+//
+//            String name = c.getString(c.getColumnIndex("name"));
+//            usersAfter.add(name);
+//
+//        }
+
+    }
+
     private   String getUserNameFromFile()
     {
 
@@ -1688,7 +1763,6 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         return null;
 
     }
-
     private void startFragment(Fragment fragment) {
         startFragment(fragment, null);
     }

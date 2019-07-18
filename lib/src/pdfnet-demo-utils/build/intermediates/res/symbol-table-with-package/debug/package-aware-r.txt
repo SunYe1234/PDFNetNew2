@@ -874,6 +874,7 @@ color app_color_primary_night
 color back_fwd_buttons_disabled_bg
 color back_fwd_buttons_disabled_outline
 color back_fwd_buttons_selected_bg
+color background
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -897,6 +898,9 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
 color controls_annot_style_markup_text
 color controls_annot_style_preview_bg
 color controls_annotation_toolbar_background
@@ -918,6 +922,7 @@ color controls_thumbnails_view_image_foreground
 color controls_thumbnails_view_page_label_background
 color controls_thumbnails_view_toolbar_bg
 color dark_gray
+color description_body
 color design_bottom_navigation_shadow_color
 color design_default_color_primary
 color design_default_color_primary_dark
@@ -960,6 +965,10 @@ color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color light_gray
+color main_black_color
+color main_blue_color
+color main_divider_color
+color main_normal_black_color
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1003,6 +1012,7 @@ color navigation_drawer_separator
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color open_button
 color orange
 color page_number_indicator_bg
 color permission_screen_background
@@ -1087,6 +1097,7 @@ color tooltip_background_light
 color turquoise
 color undo_redo_flashing_box
 color violet
+color windowBackground
 color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -1443,6 +1454,8 @@ dimen quick_menu_elevation
 dimen quick_menu_font_size
 dimen radio_button_conner_radius
 dimen rotate_guideline_center_radius
+dimen sample_margin
+dimen sample_size
 dimen search_results_separator_thickness
 dimen second_keyline
 dimen secondary_text_size
@@ -1630,6 +1643,7 @@ drawable border_dashed
 drawable border_selected
 drawable breadcrumb_bg
 drawable btn_borderless
+drawable button
 drawable button_text_color_selector
 drawable checker_background
 drawable checker_pattern
@@ -1637,6 +1651,7 @@ drawable collapsing_toolbar_bottom_scrim
 drawable collapsing_toolbar_top_scrim
 drawable color_grid_selector
 drawable color_picker_view_background
+drawable complete_reader
 drawable controls_annotation_dialog_listview_separator_selected_state
 drawable controls_annotation_dialog_listview_separator_selector
 drawable controls_annotation_toolbar_bg
@@ -1670,6 +1685,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable diff
 drawable drawer_item_background
 drawable fab_add
 drawable fab_menu_label_background
@@ -1936,6 +1952,7 @@ drawable selector_info_icon
 drawable selector_search_next
 drawable selector_search_prev
 drawable serif_a_letter_black
+drawable simple_reader
 drawable single_vert_line_bg
 drawable star
 drawable tab_widget_bg
@@ -2008,6 +2025,8 @@ id action_viewmode
 id action_whole_word
 id actions
 id activity_chooser_view_content
+id activity_main
+id activity_register
 id add
 id add_color_btn
 id add_custom_stamp_fab
@@ -2059,7 +2078,9 @@ id btn_thickness2
 id btn_thickness3
 id btn_thickness4
 id buttonGoToSdCard
+id buttonLogin
 id buttonPanel
+id buttonRegister
 id button_cancel
 id button_controls_annot_style_toolbar_1
 id button_controls_annot_style_toolbar_2
@@ -2120,6 +2141,9 @@ id colormode_testchar_1
 id colormode_testchars
 id colormode_textcolor_selector
 id colormode_viewpager
+id completeReaderButton
+id completeReaderImage
+id completeReaderLayout
 id compression_color_mode_spinner
 id compression_mono_mode_spinner
 id compression_quality_spinner
@@ -2256,6 +2280,9 @@ id dialog_message
 id dialog_print_annotations_summary_root_view
 id dialog_rename_file_edit
 id dialog_search_results_progress_bar
+id diffButton
+id diffImage
+id diffLayout
 id diff_annotation_switch_1
 id diff_annotation_switch_2
 id diff_blend_layout
@@ -2289,6 +2316,9 @@ id dot_layout
 id down
 id drawer_layout
 id drawing_view
+id editEmail
+id editName
+id editPassword
 id editText
 id edit_btn
 id edit_query
@@ -2772,6 +2802,9 @@ id shape_text_view
 id shortcut
 id show_more_title
 id show_password
+id simpleReaderButton
+id simpleReaderImage
+id simpleReaderLayout
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -2827,8 +2860,10 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
+id textMessage
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textTitle
 id textView
 id text_color_layout
 id text_color_preview
@@ -3008,6 +3043,9 @@ layout activity_complete_reader
 layout activity_complete_reader_settings
 layout activity_diff_tool
 layout activity_document
+layout activity_main
+layout activity_main1
+layout activity_register
 layout alert_dialog_with_checkbox
 layout annot_view_layout
 layout breadcrumb
@@ -3017,6 +3055,7 @@ layout color_picker_layout_advanced
 layout color_picker_layout_custom
 layout color_preference_thumbnail
 layout color_preference_thumbnail_disabled
+layout complete_reader_preview
 layout controls_add_favorite_advanced
 layout controls_add_favorite_standard
 layout controls_annot_style_container
@@ -3089,6 +3128,7 @@ layout dialog_print_annotations_summary
 layout dialog_rename_file
 layout dialog_text_input
 layout dialog_undo_redo
+layout diff_preview
 layout fab_btn_blank_pdf
 layout fab_btn_image_pdf
 layout fab_btn_office_pdf
@@ -3162,6 +3202,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout simple_image_spinner_dropdown_item
 layout simple_image_spinner_item
+layout simple_reader_preview
 layout simple_spinner_item
 layout sticky_header
 layout support_simple_spinner_dropdown_item
@@ -3242,6 +3283,8 @@ menu sig_field_paths
 menu sig_field_signed
 menu text_select
 plurals dialog_merge_invalid_file_message
+raw diff_doc_1
+raw diff_doc_2
 raw getting_started
 raw pdfnet
 raw pdftron_layout_resources
@@ -3407,6 +3450,8 @@ string character_counter_content_description
 string character_counter_pattern
 string clear
 string columns_count
+string complete_reader_msg
+string complete_reader_title
 string controls_add_advanced_color
 string controls_add_favorite_color
 string controls_annotation_dialog_author
@@ -3627,8 +3672,10 @@ string diff_bl_soft_light
 string diff_blend_mode
 string diff_color_title
 string diff_compare
+string diff_msg
 string diff_options_title
 string diff_select_file_title
+string diff_title
 string do_not_show_again
 string document
 string document_corrupted_error_message
@@ -3729,6 +3776,8 @@ string measure_calibrate_title
 string menu_add_options
 string merge
 string merging_wait
+string missing_license_key
+string missing_license_key_msg
 string modify
 string more
 string moving_wait
@@ -3936,6 +3985,8 @@ string show_password_option
 string signature_dialog_delete_message
 string signature_dialog_delete_title
 string signature_new_guide
+string simple_reader_msg
+string simple_reader_title
 string snack_bar_file_info_message
 string snack_bar_local_folder_read_only
 string snack_bar_local_folder_read_only_redirect

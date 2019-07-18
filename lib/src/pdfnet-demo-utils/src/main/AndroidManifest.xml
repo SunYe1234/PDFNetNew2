@@ -23,5 +23,8 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
+        <activity android:name=".app.MainActivity"/>
+        <activity android:name=".app.RegisterActivity"/>
+        <activity android:name=".app.CompleteReaderActivity"/>
     </application>
 </manifest>

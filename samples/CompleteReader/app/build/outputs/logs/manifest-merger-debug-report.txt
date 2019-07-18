@@ -12,7 +12,7 @@ INJECTED from /Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/src
 INJECTED from /Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
 INJECTED from /Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
 MERGED from [com.android.support:multidex:1.0.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/48798f2807d5f1a959c5a7d1db1904ad/AndroidManifest.xml:17:1-22:12
-MERGED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-34:12
 MERGED from [:PDFViewCtrlTools] /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
 MERGED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/d6cf389f3355929d90b23070445a9adf/AndroidManifest.xml:2:1-16:12
 MERGED from [com.pdftron:floatingactionbutton:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/e2b86a03687c4d43d34d994cc05aa692/AndroidManifest.xml:2:1-11:12
@@ -102,8 +102,8 @@ ADDED from /Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/src/ma
 		ADDED from /Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/src/main/AndroidManifest.xml:10:22-77
 application
 ADDED from /Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/src/main/AndroidManifest.xml:12:5-401:19
-MERGED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-28:19
-MERGED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-28:19
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-32:19
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-32:19
 MERGED from [:PDFViewCtrlTools] /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-28:19
 MERGED from [:PDFViewCtrlTools] /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-28:19
 MERGED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/d6cf389f3355929d90b23070445a9adf/AndroidManifest.xml:9:5-14:19
@@ -383,6 +383,18 @@ MERGED from [:PDFViewCtrlTools] /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFV
 		ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
 	android:name
 		ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+activity#com.pdftron.demo.app.MainActivity
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-70
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:19-67
+activity#com.pdftron.demo.app.RegisterActivity
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:9-74
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:19-71
+activity#com.pdftron.demo.app.CompleteReaderActivity
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:9-80
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:19-77
 provider#com.pdftron.pdfnet.PDFNetInitializer
 ADDED from [:PDFViewCtrlTools] /Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:9-18:35
 REJECTED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/d6cf389f3355929d90b23070445a9adf/AndroidManifest.xml:10:9-13:40

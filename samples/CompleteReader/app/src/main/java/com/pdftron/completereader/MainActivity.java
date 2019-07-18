@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
 //                Intent intent = new Intent(MainActivity.this, CompleteReaderActivity.class);
 //                startActivity(intent);
                 saveUserNameToFile();
+                if(LoginFunction())
                 openCompleteReaderActivity();
                 // Calling login method.
                 //LoginFunction();
@@ -189,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
         AdvancedReaderActivity.open(this);
     }
     // Login function starts from here.
-    public void LoginFunction(){
+    public boolean LoginFunction(){
 
         if(EditTextEmptyHolder) {
 
@@ -215,14 +216,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // Calling method to check final result ..
-            CheckFinalResult();
+            if (!CheckFinalResult())
+                return false;
+            else return true;
 
         }
         else {
 
             //If any of login EditText empty then this block will be executed.
             Toast.makeText(MainActivity.this,"Please Enter UserName or Password.", Toast.LENGTH_LONG).show();
-
+            return false;
         }
 
     }
@@ -248,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Checking entered password from SQLite database email associated password.
-    public void CheckFinalResult(){
+    public boolean CheckFinalResult(){
 
         if(TempPassword.equalsIgnoreCase(PasswordHolder))
         {
@@ -263,15 +266,16 @@ public class MainActivity extends AppCompatActivity {
             intent.setClass(this,CompleteReaderActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
+            return true;
 
 
         }
         else {
 
             Toast.makeText(MainActivity.this,"UserName or Password is Wrong, Please Try Again.", Toast.LENGTH_LONG).show();
-
+            return false;
         }
-        TempPassword = "NOT_FOUND" ;
+        //TempPassword = "NOT_FOUND" ;
 
     }
 

@@ -125,4 +125,8 @@
     <dimen name="share_ui_action_bar_send_padding_vertical">16.0dip</dimen>
     <dimen name="share_ui_send_button_text_size">16.0sp</dimen>
 
+    <dimen name="sample_size">200dp</dimen>
+    <dimen name="sample_margin">28dp</dimen>
+
+
 </resources>

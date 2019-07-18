@@ -5066,35 +5066,45 @@ public class PdfViewCtrlTabFragment extends Fragment implements
             mShowingSpecialFileAlertDialog = true;
             if (state == PdfDocManager.DOCUMENT_STATE_READ_ONLY_AND_MODIFIED ||
                 state == PdfDocManager.DOCUMENT_STATE_FROM_CONVERSION) {
-                builder.setPositiveButton(R.string.action_export_options, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if (dialogToDismiss != null) {
-                            dialogToDismiss.dismiss();
-                        }
-                        Activity activity = getActivity();
-                        if (activity == null) {
-                            return;
-                        }
-
-                        mShowingSpecialFileAlertDialog = false;
-                        // do different action for SD card file
-                        boolean isSDCardFile = false;
-                        if (Utils.isLollipop() && mCurrentFile != null) {
-                            isSDCardFile = Utils.isSdCardFile(activity, mCurrentFile);
-                        }
-                        if (isSDCardFile) {
-                            if (mTabListener != null) {
-                                mTabListener.onTabJumpToSdCardFolder();
-                            }
-                            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_VIEWER, "Read Only SD Card File Jump To SD Card");
-                        } else {
-                            handleSpecialFilePositive();
-                            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_VIEWER, "Read Only File Saved a Copy");
-                        }
-                        dialog.dismiss();
-                    }
-                }).setNegativeButton(R.string.document_read_only_warning_negative, new DialogInterface.OnClickListener() {
+//                builder.setPositiveButton(R.string.action_export_options, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        if (dialogToDismiss != null) {
+//                            dialogToDismiss.dismiss();
+//                        }
+//                        Activity activity = getActivity();
+//                        if (activity == null) {
+//                            return;
+//                        }
+//
+//                        mShowingSpecialFileAlertDialog = false;
+//                        // do different action for SD card file
+//                        boolean isSDCardFile = false;
+//                        if (Utils.isLollipop() && mCurrentFile != null) {
+//                            isSDCardFile = Utils.isSdCardFile(activity, mCurrentFile);
+//                        }
+//                        if (isSDCardFile) {
+//                            if (mTabListener != null) {
+//                                mTabListener.onTabJumpToSdCardFolder();
+//                            }
+//                            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_VIEWER, "Read Only SD Card File Jump To SD Card");
+//                        } else {
+//                            handleSpecialFilePositive();
+//                            AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.CATEGORY_VIEWER, "Read Only File Saved a Copy");
+//                        }
+//                        dialog.dismiss();
+//                    }
+//                }).setNegativeButton(R.string.document_read_only_warning_negative, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        mShowingSpecialFileAlertDialog = false;
+//                        if (mDocumentState != PdfDocManager.DOCUMENT_STATE_FROM_CONVERSION) {
+//                            mDocumentState = PdfDocManager.DOCUMENT_STATE_READ_ONLY;
+//                        }
+//                        dialog.dismiss();
+//                    }
+//                });
+                builder.setPositiveButton(R.string.document_read_only_warning_negative, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         mShowingSpecialFileAlertDialog = false;
