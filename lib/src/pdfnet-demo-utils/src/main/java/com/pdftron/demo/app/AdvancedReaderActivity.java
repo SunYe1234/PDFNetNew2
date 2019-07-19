@@ -46,6 +46,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.pdftron.common.PDFNetException;
+import com.pdftron.common.RecentlyUsedCache;
 import com.pdftron.demo.R;
 import com.pdftron.demo.navigation.CriticalPermissionDialogFragment;
 import com.pdftron.demo.navigation.ExternalStorageViewFragment;
@@ -75,6 +76,7 @@ import com.pdftron.pdf.DocumentPreviewCache;
 import com.pdftron.pdf.PDFDoc;
 import com.pdftron.pdf.PDFNet;
 import com.pdftron.pdf.PDFNetInternalTools;
+import com.pdftron.pdf.ReflowProcessor;
 import com.pdftron.pdf.config.PDFNetConfig;
 import com.pdftron.pdf.config.ViewerBuilder;
 import com.pdftron.pdf.controls.PasswordDialogFragment;
@@ -324,8 +326,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             if (isAppUpdated) {
                 Logger.INSTANCE.LogD(TAG, "Resetting thumb cache and recent cache");
                 DocumentPreviewCache.clearCache();
-                // ReflowProcessor.clearCache();
-                // RecentlyUsedCache.resetCache();
+                 ReflowProcessor.clearCache();
+                 RecentlyUsedCache.resetCache();
             }
         } catch (Exception e) {
             Logger.INSTANCE.LogE(TAG, "Error");
@@ -565,37 +567,38 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     }
 
     private void handleBackPress() {
-        if (mDrawerLayout != null) {
-            if (mDrawerLayout.isDrawerOpen(mFileInfoDrawerView)) {
-                toggleInfoDrawer(false);
-                return;
-            }
-            if (!Utils.isLargeScreenWidth(this)) {
-                if (mDrawerLayout.isDrawerOpen(mNavigationDrawerView)) {
-                    toggleNavigationDrawer(false);
-                    return;
-                }
-            }
-        }
-        boolean handled = false;
-        if (mCurrentFragment != null && mCurrentFragment.getView() != null) {
-            if (hasMainActivityListener(mCurrentFragment)) {
-                try {
-                    handled = ((MainActivityListener) mCurrentFragment).onBackPressed();
-                } catch (Exception e) {
-                    // Do nothing
-                }
-            } else if (mCurrentFragment instanceof PdfViewCtrlTabHostFragment) {
-                handled = ((PdfViewCtrlTabHostFragment) mCurrentFragment).handleBackPressed();
-                if (!handled && !mQuitAppWhenDoneViewing && mLastAddedBrowserFragment != null) {
-                    startFragment(mLastAddedBrowserFragment);
-                    handled = true;
-                }
-            }
-        }
-        if (!handled) {
-            super.onBackPressed();
-        }
+        backToLogin();
+//        if (mDrawerLayout != null) {
+//            if (mDrawerLayout.isDrawerOpen(mFileInfoDrawerView)) {
+//                toggleInfoDrawer(false);
+//                return;
+//            }
+//            if (!Utils.isLargeScreenWidth(this)) {
+//                if (mDrawerLayout.isDrawerOpen(mNavigationDrawerView)) {
+//                    toggleNavigationDrawer(false);
+//                    return;
+//                }
+//            }
+//        }
+//        boolean handled = false;
+//        if (mCurrentFragment != null && mCurrentFragment.getView() != null) {
+//            if (hasMainActivityListener(mCurrentFragment)) {
+//                try {
+//                    handled = ((MainActivityListener) mCurrentFragment).onBackPressed();
+//                } catch (Exception e) {
+//                    // Do nothing
+//                }
+//            } else if (mCurrentFragment instanceof PdfViewCtrlTabHostFragment) {
+//                handled = ((PdfViewCtrlTabHostFragment) mCurrentFragment).handleBackPressed();
+//                if (!handled && !mQuitAppWhenDoneViewing && mLastAddedBrowserFragment != null) {
+//                    startFragment(mLastAddedBrowserFragment);
+//                    handled = true;
+//                }
+//            }
+//        }
+//        if (!handled) {
+//            super.onBackPressed();
+//        }
     }
 
     private boolean isFirstTimeRun() {
@@ -1586,7 +1589,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             }
             startActivityForResult(new Intent().setClass(this, SettingsActivity.class), RequestCode.SETTINGS);
         } else if (navItemId == R.id.item_exit) {
-            finish();
+            backToLogin();
+            //finish();
         }
         //if the button "Delete Account" is clicked
         else if (navItemId == R.id.item_delete_account) {
