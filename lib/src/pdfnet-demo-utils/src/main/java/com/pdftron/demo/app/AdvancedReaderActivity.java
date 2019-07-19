@@ -281,38 +281,38 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         ShortcutHelper.enable(true);
 
-        if (savedInstanceState != null) {
-            mQuitAppWhenDoneViewing = savedInstanceState.getBoolean(SAVE_INSTANCE_QUIT_APP);
-
-            // fragments management
-            mCurrentFragment = getSupportFragmentManager().getFragment(savedInstanceState,
-                    SAVE_INSTANCE_CURRENT_FRAGMENT_TAG);
-            if (mCurrentFragment != null) {
-                setCurrentFragment(mCurrentFragment);
-            }
-            mLastAddedBrowserFragment = getSupportFragmentManager().getFragment(savedInstanceState,
-                    SAVE_INSTANCE_LAST_ADDED_BROWSER_FRAGMENT_TAG);
-            mPdfViewCtrlTabHostFragment = (PdfViewCtrlTabHostFragment) getSupportFragmentManager().getFragment(savedInstanceState,
-                    SAVE_INSTANCE_TABBED_HOST_FRAGMENT_TAG);
-            if (mPdfViewCtrlTabHostFragment != null) {
-                mPdfViewCtrlTabHostFragment.addHostListener(this);
-            }
-            mProcessedFragmentViewId = savedInstanceState
-                    .getInt(SAVE_INSTANCE_PROCESSED_FRAGMENT_VIEW_ID, R.id.item_file_list);
-            mBrowserProcessedFragmentViewId = savedInstanceState
-                    .getInt(SAVE_INSTANCE_BROWSER_PROCESSED_FRAGMENT_VIEW_ID, R.id.item_file_list);
-
-            // removing existing tab fragments since they will be created from scratch in host fragment
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            List<Fragment> fragments = getSupportFragmentManager().getFragments();
-            for (Fragment fragment : fragments) {
-                if (fragment instanceof PdfViewCtrlTabFragment ||
-                        fragment instanceof DialogFragment) {
-                    ft.remove(fragment);
-                }
-            }
-            ft.commit();
-        }
+//        if (savedInstanceState != null) {
+//            mQuitAppWhenDoneViewing = savedInstanceState.getBoolean(SAVE_INSTANCE_QUIT_APP);
+//
+//            // fragments management
+//            mCurrentFragment = getSupportFragmentManager().getFragment(savedInstanceState,
+//                    SAVE_INSTANCE_CURRENT_FRAGMENT_TAG);
+//            if (mCurrentFragment != null) {
+//                setCurrentFragment(mCurrentFragment);
+//            }
+//            mLastAddedBrowserFragment = getSupportFragmentManager().getFragment(savedInstanceState,
+//                    SAVE_INSTANCE_LAST_ADDED_BROWSER_FRAGMENT_TAG);
+//            mPdfViewCtrlTabHostFragment = (PdfViewCtrlTabHostFragment) getSupportFragmentManager().getFragment(savedInstanceState,
+//                    SAVE_INSTANCE_TABBED_HOST_FRAGMENT_TAG);
+//            if (mPdfViewCtrlTabHostFragment != null) {
+//                mPdfViewCtrlTabHostFragment.addHostListener(this);
+//            }
+//            mProcessedFragmentViewId = savedInstanceState
+//                    .getInt(SAVE_INSTANCE_PROCESSED_FRAGMENT_VIEW_ID, R.id.item_file_list);
+//            mBrowserProcessedFragmentViewId = savedInstanceState
+//                    .getInt(SAVE_INSTANCE_BROWSER_PROCESSED_FRAGMENT_VIEW_ID, R.id.item_file_list);
+//
+//            // removing existing tab fragments since they will be created from scratch in host fragment
+//            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//            List<Fragment> fragments = getSupportFragmentManager().getFragments();
+//            for (Fragment fragment : fragments) {
+//                if (fragment instanceof PdfViewCtrlTabFragment ||
+//                        fragment instanceof DialogFragment) {
+//                    ft.remove(fragment);
+//                }
+//            }
+//            ft.commit();
+//        }
 
         // Is this the first run of the app?
         boolean isAppUpdated = SettingsManager.getAppUpdated(this);
@@ -516,27 +516,27 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         }
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        Logger.INSTANCE.LogV("LifeCycle", "Main.onSaveInstanceState");
-        super.onSaveInstanceState(outState);
-
-        outState.putBoolean(SAVE_INSTANCE_QUIT_APP, mQuitAppWhenDoneViewing);
-
-        FragmentManager fm = getSupportFragmentManager();
-        List<Fragment> fragments = fm.getFragments();
-        if (mCurrentFragment != null && fragments.contains(mCurrentFragment)) {
-            fm.putFragment(outState, SAVE_INSTANCE_CURRENT_FRAGMENT_TAG, mCurrentFragment);
-        }
-        if (mLastAddedBrowserFragment != null && fragments.contains(mLastAddedBrowserFragment)) {
-            fm.putFragment(outState, SAVE_INSTANCE_LAST_ADDED_BROWSER_FRAGMENT_TAG, mLastAddedBrowserFragment);
-        }
-        if (mPdfViewCtrlTabHostFragment != null && fragments.contains(mPdfViewCtrlTabHostFragment)) {
-            fm.putFragment(outState, SAVE_INSTANCE_TABBED_HOST_FRAGMENT_TAG, mPdfViewCtrlTabHostFragment);
-        }
-        outState.putInt(SAVE_INSTANCE_PROCESSED_FRAGMENT_VIEW_ID, mProcessedFragmentViewId);
-        outState.putInt(SAVE_INSTANCE_BROWSER_PROCESSED_FRAGMENT_VIEW_ID, mBrowserProcessedFragmentViewId);
-    }
+//    @Override
+//    protected void onSaveInstanceState(Bundle outState) {
+//        Logger.INSTANCE.LogV("LifeCycle", "Main.onSaveInstanceState");
+//        super.onSaveInstanceState(outState);
+//
+//        outState.putBoolean(SAVE_INSTANCE_QUIT_APP, mQuitAppWhenDoneViewing);
+//
+//        FragmentManager fm = getSupportFragmentManager();
+//        List<Fragment> fragments = fm.getFragments();
+//        if (mCurrentFragment != null && fragments.contains(mCurrentFragment)) {
+//            fm.putFragment(outState, SAVE_INSTANCE_CURRENT_FRAGMENT_TAG, mCurrentFragment);
+//        }
+//        if (mLastAddedBrowserFragment != null && fragments.contains(mLastAddedBrowserFragment)) {
+//            fm.putFragment(outState, SAVE_INSTANCE_LAST_ADDED_BROWSER_FRAGMENT_TAG, mLastAddedBrowserFragment);
+//        }
+//        if (mPdfViewCtrlTabHostFragment != null && fragments.contains(mPdfViewCtrlTabHostFragment)) {
+//            fm.putFragment(outState, SAVE_INSTANCE_TABBED_HOST_FRAGMENT_TAG, mPdfViewCtrlTabHostFragment);
+//        }
+//        outState.putInt(SAVE_INSTANCE_PROCESSED_FRAGMENT_VIEW_ID, mProcessedFragmentViewId);
+//        outState.putInt(SAVE_INSTANCE_BROWSER_PROCESSED_FRAGMENT_VIEW_ID, mBrowserProcessedFragmentViewId);
+//    }
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -611,6 +611,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             mIsFirstTimeRunConsumed = true;
         }
         return isFirstTimeRun;
+        //return true;
     }
 
     @Override
@@ -1227,6 +1228,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         if (mPdfViewCtrlTabHostFragment != null && mPdfViewCtrlTabHostFragment.getCurrentPdfViewCtrlFragment() == null) {
             mProcessedFragmentViewId = mBrowserProcessedFragmentViewId;
         }
+        mProcessedFragmentViewId = mBrowserProcessedFragmentViewId;
+        //mTeachNavDrawer=true;
 
         if (mTeachNavDrawer) {
             // Teach the user where the nav drawer is (only done once, after returning from GettingStarted file)
@@ -1263,19 +1266,22 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
             // So, if this is the first time and the getting started file was
             // copied properly, we launch the viewer with the document.
+            boolean first=isFirstTimeRun();
+            first=true;
             if (isFirstTimeRun()) {
                 copyTutorialFile();
             }
 
+           // copyTutorialFile();
             //TODO: Remove the following if no Getting Started, and wish to use onboarding
-            /*if (isFirstTimeRun && mGettingStartedFile != null) {
+            if (isFirstTimeRun() && mGettingStartedFile != null) {
                 // Open navigation drawer the next time onResume is called
                 mTeachNavDrawer = true;
                 onFileSelected(mGettingStartedFile, "");
             } else {
                 // Try to update fragment since underlying data has changed
             reloadBrowser();
-            }*/
+            }
         }
     }
 
@@ -1303,8 +1309,13 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         } else if (mNavigationDrawerView != null && mNavigationDrawerView.getMenu() != null) {
             MenuItem menuItem = null;
             if (isFirstTimeRun()) {
+            //if(true){
                 mIsFirstTimeRunConsumed = false; // consumed
                 menuItem = mNavigationDrawerView.getMenu().findItem(R.id.item_file_list);
+
+                copyTutorialFile();
+                mTeachNavDrawer = true;
+                onFileSelected(mGettingStartedFile, "");
             } else if (mProcessedFragmentViewId != MENU_ITEM_NONE) {
                 menuItem = mNavigationDrawerView.getMenu().findItem(mProcessedFragmentViewId);
             }
@@ -1531,7 +1542,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                 if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
                     fragment = mLastAddedBrowserFragment;
                 } else {
-                    // Load last used folder, if set
+//                     Load last used folder, if set
                     fragment = LocalFolderViewFragment.newInstance();
                     ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
                             new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
@@ -1630,7 +1641,6 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                 mBrowserProcessedFragmentViewId = mProcessedFragmentViewId;
             }
             boolean needReloadBrowser = doesNeedReloadBrowser();
-
             startFragment(fragment);
 
             if (needReloadBrowser) {

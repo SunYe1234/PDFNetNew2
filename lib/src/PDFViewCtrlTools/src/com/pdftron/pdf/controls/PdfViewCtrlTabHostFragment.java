@@ -991,6 +991,9 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
         }
         setTabLayoutVisible(mMultiTabModeEnabled);
 
+        PdfViewCtrlTabsManager.getInstance().cleanup();
+        PdfViewCtrlTabsManager.getInstance().clearAllPdfViewCtrlTabInfo(activity);
+
         // if single tab remove all current tabs
         if (!mMultiTabModeEnabled) {
             if (mStartupTabTag != null) {

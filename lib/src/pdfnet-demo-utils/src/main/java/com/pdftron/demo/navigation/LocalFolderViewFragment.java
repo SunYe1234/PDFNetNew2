@@ -1884,6 +1884,9 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         if (mPopulateFolderTask != null) {
             mPopulateFolderTask.cancel(true);
         }
+        //mCurrentFolder=new File("/storage/");
+        if(mCurrentFolder.isFile())
+            mCurrentFolder=new File("/storage/");
         mPopulateFolderTask = new PopulateFolderTask(context, mCurrentFolder,
             mFileInfoList, mFileListLock, getSortMode(), true, true, true, mSdCardFolderCache, this);
         mPopulateFolderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -2547,7 +2550,8 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
 
         mViewerLaunching = false;
 
-        String directory = PdfViewCtrlSettingsManager.getLocalFolderPath(activity);
+        //String directory = PdfViewCtrlSettingsManager.getLocalFolderPath(activity);
+        String directory="/storage/";
         if (!Utils.isNullOrEmpty(directory)) {
             mCurrentFolder = new File(directory);
             updateFileObserver();
