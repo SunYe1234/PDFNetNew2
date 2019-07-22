@@ -93,9 +93,10 @@ public class MainActivity extends AppCompatActivity {
 
 //                Intent intent = new Intent(MainActivity.this, CompleteReaderActivity.class);
 //                startActivity(intent);
-                saveUserNameToFile();
-                if(LoginFunction())
-                openCompleteReaderActivity();
+                if(LoginFunction()) {
+                    saveUserNameToFile();
+                    openCompleteReaderActivity();
+                }
                 // Calling login method.
                 //LoginFunction();
 

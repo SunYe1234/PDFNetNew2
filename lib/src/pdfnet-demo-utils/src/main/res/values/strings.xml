@@ -80,7 +80,7 @@
     <string name="dialog_external_file_readonly_action"><![CDATA[In the %1$s tab, your SD Card files are read only and you cannot %2$s files. <br><br> Please navigate to the SD Card tab, where %3$s has write access to your SD Card files.]]></string>
     <string name="dialog_external_file_readonly_action_kitkat"><![CDATA[On KitKat devices apps no longer have permission to write to an external SD card. %1$s]]></string>
     <string name="dialog_external_file_readonly_action_kitkat_more_info">Insert more info here.</string>
-    <string name="dialog_external_file_readonly_action_positive_btn">Enable Write Access</string>
+    <string name="dialog_external_file_readonly_action_positive_btn">cancel</string>
     <string name="dialog_folder_go_to_sd_card_button">Go To SD Card Now</string>
     <string name="dialog_folder_go_to_sd_card_description">Open files stored on the SD card using the \"SD Card\" tab located in the side navigation drawer. Android restricts access to files on the SD card %1$s.</string>
     <string name="dialog_files_go_to_sd_card_description">This file will be opened as read-only. To modify, open it using the \"SD Card\" tab located in the side navigation drawer where %1$s has write access. %2$s.</string>

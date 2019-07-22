@@ -227,6 +227,7 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
                 itemShare.setVisible(true);
 
             // If only files are selected, allow move action and merge
+            if (itemMove!=null)
             itemMove.setVisible(true);
             for (FileInfo file : mFileInfoSelectedList) {
                 if (file.getType() != BaseFileInfo.FILE_TYPE_FILE) {

@@ -187,7 +187,7 @@
     <string name="dialog_external_file_readonly_action"><![CDATA[In the %1$s tab, your SD Card files are read only and you cannot %2$s files. <br><br> Please navigate to the SD Card tab, where %3$s has write access to your SD Card files.]]></string>
     <string name="dialog_external_file_readonly_action_kitkat"><![CDATA[On KitKat devices apps no longer have permission to write to an external SD card. %1$s]]></string>
     <string name="dialog_external_file_readonly_action_kitkat_more_info">Insert more info here.</string>
-    <string name="dialog_external_file_readonly_action_positive_btn">Enable Write Access</string>
+    <string name="dialog_external_file_readonly_action_positive_btn">cancel</string>
     <string name="dialog_external_intent_not_supported">It seems like your device does not support this functionality. %1$s</string>
     <string name="dialog_external_intent_not_supported_more_info">Insert more info here.</string>
     <string name="dialog_file_info_body"><![CDATA[<b>File Name</b><br>%1$s<br><br><b>Path</b><br>%2$s<br><br><b>Size</b><br>%3$s (%4$s Bytes)<br><br><b>Date Modified</b><br>%5$s<br>]]></string>

@@ -146,9 +146,9 @@ public class MiscUtils {
             Utils.showAlertDialogWithLink(context, message, "");
             return true;
         } else if (Utils.isLollipop()) {
-            String message = String.format(context.getString(R.string.dialog_external_file_readonly_action),
-                    context.getString(R.string.local_folders), action, context.getString(R.string.app_name));
-
+//            String message = String.format(context.getString(R.string.dialog_external_file_readonly_action),
+//                    context.getString(R.string.local_folders), action, context.getString(R.string.app_name));
+            String message="Your SD Card files are read only and you cannot rename or delete files";
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
             builder.setMessage(Html.fromHtml(message))

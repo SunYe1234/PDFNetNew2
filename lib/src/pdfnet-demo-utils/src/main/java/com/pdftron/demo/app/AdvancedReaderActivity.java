@@ -817,6 +817,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     public void onTabHostHidden() {
         Logger.INSTANCE.LogV(TAG, "Tab Host is hidden");
         unlockDrawer();
+        //onTabHostShown();
     }
 
     @Override
