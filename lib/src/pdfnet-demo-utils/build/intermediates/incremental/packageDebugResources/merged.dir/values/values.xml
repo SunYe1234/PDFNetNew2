@@ -157,8 +157,8 @@
     <string name="action_unfavorite">Unfavorite</string>
     <string name="app_name">Complete Reader</string>
     <string name="columns_count">%1$d Columns</string>
-    <string name="complete_reader_msg">Everything in Simple Reader plus file browser and more</string>
-    <string name="complete_reader_title">Advanced Reader</string>
+    <string name="complete_reader_msg">continue using PDF Reader and Writer</string>
+    <string name="complete_reader_title">PDF Reader and writer</string>
     <string name="convert_to_pdf">Convert to PDF</string>
     <string name="create_file_invalid_error_message">There was a problem trying to create the file.</string>
     <string name="deleting_file_wait">Deleting file…</string>

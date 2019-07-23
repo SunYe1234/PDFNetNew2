@@ -567,38 +567,38 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     }
 
     private void handleBackPress() {
-        backToLogin();
-//        if (mDrawerLayout != null) {
-//            if (mDrawerLayout.isDrawerOpen(mFileInfoDrawerView)) {
-//                toggleInfoDrawer(false);
-//                return;
-//            }
-//            if (!Utils.isLargeScreenWidth(this)) {
-//                if (mDrawerLayout.isDrawerOpen(mNavigationDrawerView)) {
-//                    toggleNavigationDrawer(false);
-//                    return;
-//                }
-//            }
-//        }
-//        boolean handled = false;
-//        if (mCurrentFragment != null && mCurrentFragment.getView() != null) {
-//            if (hasMainActivityListener(mCurrentFragment)) {
-//                try {
-//                    handled = ((MainActivityListener) mCurrentFragment).onBackPressed();
-//                } catch (Exception e) {
-//                    // Do nothing
-//                }
-//            } else if (mCurrentFragment instanceof PdfViewCtrlTabHostFragment) {
-//                handled = ((PdfViewCtrlTabHostFragment) mCurrentFragment).handleBackPressed();
-//                if (!handled && !mQuitAppWhenDoneViewing && mLastAddedBrowserFragment != null) {
-//                    startFragment(mLastAddedBrowserFragment);
-//                    handled = true;
-//                }
-//            }
-//        }
-//        if (!handled) {
-//            super.onBackPressed();
-//        }
+        //backToLogin();
+        if (mDrawerLayout != null) {
+            if (mDrawerLayout.isDrawerOpen(mFileInfoDrawerView)) {
+                toggleInfoDrawer(false);
+                return;
+            }
+            if (!Utils.isLargeScreenWidth(this)) {
+                if (mDrawerLayout.isDrawerOpen(mNavigationDrawerView)) {
+                    toggleNavigationDrawer(false);
+                    return;
+                }
+            }
+        }
+        boolean handled = false;
+        if (mCurrentFragment != null && mCurrentFragment.getView() != null) {
+            if (hasMainActivityListener(mCurrentFragment)) {
+                try {
+                    handled = ((MainActivityListener) mCurrentFragment).onBackPressed();
+                } catch (Exception e) {
+                    // Do nothing
+                }
+            } else if (mCurrentFragment instanceof PdfViewCtrlTabHostFragment) {
+                handled = ((PdfViewCtrlTabHostFragment) mCurrentFragment).handleBackPressed();
+                if (!handled && !mQuitAppWhenDoneViewing && mLastAddedBrowserFragment != null) {
+                    startFragment(mLastAddedBrowserFragment);
+                    handled = true;
+                }
+            }
+        }
+        if (!handled) {
+            super.onBackPressed();
+        }
     }
 
     private boolean isFirstTimeRun() {

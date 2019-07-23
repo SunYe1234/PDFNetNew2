@@ -2282,7 +2282,6 @@ id dialog_rename_file_edit
 id dialog_search_results_progress_bar
 id diffButton
 id diffImage
-id diffLayout
 id diff_annotation_switch_1
 id diff_annotation_switch_2
 id diff_blend_layout
@@ -2804,7 +2803,6 @@ id show_more_title
 id show_password
 id simpleReaderButton
 id simpleReaderImage
-id simpleReaderLayout
 id smallLabel
 id snackbar_action
 id snackbar_text

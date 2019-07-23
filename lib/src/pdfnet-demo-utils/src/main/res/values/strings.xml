@@ -295,8 +295,8 @@
     <string name="simple_reader_title">Simple Reader</string>
     <string name="simple_reader_msg">Display and annotate documents on Android</string>
 
-    <string name="complete_reader_title">Advanced Reader</string>
-    <string name="complete_reader_msg">Everything in Simple Reader plus file browser and more</string>
+    <string name="complete_reader_title">PDF Reader and writer</string>
+    <string name="complete_reader_msg">continue using PDF Reader and Writer</string>
 
     <string name="diff_title">Compare files</string>
     <string name="diff_msg">Quickly spot differences between pages</string>

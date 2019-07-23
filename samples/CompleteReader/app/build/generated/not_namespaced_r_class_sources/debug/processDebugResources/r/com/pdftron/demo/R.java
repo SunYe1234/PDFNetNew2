@@ -2327,7 +2327,6 @@ public final class R {
         public static final int dialog_search_results_progress_bar = 0x7f090144;
         public static final int diffButton = 0x7f090145;
         public static final int diffImage = 0x7f090146;
-        public static final int diffLayout = 0x7f090147;
         public static final int diff_annotation_switch_1 = 0x7f090148;
         public static final int diff_annotation_switch_2 = 0x7f090149;
         public static final int diff_blend_layout = 0x7f09014a;
@@ -2849,7 +2848,6 @@ public final class R {
         public static final int show_password = 0x7f09035e;
         public static final int simpleReaderButton = 0x7f090360;
         public static final int simpleReaderImage = 0x7f090361;
-        public static final int simpleReaderLayout = 0x7f090362;
         public static final int smallLabel = 0x7f090363;
         public static final int snackbar_action = 0x7f090364;
         public static final int snackbar_text = 0x7f090365;

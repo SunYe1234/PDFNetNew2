@@ -55,6 +55,8 @@ import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.pdftron.common.PDFNetException;
 import com.pdftron.demo.R;
+import com.pdftron.demo.app.AdvancedReaderActivity;
+import com.pdftron.demo.app.MainActivity;
 import com.pdftron.demo.asynctask.PopulateFolderTask;
 import com.pdftron.demo.dialog.FilePickerDialogFragment;
 import com.pdftron.demo.dialog.MergeDialogFragment;
@@ -2452,12 +2454,22 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
                     rootDir = rootDir.getParentFile();
                 }
             }
+            if (mCurrentFolder.equals(rootDir))
+            {
+                Intent intent=new Intent();
+                intent.setClass(getActivity(), MainActivity.class);
+                startActivity(intent);
+
+
+            }
             if (!mCurrentFolder.equals(rootDir) && mCurrentFolder.getParentFile() != null && !mCurrentFolder.getParent().equals("/")) {
                 mCurrentFolder = mCurrentFolder.getParentFile();
                 updateFileObserver();
                 reloadFileInfoList(true);
                 handled = true;
             }
+
+
         }
         return handled;
     }
