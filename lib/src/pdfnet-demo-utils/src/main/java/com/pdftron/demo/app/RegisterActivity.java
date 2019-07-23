@@ -175,7 +175,8 @@ public class RegisterActivity extends AppCompatActivity {
     public void CheckingEmailAlreadyExistsOrNot(){
 
         // Opening SQLite database write permission.
-        sqLiteDatabaseObj = sqLiteHelper.getWritableDatabase();
+        //sqLiteDatabaseObj = sqLiteHelper.getWritableDatabase();
+        sqLiteDatabaseObj=SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);
 
         // Adding search email query to cursor.
         cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_1_Name + "=?", new String[]{NameHolder}, null, null, null);
@@ -208,7 +209,7 @@ public class RegisterActivity extends AppCompatActivity {
         {
 
             // If email is exists then toast msg will display.
-            Toast.makeText(RegisterActivity.this,"Email Already Exists", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this,"This User Name Already Exists", Toast.LENGTH_LONG).show();
 
         }
         else {

@@ -109,7 +109,9 @@ import com.pdftron.sdf.SDFDoc;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -161,6 +163,10 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
 
     private static final String KEY_IS_SEARCH_MODE = "is_search_mode";
     private static final String KEY_IS_RESTARTED = "is_fragment_restarted";
+
+
+    public static String formerUserNameFileName="FormerUserName.txt";
+    public static String currentUsersNameFileName="UserName.txt";
 
     public static final int ANIMATE_DURATION_SHOW = 250;
     public static final int ANIMATE_DURATION_HIDE = 250;
@@ -989,10 +995,13 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
         if (!PdfViewCtrlSettingsManager.getMultipleTabs(activity)) {
             mMultiTabModeEnabled = false;
         }
-        setTabLayoutVisible(mMultiTabModeEnabled);
 
-        PdfViewCtrlTabsManager.getInstance().cleanup();
-        PdfViewCtrlTabsManager.getInstance().clearAllPdfViewCtrlTabInfo(activity);
+        setTabLayoutVisible(mMultiTabModeEnabled);
+//        if (userChanged()) {
+//
+            PdfViewCtrlTabsManager.getInstance().cleanup();
+            PdfViewCtrlTabsManager.getInstance().clearAllPdfViewCtrlTabInfo(activity);
+//        }
 
         // if single tab remove all current tabs
         if (!mMultiTabModeEnabled) {
@@ -1000,24 +1009,43 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
                 PdfViewCtrlTabsManager.getInstance().cleanup();
                 PdfViewCtrlTabsManager.getInstance().clearAllPdfViewCtrlTabInfo(activity);
             } else {
-                // otherwise we should keep the latest viewed document
-                String latestViewedTabTag = PdfViewCtrlTabsManager.getInstance().getLatestViewedTabTag(activity);
-                if (latestViewedTabTag != null) {
-                    ArrayList<String> documents = new ArrayList<>(PdfViewCtrlTabsManager.getInstance().getDocuments(activity));
-                    for (String document : documents) {
-                        if (!latestViewedTabTag.equals(document)) {
-                            PdfViewCtrlTabsManager.getInstance().removeDocument(activity, document);
+                if(!userChanged()) {
+                    // otherwise we should keep the latest viewed document
+                    String latestViewedTabTag = PdfViewCtrlTabsManager.getInstance().getLatestViewedTabTag(activity);
+                    if (latestViewedTabTag != null) {
+                        ArrayList<String> documents = new ArrayList<>(PdfViewCtrlTabsManager.getInstance().getDocuments(activity));
+                        for (String document : documents) {
+                            if (!latestViewedTabTag.equals(document)) {
+                                PdfViewCtrlTabsManager.getInstance().removeDocument(activity, document);
+                            }
                         }
                     }
                 }
+                else
+                {
+                    String latestViewedTabTag = PdfViewCtrlTabsManager.getInstance().getLatestViewedTabTag(activity);
+                    if (latestViewedTabTag != null) {
+                        ArrayList<String> documents = new ArrayList<>(PdfViewCtrlTabsManager.getInstance().getDocuments(activity));
+                        for (String document : documents) {
+                                PdfViewCtrlTabsManager.getInstance().removeDocument(activity, document);
+
+                        }
+                    }
+                }
+
             }
         }
+//        if (userChanged()) {
+//            PdfViewCtrlTabsManager.getInstance().cleanup();
+//            PdfViewCtrlTabsManager.getInstance().clearAllPdfViewCtrlTabInfo(activity);
+////            PdfViewCtrlTabsManager.getInstance().up();
+//        }
         // add new document to tab list
 //        if (canAddNewDocumentToTabList(startupItemSource)) {
         PdfViewCtrlTabsManager.getInstance().addDocument(activity, mStartupTabTag);
 //        }
         // remove extra tabs
-        if (mMultiTabModeEnabled) {
+        if (!mMultiTabModeEnabled) {
             removeExtraTabs();
         }
 
@@ -1096,6 +1124,91 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
             hideSearchResults();
         }
     }
+
+
+    private boolean userChanged()
+    {
+        String formerUser=getFormerUserNameFromFile();
+        String currentUser=getCurrentUserNameFromFile();
+        if (formerUser==null)
+            return false;
+        if (formerUser.equals(currentUser))
+            return false;
+        return true;
+
+
+    }
+
+    private  String getCurrentUserNameFromFile()
+    {
+        File fileDir = new File("/data/user/0/com.pdftron.completereader/files");
+
+        try {
+            File currentUsersName=new File(fileDir.getAbsolutePath()+"/"+currentUsersNameFileName);
+            if (!currentUsersName.exists())
+                currentUsersName.createNewFile();
+            FileInputStream inputStream = new FileInputStream(currentUsersName);
+//            UsersFile=new File(getFilesDir().getAbsolutePath()+"/"+formerUserNameFileName);
+            System.out.println("读取前一个用户账户名：");
+            // 一次读一个字符
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String usName="";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
+                // 但如果这两个字符分开显示时，会换两次行。
+                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    usName+=(char)tempchar;
+                }
+
+            }
+            reader.close();
+            return usName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+
+    private  String getFormerUserNameFromFile()
+    {
+        File fileDir = new File("/data/user/0/com.pdftron.completereader/files");
+
+        try {
+            File FormerUsersName=new File(fileDir.getAbsolutePath()+"/"+formerUserNameFileName);
+            if (!FormerUsersName.exists())
+                FormerUsersName.createNewFile();
+            FileInputStream inputStream = new FileInputStream(FormerUsersName);
+//            UsersFile=new File(getFilesDir().getAbsolutePath()+"/"+formerUserNameFileName);
+            System.out.println("读取前一个用户账户名：");
+            // 一次读一个字符
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String usName="";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
+                // 但如果这两个字符分开显示时，会换两次行。
+                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    usName+=(char)tempchar;
+                }
+
+            }
+            reader.close();
+            return usName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+
 
     /**
      * The overload implementation of {@link SearchResultsView.SearchResultsListener#onFullTextSearchStart()}.

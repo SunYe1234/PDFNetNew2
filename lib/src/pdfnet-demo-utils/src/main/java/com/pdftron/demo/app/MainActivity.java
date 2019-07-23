@@ -172,7 +172,9 @@ public class MainActivity extends AppCompatActivity {
         if(EditTextEmptyHolder) {
 
             // Opening SQLite database write permission.
-            sqLiteDatabaseObj = sqLiteHelper.getWritableDatabase();
+            //sqLiteDatabaseObj = sqLiteHelper.getWritableDatabase();
+            sqLiteDatabaseObj=SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);
+
 
             // Adding search email query to cursor.
             cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_1_Name + "=?", new String[]{EmailHolder}, null, null, null);

@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     public static  File UserFolder=null;
     public static File UsersFile=null;
     public static String usersNameFileName="UserName.txt";
+    public static String formerUserNameFileName="FormerUserName.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,9 +95,14 @@ public class MainActivity extends AppCompatActivity {
 //                Intent intent = new Intent(MainActivity.this, CompleteReaderActivity.class);
 //                startActivity(intent);
                 if(LoginFunction()) {
+                    saveFormerUserName();
                     saveUserNameToFile();
+                    String formerUser=getFormerUserNameFromFile();
+                    if (sqLiteDatabaseObj.isOpen())
+                        sqLiteDatabaseObj.close();
                     openCompleteReaderActivity();
                 }
+
                 // Calling login method.
                 //LoginFunction();
 
@@ -185,6 +191,62 @@ public class MainActivity extends AppCompatActivity {
         return null;
 
     }
+    private void saveFormerUserName()
+    {
+        String formerUserName=getUserNameFromFile();
+        if (formerUserName!=null)
+        {
+            try {
+
+                FileOutputStream outStream=this.openFileOutput(formerUserNameFileName,Context.MODE_PRIVATE);
+                outStream.write(new String(formerUserName).getBytes());
+                outStream.flush();
+                outStream.close();
+                //getUserNameFromFile();
+
+
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public  String getFormerUserNameFromFile()
+    {
+        File fileDir = getFilesDir();
+
+        try {
+            File UsersName=new File(getFilesDir().getAbsolutePath()+"/"+formerUserNameFileName);
+            if (!UsersName.exists())
+                UsersName.createNewFile();
+            FileInputStream inputStream = openFileInput(formerUserNameFileName);
+//            UsersFile=new File(getFilesDir().getAbsolutePath()+"/"+formerUserNameFileName);
+            System.out.println("读取前一个用户账户名：");
+            // 一次读一个字符
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String usName="";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
+                // 但如果这两个字符分开显示时，会换两次行。
+                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    usName+=(char)tempchar;
+                }
+
+            }
+            reader.close();
+            return usName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+
     private void openCompleteReaderActivity() {
         PdfViewCtrlSettingsManager.setMultipleTabs(this, true);
         AdvancedReaderActivity.setDebug(BuildConfig.DEBUG);
@@ -196,11 +258,17 @@ public class MainActivity extends AppCompatActivity {
         if(EditTextEmptyHolder) {
 
             // Opening SQLite database write permission.
-            sqLiteDatabaseObj = sqLiteHelper.getWritableDatabase();
+            //sqLiteDatabaseObj =  openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);
+            if (sqLiteDatabaseObj==null||!sqLiteDatabaseObj.isOpen())
+                sqLiteDatabaseObj = SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);
+            //openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);
 
             // Adding search email query to cursor.
-            cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_1_Name + "=?", new String[]{EmailHolder}, null, null, null);
-
+           //cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_1_Name + "=?", new String[]{EmailHolder}, null, null, null);
+            //cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, null, null, null, null, null);
+            //String sql="select * from UserTable";
+            String sql = "select * from "+SQLiteHelper.TABLE_NAME+"  where name ='" + EmailHolder + "'; ";
+            cursor = sqLiteDatabaseObj.rawQuery(sql, null);
             while (cursor.moveToNext()) {
 
                 if (cursor.isFirst()) {

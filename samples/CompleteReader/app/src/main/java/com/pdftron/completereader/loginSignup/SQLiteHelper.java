@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class SQLiteHelper extends SQLiteOpenHelper {
 
 
-    static String DATABASE_NAME="UserDataBase";
+    public static String DATABASE_NAME="UserDataBase";
 
     public static final String TABLE_NAME="UserTable";
 

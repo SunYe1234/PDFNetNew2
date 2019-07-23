@@ -1602,7 +1602,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             startActivityForResult(new Intent().setClass(this, SettingsActivity.class), RequestCode.SETTINGS);
         } else if (navItemId == R.id.item_exit) {
             backToLogin();
-            //finish();
+            finish();
         }
         //if the button "Delete Account" is clicked
         else if (navItemId == R.id.item_delete_account) {
