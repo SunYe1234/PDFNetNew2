@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     public static File UsersFile=null;
     public static String usersNameFileName="UserName.txt";
     public static String formerUserNameFileName="FormerUserName.txt";
+    public static String PDFcps="/storage/emulated/0/Download/PDFcps/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,9 +144,15 @@ public class MainActivity extends AppCompatActivity {
             outStream.close();
             //getUserNameFromFile();
 
-             UserFolder=new File("/storage/emulated/0/Download/PDFcps/"+UserName);
-            if (!UserFolder.exists())
-                    UserFolder.mkdir();
+             UserFolder=new File(PDFcps+UserName);
+             boolean exits=UserFolder.exists();
+            if (!UserFolder.exists()) {
+                File PDFcpsFolder=new File(this.PDFcps);
+                if (!PDFcpsFolder.exists())
+                    PDFcpsFolder.mkdir();
+                UserFolder.mkdir();
+            }
+            exits=UserFolder.exists();
             getUserNameFromFile();
         } catch (IOException e)
         {
