@@ -1320,9 +1320,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             } else if (mProcessedFragmentViewId != MENU_ITEM_NONE) {
                 menuItem = mNavigationDrawerView.getMenu().findItem(mProcessedFragmentViewId);
             }
-            if (menuItem != null) {
+//            if (menuItem != null) {
                 selectNavigationItem(menuItem);
-            }
+//            }
         }
 
         if (mReturnFromSettings) {
@@ -1465,11 +1465,14 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
      * @param menuItem the selected drawer navigation menu item that that this activity will navigate to
      */
     public void selectNavigationItem(MenuItem menuItem) {
+        int navItemId=-1;
         if (menuItem == null) {
-            return;
+            //return;
+            navItemId=R.id.item_folder_list;
         }
 
-        int navItemId = menuItem.getItemId();
+        if (menuItem!=null)
+         navItemId = menuItem.getItemId();
         // Update the the currently checked item
         if (mNavigationDrawerView != null && mNavigationDrawerView.getMenu() != null) {
             if (navItemId != R.id.item_settings) {
