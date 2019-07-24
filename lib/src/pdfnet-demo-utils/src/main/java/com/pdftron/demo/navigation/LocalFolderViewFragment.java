@@ -2529,7 +2529,8 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
                         int extraCount = fileCount - mAdapter.getItemCount();
                         String fileStr = extraCount > 1 ? getString(R.string.files) : getString(R.string.file);
                         mNotSupportedTextView.setText(getString(R.string.num_files_not_supported, extraCount, fileStr));
-                        mNotSupportedTextView.setVisibility(View.VISIBLE);
+                        //mNotSupportedTextView.setVisibility(View.VISIBLE);
+                        mNotSupportedTextView.setVisibility(View.INVISIBLE);
                     }
                 }
             }

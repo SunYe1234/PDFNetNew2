@@ -1267,15 +1267,15 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
             // So, if this is the first time and the getting started file was
             // copied properly, we launch the viewer with the document.
-            boolean first=isFirstTimeRun();
-            first=true;
-            if (isFirstTimeRun()) {
+            boolean isFirst=isFirstTimeRun();
+            isFirst=false;
+            if (isFirst) {
                 copyTutorialFile();
             }
 
            // copyTutorialFile();
             //TODO: Remove the following if no Getting Started, and wish to use onboarding
-            if (isFirstTimeRun() && mGettingStartedFile != null) {
+            if (isFirst && mGettingStartedFile != null) {
                 // Open navigation drawer the next time onResume is called
                 mTeachNavDrawer = true;
                 onFileSelected(mGettingStartedFile, "");
