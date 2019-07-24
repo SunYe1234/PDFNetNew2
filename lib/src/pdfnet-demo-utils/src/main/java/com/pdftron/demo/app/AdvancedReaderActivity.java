@@ -1539,10 +1539,10 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                 setTitle(R.string.title_item_favorites);
             }
         } else if (navItemId == R.id.item_folder_list) {
-            if (!(mCurrentFragment instanceof LocalFolderViewFragment)) {
-                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
-                    fragment = mLastAddedBrowserFragment;
-                } else {
+//            if (!(mCurrentFragment instanceof LocalFolderViewFragment)) {
+//                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
+//                    fragment = mLastAddedBrowserFragment;
+//                } else {
 //                     Load last used folder, if set
                     fragment = LocalFolderViewFragment.newInstance();
                     ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
@@ -1555,10 +1555,10 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                                 public void onLocalFolderHidden() {
                                 }
                             });
-                }
+//                }
                 replaceFragment = true;
                 setTitle(R.string.title_item_local_folder_list);
-            }
+//            }
         } else if (navItemId == R.id.item_external_storage) {
             if (Utils.isLollipop()) {
                 if (!(mCurrentFragment instanceof ExternalStorageViewFragment)) {
@@ -1583,7 +1583,33 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                     setTitle(R.string.external_storage);
                 }
             }
-        } else if (navItemId == R.id.item_system_file_picker) {
+        }
+        else if (navItemId == R.id.item_my_cps) {
+            if (Utils.isLollipop()) {
+                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
+                    //fragment = mLastAddedBrowserFragment;
+                    fragment=LocalFolderViewFragment.newInstance(getUserNameFromFile());
+                } else {
+//                     Load last used folder, if set
+                    fragment = LocalFolderViewFragment.newInstance(getUserNameFromFile());
+                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
+                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
+                                @Override
+                                public void onLocalFolderShown() {
+                                }
+
+                                @Override
+                                public void onLocalFolderHidden() {
+                                }
+                            });
+                }
+                replaceFragment = true;
+                //setTitle(R.string.title_item_local_folder_list);
+            }
+        }
+
+
+        else if (navItemId == R.id.item_system_file_picker) {
             if (Utils.isKitKat()) {
                 Intent intent = MiscUtils.createSystemPickerIntent();
                 startActivityForResult(intent, RequestCode.SYSTEM_PICKER);
@@ -1615,25 +1641,45 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         }
         else {
-            if (!(mCurrentFragment instanceof LocalFileViewFragment)) {
-                if (mLastAddedBrowserFragment instanceof LocalFileViewFragment) {
-                    fragment = mLastAddedBrowserFragment;
-                } else {
-                    fragment = LocalFileViewFragment.newInstance();
-                    ((LocalFileViewFragment) fragment).setLocalFileViewFragmentListener(
-                            new LocalFileViewFragment.LocalFileViewFragmentListener() {
+//            if (!(mCurrentFragment instanceof LocalFileViewFragment)) {
+//                if (mLastAddedBrowserFragment instanceof LocalFileViewFragment) {
+//                    fragment = mLastAddedBrowserFragment;
+//                } else {
+//                    fragment = LocalFileViewFragment.newInstance();
+//                    ((LocalFileViewFragment) fragment).setLocalFileViewFragmentListener(
+//                            new LocalFileViewFragment.LocalFileViewFragmentListener() {
+//                                @Override
+//                                public void onLocalFileShown() {
+//                                }
+//
+//                                @Override
+//                                public void onLocalFileHidden() {
+//                                }
+//                            });
+//                }
+//                replaceFragment = true;
+//                setTitle(R.string.title_item_local_file_list);
+//            }
+//            if (!(mCurrentFragment instanceof LocalFolderViewFragment)) {
+//                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
+//                    fragment = mLastAddedBrowserFragment;
+//                } else {
+//                     Load last used folder, if set
+                    fragment = LocalFolderViewFragment.newInstance();
+                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
+                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
                                 @Override
-                                public void onLocalFileShown() {
+                                public void onLocalFolderShown() {
                                 }
 
                                 @Override
-                                public void onLocalFileHidden() {
+                                public void onLocalFolderHidden() {
                                 }
                             });
-                }
+//                }
                 replaceFragment = true;
-                setTitle(R.string.title_item_local_file_list);
-            }
+                setTitle(R.string.title_item_local_folder_list);
+//            }
         }
 
         if (replaceFragment) {
@@ -1715,7 +1761,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         String SQLiteDataBaseQueryHolder ;
         SQLiteHelper sqLiteHelper=new SQLiteHelper(this);
         currentUser=getUserNameFromFile();
-        SQLiteDatabase sqLiteDatabaseObj= openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);;
+        SQLiteDatabase sqLiteDatabaseObj= SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);;
 //        Cursor c = sqLiteDatabaseObj.rawQuery("select name from sqlite_master where type='table' order by name", null);
 //        ArrayList<String> usersBefore=new ArrayList<String>();
 //        while(c.moveToNext()){
@@ -1816,6 +1862,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         toggleInfoDrawer(false);
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -2706,12 +2754,16 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         if (fragment instanceof FavoritesViewFragment) {
             id = R.id.item_favorites;
         } else if (fragment instanceof LocalFolderViewFragment) {
-            id = R.id.item_folder_list;
+            if (fragment.getArguments()!=null)
+                id=R.id.item_my_cps;
+            else
+                id = R.id.item_folder_list;
         } else if (fragment instanceof LocalFileViewFragment) {
             id = R.id.item_file_list;
         } else if (fragment instanceof ExternalStorageViewFragment) {
             id = R.id.item_external_storage;
         }
+
         selectNavItem(id);
     }
 }

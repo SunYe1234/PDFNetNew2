@@ -128,6 +128,7 @@
     <item name="item_favorites" type="id"/>
     <item name="item_file_list" type="id"/>
     <item name="item_folder_list" type="id"/>
+    <item name="item_my_cps" type="id"/>
     <item name="item_recent" type="id"/>
     <item name="item_settings" type="id"/>
     <item name="item_system_file_picker" type="id"/>

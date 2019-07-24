@@ -128,6 +128,9 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     private static final String TAG = LocalFolderViewFragment.class.getName();
     private static final Boolean DEBUG = false;
     private static final int CACHED_SD_CARD_FOLDER_LIMIT = 25;
+    private static final String PdfHomeCard="/storage/0403-0201/DOC SAT digitalisée";
+    private static final String CardName="0403-0201";
+    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps/";
 
     protected SimpleRecyclerView mRecyclerView;
     protected TextView mEmptyTextView;
@@ -190,6 +193,14 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
 
     public static LocalFolderViewFragment newInstance() {
         return new LocalFolderViewFragment();
+    }
+    public static LocalFolderViewFragment newInstance(String currentUser) {
+        LocalFolderViewFragment localFolderViewFragment=new LocalFolderViewFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("currentUser", currentUser);
+
+        localFolderViewFragment.setArguments(bundle);
+        return localFolderViewFragment;
     }
 
     private MenuItem itemDuplicate;
@@ -926,7 +937,14 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     @Override
     public void onResume() {
         super.onResume();
-        resumeFragment();
+        if(getArguments()!=null) {
+            if (getArguments().getString("currentUser") != null) {
+                mBreadcrumbBarLayout.removeAllViews();
+                resumeFragmentWithUserName();
+            }
+        }
+        else
+            resumeFragment();
     }
 
     @Override
@@ -976,6 +994,9 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Create the file observer
         updateFileObserver();
+        String currentUser;
+//        if (getArguments()!=null)
+//         currentUser=getArguments().getString("currentUser");
         // Creates our custom view for the folder list.
         return inflater.inflate(R.layout.fragment_local_folder_view, container, false);
     }
@@ -1720,7 +1741,8 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         }
         if (Utils.isLollipop()) {
             while (parent != null) {
-                createBreadcrumb(context, parent, 0); // Add to start
+                if (!parent.getName().equals("storage")&&!parent.getName().equals(CardName))
+                    createBreadcrumb(context, parent, 0); // Add to start
                 if (parent.getParentFile() != null && !parent.getParent().equalsIgnoreCase("/")) {
                     parent = parent.getParentFile();
                 } else {
@@ -1729,7 +1751,8 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
             }
         } else {
             while (parent != null) {
-                createBreadcrumb(context, parent, 0); // Add to start
+                if (!parent.getName().equals("storage")&&!parent.getName().equals(CardName))
+                    createBreadcrumb(context, parent, 0); // Add to start
                 if (parent.getParentFile() != null && !parent.getParent().equalsIgnoreCase("/")) {
                     parent = parent.getParentFile();
                 } else {
@@ -1890,6 +1913,7 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         //mCurrentFolder=new File("/storage/");
         if(mCurrentFolder.isFile())
             mCurrentFolder=new File("/storage/");
+            //mCurrentFolder=new File(PdfHomeCard);
         mPopulateFolderTask = new PopulateFolderTask(context, mCurrentFolder,
             mFileInfoList, mFileListLock, getSortMode(), true, true, true, mSdCardFolderCache, this);
         mPopulateFolderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -1902,7 +1926,9 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         while (leafFile != null && !leafFile.exists()) {
             leafFile = leafFile.getParentFile();
         }
-        rebuildBreadcrumbBar(context, leafFile);
+        if(getArguments()==null)
+            rebuildBreadcrumbBar(context, leafFile);
+        else mBreadcrumbBarLayout.removeAllViews();
 
         focusCurrentCrumb = (focusCurrentCrumb || leafFile != null);
         if (mCurrentFolder != null) {
@@ -2565,7 +2591,34 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         mViewerLaunching = false;
 
         //String directory = PdfViewCtrlSettingsManager.getLocalFolderPath(activity);
-        String directory="/storage/";
+        String directory=PdfHomeCard;
+        if (!Utils.isNullOrEmpty(directory)) {
+            mCurrentFolder = new File(directory);
+            updateFileObserver();
+        }
+
+        reloadFileInfoList(mDataChanged);
+        mDataChanged = false;
+
+        if (mLocalFolderViewFragmentListener != null) {
+            mLocalFolderViewFragmentListener.onLocalFolderShown();
+        }
+    }
+
+    private void resumeFragmentWithUserName() {
+        Logger.INSTANCE.LogD(TAG, "resumeFragment With User Name");
+
+        Activity activity = getActivity();
+        if (activity == null) {
+            return;
+        }
+
+        mViewerLaunching = false;
+
+        //String directory = PdfViewCtrlSettingsManager.getLocalFolderPath(activity);
+        //String directory=PdfHomeCard;
+        String userName=getArguments().getString("currentUser");
+        String directory=usersFolderParentPath+userName;
         if (!Utils.isNullOrEmpty(directory)) {
             mCurrentFolder = new File(directory);
             updateFileObserver();

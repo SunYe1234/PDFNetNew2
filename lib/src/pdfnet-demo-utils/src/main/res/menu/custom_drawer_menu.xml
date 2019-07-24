@@ -28,6 +28,11 @@
             android:icon="@drawable/ic_folder_white_24dp"
             android:title="@string/title_item_local_folder_list"
             android:checkable="true"/>
+        <item
+            android:id="@id/item_my_cps"
+            android:icon="@drawable/ic_folder_white_24dp"
+            android:title="My CPs"
+            android:checkable="true"/>
         <!--<item-->
             <!--android:id="@id/item_file_list"-->
             <!--android:icon="@drawable/ic_file_white_24dp"-->

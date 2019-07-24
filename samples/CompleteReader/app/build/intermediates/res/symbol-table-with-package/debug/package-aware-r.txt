@@ -2476,6 +2476,7 @@ id item_icon
 id item_image
 id item_image_layout
 id item_local_storage
+id item_my_cps
 id item_recent
 id item_recent_files
 id item_settings
