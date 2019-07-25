@@ -2488,6 +2488,21 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
 
 
             }
+            if(mCurrentFolder.getAbsolutePath().equals(PdfHomeCard))
+            {
+                Toast.makeText(getActivity(),"You are already in the root folder of PDFs", Toast.LENGTH_LONG).show();
+                handled=true;
+                return handled;
+            }
+            if(getArguments()!=null)
+            {
+                if (mCurrentFolder.getName().equals(getArguments().getString("currentUser")))
+                {
+                    Toast.makeText(getActivity(),"You are already in the root folder of your CPs", Toast.LENGTH_LONG).show();
+                    handled=true;
+                    return handled;
+                }
+            }
             if (!mCurrentFolder.equals(rootDir) && mCurrentFolder.getParentFile() != null && !mCurrentFolder.getParent().equals("/")) {
                 mCurrentFolder = mCurrentFolder.getParentFile();
                 updateFileObserver();
