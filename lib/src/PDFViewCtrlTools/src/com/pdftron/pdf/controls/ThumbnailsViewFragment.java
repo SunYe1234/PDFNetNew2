@@ -307,28 +307,28 @@ public class ThumbnailsViewFragment extends DialogFragment implements Thumbnails
         itemClickHelper.setOnItemLongClickListener(new ItemClickHelper.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(RecyclerView recyclerView, View v, final int position, final long id) {
-                if (mIsReadOnly) {
-                    return true;
-                }
-                if (mActionMode == null) {
-                    mItemSelectionHelper.setItemChecked(position, true);
-
-                    mActionMode = new ToolbarActionMode(getActivity(), mCabToolbar);
-                    mActionMode.startActionMode(mActionModeCallback);
-                } else {
-                    if (mIsReadOnly) {
-                        if (mOnThumbnailsEditAttemptWhileReadOnlyListener != null)
-                            mOnThumbnailsEditAttemptWhileReadOnlyListener.onThumbnailsEditAttemptWhileReadOnly();
-                        return true;
-                    }
-                    mRecyclerView.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            RecyclerView.ViewHolder holder = mRecyclerView.findViewHolderForAdapterPosition(position);
-                            mItemTouchHelper.startDrag(holder);
-                        }
-                    });
-                }
+//                if (mIsReadOnly) {
+//                    return true;
+//                }
+//                if (mActionMode == null) {
+//                    mItemSelectionHelper.setItemChecked(position, true);
+//
+//                    mActionMode = new ToolbarActionMode(getActivity(), mCabToolbar);
+//                    mActionMode.startActionMode(mActionModeCallback);
+//                } else {
+//                    if (mIsReadOnly) {
+//                        if (mOnThumbnailsEditAttemptWhileReadOnlyListener != null)
+//                            mOnThumbnailsEditAttemptWhileReadOnlyListener.onThumbnailsEditAttemptWhileReadOnly();
+//                        return true;
+//                    }
+//                    mRecyclerView.post(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            RecyclerView.ViewHolder holder = mRecyclerView.findViewHolderForAdapterPosition(position);
+//                            mItemTouchHelper.startDrag(holder);
+//                        }
+//                    });
+//                }
 
                 return true;
             }
