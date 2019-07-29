@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.storage.StorageManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
@@ -40,11 +42,16 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Button LogInButton, RegisterButton ;
@@ -61,7 +68,11 @@ public class MainActivity extends AppCompatActivity {
     public static File UsersFile=null;
     public static String usersNameFileName="UserName.txt";
     public static String formerUserNameFileName="FormerUserName.txt";
-    public static String PDFcps="/storage/emulated/0/Download/PDFcps/";
+
+    //public static String PDFcps="/storage/emulated/0/Download/PDFcps/";
+    public static String PDFcps;
+    public static String cpsHome="/Download/PDFcps/";
+    //public static String cpsHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +85,19 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }*/
+
         setContentView(R.layout.activity_main1);
+
+
+        //extSdcardPath is the path of the external SD card which depends on the exact SD card we use
+        String extSdcardPath = getExtSDCardPath();
+
+        //intnStoragePath is the path of the internal storage of the tablet
+        String intnStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+
+        //create the path of PDFcps of all users, cpsHome is the name of root directory where we save users directories
+        //cpsHome is "/Download/PDFcps/" by default, it needs to be modified manually if we want to change it
+        PDFcps=intnStoragePath+cpsHome;
 
         LogInButton = (Button)findViewById(R.id.buttonLogin);
 
@@ -354,5 +377,42 @@ public class MainActivity extends AppCompatActivity {
         //TempPassword = "NOT_FOUND" ;
 
     }
+
+    private String getExtSDCardPath()
+    {
+        StorageManager mStorageManager = (StorageManager) this.getSystemService(Context.STORAGE_SERVICE);
+        Class<?> storageVolumeClazz = null;
+        try {
+            storageVolumeClazz = Class.forName("android.os.storage.StorageVolume");
+            Method getVolumeList = mStorageManager.getClass().getMethod("getVolumeList");
+            Method getPath = storageVolumeClazz.getMethod("getPath");
+            Method isRemovable = storageVolumeClazz.getMethod("isRemovable");
+            Object result = getVolumeList.invoke(mStorageManager);
+            final int length = Array.getLength(result);
+            for (int i = 0; i < length; i++) {
+                Object storageVolumeElement = Array.get(result, i);
+                String path = (String) getPath.invoke(storageVolumeElement);
+                boolean removable = (Boolean) isRemovable.invoke(storageVolumeElement);
+                if (true == removable) {
+                    return path;
+                }
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+
+
+
+    }
+
+
 
 }

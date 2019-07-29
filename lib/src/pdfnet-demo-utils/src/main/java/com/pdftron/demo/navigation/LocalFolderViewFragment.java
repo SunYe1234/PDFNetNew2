@@ -21,6 +21,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.os.storage.StorageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.DialogFragment;
@@ -108,6 +109,9 @@ import org.apache.commons.io.FilenameUtils;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.ref.WeakReference;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -128,9 +132,18 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     private static final String TAG = LocalFolderViewFragment.class.getName();
     private static final Boolean DEBUG = false;
     private static final int CACHED_SD_CARD_FOLDER_LIMIT = 25;
-    private static final String PdfHomeCard="/storage/0403-0201/DOC SAT digitalisée";
-    private static final String CardName="0403-0201";
-    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps/";
+    //private static  String PdfHomeCard="/storage/0403-0201/DOC SAT digitalisée";
+    //private static  String CardName="0403-0201";
+    //private static  String CardName="";
+    //private static  String usersFolderParentPath="/storage/emulated/0/Download/PDFcps/";
+
+    private static  String PdfHomeCard;
+    private static  String CardName;
+    private static  String usersFolderParentPath;
+
+
+    private static String pdfsHome="/DOC SAT digitalisée";
+    private static String cpsHome="/Download/PDFcps/";
 
     protected SimpleRecyclerView mRecyclerView;
     protected TextView mEmptyTextView;
@@ -963,6 +976,20 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         if (activity == null) {
             return;
         }
+
+        //create the path of PDFs which are saved in the SD card
+        //getExtSDCardPath() will return the path of SD card,
+        // and pdfsHome is the name of PDFs'root directory in the SD card which need to be modified manully if changed
+        PdfHomeCard=getExtSDCardPath()+pdfsHome;
+
+        //create the path of PDF cps which are saved in the internal storage of tablet
+        //getExternalStorageDirectory() will return the path of internal storage of tablet,
+        //and cpsHome is the name of PDFcps'root directory where all of the directories of users are saved
+        //cpsHome need to be modified manully if changed.
+        usersFolderParentPath=Environment.getExternalStorageDirectory().getAbsolutePath()+cpsHome;
+
+        //get the name of SD card using PdfHomeCard, it's the second part of the absolute path of PDFs which are saved in the SD card
+        CardName=PdfHomeCard.split("/")[2];
 
         FileManager.initCache(getContext());
         // When we use setRetainInstance, the Bundle (savedInstanceState) will always be null.
@@ -2881,5 +2908,43 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     }
 
     private final LoadingFileHandler mLoadingFileHandler = new LoadingFileHandler(this);
+
+
+
+    private String getExtSDCardPath()
+    {
+        StorageManager mStorageManager = (StorageManager) getActivity().getSystemService(Context.STORAGE_SERVICE);
+        Class<?> storageVolumeClazz = null;
+        try {
+            storageVolumeClazz = Class.forName("android.os.storage.StorageVolume");
+            Method getVolumeList = mStorageManager.getClass().getMethod("getVolumeList");
+            Method getPath = storageVolumeClazz.getMethod("getPath");
+            Method isRemovable = storageVolumeClazz.getMethod("isRemovable");
+            Object result = getVolumeList.invoke(mStorageManager);
+            final int length = Array.getLength(result);
+            for (int i = 0; i < length; i++) {
+                Object storageVolumeElement = Array.get(result, i);
+                String path = (String) getPath.invoke(storageVolumeElement);
+                boolean removable = (Boolean) isRemovable.invoke(storageVolumeElement);
+                if (true == removable) {
+                    return path;
+                }
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+
+
+
+    }
+
 
 }
