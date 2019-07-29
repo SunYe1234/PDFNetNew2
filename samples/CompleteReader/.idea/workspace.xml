@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eb92bd1a-6db6-4fdb-96c0-295741fc62c9" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/ThumbnailsViewFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/ThumbnailsViewFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileChanges/last-build.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" />
@@ -287,36 +286,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/AdvancedReaderActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="1756" column="16" selection-start-line="1756" selection-end-line="1757" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13321">
-              <caret line="1634" column="27" selection-start-line="1634" selection-start-column="27" selection-end-line="1634" selection-end-column="27" />
-              <folding>
-                <element signature="e#103167#103168#0" expanded="true" />
-                <element signature="e#103206#103207#0" expanded="true" />
-                <element signature="e#103501#103502#0" expanded="true" />
-                <element signature="e#103535#103536#0" expanded="true" />
-                <element signature="e#103739#103740#0" expanded="true" />
-                <element signature="e#103773#103774#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="1027" column="21" selection-start-line="1027" selection-start-column="16" selection-end-line="1027" selection-end-column="21" />
+            <state relative-caret-position="206">
+              <caret line="5314" column="27" selection-start-line="5314" selection-start-column="16" selection-end-line="5314" selection-end-column="32" />
               <folding>
                 <element signature="e#189403#189404#0" expanded="true" />
                 <element signature="e#189450#189451#0" expanded="true" />
@@ -377,10 +350,66 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="130" column="43" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="43" />
+              <folding>
+                <element signature="e#103167#103168#0" expanded="true" />
+                <element signature="e#103206#103207#0" expanded="true" />
+                <element signature="e#103501#103502#0" expanded="true" />
+                <element signature="e#103535#103536#0" expanded="true" />
+                <element signature="e#103739#103740#0" expanded="true" />
+                <element signature="e#103773#103774#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_fragment_tabbed_sub_reflow.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="1345" column="9" lean-forward="true" selection-start-line="1345" selection-start-column="9" selection-end-line="1345" selection-end-column="9" />
+              <folding>
+                <element signature="e#52441#52442#0" expanded="true" />
+                <element signature="e#52481#52482#0" expanded="true" />
+                <element signature="e#62363#62364#0" expanded="true" />
+                <element signature="e#62405#62406#0" expanded="true" />
+                <element signature="e#65375#65376#0" expanded="true" />
+                <element signature="e#65415#65416#0" expanded="true" />
+                <element signature="e#66911#66912#0" expanded="true" />
+                <element signature="e#66942#66943#0" expanded="true" />
+                <element signature="e#98581#98582#0" expanded="true" />
+                <element signature="e#98608#98609#0" expanded="true" />
+                <element signature="e#108611#108612#0" expanded="true" />
+                <element signature="e#108645#108646#0" expanded="true" />
+                <element signature="e#109331#109332#0" expanded="true" />
+                <element signature="e#109388#109389#0" expanded="true" />
+                <element signature="e#114520#114521#0" expanded="true" />
+                <element signature="e#114560#114561#0" expanded="true" />
+                <element signature="e#116472#116473#0" expanded="true" />
+                <element signature="e#116519#116520#0" expanded="true" />
+                <element signature="e#133325#133326#0" expanded="true" />
+                <element signature="e#133375#133376#0" expanded="true" />
+                <element signature="e#136632#136633#0" expanded="true" />
+                <element signature="e#136660#136661#0" expanded="true" />
+                <element signature="e#136827#136828#0" expanded="true" />
+                <element signature="e#136851#136852#0" expanded="true" />
+                <element signature="e#137026#137027#0" expanded="true" />
+                <element signature="e#137050#137051#0" expanded="true" />
+                <element signature="e#153558#153559#0" expanded="true" />
+                <element signature="e#153607#153608#0" expanded="true" />
+                <element signature="e#171467#171468#0" expanded="true" />
+                <element signature="e#171518#171519#0" expanded="true" />
+                <element signature="e#176750#176751#0" expanded="true" />
+                <element signature="e#176808#176809#0" expanded="true" />
+                <element signature="e#189042#189043#0" expanded="true" />
+                <element signature="e#189072#189073#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -396,11 +425,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/ThumbnailsViewFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="330" column="19" lean-forward="true" selection-start-line="309" selection-start-column="17" selection-end-line="330" selection-end-column="19" />
+            <state relative-caret-position="284">
+              <caret line="187" column="19" selection-start-line="187" selection-start-column="19" selection-end-line="187" selection-end-column="19" />
               <folding>
                 <element signature="e#12482#13783#0" expanded="true" />
                 <element signature="e#13782#13783#0" expanded="true" />
@@ -410,12 +439,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_folder_view.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/custom_drawer_menu.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
               <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_local_file_view.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-528" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_viewer_addon.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/cab_fragment_file_operations.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-189" />
           </provider>
         </entry>
       </file>
@@ -458,8 +515,8 @@
       <find>title</find>
       <find>onCreateView</find>
       <find>onBa</find>
-      <find>layou</find>
       <find>Toa</find>
+      <find>layou</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -546,29 +603,42 @@
             </path>
             <path>
               <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="pdfnet-demo-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="pdfnet-demo-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pdfnet-demo-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pdfnet-demo-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pdfnet-demo-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -717,8 +787,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.055078685" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39270386" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -728,9 +799,9 @@
       <window_info id="Designer" order="7" />
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3952912" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.086741015" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2527881" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.26022306" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.14126395" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1127,35 +1198,16 @@
           <properties />
           <option name="timeStamp" value="108" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java</url>
+          <line>1355</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_search_toolbar.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/os/Environment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="478" column="23" selection-start-line="478" selection-start-column="23" selection-end-line="478" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa29f5a96f9d7953a1300cd96f6cde1b/jars/classes.jar!/android/support/v4/app/Fragment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="1105" selection-start-line="1105" selection-end-line="1105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/utils/RecursiveFileObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/app/ActivityThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -1311,32 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="982" column="52" selection-start-line="982" selection-start-column="52" selection-end-line="982" selection-end-column="52" />
-          <folding>
-            <element signature="e#52481#52482#0" expanded="true" />
-            <element signature="e#62405#62406#0" expanded="true" />
-            <element signature="e#65415#65416#0" expanded="true" />
-            <element signature="e#66942#66943#0" expanded="true" />
-            <element signature="e#98608#98609#0" expanded="true" />
-            <element signature="e#108645#108646#0" expanded="true" />
-            <element signature="e#109388#109389#0" expanded="true" />
-            <element signature="e#114560#114561#0" expanded="true" />
-            <element signature="e#116519#116520#0" expanded="true" />
-            <element signature="e#133375#133376#0" expanded="true" />
-            <element signature="e#136660#136661#0" expanded="true" />
-            <element signature="e#136851#136852#0" expanded="true" />
-            <element signature="e#137050#137051#0" expanded="true" />
-            <element signature="e#153607#153608#0" expanded="true" />
-            <element signature="e#171518#171519#0" expanded="true" />
-            <element signature="e#176808#176809#0" expanded="true" />
-            <element signature="e#189072#189073#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1448,14 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/custom_drawer_menu.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/AdvancedReaderActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1470,25 +1488,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java">
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_fragment_tabbed_sub_reflow.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_fragment_tabbed_sub_pdfviewctrl.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_fragment_tabbed_pdfviewctrl_tab_content.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/102cc3042a1e096ae86279a9ce9e19e4/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13321">
-          <caret line="1634" column="27" selection-start-line="1634" selection-start-column="27" selection-end-line="1634" selection-end-column="27" />
+        <state relative-caret-position="190">
+          <caret line="4395" selection-start-line="4395" selection-end-line="4395" />
           <folding>
-            <element signature="e#103167#103168#0" expanded="true" />
-            <element signature="e#103206#103207#0" expanded="true" />
-            <element signature="e#103501#103502#0" expanded="true" />
-            <element signature="e#103535#103536#0" expanded="true" />
-            <element signature="e#103739#103740#0" expanded="true" />
-            <element signature="e#103773#103774#0" expanded="true" />
+            <element signature="e#174303#174304#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/widget/recyclerview/ItemClickHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#4470#5060#0" expanded="true" />
+            <element signature="e#5059#5060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/ThumbnailsViewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="187" column="19" selection-start-line="187" selection-start-column="19" selection-end-line="187" selection-end-column="19" />
+          <folding>
+            <element signature="e#12482#13783#0" expanded="true" />
+            <element signature="e#13782#13783#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_folder_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/custom_drawer_menu.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_viewer_addon.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/cab_fragment_file_operations.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_local_file_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="1027" column="21" selection-start-line="1027" selection-start-column="16" selection-end-line="1027" selection-end-column="21" />
+        <state relative-caret-position="206">
+          <caret line="5314" column="27" selection-start-line="5314" selection-start-column="16" selection-end-line="5314" selection-end-column="32" />
           <folding>
             <element signature="e#189403#189404#0" expanded="true" />
             <element signature="e#189450#189451#0" expanded="true" />
@@ -1548,46 +1623,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_fragment_tabbed_sub_reflow.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_fragment_tabbed_sub_pdfviewctrl.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_fragment_tabbed_pdfviewctrl_tab_content.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/102cc3042a1e096ae86279a9ce9e19e4/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="4395" selection-start-line="4395" selection-end-line="4395" />
+        <state relative-caret-position="26">
+          <caret line="1345" column="9" lean-forward="true" selection-start-line="1345" selection-start-column="9" selection-end-line="1345" selection-end-column="9" />
           <folding>
-            <element signature="e#174303#174304#0" expanded="true" />
+            <element signature="e#52441#52442#0" expanded="true" />
+            <element signature="e#52481#52482#0" expanded="true" />
+            <element signature="e#62363#62364#0" expanded="true" />
+            <element signature="e#62405#62406#0" expanded="true" />
+            <element signature="e#65375#65376#0" expanded="true" />
+            <element signature="e#65415#65416#0" expanded="true" />
+            <element signature="e#66911#66912#0" expanded="true" />
+            <element signature="e#66942#66943#0" expanded="true" />
+            <element signature="e#98581#98582#0" expanded="true" />
+            <element signature="e#98608#98609#0" expanded="true" />
+            <element signature="e#108611#108612#0" expanded="true" />
+            <element signature="e#108645#108646#0" expanded="true" />
+            <element signature="e#109331#109332#0" expanded="true" />
+            <element signature="e#109388#109389#0" expanded="true" />
+            <element signature="e#114520#114521#0" expanded="true" />
+            <element signature="e#114560#114561#0" expanded="true" />
+            <element signature="e#116472#116473#0" expanded="true" />
+            <element signature="e#116519#116520#0" expanded="true" />
+            <element signature="e#133325#133326#0" expanded="true" />
+            <element signature="e#133375#133376#0" expanded="true" />
+            <element signature="e#136632#136633#0" expanded="true" />
+            <element signature="e#136660#136661#0" expanded="true" />
+            <element signature="e#136827#136828#0" expanded="true" />
+            <element signature="e#136851#136852#0" expanded="true" />
+            <element signature="e#137026#137027#0" expanded="true" />
+            <element signature="e#137050#137051#0" expanded="true" />
+            <element signature="e#153558#153559#0" expanded="true" />
+            <element signature="e#153607#153608#0" expanded="true" />
+            <element signature="e#171467#171468#0" expanded="true" />
+            <element signature="e#171518#171519#0" expanded="true" />
+            <element signature="e#176750#176751#0" expanded="true" />
+            <element signature="e#176808#176809#0" expanded="true" />
+            <element signature="e#189042#189043#0" expanded="true" />
+            <element signature="e#189072#189073#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/widget/recyclerview/ItemClickHelper.java">
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        <state relative-caret-position="315">
+          <caret line="130" column="43" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="43" />
           <folding>
-            <element signature="e#4470#5060#0" expanded="true" />
-            <element signature="e#5059#5060#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/ThumbnailsViewFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="330" column="19" lean-forward="true" selection-start-line="309" selection-start-column="17" selection-end-line="330" selection-end-column="19" />
-          <folding>
-            <element signature="e#12482#13783#0" expanded="true" />
-            <element signature="e#13782#13783#0" expanded="true" />
+            <element signature="e#103167#103168#0" expanded="true" />
+            <element signature="e#103206#103207#0" expanded="true" />
+            <element signature="e#103501#103502#0" expanded="true" />
+            <element signature="e#103535#103536#0" expanded="true" />
+            <element signature="e#103739#103740#0" expanded="true" />
+            <element signature="e#103773#103774#0" expanded="true" />
           </folding>
         </state>
       </provider>
