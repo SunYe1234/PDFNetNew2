@@ -1269,9 +1269,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             // copied properly, we launch the viewer with the document.
             boolean isFirst=isFirstTimeRun();
             isFirst=false;
-            if (isFirst) {
-                copyTutorialFile();
-            }
+//            if (isFirst) {
+//                copyTutorialFile();
+//            }
 
            // copyTutorialFile();
             //TODO: Remove the following if no Getting Started, and wish to use onboarding
@@ -1309,15 +1309,17 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             mViewerBuilder = null;
         } else if (mNavigationDrawerView != null && mNavigationDrawerView.getMenu() != null) {
             MenuItem menuItem = null;
-            if (isFirstTimeRun()) {
-            //if(true){
-                mIsFirstTimeRunConsumed = false; // consumed
-                menuItem = mNavigationDrawerView.getMenu().findItem(R.id.item_file_list);
+//            if (isFirstTimeRun()) {
+//            //if(true){
+//                mIsFirstTimeRunConsumed = false; // consumed
+//                menuItem = mNavigationDrawerView.getMenu().findItem(R.id.item_file_list);
+//
+//                copyTutorialFile();
+//                mTeachNavDrawer = true;
+//                onFileSelected(mGettingStartedFile, "");
+//            } else
 
-                copyTutorialFile();
-                mTeachNavDrawer = true;
-                onFileSelected(mGettingStartedFile, "");
-            } else if (mProcessedFragmentViewId != MENU_ITEM_NONE) {
+                if (mProcessedFragmentViewId != MENU_ITEM_NONE) {
                 menuItem = mNavigationDrawerView.getMenu().findItem(mProcessedFragmentViewId);
             }
 //            if (menuItem != null) {
@@ -1416,7 +1418,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                     // avoid showing this as we will display getting started
                     MiscUtils.showPermissionResultSnackbar(this, mDrawerLayout, true, requestCode);
                     reloadBrowser();
-                    copyTutorialFile();
+                    //copyTutorialFile();
                 }
             } else {
                 if (requestCode == RequestCode.STORAGE_2) {

@@ -116,19 +116,15 @@ public class MainActivity extends AppCompatActivity {
                 // Calling EditText is empty or no method.
                 CheckEditTextStatus();
 
-//                Intent intent = new Intent(MainActivity.this, CompleteReaderActivity.class);
-//                startActivity(intent);
+
                 if(LoginFunction()) {
-                    saveFormerUserName();
                     saveUserNameToFile();
-                    String formerUser=getFormerUserNameFromFile();
                     if (sqLiteDatabaseObj.isOpen())
                         sqLiteDatabaseObj.close();
-                    openCompleteReaderActivity();
+                    openAdvancedReaderActivity();
                 }
 
-                // Calling login method.
-                //LoginFunction();
+
 
 
             }
@@ -149,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    save the current user name to username.txt under Files
+    save the current user name to username.txt under Files and create user folder if it doesn't exist yet
      */
     private void saveUserNameToFile() {
 
@@ -277,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void openCompleteReaderActivity() {
+    private void openAdvancedReaderActivity() {
         PdfViewCtrlSettingsManager.setMultipleTabs(this, true);
         AdvancedReaderActivity.setDebug(BuildConfig.DEBUG);
         AdvancedReaderActivity.open(this);

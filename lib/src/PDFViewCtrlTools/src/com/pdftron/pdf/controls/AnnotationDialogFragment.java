@@ -309,45 +309,50 @@ public class AnnotationDialogFragment extends NavigationListDialogFragment {
         mProgressBarView = view.findViewById(R.id.progress_bar_view);
 
         mFab = view.findViewById(R.id.export_annotations_button);
+        //mFab=null;
+        mFab.setVisibility(View.INVISIBLE);
         if (mIsReadOnly) {
+
             mFab.setVisibility(View.GONE);
         }
-        mFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mAnnotationDialogListener != null) {
-                    mDisposables.add(prepareAnnotations()
-                            .subscribeOn(Schedulers.io())
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .doOnSubscribe(new Consumer<Disposable>() {
-                                @Override
-                                public void accept(Disposable disposable) throws Exception {
-                                    mProgressBarView.setVisibility(View.VISIBLE);
-                                }
-                            })
-                            .subscribe(new Consumer<PDFDoc>() {
-                                           @Override
-                                           public void accept(PDFDoc pdfDoc) throws Exception {
-                                               mProgressBarView.setVisibility(View.GONE);
-                                               if (mAnnotationDialogListener != null) {
-                                                   mAnnotationDialogListener.onExportAnnotations(pdfDoc);
-                                               }
-                                           }
-                                       },
-                                    new Consumer<Throwable>() {
-                                        @Override
-                                        public void accept(Throwable throwable) throws Exception {
-                                            mProgressBarView.setVisibility(View.GONE);
-                                            AnalyticsHandlerAdapter.getInstance().sendException(new Exception(throwable));
-                                        }
+        if (mFab!=null) {
+            mFab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mAnnotationDialogListener != null) {
+                        mDisposables.add(prepareAnnotations()
+                                .subscribeOn(Schedulers.io())
+                                .observeOn(AndroidSchedulers.mainThread())
+                                .doOnSubscribe(new Consumer<Disposable>() {
+                                    @Override
+                                    public void accept(Disposable disposable) throws Exception {
+                                        mProgressBarView.setVisibility(View.VISIBLE);
                                     }
-                            ));
+                                })
+                                .subscribe(new Consumer<PDFDoc>() {
+                                               @Override
+                                               public void accept(PDFDoc pdfDoc) throws Exception {
+                                                   mProgressBarView.setVisibility(View.GONE);
+                                                   if (mAnnotationDialogListener != null) {
+                                                       mAnnotationDialogListener.onExportAnnotations(pdfDoc);
+                                                   }
+                                               }
+                                           },
+                                        new Consumer<Throwable>() {
+                                            @Override
+                                            public void accept(Throwable throwable) throws Exception {
+                                                mProgressBarView.setVisibility(View.GONE);
+                                                AnalyticsHandlerAdapter.getInstance().sendException(new Exception(throwable));
+                                            }
+                                        }
+                                ));
+                    }
+                    onEventAction();
+                    AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.EVENT_ANNOTATIONS_LIST,
+                            AnalyticsParam.annotationsListActionParam(AnalyticsHandlerAdapter.ANNOTATIONS_LIST_EXPORT));
                 }
-                onEventAction();
-                AnalyticsHandlerAdapter.getInstance().sendEvent(AnalyticsHandlerAdapter.EVENT_ANNOTATIONS_LIST,
-                        AnalyticsParam.annotationsListActionParam(AnalyticsHandlerAdapter.ANNOTATIONS_LIST_EXPORT));
-            }
-        });
+            });
+        }
 
         // Add click listener to the list
         ItemClickHelper itemClickHelper = new ItemClickHelper();
@@ -444,7 +449,8 @@ public class AnnotationDialogFragment extends NavigationListDialogFragment {
                             @Override
                             public void run() throws Exception {
                                 if (mFab != null) {
-                                    mFab.setVisibility(mAnnotationsAdapter.getItemCount() > 0 ? View.VISIBLE : View.GONE);
+                                    //mFab.setVisibility(mAnnotationsAdapter.getItemCount() > 0 ? View.VISIBLE : View.GONE);
+                                    mFab.setVisibility(View.INVISIBLE);
 
                                     if (mIsReadOnly) {
                                         mFab.setVisibility(View.GONE);
