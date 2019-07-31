@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
         setContentView(R.layout.activity_main1);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
         //extSdcardPath is the path of the external SD card which depends on the exact SD card we use

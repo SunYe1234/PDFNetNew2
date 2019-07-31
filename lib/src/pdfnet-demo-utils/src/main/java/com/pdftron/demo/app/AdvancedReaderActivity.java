@@ -43,6 +43,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.pdftron.common.PDFNetException;
@@ -240,6 +241,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         Logger.INSTANCE.LogV("LifeCycle", "Main.onCreate");
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
 
         mDisposables = new CompositeDisposable();
 
@@ -1503,47 +1506,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                     replaceFragment = false;
                 }
             }
-        } else if (navItemId == R.id.item_recent) {
-            if (!(mCurrentFragment instanceof RecentViewFragment)) {
-                if (mLastAddedBrowserFragment instanceof RecentViewFragment) {
-                    fragment = mLastAddedBrowserFragment;
-                } else {
-                    fragment = RecentViewFragment.newInstance();
-                    ((RecentViewFragment) fragment).setRecentViewFragmentListener(
-                            new RecentViewFragment.RecentViewFragmentListener() {
-                                @Override
-                                public void onRecentShown() {
-                                }
-
-                                @Override
-                                public void onRecentHidden() {
-                                }
-                            });
-                }
-                replaceFragment = true;
-                setTitle(R.string.title_item_recent);
-            }
-        } else if (navItemId == R.id.item_favorites) {
-            if (!(mCurrentFragment instanceof FavoritesViewFragment)) {
-                if (mLastAddedBrowserFragment instanceof FavoritesViewFragment) {
-                    fragment = mLastAddedBrowserFragment;
-                } else {
-                    fragment = FavoritesViewFragment.newInstance();
-                    ((FavoritesViewFragment) fragment).setFavoritesViewFragmentListener(
-                            new FavoritesViewFragment.FavoritesViewFragmentListener() {
-                                @Override
-                                public void onFavoritesShown() {
-                                }
-
-                                @Override
-                                public void onFavoritesHidden() {
-                                }
-                            });
-                }
-                replaceFragment = true;
-                setTitle(R.string.title_item_favorites);
-            }
-        } else if (navItemId == R.id.item_folder_list) {
+        }
+        else if (navItemId == R.id.item_folder_list) {
 //            if (!(mCurrentFragment instanceof LocalFolderViewFragment)) {
 //                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
 //                    fragment = mLastAddedBrowserFragment;
@@ -1564,31 +1528,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
                 replaceFragment = true;
                 setTitle(R.string.title_item_local_folder_list);
 //            }
-        } else if (navItemId == R.id.item_external_storage) {
-            if (Utils.isLollipop()) {
-                if (!(mCurrentFragment instanceof ExternalStorageViewFragment)) {
-                    if (mLastAddedBrowserFragment instanceof ExternalStorageViewFragment) {
-                        fragment = mLastAddedBrowserFragment;
-                    } else {
-                        // Load last used folder, if set
-                        fragment = ExternalStorageViewFragment.newInstance();
-                        ((ExternalStorageViewFragment) fragment).setExternalStorageViewFragmentListener(
-                                new ExternalStorageViewFragment.ExternalStorageViewFragmentListener() {
-                                    @Override
-                                    public void onExternalStorageShown() {
-                                    }
-
-                                    @Override
-                                    public void onExternalStorageHidden() {
-                                    }
-                                });
-                    }
-
-                    replaceFragment = true;
-                    setTitle(R.string.external_storage);
-                }
-            }
         }
+
         else if (navItemId == R.id.item_my_cps) {
             if (Utils.isLollipop()) {
                 if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
@@ -1614,24 +1555,26 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         }
 
 
-        else if (navItemId == R.id.item_system_file_picker) {
-            if (Utils.isKitKat()) {
-                Intent intent = MiscUtils.createSystemPickerIntent();
-                startActivityForResult(intent, RequestCode.SYSTEM_PICKER);
-                AnalyticsHandlerAdapter.getInstance().sendTimedEvent(AnalyticsHandlerAdapter.EVENT_SCREEN_SYSTEM_PICKER);
-            }
-        } else if (navItemId == R.id.item_settings) {
-            // some settings like multi-tap, full-screen mode might have been updated, so we have
-            // to create Host Fragment from scratch
-            if (mPdfViewCtrlTabHostFragment != null) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                Logger.INSTANCE.LogD(TAG, "remove " + mPdfViewCtrlTabHostFragment);
-                ft.remove(mPdfViewCtrlTabHostFragment);
-                ft.commit();
-                mPdfViewCtrlTabHostFragment = null;
-            }
-            startActivityForResult(new Intent().setClass(this, SettingsActivity.class), RequestCode.SETTINGS);
-        } else if (navItemId == R.id.item_exit) {
+//        else if (navItemId == R.id.item_system_file_picker) {
+//            if (Utils.isKitKat()) {
+//                Intent intent = MiscUtils.createSystemPickerIntent();
+//                startActivityForResult(intent, RequestCode.SYSTEM_PICKER);
+//                AnalyticsHandlerAdapter.getInstance().sendTimedEvent(AnalyticsHandlerAdapter.EVENT_SCREEN_SYSTEM_PICKER);
+//            }
+//        }
+//        else if (navItemId == R.id.item_settings) {
+//            // some settings like multi-tap, full-screen mode might have been updated, so we have
+//            // to create Host Fragment from scratch
+//            if (mPdfViewCtrlTabHostFragment != null) {
+//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//                Logger.INSTANCE.LogD(TAG, "remove " + mPdfViewCtrlTabHostFragment);
+//                ft.remove(mPdfViewCtrlTabHostFragment);
+//                ft.commit();
+//                mPdfViewCtrlTabHostFragment = null;
+//            }
+//            startActivityForResult(new Intent().setClass(this, SettingsActivity.class), RequestCode.SETTINGS);
+//        }
+        else if (navItemId == R.id.item_exit) {
             backToLogin();
             finish();
         }
@@ -1641,35 +1584,11 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             deleteUserCopies();
             //delete his account in the database
             deleteUserAccount();
-            //finish();
             backToLogin();
 
         }
         else {
-//            if (!(mCurrentFragment instanceof LocalFileViewFragment)) {
-//                if (mLastAddedBrowserFragment instanceof LocalFileViewFragment) {
-//                    fragment = mLastAddedBrowserFragment;
-//                } else {
-//                    fragment = LocalFileViewFragment.newInstance();
-//                    ((LocalFileViewFragment) fragment).setLocalFileViewFragmentListener(
-//                            new LocalFileViewFragment.LocalFileViewFragmentListener() {
-//                                @Override
-//                                public void onLocalFileShown() {
-//                                }
 //
-//                                @Override
-//                                public void onLocalFileHidden() {
-//                                }
-//                            });
-//                }
-//                replaceFragment = true;
-//                setTitle(R.string.title_item_local_file_list);
-//            }
-//            if (!(mCurrentFragment instanceof LocalFolderViewFragment)) {
-//                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
-//                    fragment = mLastAddedBrowserFragment;
-//                } else {
-//                     Load last used folder, if set
                     fragment = LocalFolderViewFragment.newInstance();
                     ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
                             new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
