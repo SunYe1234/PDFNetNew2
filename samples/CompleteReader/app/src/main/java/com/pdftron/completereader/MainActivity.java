@@ -356,6 +356,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Going to Dashboard activity after login success message.
             Intent intent = new Intent(MainActivity.this, CompleteReaderActivity.class);
+            //Intent intent = new Intent(MainActivity.this, AdvancedReaderActivity.class);
 
             // Sending Email to Dashboard Activity using intent.
             intent.putExtra("userName",UserName );

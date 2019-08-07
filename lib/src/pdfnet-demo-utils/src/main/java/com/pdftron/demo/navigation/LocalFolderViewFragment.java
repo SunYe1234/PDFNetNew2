@@ -42,6 +42,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -972,10 +973,13 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         Activity activity = getActivity();
         if (activity == null) {
             return;
         }
+
 
         //create the path of PDFs which are saved in the SD card
         //getExtSDCardPath() will return the path of SD card,

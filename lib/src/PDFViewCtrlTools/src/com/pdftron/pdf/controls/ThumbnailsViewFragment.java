@@ -27,6 +27,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
@@ -44,6 +45,7 @@ import com.pdftron.pdf.utils.AnalyticsHandlerAdapter;
 import com.pdftron.pdf.utils.AnalyticsParam;
 import com.pdftron.pdf.utils.CommonToast;
 import com.pdftron.pdf.utils.Event;
+import com.pdftron.pdf.utils.Logger;
 import com.pdftron.pdf.utils.RequestCode;
 import com.pdftron.pdf.utils.ToolbarActionMode;
 import com.pdftron.pdf.utils.Utils;
@@ -143,6 +145,9 @@ public class ThumbnailsViewFragment extends DialogFragment implements Thumbnails
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+
 
         if (savedInstanceState != null) {
             mOutputFileUri = savedInstanceState.getParcelable(BUNDLE_OUTPUT_FILE_URI);
@@ -492,6 +497,7 @@ public class ThumbnailsViewFragment extends DialogFragment implements Thumbnails
     public void onResume() {
         super.onResume();
 
+        Logger.INSTANCE.LogV("LifeCycle", "Thumbnail.onResume");
         if (mPdfViewCtrl != null && mPdfViewCtrl.getToolManager() != null) {
             if (((ToolManager) mPdfViewCtrl.getToolManager()).canResumePdfDocWithoutReloading()) {
                 addDocPages();
