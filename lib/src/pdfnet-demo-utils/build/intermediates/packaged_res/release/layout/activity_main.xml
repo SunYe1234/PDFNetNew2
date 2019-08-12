@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.pdftron.demo.app.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<include-->
+            <!--android:id="@+id/simpleReaderLayout"-->
+            <!--layout="@layout/simple_reader_preview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/sample_size"-->
+            <!--android:layout_margin="@dimen/sample_margin"-->
+            <!--app:layout_constraintBottom_toTopOf="@id/completeReaderLayout"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintVertical_weight="1" />-->
+
+        <include
+            android:id="@+id/completeReaderLayout"
+            layout="@layout/complete_reader_preview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sample_size"
+            android:layout_margin="@dimen/sample_margin"
+            app:layout_constraintVertical_weight="1"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="246dp" />
+            <!--app:layout_constraintBottom_toTopOf="@id/diffLayout"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/simpleReaderLayout"-->
+
+
+        <!--<include-->
+            <!--android:id="@+id/diffLayout"-->
+            <!--layout="@layout/diff_preview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/sample_size"-->
+            <!--android:layout_margin="@dimen/sample_margin"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/completeReaderLayout"-->
+            <!--app:layout_constraintVertical_weight="1" />-->
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

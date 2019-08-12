@@ -49,6 +49,7 @@ import android.widget.Toast;
 import com.pdftron.common.PDFNetException;
 import com.pdftron.common.RecentlyUsedCache;
 import com.pdftron.demo.R;
+import com.pdftron.demo.boomMenu.EaseActivityWithFragment;
 import com.pdftron.demo.navigation.CriticalPermissionDialogFragment;
 import com.pdftron.demo.navigation.ExternalStorageViewFragment;
 import com.pdftron.demo.navigation.FavoritesViewFragment;
@@ -570,6 +571,16 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     }
 
     private void handleBackPress() {
+        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        for (Fragment fragment : fragments) {
+            /*如果是自己封装的Fragment的子类  判断是否需要处理返回事件*/
+            if (fragment instanceof EaseActivityWithFragment) {
+                EaseActivityWithFragment easeActivityWithFragment=(EaseActivityWithFragment)fragment;
+                easeActivityWithFragment.onBackPressed();
+                return;
+            }
+        }
+
         //backToLogin();
         if (mDrawerLayout != null) {
             if (mDrawerLayout.isDrawerOpen(mFileInfoDrawerView)) {
@@ -1513,17 +1524,18 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 //                    fragment = mLastAddedBrowserFragment;
 //                } else {
 //                     Load last used folder, if set
-                    fragment = LocalFolderViewFragment.newInstance();
-                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
-                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
-                                @Override
-                                public void onLocalFolderShown() {
-                                }
-
-                                @Override
-                                public void onLocalFolderHidden() {
-                                }
-                            });
+                    //fragment = LocalFolderViewFragment.newInstance();
+            fragment=new EaseActivityWithFragment();
+//                    ((EaseActivityWithFragment) fragment).setLocalFolderViewFragmentListener(
+//                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
+//                                @Override
+//                                public void onLocalFolderShown() {
+//                                }
+//
+//                                @Override
+//                                public void onLocalFolderHidden() {
+//                                }
+//                            });
 //                }
                 replaceFragment = true;
                 setTitle(R.string.title_item_local_folder_list);
@@ -1532,25 +1544,26 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         else if (navItemId == R.id.item_my_cps) {
             if (Utils.isLollipop()) {
-                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
-                    //fragment = mLastAddedBrowserFragment;
-                    fragment=LocalFolderViewFragment.newInstance(getUserNameFromFile());
-                } else {
-//                     Load last used folder, if set
-                    fragment = LocalFolderViewFragment.newInstance(getUserNameFromFile());
-                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
-                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
-                                @Override
-                                public void onLocalFolderShown() {
-                                }
-
-                                @Override
-                                public void onLocalFolderHidden() {
-                                }
-                            });
-                }
+//                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
+//                    //fragment = mLastAddedBrowserFragment;
+//                    fragment=LocalFolderViewFragment.newInstance(getUserNameFromFile());
+//                } else {
+////                     Load last used folder, if set
+//                    fragment = LocalFolderViewFragment.newInstance(getUserNameFromFile());
+//                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
+//                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
+//                                @Override
+//                                public void onLocalFolderShown() {
+//                                }
+//
+//                                @Override
+//                                public void onLocalFolderHidden() {
+//                                }
+//                            });
+//                }
+                fragment=EaseActivityWithFragment.newInstance(getUserNameFromFile());
                 replaceFragment = true;
-                //setTitle(R.string.title_item_local_folder_list);
+//                setTitle(R.string.title_item_local_folder_list);
             }
         }
 
@@ -1589,17 +1602,18 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         }
         else {
 //
-                    fragment = LocalFolderViewFragment.newInstance();
-                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
-                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
-                                @Override
-                                public void onLocalFolderShown() {
-                                }
-
-                                @Override
-                                public void onLocalFolderHidden() {
-                                }
-                            });
+//                    fragment = LocalFolderViewFragment.newInstance();
+//                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
+//                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
+//                                @Override
+//                                public void onLocalFolderShown() {
+//                                }
+//
+//                                @Override
+//                                public void onLocalFolderHidden() {
+//                                }
+//                            });
+            fragment=new EaseActivityWithFragment();
 //                }
                 replaceFragment = true;
                 setTitle(R.string.title_item_local_folder_list);

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/layout-v21/controls_fragment_bookmark_dialog.xml",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/layout-v21/controls_fragment_bookmark_dialog.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/layout-v21/controls_fragment_thumbnails_view.xml",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/layout-v21/controls_fragment_thumbnails_view.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/res/layout-v21/notification_template_custom_big.xml"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/color-night-v8/selector_color_drawer_icon.xml",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/color-night/selector_color_drawer_icon.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/color-night-v8/selector_color_drawer_text.xml",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/color-night/selector_color_drawer_text.xml"
+    }
+]

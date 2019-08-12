@@ -110,10 +110,12 @@ public abstract class ToolbarFragment extends Fragment {
             if (view != null) {
                 mAppBarLayout = (LinearLayout) view.findViewById(R.id.fragment_app_bar);
                 mToolbar = (Toolbar) view.findViewById(R.id.fragment_toolbar);
+                if (mToolbarNavDrawable!=null)
                 mToolbarNavDrawable = mToolbar.getNavigationIcon();
                 mContent = view.findViewById(R.id.fragment_content);
 
                 if (Utils.isLargeScreenWidth(mActivity)) {
+                    if (mToolbar!=null)
                     mToolbar.setNavigationIcon(null);
                 }
             }

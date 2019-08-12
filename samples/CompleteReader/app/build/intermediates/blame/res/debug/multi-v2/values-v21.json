@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,6",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,290",
+                        "endLines": "4,5,8",
+                        "endColumns": "12,75,12",
+                        "endOffsets": "209,285,464"
+                    },
+                    "to": {
+                        "startLines": "226,229,230",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "16985,17144,17220",
+                        "endLines": "228,229,232",
+                        "endColumns": "12,75,12",
+                        "endOffsets": "17139,17215,17394"
+                    }
+                },
                 {
                     "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/res/values-v21/values-v21.xml",
                     "from": {
@@ -61,7 +80,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/values-v21/values-v21.xml",
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,17,27",
                         "startColumns": "4,4,4,4",
@@ -77,25 +96,6 @@
                         "endLines": "2,246,256,353",
                         "endColumns": "71,12,12,12",
                         "endOffsets": "122,18243,18814,24698"
-                    }
-                },
-                {
-                    "source": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/values-v21/values-v21.xml",
-                    "from": {
-                        "startLines": "2,5,6",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,214,290",
-                        "endLines": "4,5,8",
-                        "endColumns": "12,75,12",
-                        "endOffsets": "209,285,464"
-                    },
-                    "to": {
-                        "startLines": "226,229,230",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "16985,17144,17220",
-                        "endLines": "228,229,232",
-                        "endColumns": "12,75,12",
-                        "endOffsets": "17139,17215,17394"
                     }
                 },
                 {

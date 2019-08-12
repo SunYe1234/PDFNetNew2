@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/simple_reader.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/drawable-nodpi/simple_reader.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/black_square.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/drawable-nodpi-v4/black_square.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/white_square.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/drawable-nodpi-v4/white_square.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/tutorial_external_step3.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/drawable-nodpi/tutorial_external_step3.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/complete_reader.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/drawable-nodpi/complete_reader.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/tutorial_external_step2.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/drawable-nodpi/tutorial_external_step2.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/goto_sd_card.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/drawable-nodpi/goto_sd_card.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/drawable-nodpi-v4/diff.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/src/main/res/drawable-nodpi/diff.png"
+    }
+]

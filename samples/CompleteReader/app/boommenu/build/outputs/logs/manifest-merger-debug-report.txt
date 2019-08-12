@@ -1,0 +1,55 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+	package
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:2:5-37
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:1-17:12
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:4:5-15:19
+	android:supportsRtl
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:6:9-35
+	android:label
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:5:9-41
+activity#com.nightonke.boommenu.EaseActivity
+ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:8:9-10:36
+	android:label
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:10:13-33
+	android:name
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:9:13-41
+activity#com.nightonke.boommenu.EaseActivityWithFragment
+ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:11:9-13:36
+	android:label
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:13:13-33
+	android:name
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml:12:13-53
+uses-sdk
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml
+		INJECTED from /Users/yezi/Downloads/BoomMenu-master/boommenu/src/main/AndroidManifest.xml

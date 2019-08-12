@@ -52,7 +52,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.app.Fragment;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.pdftron.common.PDFNetException;
@@ -60,6 +60,8 @@ import com.pdftron.demo.R;
 import com.pdftron.demo.app.AdvancedReaderActivity;
 import com.pdftron.demo.app.MainActivity;
 import com.pdftron.demo.asynctask.PopulateFolderTask;
+import com.pdftron.demo.boomMenu.EaseActivity;
+import com.pdftron.demo.boomMenu.EaseFragment;
 import com.pdftron.demo.dialog.FilePickerDialogFragment;
 import com.pdftron.demo.dialog.MergeDialogFragment;
 import com.pdftron.demo.navigation.adapter.BaseFileAdapter;
@@ -1030,6 +1032,7 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
 //         currentUser=getArguments().getString("currentUser");
         // Creates our custom view for the folder list.
         return inflater.inflate(R.layout.fragment_local_folder_view, container, false);
+        //return inflater.inflate(R.layout.activity_ease_fragment,container,false);
     }
 
     @SuppressLint("StringFormatInvalid")
@@ -1037,20 +1040,25 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mRecyclerView = view.findViewById(R.id.recycler_view);
-        mEmptyTextView = view.findViewById(R.id.empty_text_view);
-        mProgressBarView = view.findViewById(R.id.progress_bar_view);
+        EaseFragment easeFragment=new EaseFragment();
+        getChildFragmentManager().beginTransaction().add(R.id.frame_boomMenu,easeFragment).commit();
+
+//        mRecyclerView = view.findViewById(R.id.recycler_view);
+//        mEmptyTextView = view.findViewById(R.id.empty_text_view);
+//        mProgressBarView = view.findViewById(R.id.progress_bar_view);
         mBreadcrumbBarScrollView = view.findViewById(R.id.breadcrumb_bar_scroll_view);
         mBreadcrumbBarLayout = view.findViewById(R.id.breadcrumb_bar_layout);
-        //mFabMenu = view.findViewById(R.id.fab_menu);
-        mGoToSdCardView = view.findViewById(R.id.go_to_sd_card_view);
-        mGoToSdCardButton = view.findViewById(R.id.buttonGoToSdCard);
-        mGoToSdCardDescription = view.findViewById(R.id.go_to_sd_card_view_text);
+//        //mFabMenu = view.findViewById(R.id.fab_menu);
+//        mGoToSdCardView = view.findViewById(R.id.go_to_sd_card_view);
+//        mGoToSdCardButton = view.findViewById(R.id.buttonGoToSdCard);
+//        mGoToSdCardDescription = view.findViewById(R.id.go_to_sd_card_view_text);
 
         mBreadcrumbBarScrollView.setVerticalScrollBarEnabled(false);
         mBreadcrumbBarScrollView.setHorizontalScrollBarEnabled(false);
         mBreadcrumbBarLayout.removeAllViews();
-        mHtmlConversionComponent = getHtmlConversionComponent(view);
+//        mHtmlConversionComponent = getHtmlConversionComponent(view);
+
+
 //        if(mFabMenu!=null) {
 //            mFabMenu.setClosedOnTouchOutside(true);
 //
@@ -1155,124 +1163,130 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
 //        }
 
         mSpanCount = PdfViewCtrlSettingsManager.getGridSize(getActivity(), PdfViewCtrlSettingsManager.KEY_PREF_SUFFIX_FOLDER_FILES);
-        mRecyclerView.initView(mSpanCount);
+        if (mRecyclerView!=null)mRecyclerView.initView(mSpanCount);
 
-        ItemClickHelper itemClickHelper = new ItemClickHelper();
-        itemClickHelper.attachToRecyclerView(mRecyclerView);
+        if (mRecyclerView!=null) {
+            ItemClickHelper itemClickHelper = new ItemClickHelper();
 
-        mItemSelectionHelper = new ItemSelectionHelper();
-        mItemSelectionHelper.attachToRecyclerView(mRecyclerView);
-        mItemSelectionHelper.setChoiceMode(ItemSelectionHelper.CHOICE_MODE_MULTIPLE);
+            itemClickHelper.attachToRecyclerView(mRecyclerView);
 
-        mAdapter = createAdapter();
-        mRecyclerView.setAdapter(mAdapter);
 
-        try {
-            mRecyclerView.getViewTreeObserver().addOnGlobalLayoutListener(
-                new ViewTreeObserver.OnGlobalLayoutListener() {
-                    @Override
-                    public void onGlobalLayout() {
-                        if (mRecyclerView == null) {
-                            return;
-                        }
-                        try {
-                            mRecyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                        } catch (Exception ignored) {
-                        }
-                        if (mAdapter == null) {
-                            return;
-                        }
-                        int viewWidth = mRecyclerView.getMeasuredWidth();
-                        mAdapter.updateMainViewWidth(viewWidth);
-                        mAdapter.getDerivedFilter().setFileTypeEnabledInFilterFromSettings(mRecyclerView.getContext(), PdfViewCtrlSettingsManager.KEY_PREF_SUFFIX_FOLDER_FILES);
-                        updateFileListFilter();
+            mItemSelectionHelper = new ItemSelectionHelper();
+            mItemSelectionHelper.attachToRecyclerView(mRecyclerView);
+            mItemSelectionHelper.setChoiceMode(ItemSelectionHelper.CHOICE_MODE_MULTIPLE);
+
+            mAdapter = createAdapter();
+
+            mRecyclerView.setAdapter(mAdapter);
+
+            try {
+                mRecyclerView.getViewTreeObserver().addOnGlobalLayoutListener(
+                        new ViewTreeObserver.OnGlobalLayoutListener() {
+                            @Override
+                            public void onGlobalLayout() {
+                                if (mRecyclerView == null) {
+                                    return;
+                                }
+                                try {
+                                    mRecyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                                } catch (Exception ignored) {
+                                }
+                                if (mAdapter == null) {
+                                    return;
+                                }
+                                int viewWidth = mRecyclerView.getMeasuredWidth();
+                                mAdapter.updateMainViewWidth(viewWidth);
+                                mAdapter.getDerivedFilter().setFileTypeEnabledInFilterFromSettings(mRecyclerView.getContext(), PdfViewCtrlSettingsManager.KEY_PREF_SUFFIX_FOLDER_FILES);
+                                updateFileListFilter();
+                            }
+                        });
+            } catch (Exception ignored) {
+            }
+
+
+            itemClickHelper.setOnItemClickListener(new ItemClickHelper.OnItemClickListener() {
+                @Override
+                public void onItemClick(RecyclerView parent, View view, int position, long id) {
+                    FileInfo fileInfo = mAdapter.getItem(position);
+                    if (fileInfo == null) {
+                        return;
                     }
-                });
-        } catch (Exception ignored) {
+
+                    if (mActionMode == null) {
+                        // We are not in CAB mode, we don't want to let the item checked
+                        // in this case... We are just opening the document, not selecting it.
+                        mItemSelectionHelper.setItemChecked(position, false);
+
+                        if (fileInfo.getFile().exists()) {
+                            onFileClicked(fileInfo);
+                        }
+                    } else {
+                        if (mFileInfoSelectedList.contains(fileInfo)) {
+                            mFileInfoSelectedList.remove(fileInfo);
+                            mItemSelectionHelper.setItemChecked(position, false);
+                        } else {
+                            mFileInfoSelectedList.add(fileInfo);
+                            mItemSelectionHelper.setItemChecked(position, true);
+                        }
+
+                        if (mFileInfoSelectedList.isEmpty()) {
+                            finishActionMode();
+                        } else {
+                            mActionMode.invalidate();
+                        }
+                    }
+                }
+            });
+
+            itemClickHelper.setOnItemLongClickListener(new ItemClickHelper.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(RecyclerView parent, View view, int position, long id) {
+                    Activity activity = getActivity();
+                    if (activity == null) {
+                        return false;
+                    }
+
+                    FileInfo fileInfo = mAdapter.getItem(position);
+                    if (fileInfo == null) {
+                        return false;
+                    }
+
+                    closeSearch();
+                    if (mActionMode == null) {
+                        mFileInfoSelectedList.add(fileInfo);
+                        mItemSelectionHelper.setItemChecked(position, true);
+
+                        if (activity instanceof AppCompatActivity) {
+                            mActionMode = ((AppCompatActivity) activity).startSupportActionMode(LocalFolderViewFragment.this);
+                        }
+                        if (mActionMode != null) {
+                            mActionMode.invalidate();
+                        }
+                    } else {
+                        if (mFileInfoSelectedList.contains(fileInfo)) {
+                            mFileInfoSelectedList.remove(fileInfo);
+                            mItemSelectionHelper.setItemChecked(position, false);
+                        } else {
+                            mFileInfoSelectedList.add(fileInfo);
+                            mItemSelectionHelper.setItemChecked(position, true);
+                        }
+
+                        if (mFileInfoSelectedList.isEmpty()) {
+                            finishActionMode();
+                        } else {
+                            mActionMode.invalidate();
+                        }
+                    }
+
+                    return true;
+                }
+            });
         }
-
-        itemClickHelper.setOnItemClickListener(new ItemClickHelper.OnItemClickListener() {
-            @Override
-            public void onItemClick(RecyclerView parent, View view, int position, long id) {
-                FileInfo fileInfo = mAdapter.getItem(position);
-                if (fileInfo == null) {
-                    return;
-                }
-
-                if (mActionMode == null) {
-                    // We are not in CAB mode, we don't want to let the item checked
-                    // in this case... We are just opening the document, not selecting it.
-                    mItemSelectionHelper.setItemChecked(position, false);
-
-                    if (fileInfo.getFile().exists()) {
-                        onFileClicked(fileInfo);
-                    }
-                } else {
-                    if (mFileInfoSelectedList.contains(fileInfo)) {
-                        mFileInfoSelectedList.remove(fileInfo);
-                        mItemSelectionHelper.setItemChecked(position, false);
-                    } else {
-                        mFileInfoSelectedList.add(fileInfo);
-                        mItemSelectionHelper.setItemChecked(position, true);
-                    }
-
-                    if (mFileInfoSelectedList.isEmpty()) {
-                        finishActionMode();
-                    } else {
-                        mActionMode.invalidate();
-                    }
-                }
-            }
-        });
-
-        itemClickHelper.setOnItemLongClickListener(new ItemClickHelper.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(RecyclerView parent, View view, int position, long id) {
-                Activity activity = getActivity();
-                if (activity == null) {
-                    return false;
-                }
-
-                FileInfo fileInfo = mAdapter.getItem(position);
-                if (fileInfo == null) {
-                    return false;
-                }
-
-                closeSearch();
-                if (mActionMode == null) {
-                    mFileInfoSelectedList.add(fileInfo);
-                    mItemSelectionHelper.setItemChecked(position, true);
-
-                    if (activity instanceof AppCompatActivity) {
-                        mActionMode = ((AppCompatActivity) activity).startSupportActionMode(LocalFolderViewFragment.this);
-                    }
-                    if (mActionMode != null) {
-                        mActionMode.invalidate();
-                    }
-                } else {
-                    if (mFileInfoSelectedList.contains(fileInfo)) {
-                        mFileInfoSelectedList.remove(fileInfo);
-                        mItemSelectionHelper.setItemChecked(position, false);
-                    } else {
-                        mFileInfoSelectedList.add(fileInfo);
-                        mItemSelectionHelper.setItemChecked(position, true);
-                    }
-
-                    if (mFileInfoSelectedList.isEmpty()) {
-                        finishActionMode();
-                    } else {
-                        mActionMode.invalidate();
-                    }
-                }
-
-                return true;
-            }
-        });
 
 
 //        mScroller.setRecyclerView(mRecyclerView);
 
-        mGoToSdCardButton.setOnClickListener(new View.OnClickListener() {
+        if (mGoToSdCardButton!=null)mGoToSdCardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // go to external tab
@@ -1284,10 +1298,12 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         });
         String message = String.format(getString(R.string.dialog_folder_go_to_sd_card_description),
             getString(R.string.dialog_go_to_sd_card_description_more_info));
-        mGoToSdCardDescription.setText(Html.fromHtml(message));
-        mGoToSdCardDescription.setMovementMethod(LinkMovementMethod.getInstance());
+        if(mGoToSdCardDescription!=null) {
+            mGoToSdCardDescription.setText(Html.fromHtml(message));
+            mGoToSdCardDescription.setMovementMethod(LinkMovementMethod.getInstance());
+        }
 
-        mNotSupportedTextView = view.findViewById(R.id.num_no_supported_files);
+        //mNotSupportedTextView = view.findViewById(R.id.num_no_supported_files);
     }
 
     @Override
@@ -1385,30 +1401,30 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
             }
 
             // Disable long-click context menu
-            EditText editText = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
-            if (editText != null) {
-                editText.setCustomSelectionActionModeCallback(new android.view.ActionMode.Callback() {
-                    @Override
-                    public boolean onCreateActionMode(android.view.ActionMode mode, Menu menu) {
-                        return false;
-                    }
-
-                    @Override
-                    public boolean onPrepareActionMode(android.view.ActionMode mode, Menu menu) {
-                        return false;
-                    }
-
-                    @Override
-                    public boolean onActionItemClicked(android.view.ActionMode mode, MenuItem item) {
-                        return false;
-                    }
-
-                    @Override
-                    public void onDestroyActionMode(android.view.ActionMode mode) {
-
-                    }
-                });
-            }
+            //EditText editText = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+//            if (editText != null) {
+//                editText.setCustomSelectionActionModeCallback(new android.view.ActionMode.Callback() {
+//                    @Override
+//                    public boolean onCreateActionMode(android.view.ActionMode mode, Menu menu) {
+//                        return false;
+//                    }
+//
+//                    @Override
+//                    public boolean onPrepareActionMode(android.view.ActionMode mode, Menu menu) {
+//                        return false;
+//                    }
+//
+//                    @Override
+//                    public boolean onActionItemClicked(android.view.ActionMode mode, MenuItem item) {
+//                        return false;
+//                    }
+//
+//                    @Override
+//                    public void onDestroyActionMode(android.view.ActionMode mode) {
+//
+//                    }
+//                });
+//            }
 
             final MenuItem reloadMenuItem = menu.findItem(R.id.menu_action_reload);
             final MenuItem listToggleMenuItem = menu.findItem(R.id.menu_grid_toggle);
@@ -2835,9 +2851,9 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
                     //mSnackBar.show();
                 }
                 // Show dialog re-direct user to SD card tab
-                mRecyclerView.setVisibility(View.GONE);
-                mFabMenu.setVisibility(View.GONE);
-                mGoToSdCardView.setVisibility(View.VISIBLE);
+               if (mRecyclerView!=null)mRecyclerView.setVisibility(View.GONE);
+                if (mFabMenu!=null)mFabMenu.setVisibility(View.GONE);
+                if(mGoToSdCardView!=null)mGoToSdCardView.setVisibility(View.VISIBLE);
             } else {
                 if (mSnackBar != null) {
                     if (mSnackBar.isShown()) {
@@ -2845,9 +2861,9 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
                     }
                     mSnackBar = null;
                 }
-                mGoToSdCardView.setVisibility(View.GONE);
-                mRecyclerView.setVisibility(View.VISIBLE);
-                mFabMenu.setVisibility(View.VISIBLE);
+                if(mGoToSdCardView!=null) mGoToSdCardView.setVisibility(View.GONE);
+                if (mRecyclerView!=null)mRecyclerView.setVisibility(View.VISIBLE);
+                if (mFabMenu!=null)mFabMenu.setVisibility(View.VISIBLE);
             }
         }
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_local"
+        android:checkableBehavior="all">
+        <item
+            android:id="@id/item_viewer"
+            android:icon="@drawable/ic_file_white_24dp"
+            android:title="@string/title_item_viewer"
+            android:visible="false"
+            android:checkable="true"/>
+        <!--<item-->
+            <!--android:id="@id/item_recent"-->
+            <!--android:icon="@drawable/ic_access_time_white_24dp"-->
+            <!--android:title="@string/title_item_recent"-->
+            <!--android:checkable="true"/>-->
+        <!--<item-->
+            <!--android:id="@id/item_favorites"-->
+            <!--android:icon="@drawable/ic_star_white_24dp"-->
+            <!--android:title="@string/title_item_favorites"-->
+            <!--android:checkable="true"/>-->
+    </group>
+    <group
+        android:id="@+id/group_local_browsers"
+        android:checkableBehavior="all">
+        <item
+            android:id="@id/item_folder_list"
+            android:icon="@drawable/ic_folder_white_24dp"
+            android:title="@string/title_item_local_folder_list"
+            android:checkable="true"/>
+        <item
+            android:id="@id/item_my_cps"
+            android:icon="@drawable/ic_folder_white_24dp"
+            android:title="My CPs"
+            android:checkable="true"/>
+        <!--<item-->
+            <!--android:id="@id/item_file_list"-->
+            <!--android:icon="@drawable/ic_file_white_24dp"-->
+            <!--android:title="@string/title_item_local_file_list"-->
+            <!--android:checkable="true"/>-->
+        <!--<item-->
+            <!--android:id="@id/item_external_storage"-->
+            <!--android:icon="@drawable/ic_sd_storage_white_24dp"-->
+            <!--android:title="@string/external_storage"-->
+            <!--android:checkable="true"/>-->
+        <!--<item-->
+            <!--android:id="@id/item_system_file_picker"-->
+            <!--android:icon="@drawable/ic_baseline_folder_open_24dp"-->
+            <!--android:title="@string/system_files"-->
+            <!--android:checkable="false"/>-->
+    </group>
+    <group
+        android:id="@+id/group_extra"
+        android:checkableBehavior="none">
+        <!--<item-->
+            <!--android:id="@id/item_settings"-->
+            <!--android:icon="@drawable/ic_settings_white_24dp"-->
+            <!--android:title="@string/action_settings"-->
+            <!--android:checkable="false"/>-->
+
+        <item
+            android:id="@id/item_exit"
+            android:icon="@drawable/ic_exit_to_app_white_24dp"
+            android:title="@string/action_exit"
+            android:checkable="false"/>
+        <item
+            android:id="@id/item_delete_account"
+            android:icon="@drawable/ic_delete_account_24dp"
+            android:title="Delete account"
+            android:checkable="false"/>
+
+    </group>
+</menu>

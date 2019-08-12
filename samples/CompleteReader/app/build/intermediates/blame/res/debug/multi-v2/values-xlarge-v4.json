@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
                     "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/values-xlarge-v4/values-xlarge-v4.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/yezi/Downloads/PDFNetAndroid/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

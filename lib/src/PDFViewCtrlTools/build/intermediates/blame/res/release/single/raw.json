@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/raw/stickynote_icons.pdf",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/raw/stickynote_icons.pdf"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/raw/pdfnet.res",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/res/raw/pdfnet.res"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/raw/pdftron_smart_substitution.plugin",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/res/raw/pdftron_smart_substitution.plugin"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/raw/pdftron_layout_resources.plugin",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/res/raw/pdftron_layout_resources.plugin"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/raw/stamps_icons.pdf",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/raw/stamps_icons.pdf"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/raw/sepia_mode_filter.png",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/raw/sepia_mode_filter.png"
+    }
+]

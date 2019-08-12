@@ -1,0 +1,416 @@
+-- Merging decision tree log ---
+meta-data#pdftron_license_key
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:23:9-25:52
+	android:value
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:25:13-49
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:24:13-47
+manifest
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-34:12
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-30:12
+MERGED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/AndroidManifest.xml:2:1-16:12
+MERGED from [com.pdftron:floatingactionbutton:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/62695f10739b71e5766cdefa307d4673/AndroidManifest.xml:2:1-11:12
+MERGED from [com.pdftron:pagecropper:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/69dbbcd9865fca191df35dd8a4fe86f8/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/59a9966098642de3828b221c8123d5d5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:design:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/102cc3042a1e096ae86279a9ce9e19e4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2931b89735e03f6193475d14471cf9b8/AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:17:1-30:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/cc4524038507bbdf013879f241c2b1a1/AndroidManifest.xml:15:1-20:12
+MERGED from [com.android.support:multidex:1.0.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/48798f2807d5f1a959c5a7d1db1904ad/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/82160cd7adc06d5d97365eed4cd7a5df/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/842fbb0ebd053544987bd03232011b22/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/aa29f5a96f9d7953a1300cd96f6cde1b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2cf1a1d685f86ccde1fecdb4f30873c8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/f6679fc6fde8a26a8ef2833b222d3c0e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/a6bf84a714cbc42de7bc6c136ca45737/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/68d237eaee52259ec69d8416eddf485c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/c07bc14e370a5e9a040eb414def34093/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6e27b0ebaea576cea7b17d7bb33268fa/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/dc5c2b7c4302ccef30f840b4d7e7d2bb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bbdf3e8b753852de0c0594da4609c95e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/19b5827a9b6bb28534ed97aacccbd1a7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/e92a9a4c08d6a48bb70532c3f5cbd83b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/e2c0c1ef2a7bd13720a2c61d576913c8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/ffea231df71be2821c14e47e07265f80/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/70c3aef8644e24e3218fb10c4f97cf69/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9ea02e06a64c12e3d334605a884368d1/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/5c588022df793bbde487736ac591da2c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9f4ddabf82743a8985fdf8e018393f02/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/d68ebfaf1d756a214a5ff51b90d2e29f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/40eb24abd981cd38cf6f7d4e0bc7259b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3639d5ac2059954669e8a56591498c6a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3626853acb3b6525e9e79071e5587195/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/871f768adb16f733f8c41c876bbfe562/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bbea06adbda52e16402ab53fb491eaf5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/ac4638cd182112993333ff17516aad0a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6164a9509c28d5e14271855fd6592d65/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3683265b4736a89332962b0b4d1b1f03/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:drawee:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/b3f457611cb7cb1cf1ae3913356f6252/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bdfb94a383e4032d1e610aa692c12944/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3a0ade860334f809d9323ff7d7367bd7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/5fa8da373cc68feffb5b166d04b93539/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9980ef92f6cbce055e7e3450fbde8fde/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+	package
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:3:5-41
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-403:12
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:8:22-63
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:9:22-68
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:10:22-77
+application
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:12:5-401:19
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:10:5-32:19
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:10:5-32:19
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:10:5-28:19
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:10:5-28:19
+MERGED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/AndroidManifest.xml:9:5-14:19
+MERGED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/AndroidManifest.xml:9:5-14:19
+MERGED from [com.pdftron:floatingactionbutton:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/62695f10739b71e5766cdefa307d4673/AndroidManifest.xml:9:5-20
+MERGED from [com.pdftron:floatingactionbutton:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/62695f10739b71e5766cdefa307d4673/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2931b89735e03f6193475d14471cf9b8/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2931b89735e03f6193475d14471cf9b8/AndroidManifest.xml:9:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:22:5-28:19
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9ea02e06a64c12e3d334605a884368d1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9ea02e06a64c12e3d334605a884368d1/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:19:9-35
+	android:label
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:16:9-41
+	android:roundIcon
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:18:9-54
+	android:largeHeap
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:17:9-33
+	android:icon
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:15:9-43
+	android:allowBackup
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:14:9-35
+	android:theme
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:20:9-40
+	android:usesCleartextTraffic
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:21:9-44
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:13:9-68
+activity#com.pdftron.completereader.MainActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:27:9-34:20
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:27:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:31:27-74
+activity#com.pdftron.completereader.loginSignup.RegisterActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:35:9-65
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:35:19-63
+activity#com.pdftron.completereader.loginSignup.DashboardActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:36:9-66
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:36:19-64
+activity#com.pdftron.completereader.CompleteReaderActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:37:9-59
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:37:19-57
+activity#com.pdftron.pdf.controls.DiffActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:39:9-43:55
+	android:windowSoftInputMode
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:43:13-52
+	android:configChanges
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:41:13-106
+	android:theme
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:42:13-50
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:40:13-65
+activity#com.pdftron.demo.app.SimpleReaderActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:45:9-49:55
+	android:windowSoftInputMode
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:49:13-52
+	android:configChanges
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:47:13-106
+	android:theme
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:48:13-50
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:46:13-69
+activity#com.pdftron.demo.app.AdvancedReaderActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:51:9-395:20
+	android:windowSoftInputMode
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:55:13-52
+	android:configChanges
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:53:13-106
+	android:theme
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:54:13-50
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:52:13-71
+intent-filter#action:name:android.intent.action.EDIT+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:application/msword+data:mimeType:application/pdf+data:mimeType:application/vnd.openxmlformats-officedocument.presentationml.presentation+data:mimeType:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet+data:mimeType:application/vnd.openxmlformats-officedocument.wordprocessingml.document+data:mimeType:application/x-cbr+data:mimeType:image/gif+data:mimeType:image/jpeg+data:mimeType:image/png+data:mimeType:text/markdown
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:57:13-73:29
+action#android.intent.action.VIEW
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:58:17-69
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:58:25-66
+action#android.intent.action.EDIT
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:59:17-69
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:59:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:61:17-76
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:61:27-73
+data
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:63:17-60
+	android:host
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:82:21-37
+	android:scheme
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:84:21-42
+	android:pathPattern
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:83:21-51
+	android:mimeType
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:63:23-57
+intent-filter#action:name:android.intent.action.EDIT+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:pathPattern:.*\\.BMP+data:pathPattern:.*\\.CBZ+data:pathPattern:.*\\.DOC+data:pathPattern:.*\\.DOCX+data:pathPattern:.*\\.GIF+data:pathPattern:.*\\.JPEG+data:pathPattern:.*\\.JPG+data:pathPattern:.*\\.MD+data:pathPattern:.*\\.PDF+data:pathPattern:.*\\.PNG+data:pathPattern:.*\\.PPTX+data:pathPattern:.*\\.TIF+data:pathPattern:.*\\.TIFF+data:pathPattern:.*\\.XLSX+data:pathPattern:.*\\.bmp+data:pathPattern:.*\\.cbz+data:pathPattern:.*\\.doc+data:pathPattern:.*\\.docx+data:pathPattern:.*\\.gif+data:pathPattern:.*\\.jpeg+data:pathPattern:.*\\.jpg+data:pathPattern:.*\\.md+data:pathPattern:.*\\.pdf+data:pathPattern:.*\\.png+data:pathPattern:.*\\.pptx+data:pathPattern:.*\\.tif+data:pathPattern:.*\\.tiff+data:pathPattern:.*\\.xlsx+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file+data:scheme:file
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:75:13-193:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:host:*+data:pathPattern:.*\\.BMP+data:pathPattern:.*\\.BMP+data:pathPattern:.*\\.CBZ+data:pathPattern:.*\\.CBZ+data:pathPattern:.*\\.DOC+data:pathPattern:.*\\.DOC+data:pathPattern:.*\\.DOCX+data:pathPattern:.*\\.DOCX+data:pathPattern:.*\\.GIF+data:pathPattern:.*\\.GIF+data:pathPattern:.*\\.JPEG+data:pathPattern:.*\\.JPEG+data:pathPattern:.*\\.JPG+data:pathPattern:.*\\.JPG+data:pathPattern:.*\\.MD+data:pathPattern:.*\\.MD+data:pathPattern:.*\\.PDF+data:pathPattern:.*\\.PDF+data:pathPattern:.*\\.PNG+data:pathPattern:.*\\.PNG+data:pathPattern:.*\\.PPTX+data:pathPattern:.*\\.PPTX+data:pathPattern:.*\\.XLSX+data:pathPattern:.*\\.XLSX+data:pathPattern:.*\\.bmp+data:pathPattern:.*\\.bmp+data:pathPattern:.*\\.cbz+data:pathPattern:.*\\.cbz+data:pathPattern:.*\\.doc+data:pathPattern:.*\\.doc+data:pathPattern:.*\\.docx+data:pathPattern:.*\\.docx+data:pathPattern:.*\\.gif+data:pathPattern:.*\\.gif+data:pathPattern:.*\\.jpeg+data:pathPattern:.*\\.jpeg+data:pathPattern:.*\\.jpg+data:pathPattern:.*\\.jpg+data:pathPattern:.*\\.md+data:pathPattern:.*\\.md+data:pathPattern:.*\\.pdf+data:pathPattern:.*\\.pdf+data:pathPattern:.*\\.png+data:pathPattern:.*\\.png+data:pathPattern:.*\\.pptx+data:pathPattern:.*\\.pptx+data:pathPattern:.*\\.xlsx+data:pathPattern:.*\\.xlsx+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:http+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https+data:scheme:https
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:195:13-393:29
+category#android.intent.category.BROWSABLE
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:199:17-78
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:199:27-75
+activity#com.pdftron.demo.app.SettingsActivity
+ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:397:9-400:53
+	android:parentActivityName
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:399:13-85
+	android:theme
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:400:13-50
+	android:name
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:398:13-65
+uses-sdk
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:6:5-8:41
+MERGED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/AndroidManifest.xml:5:5-7:41
+MERGED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/AndroidManifest.xml:5:5-7:41
+MERGED from [com.pdftron:floatingactionbutton:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/62695f10739b71e5766cdefa307d4673/AndroidManifest.xml:5:5-7:41
+MERGED from [com.pdftron:floatingactionbutton:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/62695f10739b71e5766cdefa307d4673/AndroidManifest.xml:5:5-7:41
+MERGED from [com.pdftron:pagecropper:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/69dbbcd9865fca191df35dd8a4fe86f8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.pdftron:pagecropper:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/69dbbcd9865fca191df35dd8a4fe86f8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/59a9966098642de3828b221c8123d5d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/59a9966098642de3828b221c8123d5d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/102cc3042a1e096ae86279a9ce9e19e4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/102cc3042a1e096ae86279a9ce9e19e4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2931b89735e03f6193475d14471cf9b8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2931b89735e03f6193475d14471cf9b8/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/cc4524038507bbdf013879f241c2b1a1/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/cc4524038507bbdf013879f241c2b1a1/AndroidManifest.xml:18:5-43
+MERGED from [com.android.support:multidex:1.0.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/48798f2807d5f1a959c5a7d1db1904ad/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/48798f2807d5f1a959c5a7d1db1904ad/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.fresco:fresco:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/82160cd7adc06d5d97365eed4cd7a5df/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/82160cd7adc06d5d97365eed4cd7a5df/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/842fbb0ebd053544987bd03232011b22/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/842fbb0ebd053544987bd03232011b22/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/aa29f5a96f9d7953a1300cd96f6cde1b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/aa29f5a96f9d7953a1300cd96f6cde1b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2cf1a1d685f86ccde1fecdb4f30873c8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2cf1a1d685f86ccde1fecdb4f30873c8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/f6679fc6fde8a26a8ef2833b222d3c0e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/f6679fc6fde8a26a8ef2833b222d3c0e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/a6bf84a714cbc42de7bc6c136ca45737/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/a6bf84a714cbc42de7bc6c136ca45737/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/68d237eaee52259ec69d8416eddf485c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/68d237eaee52259ec69d8416eddf485c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/c07bc14e370a5e9a040eb414def34093/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/c07bc14e370a5e9a040eb414def34093/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6e27b0ebaea576cea7b17d7bb33268fa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6e27b0ebaea576cea7b17d7bb33268fa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/dc5c2b7c4302ccef30f840b4d7e7d2bb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/dc5c2b7c4302ccef30f840b4d7e7d2bb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bbdf3e8b753852de0c0594da4609c95e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bbdf3e8b753852de0c0594da4609c95e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/19b5827a9b6bb28534ed97aacccbd1a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/19b5827a9b6bb28534ed97aacccbd1a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/e92a9a4c08d6a48bb70532c3f5cbd83b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/e92a9a4c08d6a48bb70532c3f5cbd83b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/e2c0c1ef2a7bd13720a2c61d576913c8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/e2c0c1ef2a7bd13720a2c61d576913c8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/ffea231df71be2821c14e47e07265f80/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/ffea231df71be2821c14e47e07265f80/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/70c3aef8644e24e3218fb10c4f97cf69/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/70c3aef8644e24e3218fb10c4f97cf69/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/92ed16ebe568c82a49cf92d480499ea5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9ea02e06a64c12e3d334605a884368d1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9ea02e06a64c12e3d334605a884368d1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/5c588022df793bbde487736ac591da2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/5c588022df793bbde487736ac591da2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9f4ddabf82743a8985fdf8e018393f02/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9f4ddabf82743a8985fdf8e018393f02/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/d68ebfaf1d756a214a5ff51b90d2e29f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/d68ebfaf1d756a214a5ff51b90d2e29f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/40eb24abd981cd38cf6f7d4e0bc7259b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/40eb24abd981cd38cf6f7d4e0bc7259b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3639d5ac2059954669e8a56591498c6a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3639d5ac2059954669e8a56591498c6a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3626853acb3b6525e9e79071e5587195/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3626853acb3b6525e9e79071e5587195/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/871f768adb16f733f8c41c876bbfe562/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/871f768adb16f733f8c41c876bbfe562/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bbea06adbda52e16402ab53fb491eaf5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bbea06adbda52e16402ab53fb491eaf5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/ac4638cd182112993333ff17516aad0a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/ac4638cd182112993333ff17516aad0a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6164a9509c28d5e14271855fd6592d65/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6164a9509c28d5e14271855fd6592d65/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3683265b4736a89332962b0b4d1b1f03/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3683265b4736a89332962b0b4d1b1f03/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:drawee:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/b3f457611cb7cb1cf1ae3913356f6252/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/b3f457611cb7cb1cf1ae3913356f6252/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bdfb94a383e4032d1e610aa692c12944/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bdfb94a383e4032d1e610aa692c12944/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3a0ade860334f809d9323ff7d7367bd7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3a0ade860334f809d9323ff7d7367bd7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/5fa8da373cc68feffb5b166d04b93539/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/5fa8da373cc68feffb5b166d04b93539/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9980ef92f6cbce055e7e3450fbde8fde/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9980ef92f6cbce055e7e3450fbde8fde/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+provider#com.pdftron.demo.utils.PDFTronDemoInitializer
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:11:9-14:40
+	android:authorities
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:13:13-64
+	android:exported
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:12:13-73
+provider#com.pdftron.pdf.utils.PDFTronToolsInitializer
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:15:9-18:35
+REJECTED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:11:9-14:40
+	tools:node
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:18:13-32
+	android:authorities
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:17:13-65
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:16:13-73
+provider#com.pdftron.pdf.utils.ShareProvider
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:19:9-27:20
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:19:9-27:20
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:19:9-27:20
+	android:grantUriPermissions
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:23:13-47
+	android:authorities
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:21:13-72
+	android:exported
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:20:13-63
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:24:13-26:58
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:24:13-26:58
+MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:24:13-26:58
+	android:resource
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:26:17-55
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:25:17-67
+activity#com.pdftron.demo.app.MainActivity
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:29:9-70
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:29:19-67
+activity#com.pdftron.demo.app.RegisterActivity
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:30:9-74
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:30:19-71
+activity#com.pdftron.demo.app.CompleteReaderActivity
+ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:31:9-80
+	android:name
+		ADDED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/release/AndroidManifest.xml:31:19-77
+provider#com.pdftron.pdfnet.PDFNetInitializer
+ADDED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:15:9-18:35
+REJECTED from [com.pdftron:pdftron:] /Users/yezi/.gradle/caches/transforms-2/files-2.1/9d2620b73e604f936b3b25d9e73c4076/AndroidManifest.xml:10:9-13:40
+	tools:node
+		ADDED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:18:13-32
+	android:authorities
+		ADDED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:17:13-66
+	android:name
+		ADDED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/release/AndroidManifest.xml:16:13-64
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:24:13-83

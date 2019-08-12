@@ -1,0 +1,116 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,93,144,213,265,311",
+                        "endColumns": "37,50,68,51,45,55",
+                        "endOffsets": "88,139,208,260,306,362"
+                    },
+                    "to": {
+                        "startLines": "2,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,570,621,690,742,788",
+                        "endColumns": "37,50,68,51,45,55",
+                        "endOffsets": "88,616,685,737,783,839"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "93,152,223,294,364,434,502,844,948",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "147,218,289,359,429,497,565,943,1059"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "17,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "1064,1186",
+                        "endColumns": "121,133",
+                        "endOffsets": "1181,1315"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/res/merged/release/values-large-v4/values-large-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/release/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,93,144,213,265,311",
+                        "endColumns": "37,50,68,51,45,55",
+                        "endOffsets": "88,139,208,260,306,362"
+                    },
+                    "to": {
+                        "startLines": "2,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,570,621,690,742,788",
+                        "endColumns": "37,50,68,51,45,55",
+                        "endOffsets": "88,616,685,737,783,839"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "93,152,223,294,364,434,502,844,948",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "147,218,289,359,429,497,565,943,1059"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "17,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "1064,1186",
+                        "endColumns": "121,133",
+                        "endOffsets": "1181,1315"
+                    }
+                }
+            ]
+        }
+    ]
+}

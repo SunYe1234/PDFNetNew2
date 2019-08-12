@@ -1,0 +1,154 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/res/merged/release/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/values-night/styles.xml",
+                    "from": {
+                        "startLines": "3,11,9",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "56,418,341",
+                        "endLines": "7,11,9",
+                        "endColumns": "12,75,75",
+                        "endOffsets": "335,489,412"
+                    },
+                    "to": {
+                        "startLines": "19,24,25",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1414,1698,1773",
+                        "endLines": "23,24,25",
+                        "endColumns": "12,74,74",
+                        "endOffsets": "1693,1768,1843"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593",
+                        "endColumns": "69,83,83,95,101,101,93",
+                        "endOffsets": "120,204,288,384,486,588,682"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "782,852,936,1020,1116,1218,1320",
+                        "endColumns": "69,83,83,95,101,101,93",
+                        "endOffsets": "847,931,1015,1111,1213,1315,1409"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/values-night/controls_colors.xml",
+                    "from": {
+                        "startLines": "6,4,8,2",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "186,119,254,55",
+                        "endColumns": "66,65,65,62",
+                        "endOffsets": "248,180,315,113"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,122,188,254",
+                        "endColumns": "66,65,65,62",
+                        "endOffsets": "117,183,249,312"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/values-night/tools_colors.xml",
+                    "from": {
+                        "startLines": "2,3,8,7,5,4",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,130,451,376,291,213",
+                        "endColumns": "74,82,69,74,83,77",
+                        "endOffsets": "125,208,516,446,370,286"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "317,392,475,545,620,704",
+                        "endColumns": "74,82,69,74,83,77",
+                        "endOffsets": "387,470,540,615,699,777"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/values-night/styles.xml",
+                    "from": {
+                        "startLines": "3,11,9",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "56,418,341",
+                        "endLines": "7,11,9",
+                        "endColumns": "12,75,75",
+                        "endOffsets": "335,489,412"
+                    },
+                    "to": {
+                        "startLines": "19,24,25",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1414,1698,1773",
+                        "endLines": "23,24,25",
+                        "endColumns": "12,74,74",
+                        "endOffsets": "1693,1768,1843"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593",
+                        "endColumns": "69,83,83,95,101,101,93",
+                        "endOffsets": "120,204,288,384,486,588,682"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "782,852,936,1020,1116,1218,1320",
+                        "endColumns": "69,83,83,95,101,101,93",
+                        "endOffsets": "847,931,1015,1111,1213,1315,1409"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/values-night/controls_colors.xml",
+                    "from": {
+                        "startLines": "6,4,8,2",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "186,119,254,55",
+                        "endColumns": "66,65,65,62",
+                        "endOffsets": "248,180,315,113"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,122,188,254",
+                        "endColumns": "66,65,65,62",
+                        "endOffsets": "117,183,249,312"
+                    }
+                },
+                {
+                    "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/res/values-night/tools_colors.xml",
+                    "from": {
+                        "startLines": "2,3,8,7,5,4",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,130,451,376,291,213",
+                        "endColumns": "74,82,69,74,83,77",
+                        "endOffsets": "125,208,516,446,370,286"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "317,392,475,545,620,704",
+                        "endColumns": "74,82,69,74,83,77",
+                        "endOffsets": "387,470,540,615,699,777"
+                    }
+                }
+            ]
+        }
+    ]
+}

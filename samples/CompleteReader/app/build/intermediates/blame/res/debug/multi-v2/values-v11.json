@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/yezi/Downloads/PDFNetAndroid/samples/CompleteReader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+            "outputFile": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/7306d5dc42209e332d3ab26c5df06066/res/values-v11/values-v11.xml",
+                    "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/69dbbcd9865fca191df35dd8a4fe86f8/res/values-v11/values-v11.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
