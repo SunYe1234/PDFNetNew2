@@ -71,7 +71,7 @@ public class EaseActivityWithFragment extends Fragment {
         {
            // File parent=new File(file.getParent());
             String name=file.getName();
-            if (file.getName().equals("DOC SAT digitalisée"))
+            if (file.getName().equals("DOC SAT digitalisée")||(user!=null&&file.getName().equals(user)))
             {
                 Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
 
