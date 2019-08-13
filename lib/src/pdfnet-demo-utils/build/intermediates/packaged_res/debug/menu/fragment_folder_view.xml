@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <!-- Search View Widget -->
-    <!--<item android:id="@+id/menu_action_search"-->
-        <!--android:title="@string/action_search"-->
-        <!--android:icon="@drawable/ic_search_white_24dp"-->
-        <!--app:showAsAction="always|collapseActionView"-->
-        <!--app:actionViewClass="android.support.v7.widget.SearchView" />-->
+    <item android:id="@+id/menu_action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
 
     <!--&lt;!&ndash;Toggle Grid&ndash;&gt;-->
     <!--<item android:id="@+id/menu_grid_toggle"-->

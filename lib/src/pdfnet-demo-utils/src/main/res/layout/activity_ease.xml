@@ -185,7 +185,15 @@
     <!--app:bmb_showDelay="0"-->
     <!--app:bmb_hideDelay="0"-->
     <!--/>-->
-
+    <!--<SearchView-->
+        <!--android:id="@+id/searchView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="36dp"-->
+        <!--android:iconifiedByDefault="false"-->
+        <!--android:queryHint="please input the file or directory name"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--tools:layout_editor_absoluteX="0dp" />-->
     <GridLayout
         android:id="@+id/show_menu_button"
         android:layout_width="wrap_content"

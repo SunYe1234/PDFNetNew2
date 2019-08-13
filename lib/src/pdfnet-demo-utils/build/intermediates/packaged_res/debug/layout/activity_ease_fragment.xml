@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.pdftron.demo.boomMenu.EaseActivityWithFragment">
 
+    <!--<Button-->
+    <!--android:id="@+id/action_search"-->
+    <!--android:layout_width="78dp"-->
+    <!--android:layout_height="76dp"-->
+    <!--android:layout_marginStart="28dp"-->
+    <!--android:layout_marginLeft="28dp"-->
+    <!--android:layout_marginTop="32dp"-->
+    <!--android:background="@drawable/ic_search_white_24dp"-->
+    <!--android:title="@string/action_search"-->
+    <!--app:actionViewClass="android.support.v7.widget.SearchView"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:showAsAction="always|collapseActionView" />-->
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="please input the file or directory name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="39dp" />
 
 </android.support.constraint.ConstraintLayout>

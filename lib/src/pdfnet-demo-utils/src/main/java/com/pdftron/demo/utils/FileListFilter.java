@@ -20,6 +20,8 @@ import java.util.List;
 /** @hide */
 public class FileListFilter<FileInfo extends BaseFileInfo> extends Filter {
 
+    private ArrayList<FileInfo> filterdFiles;
+
     public interface FilterPublishListener<FileInfo> {
         /**
          * Raised when a filtering step is completed.
@@ -143,36 +145,38 @@ public class FileListFilter<FileInfo extends BaseFileInfo> extends Filter {
                         if (!item.isHidden()) {
                             newValues.add(item);
                         }
-                    } else if (item.getFileName().toLowerCase().contains(prefixString)) {
+                    } else if (item.getFileName().toLowerCase().equals(prefixString)) {
                         // if searching for a constraint then doesn't matter if it is hidden or not
                         newValues.add(item);
                     }
                 }
             }
-            synchronized (mExtensionLock) {
-                boolean filterByFileType = !(mPDFExtensions == null && mDocExtensions == null && mImageExtensions == null); // at least one type selected
-                if (filterByFileType) {
-                    ArrayList<FileInfo> filteredValues = new ArrayList<>();
-                    for (FileInfo item : newValues) {
-                        String fileName = item.getFileName();
-                        if (item.isDirectory()) {
-                            filteredValues.add(item);
-                        } else if (mPDFExtensions != null && FilenameUtils.isExtension(fileName.toLowerCase(), mPDFExtensions)) {
-                            filteredValues.add(item);
-                        } else if (mDocExtensions != null && FilenameUtils.isExtension(fileName.toLowerCase(), mDocExtensions)) {
-                            filteredValues.add(item);
-                        } else if (mImageExtensions != null && FilenameUtils.isExtension(fileName.toLowerCase(), mImageExtensions)) {
-                            filteredValues.add(item);
-                        }
-                    }
-                    newValues = filteredValues;
-                }
-            }
+//            synchronized (mExtensionLock) {
+//                boolean filterByFileType = !(mPDFExtensions == null && mDocExtensions == null && mImageExtensions == null); // at least one type selected
+//                if (filterByFileType) {
+//                    ArrayList<FileInfo> filteredValues = new ArrayList<>();
+//                    for (FileInfo item : newValues) {
+//                        String fileName = item.getFileName();
+//                        if (item.isDirectory()) {
+//                            filteredValues.add(item);
+//                        } else if (mPDFExtensions != null && FilenameUtils.isExtension(fileName.toLowerCase(), mPDFExtensions)) {
+//                            filteredValues.add(item);
+//                        } else if (mDocExtensions != null && FilenameUtils.isExtension(fileName.toLowerCase(), mDocExtensions)) {
+//                            filteredValues.add(item);
+//                        } else if (mImageExtensions != null && FilenameUtils.isExtension(fileName.toLowerCase(), mImageExtensions)) {
+//                            filteredValues.add(item);
+//                        }
+//                    }
+//                    newValues = filteredValues;
+//                }
+//            }
 
+            filterdFiles=newValues;
             results.values = newValues;
             results.count = newValues.size();
 
         }
+
 
         return results;
     }
@@ -182,6 +186,7 @@ public class FileListFilter<FileInfo extends BaseFileInfo> extends Filter {
     protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
 
         ArrayList<FileInfo> filteredList = (ArrayList<FileInfo>) filterResults.values;
+        filterdFiles=filteredList;
 
         if (filteredList == null) {
             filteredList = new ArrayList<>();
@@ -202,5 +207,15 @@ public class FileListFilter<FileInfo extends BaseFileInfo> extends Filter {
         if (mFilterPublishListener != null) {
             mFilterPublishListener.onFilterResultsPublished(filteredList, resultCode);
         }
+    }
+
+
+
+    public ArrayList<FileInfo> returnResults(String query) {
+
+        performFiltering(query);
+        return filterdFiles;
+
+
     }
 }

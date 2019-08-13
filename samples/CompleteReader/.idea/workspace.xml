@@ -125,54 +125,39 @@
       <change afterPath="$PROJECT_DIR$/app/boommenu/src/main/res/values/string.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/boommenu/src/main/res/values/styles.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/boommenu/src/test/java/com/nightonke/boommenu/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/compile_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/compile_library_classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$7$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$7$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$7$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$7$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/runtime_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/runtime_library_classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_library_classes/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseActivityWithFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseActivityWithFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseFragment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseFragment$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$LoadingFileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment$LoadingFileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/navigation/LocalFolderViewFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/utils/FileListFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/utils/FileListFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/layout/activity_ease.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/layout/activity_ease.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/layout/activity_ease_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/layout/activity_ease_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/menu/fragment_folder_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/menu/fragment_folder_view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/runtime_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/runtime_library_classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/utils/FileListFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/utils/FileListFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_folder_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_folder_view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileChanges/last-build.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" />
@@ -374,6 +359,7 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/9Wi5m_L92arIBM21SNMkLd0EdSY=" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/BzvTJ0Pm_vZTkhoofIpoXHOyjvg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/PLd35j2COaVKFkH2neCtXgia4Uc=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/PLd35j2COaVKFkH2neCtXgia4Uc=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/processDebugResources/resources-list-for-resources-debug.ap_.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/arch/lifecycle/extensions/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/arch/lifecycle/extensions/R$attr.class" afterDir="false" />
@@ -1151,6 +1137,8 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_dashboard.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_dashboard.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_diff_tool.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_diff_tool.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_document.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_document.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ease.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ease.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ease_fragment.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_ease_fragment.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main1.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main1.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_register.xml.flat" afterDir="false" />
@@ -1824,93 +1812,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/AdvancedReaderActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="818" column="69" selection-start-line="818" selection-start-column="69" selection-end-line="818" selection-end-column="69" />
-              <folding>
-                <element signature="e#24909#24910#0" expanded="true" />
-                <element signature="e#24942#24943#0" expanded="true" />
-                <element signature="e#64677#64714#0" expanded="true" />
-                <element signature="e#112152#112153#0" expanded="true" />
-                <element signature="e#112195#112196#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="52" column="23" selection-start-line="52" selection-end-line="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1660#1687#0" expanded="true" />
-                <element signature="e#3267#6582#0" expanded="true" />
-                <element signature="e#6581#6582#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/config/ViewerBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="145" selection-start-line="145" selection-end-line="145" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
-                <element signature="e#1596#1597#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="180" column="51" selection-start-line="180" selection-start-column="51" selection-end-line="180" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6450#6647#0" expanded="true" />
-                <element signature="e#6646#6647#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="5040" column="32" selection-start-line="5040" selection-start-column="32" selection-end-line="5040" selection-end-column="32" />
-              <folding>
-                <element signature="e#189621#189622#0" expanded="true" />
-                <element signature="e#189658#189659#0" expanded="true" />
-                <element signature="e#189702#189703#0" expanded="true" />
-                <element signature="e#189741#189742#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="2428" column="33" selection-start-line="2428" selection-start-column="27" selection-end-line="2428" selection-end-column="41" />
+            <state relative-caret-position="202">
+              <caret line="2107" column="20" selection-start-line="2107" selection-start-column="20" selection-end-line="2107" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#105711#105712#0" expanded="true" />
@@ -1920,6 +1825,111 @@
                 <element signature="e#106283#106284#0" expanded="true" />
                 <element signature="e#106317#106318#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/asynctask/PopulateFolderTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="141" column="8" selection-start-line="141" selection-start-column="8" selection-end-line="141" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="115" column="54" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="264" selection-start-line="264" selection-end-line="264" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4471#4472#0" expanded="true" />
+                <element signature="e#4588#4589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/widget/Filter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="226" selection-start-line="226" selection-end-line="226" />
+              <folding>
+                <element signature="e#1864#1865#0" expanded="true" />
+                <element signature="e#1917#1918#0" expanded="true" />
+                <element signature="e#2781#2782#0" expanded="true" />
+                <element signature="e#2821#2822#0" expanded="true" />
+                <element signature="e#8067#8068#0" expanded="true" />
+                <element signature="e#8104#8105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/os/Handler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+              <folding>
+                <element signature="e#13285#13286#0" expanded="true" />
+                <element signature="e#13334#13335#0" expanded="true" />
+                <element signature="e#24276#24277#0" expanded="true" />
+                <element signature="e#24328#24329#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/utils/FileListFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="147" column="71" selection-start-line="147" selection-start-column="71" selection-end-line="147" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease_fragment.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="195" column="50" selection-start-line="187" selection-start-column="8" selection-end-line="195" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/adapter/LocalFileAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -1935,36 +1945,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fragmentMa</find>
-      <find>fragmentManager</find>
-      <find>child</find>
-      <find>getSubF</find>
-      <find>getChildF</find>
-      <find>findViewById</find>
-      <find>mProgressBarView</find>
-      <find>mFabMenu</find>
-      <find>mGoToSdCardDescription</find>
-      <find>skipping</find>
-      <find>LocalFolder</find>
-      <find>onBac</find>
-      <find>onBack</find>
-      <find>LocalF</find>
-      <find>onRes</find>
-      <find>LocalFolderV</find>
-      <find>selectN</find>
-      <find>onFile</find>
-      <find>setCurrentF</find>
-      <find>start</find>
-      <find>onFilese</find>
-      <find>replace</find>
-      <find>setCurrent</find>
-      <find>tong</find>
-      <find>toggleInfoDrawer</find>
-      <find>onFileCli</find>
-      <find>startTabH</find>
-      <find>LocalFold</find>
-      <find>setC</find>
-      <find>STATIC</find>
+      <find>mFileLi</find>
+      <find>mIten</find>
+      <find>createAdap</find>
+      <find>onQueryT</find>
+      <find>onQueryTextS</find>
+      <find>onShowFil</find>
+      <find>getF</find>
+      <find>on</find>
+      <find>onFilter</find>
+      <find>mAdapter</find>
+      <find>onQueryTextC</find>
+      <find>onQueryTextCh</find>
+      <find>setOnq</find>
+      <find>removeMessage</find>
+      <find>publis</find>
+      <find>setAdap</find>
+      <find>abstract</find>
+      <find>mFileInfoList</find>
+      <find>mCurrentFol</find>
+      <find>getSortMo</find>
+      <find>onPop</find>
+      <find>onPopulateFolder</find>
+      <find>onQue</find>
+      <find>onPopulateFolderTaskFini</find>
+      <find>getActionVi</find>
+      <find>sendMessageDela</find>
+      <find>onQuer</find>
+      <find>mPop</find>
+      <find>setOnQuery</find>
+      <find>onView</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src</dir>
@@ -1976,8 +1986,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/AnnotationDialogFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/pdftron/completereader/loginSignup/RegisterActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pdftron/completereader/loginSignup/DashboardActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pdftron/completereader/CompleteReaderActivity.java" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/CompleteReaderActivity.java" />
@@ -1987,8 +1995,6 @@
         <option value="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/ThumbnailsViewFragment.java" />
         <option value="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabFragment.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease.xml" />
-        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease_fragment.xml" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BuilderManager.java" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/values/attrs.xml" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/values/colors.xml" />
@@ -2020,13 +2026,17 @@
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/bmb_ham_button.xml" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/bmb_simple_circle_button.xml" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/bmb_text_inside_circle_button.xml" />
-        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/pdftron/completereader/MainActivity.java" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/AdvancedReaderActivity.java" />
         <option value="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.java" />
+        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_folder_view.xml" />
+        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java" />
         <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java" />
+        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease.xml" />
+        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease_fragment.xml" />
+        <option value="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/utils/FileListFilter.java" />
       </list>
     </option>
   </component>
@@ -2121,25 +2131,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pdfnet-demo-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="boomMenu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pdfnet-demo-utils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -2290,8 +2286,45 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748212" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Designer" order="7" />
+      <window_info id="Resources Explorer" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36183396" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.5551425" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Android Monitor" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32961586" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Gradle Console" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.53722084" />
+      <window_info anchor="bottom" id="Build" order="13" weight="0.37918216" />
+      <window_info anchor="bottom" id="Android Profiler" order="14" />
+      <window_info anchor="bottom" id="Logcat" order="15" weight="0.43990088" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Gradle" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Android Model" order="6" side_tool="true" />
+      <window_info anchor="right" id="Preview" order="7" />
+      <window_info anchor="right" x="0" y="0" width="310" height="700" id="Documentation" order="8" side_tool="true" weight="0.10300429" />
+      <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23748212" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
@@ -2302,9 +2335,9 @@
       <window_info id="Designer" order="7" />
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.16728625" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12763321" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3866171" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32961586" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36183396" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.23172243" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -2326,44 +2359,6 @@
       <window_info anchor="right" id="Android Model" order="6" side_tool="true" />
       <window_info anchor="right" id="Preview" order="7" />
       <window_info anchor="right" x="0" y="0" width="310" height="700" id="Documentation" order="8" side_tool="true" visible="true" weight="0.10300429" />
-      <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748212" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Build Variants" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Designer" order="7" />
-      <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.40892193" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24907063" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.49194548" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Android Monitor" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32961586" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Gradle Console" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.53722084" />
-      <window_info anchor="bottom" id="Build" order="13" weight="0.37918216" />
-      <window_info anchor="bottom" id="Android Profiler" order="14" />
-      <window_info anchor="bottom" id="Logcat" order="15" weight="0.43990088" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Android Model" order="6" side_tool="true" />
-      <window_info anchor="right" id="Preview" order="7" />
-      <window_info anchor="right" x="0" y="0" width="310" height="700" id="Documentation" order="8" side_tool="true" visible="true" weight="0.0937053" />
       <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
     </layout-to-restore>
@@ -2501,7 +2496,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>1037</line>
+          <line>1041</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
@@ -2543,25 +2538,25 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>964</line>
+          <line>968</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>969</line>
+          <line>973</line>
           <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>1894</line>
+          <line>1898</line>
           <properties />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>1927</line>
+          <line>1931</line>
           <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
@@ -2585,7 +2580,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>1223</line>
+          <line>1227</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
@@ -2687,13 +2682,13 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>2670</line>
+          <line>2676</line>
           <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>1967</line>
+          <line>1971</line>
           <properties />
           <option name="timeStamp" value="103" />
         </line-breakpoint>
@@ -2705,7 +2700,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>2529</line>
+          <line>2535</line>
           <properties />
           <option name="timeStamp" value="105" />
         </line-breakpoint>
@@ -2735,7 +2730,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>997</line>
+          <line>1001</line>
           <properties />
           <option name="timeStamp" value="112" />
         </line-breakpoint>
@@ -2759,13 +2754,13 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java</url>
-          <line>2420</line>
+          <line>2426</line>
           <properties />
           <option name="timeStamp" value="122" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java</url>
-          <line>75</line>
+          <line>131</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
@@ -2781,249 +2776,46 @@
           <properties />
           <option name="timeStamp" value="126" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.java</url>
           <line>126</line>
           <properties />
           <option name="timeStamp" value="127" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java</url>
+          <line>594</line>
+          <properties />
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/utils/FileListFilter.java</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java</url>
+          <line>596</line>
+          <properties />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java</url>
+          <line>262</line>
+          <properties />
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Animation/OrderEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Animation/Rotate3DAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Animation/ShareLinesView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Animation/ShowRgbEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Piece/BoomPiece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Piece/Dot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Piece/Ham.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Piece/PiecePlaceEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Piece/PiecePlaceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BackgroundView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BMBFrameLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomStateEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BuilderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/ButtonEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/ExceptionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/OnBoomListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/OnBoomListenerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="142" column="25" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="312" selection-start-line="312" selection-end-line="312" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/FileBrowserViewFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="37" column="51" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/ToolbarFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease_fragment.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="10" selection-start-line="8" selection-start-column="3" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="7" selection-start-line="65" selection-start-column="5" selection-end-line="71" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/fragment_local_folder_view.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="103" column="65" selection-start-line="97" selection-start-column="14" selection-end-line="103" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BMBShadow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomButtons/BoomButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
-          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/bmb_ham_button.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/bmb_simple_circle_button.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/bmb_text_inside_circle_button.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2701" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/bmb_text_outside_circle_button.xml">
@@ -3088,20 +2880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/adapter/BaseFileAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/adapter/LocalFileAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/dialog/FilePickerDialogFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1510">
@@ -3120,13 +2898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="10774" selection-start-line="10774" selection-end-line="10774" />
         </state>
       </provider>
     </entry>
@@ -3151,22 +2922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="2428" column="33" selection-start-line="2428" selection-start-column="27" selection-end-line="2428" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#105711#105712#0" expanded="true" />
-            <element signature="e#105750#105751#0" expanded="true" />
-            <element signature="e#106045#106046#0" expanded="true" />
-            <element signature="e#106079#106080#0" expanded="true" />
-            <element signature="e#106283#106284#0" expanded="true" />
-            <element signature="e#106317#106318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/PdfViewCtrlTabHostFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -3180,40 +2935,289 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/BoomButtons/TextOutsideCircleButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="52" column="23" selection-start-line="52" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/SearchResultsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/SearchResultsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="599" column="28" selection-start-line="599" selection-start-column="16" selection-end-line="599" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/asynctask/FindTextTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/layout/controls_search_toolbar.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/controls/SearchToolbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_local_file_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/view/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9898">
+          <caret line="690" column="16" selection-start-line="690" selection-start-column="16" selection-end-line="690" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/jars/classes.jar!/android/support/v7/widget/SearchView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="11427" column="25" selection-start-line="11427" selection-start-column="25" selection-end-line="11427" selection-end-column="25" />
+          <folding>
+            <element signature="e#466911#466912#0" expanded="true" />
+            <element signature="e#466963#466964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/os/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
+          <folding>
+            <element signature="e#11122#11123#0" expanded="true" />
+            <element signature="e#11158#11159#0" expanded="true" />
+            <element signature="e#13823#13824#0" expanded="true" />
+            <element signature="e#13863#13864#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/102cc3042a1e096ae86279a9ce9e19e4/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="6080" column="9" lean-forward="true" selection-start-line="6080" selection-start-column="9" selection-end-line="6080" selection-end-column="9" />
+          <folding>
+            <element signature="e#239868#239869#0" expanded="true" />
+            <element signature="e#239924#239925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/fragment_local_folder_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="103" column="65" selection-start-line="97" selection-start-column="14" selection-end-line="103" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2931b89735e03f6193475d14471cf9b8/jars/classes.jar!/android/support/constraint/ConstraintLayout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-383" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/FileBrowserViewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="43" column="56" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/menu/fragment_folder_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/widget/recyclerview/SimpleRecyclerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/adapter/BaseFileAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="94" column="17" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="26" />
+          <folding>
+            <element signature="e#26883#26884#0" expanded="true" />
+            <element signature="e#26931#26932#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/adapter/LocalFileAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/asynctask/PopulateFolderTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="141" column="8" selection-start-line="141" selection-start-column="8" selection-end-line="141" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa29f5a96f9d7953a1300cd96f6cde1b/jars/classes.jar!/android/support/v4/app/FragmentManagerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="1592" selection-start-line="1592" selection-end-line="1592" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#13285#13286#0" expanded="true" />
+            <element signature="e#13334#13335#0" expanded="true" />
+            <element signature="e#24276#24277#0" expanded="true" />
+            <element signature="e#24328#24329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/widget/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+          <folding>
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#2781#2782#0" expanded="true" />
+            <element signature="e#2821#2822#0" expanded="true" />
+            <element signature="e#8067#8068#0" expanded="true" />
+            <element signature="e#8104#8105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/navigation/LocalFolderViewFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="2107" column="20" selection-start-line="2107" selection-start-column="20" selection-end-line="2107" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1660#1687#0" expanded="true" />
-            <element signature="e#3267#6582#0" expanded="true" />
-            <element signature="e#6581#6582#0" expanded="true" />
+            <element signature="e#105711#105712#0" expanded="true" />
+            <element signature="e#105750#105751#0" expanded="true" />
+            <element signature="e#106045#106046#0" expanded="true" />
+            <element signature="e#106079#106080#0" expanded="true" />
+            <element signature="e#106283#106284#0" expanded="true" />
+            <element signature="e#106317#106318#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="180" column="51" selection-start-line="180" selection-start-column="51" selection-end-line="180" selection-end-column="51" />
+        <state relative-caret-position="199">
+          <caret line="115" column="54" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6450#6647#0" expanded="true" />
-            <element signature="e#6646#6647#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="195" column="50" selection-start-line="187" selection-start-column="8" selection-end-line="195" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/layout/activity_ease_fragment.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseActivityWithFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="264" selection-start-line="264" selection-end-line="264" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4471#4472#0" expanded="true" />
+            <element signature="e#4588#4589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/utils/FileListFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="147" column="71" selection-start-line="147" selection-start-column="71" selection-end-line="147" selection-end-column="71" />
         </state>
       </provider>
     </entry>

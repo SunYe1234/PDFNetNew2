@@ -227,6 +227,10 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
     private MenuItem itemFavorite;
     private MenuItem itemShare;
 
+
+    private FileListFilter<FileInfo> mFilter;
+    private ArrayList<FileInfo> searchResults;
+
     // Called each time the action mode is shown. Always called after
     // onCreateActionMode, but may be called multiple times if the mode is
     // invalidated.
@@ -2095,7 +2099,9 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
         // prevent clearing filter text when the fragment is hidden
         if (mAdapter != null && Utils.isNullOrEmpty(mFilterText)) {
             mAdapter.cancelAllThumbRequests(true);
-            mAdapter.getFilter().filter(newText);
+            mFilter=(FileListFilter<FileInfo>) mAdapter.getFilter();
+            mFilter.filter(newText);
+            searchResults=mFilter.returnResults(newText);
             boolean isEmpty = Utils.isNullOrEmpty(newText);
             mAdapter.setInSearchMode(!isEmpty);
         }
