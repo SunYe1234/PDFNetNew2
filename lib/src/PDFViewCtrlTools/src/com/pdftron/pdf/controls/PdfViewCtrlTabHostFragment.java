@@ -234,6 +234,8 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
 
     protected int mSystemWindowInsetTop = 0;
 
+    private File currentFile;
+
     // Disposables
     protected CompositeDisposable mDisposables;
 
@@ -5027,5 +5029,15 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
     @NonNull
     protected Class<? extends PdfViewCtrlTabFragment> getDefaultTabFragmentClass() {
         return PdfViewCtrlTabFragment.class;
+    }
+
+    public void setCurrentFile(File file)
+    {
+        this.currentFile=file;
+    }
+
+    public File getCurrentFile()
+    {
+        return this.currentFile;
     }
 }

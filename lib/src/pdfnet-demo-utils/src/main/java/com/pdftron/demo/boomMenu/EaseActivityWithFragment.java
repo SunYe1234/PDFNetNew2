@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.pdftron.demo.R;
+import com.pdftron.demo.boomMenu.Animation.Ease;
+import com.pdftron.pdf.controls.PdfViewCtrlTabFragment;
+import com.pdftron.pdf.controls.PdfViewCtrlTabHostFragment;
 
 import java.io.File;
 
@@ -57,34 +60,58 @@ public class EaseActivityWithFragment extends Fragment {
         this.formerFragment=easeFragment;
     }
 
-    public EaseFragment getCurrentFragment()
+    public Fragment getCurrentFragment()
     {
-        return (EaseFragment) getChildFragmentManager().findFragmentById(R.id.frameLayout);
+        return getChildFragmentManager().findFragmentById(R.id.frameLayout);
     }
 
     public void onBackPressed()
     {
-        EaseFragment currentFragment=getCurrentFragment();
-        String currentPath=currentFragment.getFilesPath();
-        File file=new File(currentPath);
-        if (file!=null)
+        EaseFragment currentFragment=null;
+        PdfViewCtrlTabHostFragment currentPdfFragment=null;
+        if (getCurrentFragment() instanceof EaseFragment)
+         currentFragment=(EaseFragment) getCurrentFragment();
+        else if (getCurrentFragment() instanceof PdfViewCtrlTabHostFragment)
+            currentPdfFragment=(PdfViewCtrlTabHostFragment)getCurrentFragment();
+        if (currentFragment!=null) {
+            String currentPath = currentFragment.getFilesPath();
+            File file = new File(currentPath);
+            if (file != null) {
+                // File parent=new File(file.getParent());
+                String name = file.getName();
+                if (file.getName().equals("DOC SAT digitalisée") || (user != null && file.getName().equals(user))) {
+                    Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
+
+                    return;
+                }
+                EaseFragment parentFrag = new EaseFragment();
+                parentFrag.setFilesPath(file.getParent());
+                getChildFragmentManager().beginTransaction().replace(R.id.frameLayout, parentFrag).commit();
+            }
+        }
+        else if (currentPdfFragment!=null)
         {
-           // File parent=new File(file.getParent());
-            String name=file.getName();
-            if (file.getName().equals("DOC SAT digitalisée")||(user!=null&&file.getName().equals(user)))
-            {
+            File file=currentPdfFragment.getCurrentFile();
+            String name = file.getName();
+            if (file.getName().equals("DOC SAT digitalisée") || (user != null && file.getName().equals(user))) {
                 Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
 
                 return;
             }
-            EaseFragment parentFrag=new EaseFragment();
+            EaseFragment parentFrag = new EaseFragment();
             parentFrag.setFilesPath(file.getParent());
-            getChildFragmentManager().beginTransaction().replace(R.id.frameLayout,parentFrag).commit();
+            getChildFragmentManager().beginTransaction().replace(R.id.frameLayout, parentFrag).commit();
+
         }
 //        getFragmentManager().beginTransaction().replace(R.id.frameLayout,formerFragment).commit();
     }
 
     public void changeFragment(EaseFragment easeFragment)
+    {
+        getChildFragmentManager().beginTransaction().replace(R.id.frameLayout,easeFragment).commit();
+    }
+
+    public void changeFragment(PdfViewCtrlTabHostFragment easeFragment)
     {
         getChildFragmentManager().beginTransaction().replace(R.id.frameLayout,easeFragment).commit();
     }

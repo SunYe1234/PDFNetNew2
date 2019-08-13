@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -21,11 +22,18 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.pdftron.demo.R;
+import com.pdftron.demo.app.AdvancedReaderActivity;
+import com.pdftron.pdf.config.ViewerBuilder;
+import com.pdftron.pdf.controls.PdfViewCtrlTabHostFragment;
+import com.pdftron.pdf.model.BaseFileInfo;
+import com.pdftron.pdf.utils.Logger;
+import com.pdftron.pdf.utils.Utils;
 
 import java.io.File;
 import java.util.ArrayList;
 
 import static com.pdftron.demo.boomMenu.ButtonEnum.TextOutsideCircle;
+import static com.pdftron.pdf.controls.AnnotStyleDialogFragment.TAG;
 
 public  class EaseFragment extends Fragment {
 
@@ -34,6 +42,9 @@ public  class EaseFragment extends Fragment {
     private ArrayList<String> namesOfFiles;
     private File[] files;
     private GridLayout.LayoutParams gl;
+
+    private PdfViewCtrlTabHostFragment mPdfViewCtrlTabHostFragment;
+
 
     private  static  EaseActivityWithFragment parentFragment;
 
@@ -147,7 +158,7 @@ public  class EaseFragment extends Fragment {
         int indexInRow=0;
         int index = 0;
         TableRow tableRow=null;
-        for( File file : files )
+        for( final File file : files )
         {
             if (!file.isDirectory())
             {
@@ -164,6 +175,12 @@ public  class EaseFragment extends Fragment {
 
                 button.setPadding(0,0,0,0);
                 button.setGravity(Gravity.CENTER_HORIZONTAL);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onFileSelected(file,"",true);
+                    }
+                });
 //                MarqueeTextView textView=(MarqueeTextView)findViewById(R.id.textview);
 //                textView.setText(name);
                 TextView textView=new TextView(getContext());
@@ -361,6 +378,112 @@ public  class EaseFragment extends Fragment {
 
 
 
+    /**
+     * Opens a local document in the document viewer.
+     *
+     * @param file that represents a local document
+     * @param password password used to open document, can be null
+     * @param skipPasswordCheck true to skip password check when opening the document
+     */
+    public void onFileSelected(final File file, String password, boolean skipPasswordCheck) {
+        boolean openedSucessfully = false;
+        if (file != null && file.exists()) {
+            if (Utils.isNullOrEmpty(password)) {
+                password = Utils.getPassword(getContext(), file.getAbsolutePath());
+            }
+
+//            if (Utils.isOfficeDocument(file.getAbsolutePath())) {
+//                startTabHostFragment(
+//                        ViewerBuilder.withFile(file, password)
+//                                .usingFileType(BaseFileInfo.FILE_TYPE_FILE)
+//                );
+//
+//                return;
+//            }
+
+//            CheckDifferentFileTypeResult result = checkDifferentFileType(file, password, BaseFileInfo.FILE_TYPE_FILE, "", skipPasswordCheck);
+//
+//            if (result.getOpenDocument()) {
+//                // Perform any operation needed on the current fragment before launching the viewer.
+//                if (mCurrentFragment != null && hasMainActivityListener(mCurrentFragment)) {
+//                    ((MainActivityListener) mCurrentFragment).onPreLaunchViewer();
+//                }
+//            }
+
+//            if (result.getOpenDocument() // PDF document
+//                    || FileManager.checkIfFileTypeIsInList(file.getAbsolutePath())) { // non-PDF document
+            startTabHostFragment(
+                    ViewerBuilder.withFile(file, password)
+                            .usingFileType(BaseFileInfo.FILE_TYPE_FILE),file
+            );
+            openedSucessfully = true;
+//            }
+//        } else {
+//            Utils.showAlertDialog(this, R.string.file_does_not_exist_message, R.string.error_opening_file);
+//        }
+
+//        if (!openedSucessfully) {
+//            // Update recent and favorite files lists
+//            FileInfo fileInfo = new FileInfo(BaseFileInfo.FILE_TYPE_FILE, file);
+//            RecentFilesManager.getInstance().removeFile(this, fileInfo);
+//            FavoriteFilesManager.getInstance().removeFile(this, fileInfo);
+//            if (file != null) {
+//                PdfViewCtrlTabsManager.getInstance().removePdfViewCtrlTabInfo(this, file.getAbsolutePath());
+//            }
+//
+//            // Try to update fragment since underlying data has changed
+//            reloadBrowser();
+//
+//            onOpenDocError();
+//        }
+        }
+    }
+
+
+    private void startTabHostFragment(@Nullable ViewerBuilder viewerBuilder, File file) {
+//        if (isFinishing()) {
+//            return;
+//        }
+//        if (null == findViewById(R.id.frameLayout)) {
+//            // wrong states
+//            return;
+//        }
+
+        if (viewerBuilder == null) {
+            viewerBuilder = ViewerBuilder.withUri(null, "");
+        }
+
+//        viewerBuilder.usingCacheFolder(mUseCacheDir)
+//                .usingQuitAppMode(mQuitAppWhenDoneViewing);
+//
+//        Bundle args = viewerBuilder.createBundle(this);
+//        if (args.containsKey(BUNDLE_TAB_TITLE)) {
+//            String title = args.getString(BUNDLE_TAB_TITLE);
+//            if (mLastAddedBrowserFragment != null && mLastAddedBrowserFragment instanceof FileBrowserViewFragment) {
+//                ((FileBrowserViewFragment) mLastAddedBrowserFragment).setCurrentFile(title);
+//            }
+//        }
+//        mProcessedFragmentViewId = R.id.item_viewer;
+//        selectNavItem(mProcessedFragmentViewId);
+
+
+//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.setCustomAnimations(R.anim.tab_fragment_slide_in_bottom, R.anim.tab_fragment_slide_out_bottom);
+        mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
+        mPdfViewCtrlTabHostFragment.setCurrentFile(file);
+        mPdfViewCtrlTabHostFragment.addHostListener((AdvancedReaderActivity)EaseFragment.getFatherFragment().getActivity());
+
+        Logger.INSTANCE.LogD(TAG, "replace with " + mPdfViewCtrlTabHostFragment);
+//        ft.replace(R.id.container, mPdfViewCtrlTabHostFragment, null);
+        ((EaseActivityWithFragment)(EaseFragment.getFatherFragment())).changeFragment(mPdfViewCtrlTabHostFragment);
+//        ft.commit();
+
+//        setCurrentFragment(mPdfViewCtrlTabHostFragment);
+
+//        updateNavTab(); // update navigation tab in case the activity will be resumed
+//
+//        toggleInfoDrawer(false);
+    }
 
 
 }
