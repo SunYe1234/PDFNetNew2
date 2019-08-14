@@ -12,13 +12,13 @@ public final class R {
     public static final class raw {
         private raw() {}
 
-        public static final int pdfnet = 0x7f100003;
-        public static final int pdftron_layout_resources = 0x7f100004;
-        public static final int pdftron_smart_substitution = 0x7f100005;
+        public static final int pdfnet = 0x7f110003;
+        public static final int pdftron_layout_resources = 0x7f110004;
+        public static final int pdftron_smart_substitution = 0x7f110005;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f11008d;
+        public static final int app_name = 0x7f12008d;
     }
 }

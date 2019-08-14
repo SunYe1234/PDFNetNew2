@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_butterfly.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/butterfly.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_annotation_note_icon_comment_outline.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/annotation_note_icon_comment_outline.xml"
     },
@@ -56,12 +52,12 @@
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable-hdpi-v4/text_select_handle_right.png"
     },
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_fragment_view_mode_color_mode_row.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/layout/fragment_view_mode_color_mode_row.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_btn_borderless.xml.flat",
@@ -102,10 +98,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_controls_thumbnails_view_grid_item.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/layout/controls_thumbnails_view_grid_item.xml"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_pig.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/pig.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -940,10 +932,6 @@
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable/tooltip_frame_light.xml"
     },
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_bat.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/bat.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_ic_redo_white_24dp.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/ic_redo_white_24dp.xml"
     },
@@ -1090,10 +1078,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_quickmenu_bg_rect_old_api.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/quickmenu_bg_rect_old_api.xml"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_peacock.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/peacock.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
@@ -1708,16 +1692,8 @@
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/menu/cab_controls_fragment_rubber_stamp.xml"
     },
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_rat.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/rat.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_tools_dialog_link_editor.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/layout/tools_dialog_link_editor.xml"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_bear.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/bear.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -1854,10 +1830,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_ic_delete_white_24dp.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/ic_delete_white_24dp.xml"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_dolphin.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/dolphin.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_activity_document.xml.flat",
@@ -2270,10 +2242,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_activity_main1.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/res/layout/activity_main1.xml"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_bee.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/bee.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -2708,6 +2676,10 @@
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/ic_redo_black_24dp.xml"
     },
     {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/font_arizonia.xml.flat",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/res/font/arizonia.xml"
+    },
+    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_radio_checked_middle.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/radio_checked_middle.xml"
     },
@@ -3056,10 +3028,6 @@
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/res/color/design_tint_password_toggle.xml"
     },
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_horse.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/horse.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/animator_mtrl_fab_show_motion_spec.xml.flat",
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/res/animator/mtrl_fab_show_motion_spec.xml"
     },
@@ -3118,10 +3086,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_snake.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/snake.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/color_abc_tint_spinner.xml.flat",
@@ -3488,10 +3452,6 @@
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable/abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_deer.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/deer.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_ic_annotation_callout_black_24dp.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/ic_annotation_callout_black_24dp.xml"
     },
@@ -3664,10 +3624,6 @@
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/ic_font_size_black_24dp.xml"
     },
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_owl.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/owl.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_fragment_container.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/layout/fragment_container.xml"
     },
@@ -3770,6 +3726,10 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_viewpager_point.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/viewpager_point.xml"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/font_dawning_of_a_new_day.xml.flat",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/res/font/dawning_of_a_new_day.xml"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/color_abc_hint_foreground_material_light.xml.flat",
@@ -4408,10 +4368,6 @@
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/layout/view_pdf_layer.xml"
     },
     {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_elephant.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/elephant.png"
-    },
-    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_ic_custommode_icon.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable/ic_custommode_icon.xml"
     },
@@ -4430,10 +4386,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_fragment_custom_color_mode_dialog.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/layout/fragment_custom_color_mode_dialog.xml"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_eagle.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/eagle.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/color_mtrl_tabs_icon_color_selector_colored.xml.flat",
@@ -4470,10 +4422,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/3aa4517ae395cf548050856bf6961ca4/res/color/design_error.xml"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_squirrel.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/squirrel.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -4618,10 +4566,6 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_cat.png.flat",
-        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/cat.png"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",

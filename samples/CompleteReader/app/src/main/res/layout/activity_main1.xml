@@ -10,7 +10,28 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:animateLayoutChanges="true"
     tools:context="com.pdftron.completereader.MainActivity">
+
+    <!--<TextView-->
+        <!--android:id="@+id/loginText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginBottom="96dp"-->
+        <!--android:fontFamily="monospace"-->
+        <!--android:gravity="center"-->
+        <!--android:text="User   Login"-->
+        <!--android:textSize="30dp"-->
+        <!--android:textColor="@android:color/white" />-->
 
     <TextView
         android:id="@+id/textView"
@@ -20,30 +41,35 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="96dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        android:text="User   Login "
+        android:lineSpacingMultiplier="1.5"
+        android:text="Your Conquest \n is the Sea of Stars "
         android:textColor="@android:color/white"
-        android:textSize="20dp" />
+        android:textSize="30dp" />
 
     <EditText
         android:id="@+id/editEmail"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="88dp"
         android:ems="10"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:hint="Enter Name"
-        android:textColorHint="@android:color/white"
         android:inputType="textEmailAddress"
         android:textColor="@android:color/white"
+        android:textColorHint="#70ffffff"
+
+
         />
 
     <EditText
@@ -51,18 +77,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editEmail"
-        android:layout_marginTop="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="108dp"
         android:ems="10"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:hint="Enter Password"
-        android:textColorHint="@android:color/white"
         android:inputType="textPassword"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textColorHint="#70ffffff"
+
+       />
 
     <Button
         android:id="@+id/buttonLogin"

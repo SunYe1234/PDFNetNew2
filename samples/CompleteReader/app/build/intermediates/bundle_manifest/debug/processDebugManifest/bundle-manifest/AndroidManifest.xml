@@ -31,6 +31,9 @@
         <meta-data
             android:name="pdftron_license_key"
             android:value="YOUR_LICENSE_KEY" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity android:name="com.pdftron.completereader.MainActivity" >
             <intent-filter>

@@ -477,7 +477,7 @@
     <string name="updating_file_list_wait">Updating file list…</string>
     <string name="version">Version</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -507,7 +507,7 @@
         <item name="listPreferredItemPaddingRight">@dimen/navigation_drawer_horizontal_margin</item>
         <item name="listPreferredItemHeightSmall">@dimen/navigation_drawer_list_item_height</item>
 
-        
+        <!-- Use a light separator and highlight colour on the dark background -->
         <item name="android:listDivider">@color/navigation_drawer_separator</item>
         <item name="colorControlHighlight">#66ffffff</item>
     </style>
@@ -530,7 +530,7 @@
         <item name="contentInsetStart">@dimen/first_keyline</item>
     </style>
     <declare-styleable name="BoomMenuButton">
-        
+        <!--Basic-->
         <attr format="boolean|reference" name="bmb_cacheOptimization"/>
         <attr format="boolean|reference" name="bmb_boomInWholeScreen"/>
         <attr format="boolean|reference" name="bmb_inList"/>
@@ -538,14 +538,14 @@
         <attr format="boolean|reference" name="bmb_backPressListened"/>
         <attr format="boolean|reference" name="bmb_orientationAdaptable"/>
 
-        
+        <!--Shadow-->
         <attr format="boolean|reference" name="bmb_shadowEffect"/>
         <attr format="dimension|reference" name="bmb_shadowRadius"/>
         <attr format="color|reference" name="bmb_shadowColor"/>
         <attr format="dimension|reference" name="bmb_shadowOffsetX"/>
         <attr format="dimension|reference" name="bmb_shadowOffsetY"/>
 
-        
+        <!--Button-->
         <attr format="dimension|reference" name="bmb_buttonRadius"/>
         <attr format="enum|reference" name="bmb_buttonEnum">
             <enum name="simpleCircle" value="0"/>
@@ -564,7 +564,7 @@
         <attr format="dimension|reference" name="bmb_edgeInsetsRight"/>
         <attr format="dimension|reference" name="bmb_edgeInsetsBottom"/>
 
-        
+        <!--Piece-->
         <attr format="dimension|reference" name="bmb_dotRadius"/>
         <attr format="dimension|reference" name="bmb_hamWidth"/>
         <attr format="dimension|reference" name="bmb_hamHeight"/>
@@ -624,7 +624,7 @@
         <attr format="color|reference" name="bmb_shareLine2Color"/>
         <attr format="dimension|reference" name="bmb_shareLineWidth"/>
 
-        
+        <!--Animation-->
         <attr format="color|reference" name="bmb_dimColor"/>
         <attr format="integer|reference" name="bmb_showDuration"/>
         <attr format="integer|reference" name="bmb_showDelay"/>
@@ -851,7 +851,7 @@
         <attr format="boolean|reference" name="bmb_autoBoom"/>
         <attr format="boolean|reference" name="bmb_autoBoomImmediately"/>
 
-        
+        <!--Boom Buttons-->
         <attr format="enum|reference" name="bmb_buttonPlaceEnum">
             <enum name="buttonPlace_sc_1" value="0"/>
             <enum name="buttonPlace_sc_2_1" value="1"/>

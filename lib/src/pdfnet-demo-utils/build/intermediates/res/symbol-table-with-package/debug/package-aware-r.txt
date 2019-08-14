@@ -1755,9 +1755,6 @@ drawable annotation_toolbar_close
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
-drawable bat
-drawable bear
-drawable bee
 drawable black_square
 drawable blankpage_135dp
 drawable blankpage_regular
@@ -1767,11 +1764,9 @@ drawable border_dashed
 drawable border_selected
 drawable breadcrumb_bg
 drawable btn_borderless
-drawable butterfly
 drawable button
 drawable button_hollow_rectangle
 drawable button_text_color_selector
-drawable cat
 drawable checker_background
 drawable checker_pattern
 drawable collapsing_toolbar_bottom_scrim
@@ -1806,7 +1801,6 @@ drawable controls_toolbar_dropshadow
 drawable controls_toolbar_spinner_selected
 drawable controls_toolbar_spinner_selected_blue
 drawable controls_toolbar_spinner_selected_dark
-drawable deer
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1814,10 +1808,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable diff
-drawable dolphin
 drawable drawer_item_background
-drawable eagle
-drawable elephant
 drawable empty_directory
 drawable fab_add
 drawable fab_menu_label_background
@@ -1831,7 +1822,6 @@ drawable graphpage_135dp
 drawable graphpage_regular
 drawable graphpage_selected
 drawable hairline
-drawable horse
 drawable ic_access_time_white_24dp
 drawable ic_add_blank_page_white
 drawable ic_add_image_white
@@ -2042,19 +2032,16 @@ drawable notify_panel_notification_icon_bg
 drawable oval_fill_preview
 drawable oval_fill_transparent
 drawable oval_stroke_preview
-drawable owl
 drawable page_jump_button_active
 drawable page_jump_button_bg
 drawable page_jump_button_disabled
 drawable page_jump_button_neutral
 drawable page_number_indicator_bg
 drawable paragraph_sign
-drawable peacock
 drawable permissions
 drawable permissions_land
 drawable piece
 drawable piece_dot
-drawable pig
 drawable quickmenu_bg_rect
 drawable quickmenu_bg_rect_old_api
 drawable radio_checked_default
@@ -2065,7 +2052,6 @@ drawable radio_unchecked_default
 drawable radio_unchecked_left
 drawable radio_unchecked_middle
 drawable radio_unchecked_right
-drawable rat
 drawable rect_fill_transparent_24dp
 drawable reflow_mode
 drawable restore
@@ -2095,8 +2081,6 @@ drawable shape_oval_normal
 drawable shape_rectangle_normal
 drawable simple_reader
 drawable single_vert_line_bg
-drawable snake
-drawable squirrel
 drawable star
 drawable tab_widget_bg
 drawable text_select_handle_left

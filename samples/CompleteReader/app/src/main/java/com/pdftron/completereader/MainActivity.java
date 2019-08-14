@@ -89,8 +89,9 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
         setContentView(R.layout.activity_main1);
-        TextView textView=(TextView)findViewById(R.id.textView);
-        textView.setTextSize(30);
+//        TextView textView=(TextView)findViewById(R.id.loginText);
+//        textView.setTextSize(30);
+
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -463,6 +464,13 @@ public class MainActivity extends AppCompatActivity {
         imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         boolean active=imm.isActive();
     }
+
+
+
+
+
 }
+
+
 
 

@@ -229,7 +229,7 @@
     <bool name="isTablet">false</bool>
     <color name="action_bar_bg">#202020</color>
     <color name="annotation_flashing_box">#ff7088ff</color>
-    <color name="app_color_accent">#FFf89c36</color>
+    <color name="app_color_accent">#FF9900</color>
     <color name="app_color_primary_dark_day">#303F9F</color>
     <color name="app_color_primary_dark_night">#000000</color>
     <color name="app_color_primary_day">#177CB0</color>

@@ -7,8 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -269,5 +271,54 @@ public class RegisterActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent motionEvent) {
+        if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+            // 获得当前得到焦点的View，一般情况下就是EditText（特殊情况就是轨迹球或者实体按键会移动焦点）
+            View view = this.getCurrentFocus();
+            if (isShouldHideInput(view, motionEvent)) {
+                closeKeyboard(view);
+            }
+        }
+        return super.dispatchTouchEvent(motionEvent);
+    }
+
+    /**
+     * 根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏 stone
+     *
+     * @param view
+     * @param motionEvent
+     * @return
+     */
+    private boolean isShouldHideInput(View view, MotionEvent motionEvent) {
+        if (view != null && (view instanceof EditText)) {
+            int[] l = {0, 0};
+            view.getLocationInWindow(l);
+            int left = l[0], top = l[1], bottom = top + view.getHeight(), right = left
+                    + view.getWidth();
+            if (motionEvent.getX() > left && motionEvent.getX() < right
+                    && motionEvent.getY() > top && motionEvent.getY() < bottom) {
+                // 点击EditText的事件，忽略它
+                return false;
+            } else {
+                return true;
+            }
+        }
+        // 如果焦点不是EditText则忽略，这个发生在视图刚绘制完，第一个焦点不在EditView上，和用户用轨迹球选择其他的焦点
+        return false;
+    }
+
+    private void closeKeyboard(View currentFocus) {
+        if (currentFocus == null) {
+            return;
+        }
+        InputMethodManager imm = (InputMethodManager) currentFocus.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        boolean active=imm.isActive();
+    }
+
+
+
 
 }

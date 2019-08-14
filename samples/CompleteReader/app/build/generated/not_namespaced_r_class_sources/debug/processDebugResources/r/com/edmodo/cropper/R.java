@@ -31,28 +31,28 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int CropOverlayView = 0x7f090002;
-        public static final int ImageView_image = 0x7f090004;
-        public static final int bitmap_margin = 0x7f09005f;
-        public static final int off = 0x7f0902b6;
-        public static final int on = 0x7f0902b8;
-        public static final int onTouch = 0x7f0902b9;
+        public static final int CropOverlayView = 0x7f0a0002;
+        public static final int ImageView_image = 0x7f0a0004;
+        public static final int bitmap_margin = 0x7f0a005f;
+        public static final int off = 0x7f0a02b6;
+        public static final int on = 0x7f0a02b8;
+        public static final int onTouch = 0x7f0a02b9;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int crop_image_view = 0x7f0c0060;
+        public static final int crop_image_view = 0x7f0d0060;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f11008d;
+        public static final int app_name = 0x7f12008d;
     }
     public static final class style {
         private style() {}
 
-        public static final int AppBaseTheme = 0x7f12000f;
-        public static final int AppTheme = 0x7f120010;
+        public static final int AppBaseTheme = 0x7f13000f;
+        public static final int AppTheme = 0x7f130010;
     }
     public static final class styleable {
         private styleable() {}

@@ -2,12 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_register"
+    android:background="@drawable/star_sky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="com.pdftron.completereader.loginSignup.RegisterActivity">
 
     <TextView
@@ -16,23 +19,61 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="96dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        android:text="User Sign Up"
-        android:textColor="#000"
-        android:layout_marginTop="50dp"
-        android:textSize="20dp" />
+        android:lineSpacingMultiplier="1.5"
+        android:text="Sign   Up "
+        android:textColor="@android:color/white"
+        android:textSize="30dp" />
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="User Sign Up"-->
+        <!--android:textColor="#000"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:textSize="20dp" />-->
 
     <EditText
         android:id="@+id/editName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="88dp"
         android:ems="10"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:hint="Enter Name"
         android:inputType="textEmailAddress"
-        android:textColor="#000" />
+        android:textColor="@android:color/white"
+        android:textColorHint="#70ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        />
+
+    <!--<EditText-->
+        <!--android:id="@+id/editName"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/textView"-->
+        <!--android:layout_marginTop="170dp"-->
+        <!--android:ems="10"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="Enter Name"-->
+        <!--android:inputType="textEmailAddress"-->
+        <!--android:textColor="#000" />-->
 
     <!--<EditText-->
         <!--android:layout_width="fill_parent"-->
@@ -52,19 +93,51 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editName"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="108dp"
         android:ems="10"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:hint="Enter Password"
         android:inputType="textPassword"
-        android:textColor="#000" />
+        android:textColor="@android:color/white"
+
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+    <!--<EditText-->
+        <!--android:id="@+id/editPassword"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/editName"-->
+        <!--android:layout_marginTop="70dp"-->
+        <!--android:ems="10"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="Enter Password"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:textColor="#000" />-->
 
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editPassword"
-        android:layout_marginTop="167dp"
-        android:text="SIGN UP" />
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/button_hollow_rectangle"
+        android:text="SIGN UP"
+        android:textColor="@android:color/white" />
+
+    <!--<Button-->
+        <!--android:id="@+id/buttonRegister"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/editPassword"-->
+        <!--android:layout_marginTop="167dp"-->
+        <!--android:text="SIGN UP" />-->
 
 </RelativeLayout>

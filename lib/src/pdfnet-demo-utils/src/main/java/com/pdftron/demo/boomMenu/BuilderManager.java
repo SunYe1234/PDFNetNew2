@@ -24,22 +24,7 @@ import java.util.List;
 public class BuilderManager {
 
     private static int[] imageResources = new int[]{
-            R.drawable.bat,
-            R.drawable.bear,
-            R.drawable.bee,
-            R.drawable.butterfly,
-            R.drawable.cat,
-            R.drawable.deer,
-            R.drawable.dolphin,
-            R.drawable.eagle,
-            R.drawable.horse,
-            R.drawable.elephant,
-            R.drawable.owl,
-            R.drawable.peacock,
-            R.drawable.pig,
-            R.drawable.rat,
-            R.drawable.snake,
-            R.drawable.squirrel,
+
 
             R.drawable.empty_directory,
             R.drawable.ic_file_blank_white_24dp

@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/app_color_primary_day</item>
         <item name="colorPrimaryDark">@color/app_color_primary_dark_day</item>
         <item name="colorAccent">@color/app_color_accent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowBackground">@drawable/star_sky</item>-->
     </style>
 
     <!--
