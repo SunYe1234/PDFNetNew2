@@ -229,10 +229,10 @@
     <bool name="isTablet">false</bool>
     <color name="action_bar_bg">#202020</color>
     <color name="annotation_flashing_box">#ff7088ff</color>
-    <color name="app_color_accent">#FF4081</color>
+    <color name="app_color_accent">#FFf89c36</color>
     <color name="app_color_primary_dark_day">#303F9F</color>
     <color name="app_color_primary_dark_night">#000000</color>
-    <color name="app_color_primary_day">#3F51B5</color>
+    <color name="app_color_primary_day">#177CB0</color>
     <color name="app_color_primary_night">#212121</color>
     <color name="back_fwd_buttons_disabled_bg">#C8888888</color>
     <color name="back_fwd_buttons_disabled_outline">#C8BDBDBD</color>
@@ -1288,14 +1288,14 @@
         <item name="colorCloseIcon">@android:color/white</item>
     </style>
     <style name="BaseThumbnailSliderStyle">
-        <!-- Set the description of the menu button left of the slider -->
+        
         <item name="leftMenuItemContentDescription">@string/pref_viewmode_thumbnails</item>
-        <!-- Set the color of the menu button right of the slider -->
+        
         <item name="rightMenuItemContentDescription">@string/action_outline</item>
 
-        <!-- Set the icon of the menu button left of the slider -->
+        
         <item name="leftMenuItemDrawable">@drawable/ic_thumbnails_grid_black_24dp</item>
-        <!-- Set the icon of the menu button right of the slider -->
+        
         <item name="rightMenuItemDrawable">@drawable/ic_list_white_24dp</item>
     </style>
     <style name="CalloutPresetStyle1" parent="FreeTextPresetStyle1">
@@ -1346,12 +1346,12 @@
         <item name="colorAccent">@color/app_color_accent</item>
         <item name="actionMenuTextColor">@android:color/white</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <!-- Action bar -->
+        
         <item name="actionModeBackground">?attr/colorPrimary</item>
         <item name="windowActionModeOverlay">true</item>
     </style>
     <style name="DispatchFairInsets">
-        <!-- Fully consume the system window insets by default. -->
+        
         <item name="consumeInsets">true</item>
     </style>
     <style name="DispatchFairInsetsFrameLayout" parent="DispatchFairInsets"/>
@@ -1552,8 +1552,7 @@
         <item name="annot_thickness">8.0</item>
     </style>
     <style name="StatusBarView">
-        <!-- Fit system window insets by default, since the StatusBarView widget is
-             only really useful when the fitsSystemWindows flag is set. -->
+        
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:background">?attr/colorPrimaryDark</item>
     </style>
@@ -1608,19 +1607,19 @@
         <item name="android:textColor">@color/button_dialog_annotation_note_color</item>
     </style>
     <declare-styleable name="AnnotationPropertyPreviewView">
-        <!-- whether to show transparent patten as background if there is transparency -->
+        
         <attr format="boolean" name="transparent_background"/>
-        <!-- parent view background color, show border if the stroke color is the same as the background -->
+        
         <attr format="color" name="parent_background"/>
-        <!-- inner and outer stroke color -->
+        
         <attr format="color" name="stroke_color"/>
-        <!-- whether to draw inner and outer stroke if color is the same as the background color -->
+        
         <attr format="boolean" name="draw_stroke"/>
-        <!-- the text to display for preview if the annotation is a free text annotation or text markup annotation -->
+        
         <attr format="string" name="preview_text"/>
-        <!-- minimum text size for preview -->
+        
         <attr format="dimension" name="min_text_size"/>
-        <!-- whether to use stroke ratio for drawing preview -->
+        
         <attr format="boolean" name="use_stroke_ratio"/>
     </declare-styleable>
     <declare-styleable name="AnnotationToolbar">
@@ -1664,7 +1663,7 @@
         <attr format="boolean" name="zoomWithParent"/>
     </declare-styleable>
     <declare-styleable name="DispatchFairInsets">
-        <!-- Flag indicating whether to fully consume the system window insets. -->
+        
         <attr format="boolean" name="consumeInsets"/>
     </declare-styleable>
     <declare-styleable name="DispatchFairInsetsFrameLayout">
@@ -1710,9 +1709,9 @@
         <attr format="float" name="fillOpacity"/>
     </declare-styleable>
     <declare-styleable name="StatusBarView">
-        <!-- Allow setting fitsSystemWindows to true by default. -->
+        
         <attr name="android:fitsSystemWindows"/>
-        <!-- Allow settings background to colorPrimaryDark by default. -->
+        
         <attr name="android:background"/>
     </declare-styleable>
     <declare-styleable name="SwatchView">
@@ -1730,59 +1729,57 @@
         <attr name="colorBackground"/>
     </declare-styleable>
     <declare-styleable name="ToolManager">
-        <!-- whether editing ink annotation should open the annotation toolbar -->
+        
         <attr format="boolean" name="edit_ink_annots"/>
-        <!-- whether to enable image stamper tool -->
+        
         <attr format="boolean" name="add_image_stamper_tool"/>
-        <!-- whether ink tool will open annotation toolbar -->
+        
         <attr format="boolean" name="open_toolbar_on_pan_ink_selected"/>
-        <!-- whether to use/show the built-in page number indicator -->
+        
         <attr format="boolean" name="build_in_page_number_indicator"/>
-        <!-- whether to check annotation author permission -->
+        
         <attr format="boolean" name="annot_permission_check"/>
-        <!-- whether to show author dialog the first time when user annotates -->
+        
         <attr format="boolean" name="show_author_dialog"/>
-        <!-- whether the TextMarkup annotations are compatible with Adobe
-        (Adobe's quads don't follow the specification, but they don't handle quads that do)
-        -->
+        
         <attr format="boolean" name="text_markup_adobe_hack"/>
-        <!-- whether to copy annotated text to note -->
+        
         <attr format="boolean" name="copy_annotated_text_to_note"/>
-        <!-- whether to use stylus to draw without entering ink tool -->
+        
         <attr format="boolean" name="stylus_as_pen"/>
-        <!-- whether to smooth ink annotation -->
+        
         <attr format="boolean" name="ink_smoothing_enabled"/>
-        <!-- whether auto select annotation after annotation is created -->
+        
         <attr format="boolean" name="auto_select_annotation"/>
-        <!-- whether disable showing quick menu -->
+        
         <attr format="boolean" name="quick_menu_disable"/>
-        <!-- whether can double tap to zoom -->
+        
         <attr format="boolean" name="double_tap_to_zoom"/>
-        <!-- whether can auto resize free text when editing -->
+        
         <attr format="boolean" name="auto_resize_freetext"/>
-        <!-- whether annotation editing is real time -->
+        
         <attr format="boolean" name="realtime_annot_edit"/>
-        <!-- whether can edit freetext on tap -->
+        
         <attr format="boolean" name="edit_freetext_on_tap"/>
-        <!-- whether can show saved signatures in signature dialog -->
+        
         <attr format="boolean" name="show_saved_signatures"/>
-        <!-- whether can show pick from image button in signature dialog -->
+        
         <attr format="boolean" name="show_signature_from_image"/>
-        <!-- whether can show indicator for annotations with comments -->
+        
         <attr format="boolean" name="show_annot_indicator"/>
-        <!-- whether has separate annotation layer -->
+        
         <attr format="boolean" name="annotation_layer_enabled"/>
-        <!-- whether use digital signature when signing -->
+        
         <attr format="boolean" name="use_digital_signature"/>
-        <!-- file path for the digital signature keystore file -->
+        
         <attr format="string" name="digital_signature_keystore_path"/>
-        <!-- password for the digital signature keystore file -->
+        
         <attr format="string" name="digital_signature_keystore_password"/>
-        <!-- array of tools to disable -->
+        
         <attr format="reference" name="disable_tool_modes"/>
-        <!-- array of annot types to disable editing -->
+        
         <attr format="reference" name="disable_annot_editing_by_types"/>
-        <!-- whether to use pressure sensitive signatures -->
+        
         <attr format="boolean" name="use_pressure_sensitive_signatures"/>
     </declare-styleable>
     <declare-styleable name="ToolStyle">
@@ -1803,7 +1800,7 @@
         <attr format="float" name="ruler_translate_value"/>
         <attr format="string" name="ruler_translate_unit"/>
         <attr format="integer" name="ruler_precision"/>
-        <!-- default style attrs -->
+        
         <attr format="reference" name="highlight_default_style"/>
         <attr format="reference" name="sticky_note_default_style"/>
         <attr format="reference" name="underline_default_style"/>
@@ -1824,7 +1821,7 @@
         <attr format="reference" name="rect_group_annot_edit_style"/>
         <attr format="reference" name="other_default_style"/>
 
-        <!-- presets reference to array -->
+        
         <attr format="reference" name="highlight_presets"/>
         <attr format="reference" name="sticky_note_presets"/>
         <attr format="reference" name="underline_presets"/>
@@ -1844,7 +1841,7 @@
         <attr format="reference" name="signature_presets"/>
         <attr format="reference" name="link_presets"/>
         <attr format="reference" name="other_presets"/>
-        <!-- icons reference to array -->
+        
         <attr format="reference" name="sticky_note_icons"/>
     </declare-styleable>
 </resources>

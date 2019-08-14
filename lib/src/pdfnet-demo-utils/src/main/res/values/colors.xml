@@ -4,6 +4,7 @@
     <color name="annotation_flashing_box">#FF7088FF</color>
 
     <color name="navigation_drawer_sel_bg">@color/gray200</color>
+    <!--<color name="navigation_drawer_sel_bg">@android:color/holo_orange_light</color>-->
     <color name="navigation_drawer_separator">@color/gray200</color>
 
     <color name="scrim_insets_frame_layout_foreground">#A0000000</color>
@@ -35,7 +36,8 @@
 
 
 
-    <color name="colorPrimary">#3F51B5</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimary">#70F3FF</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="windowBackground">#f2f4f5</color>

@@ -1769,6 +1769,7 @@ drawable breadcrumb_bg
 drawable btn_borderless
 drawable butterfly
 drawable button
+drawable button_hollow_rectangle
 drawable button_text_color_selector
 drawable cat
 drawable checker_background
@@ -2105,6 +2106,7 @@ drawable single_vert_line_bg
 drawable snake
 drawable squirrel
 drawable star
+drawable star_sky
 drawable stroke_blue
 drawable tab_widget_bg
 drawable text_select_handle_left

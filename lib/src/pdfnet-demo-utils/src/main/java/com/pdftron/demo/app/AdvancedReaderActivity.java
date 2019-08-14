@@ -351,6 +351,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             // This is not set in the v21/styles.xml file because other windows that get their
             // theme/style from this Activity may not work well with a transparent status bar.
             getWindow().setStatusBarColor(Color.TRANSPARENT);
+
         }
 
         mDrawerLayout = findViewById(R.id.drawer_layout);

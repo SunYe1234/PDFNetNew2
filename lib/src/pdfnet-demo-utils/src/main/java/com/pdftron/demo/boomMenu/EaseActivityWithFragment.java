@@ -294,6 +294,12 @@ public class EaseActivityWithFragment extends Fragment implements
 //        FileInfo newFile=new FileInfo(fileInfo);
 //        searchResults.add(newFile);
 //    }
+        ArrayList<FileInfo> results=mFilter.returnResults(query);
+        if (results==null||results.size()==0)
+        {
+            Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         searchResult=new File(mFilter.returnResults(query).get(0).getAbsolutePath());
         handleResultsSearched(searchResult);
         return false;

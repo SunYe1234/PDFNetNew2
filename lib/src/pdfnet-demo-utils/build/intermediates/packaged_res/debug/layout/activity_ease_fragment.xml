@@ -25,10 +25,13 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="8dp"
         android:iconifiedByDefault="false"
         android:queryHint="please input the file or directory name"
-        app:layout_constraintTop_toTopOf="parent"
+        android:searchIcon="@drawable/ic_search_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.031"
         tools:layout_editor_absoluteX="0dp" />
 
     <FrameLayout

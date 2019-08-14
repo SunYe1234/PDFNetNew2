@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
+    android:background="@drawable/star_sky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
@@ -16,10 +18,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="96dp"
         android:gravity="center"
-        android:text="User Login "
-        android:textColor="#000"
+        android:text="User   Login "
+        android:textColor="@android:color/white"
         android:textSize="20dp" />
 
     <EditText
@@ -27,39 +34,62 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="102dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="88dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Enter Name"
+        android:textColorHint="@android:color/white"
         android:inputType="textEmailAddress"
-        android:textColor="#000" />
+        android:textColor="@android:color/white"
+        />
 
     <EditText
         android:id="@+id/editPassword"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editEmail"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="108dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Enter Password"
+        android:textColorHint="@android:color/white"
         android:inputType="textPassword"
-        android:textColor="#000" />
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editPassword"
-        android:layout_marginTop="126dp"
-        android:text="Log IN " />
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_hollow_rectangle"
+        android:text="Log IN "
+        android:textColor="@android:color/white"
+        />
 
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonLogin"
-        android:layout_marginTop="20dp"
-        android:text="NOT A USER? | SIGN UP" />
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/button_hollow_rectangle"
+        android:text="NOT A USER? | SIGN UP"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
