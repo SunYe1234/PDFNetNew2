@@ -435,10 +435,11 @@ public  class EaseFragment extends Fragment {
             if (file.isFile())
             {
                 String name=file.getName();
-                String[] type=name.split(".");
-                Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT).show();
-
-                return;
+                String type=name.substring(name.lastIndexOf(".") + 1);
+                if (!type.equals("pdf")) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
             }
             if (Utils.isNullOrEmpty(password)) {
                 password = Utils.getPassword(getContext(), file.getAbsolutePath());
@@ -550,42 +551,7 @@ public  class EaseFragment extends Fragment {
 //        }
     }
     public void onFilterResultsPublished(int resultCode) {
-//        if (mAdapter != null) {
-//            if (mEmptyTextView != null) {
-//                if (mAdapter.getItemCount() > 0) {
-//                    mEmptyTextView.setVisibility(View.GONE);
-//                    scrollToCurrentFile(mRecyclerView);
-//                } else if (mIsFullSearchDone) {
-//                    switch (resultCode) {
-//                        case FileListFilter.FILTER_RESULT_NO_STRING_MATCH:
-//                            mEmptyTextView.setText(R.string.textview_empty_because_no_string_match);
-//                            break;
-//                        case FileListFilter.FILTER_RESULT_NO_ITEMS_OF_SELECTED_FILE_TYPES:
-//                            mEmptyTextView.setText(R.string.textview_empty_because_no_files_of_selected_type);
-//                            break;
-//                        default:
-//                            mEmptyTextView.setText(R.string.textview_empty_file_list);
-//                            break;
-//                    }
-//                    mEmptyTextView.setVisibility(View.VISIBLE);
-//                }
-//            }
-//
-//            mNotSupportedTextView.setVisibility(View.GONE);
-//            if (mCurrentFolder != null && getContext() != null) {
-//                String[] list = mCurrentFolder.list();
-//                if (list != null) {
-//                    int fileCount = list.length;
-//                    if (fileCount > mAdapter.getItemCount()) {
-//                        int extraCount = fileCount - mAdapter.getItemCount();
-//                        String fileStr = extraCount > 1 ? getString(R.string.files) : getString(R.string.file);
-//                        mNotSupportedTextView.setText(getString(R.string.num_files_not_supported, extraCount, fileStr));
-//                        //mNotSupportedTextView.setVisibility(View.VISIBLE);
-//                        mNotSupportedTextView.setVisibility(View.INVISIBLE);
-//                    }
-//                }
-//            }
-//        }
+
     }
 
     public boolean onQueryTextChange(String newText) {
@@ -632,34 +598,15 @@ public  class EaseFragment extends Fragment {
             mFileInfoList.clear();
         }
         updateFileListFilter();
-
-//        if (mEmptyTextView != null) {
-//            mLoadingFileHandler.sendEmptyMessageDelayed(0, 100);
-//        }
-//        if (mProgressBarView != null) {
-//            mProgressBarView.setVisibility(View.VISIBLE);
-//        }
-
-//        setReloadActionButtonState(true);
-//        mIsFullSearchDone = false;
-
     }
-    public void onPopulateFolderTaskProgressUpdated(
-            File currentFolder
-    ) {
-
-//        mLoadingFileHandler.removeMessages(0);
-//        if (mProgressBarView != null) {
-//            mProgressBarView.setVisibility(View.GONE);
-//        }
+    public void onPopulateFolderTaskProgressUpdated(File currentFolder) {
 
         showPopulatedFolder(currentFolder);
         updateFileListFilter();
 //        setReloadActionButtonState(false);
 
     }
-    public void onPopulateFolderTaskFinished(
-    ) {
+    public void onPopulateFolderTaskFinished() {
 
 //        mIsFullSearchDone = true;
         updateFileListFilter();
@@ -685,71 +632,12 @@ public  class EaseFragment extends Fragment {
         }
 
         String filterText = "";
-//        if (mSearchMenuItem != null) {
             SearchView searchView = mSearchView;
             filterText = searchView.getQuery().toString();
-//        }
         return filterText;
     }
 
-    void showPopulatedFolder(
-            File currentFolder
-    ) {
-
-//        if (currentFolder == null) {
-//            return;
-//        }
-//
-////        mInSDCardFolder = false;
-////        Boolean isSdCardFolder = mSdCardFolderCache.get(currentFolder.getAbsolutePath());
-////        if (isSdCardFolder != null && isSdCardFolder) {
-////            mInSDCardFolder = true;
-////        }
-//
-////        if (mGoToSdCardView == null || mRecyclerView == null || mFabMenu == null) {
-////            return;
-////        }
-//
-//        if (Utils.isLollipop()) {
-//            if (mInSDCardFolder) {
-//                if (mSnackBar == null) {
-//                    mSnackBar = Snackbar.make(mRecyclerView, R.string.snack_bar_local_folder_read_only, Snackbar.LENGTH_INDEFINITE);
-//                    mSnackBar.setAction(getString(R.string.snack_bar_local_folder_read_only_redirect).toUpperCase(),
-//                            new View.OnClickListener() {
-//                                @Override
-//                                public void onClick(View v) {
-//                                    // go to external tab
-//                                    if (null != mJumpNavigationCallbacks) {
-//                                        finishActionMode();
-//                                        mJumpNavigationCallbacks.gotoExternalTab();
-//                                    }
-//                                }
-//                            });
-//
-//                    mSnackBar.addCallback(new Snackbar.Callback() {
-//                        @Override
-//                        public void onDismissed(Snackbar snackbar, int event) {
-//                            mSnackBar = null;
-//                        }
-//                    });
-//                    //mSnackBar.show();
-//                }
-//                // Show dialog re-direct user to SD card tab
-//                if (mRecyclerView!=null)mRecyclerView.setVisibility(View.GONE);
-//                if (mFabMenu!=null)mFabMenu.setVisibility(View.GONE);
-//                if(mGoToSdCardView!=null)mGoToSdCardView.setVisibility(View.VISIBLE);
-//            } else {
-//                if (mSnackBar != null) {
-//                    if (mSnackBar.isShown()) {
-//                        mSnackBar.dismiss();
-//                    }
-//                    mSnackBar = null;
-//                }
-//                if(mGoToSdCardView!=null) mGoToSdCardView.setVisibility(View.GONE);
-//                if (mRecyclerView!=null)mRecyclerView.setVisibility(View.VISIBLE);
-//                if (mFabMenu!=null)mFabMenu.setVisibility(View.VISIBLE);
-//            }
-//        }
+    void showPopulatedFolder(File currentFolder) {
 
     }
 

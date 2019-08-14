@@ -473,18 +473,6 @@ public class EaseActivityWithFragment extends Fragment implements
 
     }
 
-    public static void closeKeybord(Activity activity) {
-//        View view = activity.getCurrentFocus();
-//        if (view != null) {
 
-        InputMethodManager imm = (InputMethodManager) activity.getSystemService(INPUT_METHOD_SERVICE);
-        boolean active=imm.isActive();
-        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
-
-        active=imm.isActive();
-
-
-//        }
-    }
 
 }

@@ -145,9 +145,20 @@ public class FileListFilter<FileInfo extends BaseFileInfo> extends Filter {
                         if (!item.isHidden()) {
                             newValues.add(item);
                         }
-                    } else if (item.getFileName().toLowerCase().equals(prefixString)) {
+//                    } else if (item.getFileName().toLowerCase().equals(prefixString)) {
+                    }else
+                    {
+                        if (item.isDirectory()&&item.getFileName().toLowerCase().equals(prefixString))
                         // if searching for a constraint then doesn't matter if it is hidden or not
                         newValues.add(item);
+
+                        if (!item.isDirectory())
+                        {
+                            String name=item.getFileName();
+                            String prefix=name.substring(0,name.lastIndexOf(".")  ).toLowerCase();
+                            if (prefix.equals(prefixString))
+                                newValues.add(item);
+                        }
                     }
                 }
             }
