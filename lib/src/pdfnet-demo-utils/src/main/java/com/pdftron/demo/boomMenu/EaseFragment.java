@@ -19,14 +19,17 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pdftron.demo.R;
 import com.pdftron.demo.app.AdvancedReaderActivity;
@@ -48,6 +51,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import static android.content.Context.INPUT_METHOD_SERVICE;
 import static com.pdftron.demo.boomMenu.ButtonEnum.TextOutsideCircle;
 import static com.pdftron.pdf.controls.AnnotStyleDialogFragment.TAG;
 
@@ -428,6 +432,14 @@ public  class EaseFragment extends Fragment {
     public void onFileSelected(final File file, String password, boolean skipPasswordCheck) {
         boolean openedSucessfully = false;
         if (file != null && file.exists()) {
+            if (file.isFile())
+            {
+                String name=file.getName();
+                String[] type=name.split(".");
+                Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT).show();
+
+                return;
+            }
             if (Utils.isNullOrEmpty(password)) {
                 password = Utils.getPassword(getContext(), file.getAbsolutePath());
             }
@@ -740,6 +752,8 @@ public  class EaseFragment extends Fragment {
 //        }
 
     }
+
+
 
 
 

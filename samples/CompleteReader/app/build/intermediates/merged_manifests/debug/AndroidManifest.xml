@@ -412,9 +412,13 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name="com.pdftron.demo.app.MainActivity" />
+        <activity
+            android:name="com.pdftron.demo.app.MainActivity"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name="com.pdftron.demo.app.RegisterActivity" />
-        <activity android:name="com.pdftron.demo.app.CompleteReaderActivity" />
+        <activity
+            android:name="com.pdftron.demo.app.CompleteReaderActivity"
+            android:windowSoftInputMode="stateHidden" />
 
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"

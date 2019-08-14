@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Aug 13 15:33:07 CEST 2019
+#Wed Aug 14 08:59:30 CEST 2019
 5.base=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/transforms/mergeJniLibs/debug/0
 22.path=lib/arm64-v8a/libgifimage.so
 32.set=ASSET

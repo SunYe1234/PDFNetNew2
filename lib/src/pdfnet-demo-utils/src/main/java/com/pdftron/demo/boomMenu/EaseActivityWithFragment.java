@@ -1,5 +1,6 @@
 package com.pdftron.demo.boomMenu;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,12 +9,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.pdftron.demo.R;
+import com.pdftron.demo.app.AdvancedReaderActivity;
+import com.pdftron.demo.app.FragmentTouchListener;
 import com.pdftron.demo.asynctask.PopulateFolderTask;
 import com.pdftron.demo.boomMenu.Animation.Ease;
 import com.pdftron.demo.navigation.adapter.BaseFileAdapter;
@@ -30,6 +35,8 @@ import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Comparator;
+
+import static android.content.Context.INPUT_METHOD_SERVICE;
 
 public class EaseActivityWithFragment extends Fragment implements
         BaseFileAdapter.AdapterListener, PopulateFolderTask.Callback,
@@ -49,12 +56,21 @@ public class EaseActivityWithFragment extends Fragment implements
     protected int mSpanCount;
     protected ItemSelectionHelper mItemSelectionHelper;
     private FileListFilter<FileInfo> mFilter;
-    private ArrayList<FileInfo> searchResults;
+    private File searchResult;
     private PopulateFolderTask mPopulateFolderTask;
     private SearchView mSearchView;
     protected final LruCache<String, Boolean> mSdCardFolderCache = new LruCache<>(CACHED_SD_CARD_FOLDER_LIMIT);
 
     private Comparator<FileInfo> mSortMode = FileInfoComparator.folderPathOrder();;
+
+
+    FragmentTouchListener fragmentTouchListener = new FragmentTouchListener() {
+        @Override
+        public boolean onTouchEvent(MotionEvent event) {
+            mSearchView.clearFocus();
+            return false;
+        }
+    };
 
 
 
@@ -67,6 +83,7 @@ public class EaseActivityWithFragment extends Fragment implements
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+//        closeKeybord(getActivity());
         //setContentView(R.layout.activity_ease_fragment);
         if (savedInstanceState == null) {
             EaseFragment easeFragment=new EaseFragment();
@@ -92,14 +109,15 @@ public class EaseActivityWithFragment extends Fragment implements
         super.onViewCreated(view,savedInstanceState);
 //        View viewCreated =view.findViewById(R.id.activity_ease);
 //        relativeLayout=view.findViewById(R.id.show_menu_button);
-
+        ((AdvancedReaderActivity) this.getActivity()).registerFragmentTouchListener(fragmentTouchListener);
         mSpanCount = PdfViewCtrlSettingsManager.getGridSize(getActivity(), PdfViewCtrlSettingsManager.KEY_PREF_SUFFIX_FOLDER_FILES);
         mAdapter = createAdapter();
-        mPopulateFolderTask = new PopulateFolderTask(getContext(), new File(filesPath),
-                mFileInfoList, mFileListLock, getSortMode(), true, true, true, mSdCardFolderCache, this);
+
         mSearchView=view.findViewById(R.id.searchView);
         mSearchView.setOnQueryTextListener(this);
 
+
+        mSearchView.clearFocus();
 //        viewCreated.getBackground().setAlpha(130);
 //        if (getActivity().getIntent().getStringExtra("path")!=null)
 //            filesPath=getActivity().getIntent().getStringExtra("path");
@@ -258,10 +276,26 @@ public class EaseActivityWithFragment extends Fragment implements
     @Override
     public boolean onQueryTextSubmit(String query) {
         mFilterText=query;
+        mPopulateFolderTask = new PopulateFolderTask(getContext(), new File(filesPath),
+                mFileInfoList, mFileListLock, getSortMode(), true, true, true, mSdCardFolderCache, this);
         mPopulateFolderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         mFilter=(FileListFilter<FileInfo>) mAdapter.getFilter();
         mFilter.filter(query);
-        searchResults=mFilter.returnResults(query);
+        try {
+            Thread.sleep(200);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        //searchResults=new ArrayList<FileInfo>();
+//    for (FileInfo fileInfo:mFilter.returnResults(query))
+//    {
+//        FileInfo newFile=new FileInfo(fileInfo);
+//        searchResults.add(newFile);
+//    }
+        searchResult=new File(mFilter.returnResults(query).get(0).getAbsolutePath());
+        handleResultsSearched(searchResult);
         return false;
     }
     private Comparator<FileInfo> getSortMode(
@@ -409,6 +443,48 @@ public class EaseActivityWithFragment extends Fragment implements
 //            }
 //        }
 
+    }
+
+    public void onDestroy()
+    {
+        super.onDestroy();
+        ((AdvancedReaderActivity) this.getActivity()).unRegisterFragmentTouchListener(fragmentTouchListener);
+    }
+    private void handleResultsSearched(File result)
+    {
+//        if (results==null||results.size()==0) {
+//            Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (results.size()>1)
+//        {
+//            Toast.makeText(getActivity().getApplicationContext(), "Several results found, please be more precise", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+        if (result==null)
+            return;
+        EaseFragment easeFragment=new EaseFragment();
+        easeFragment.setFilesPath(result.getParent());
+        changeFragment(easeFragment);
+        mSearchView.clearFocus();
+        mSearchView.setQuery("",false);
+
+
+
+    }
+
+    public static void closeKeybord(Activity activity) {
+//        View view = activity.getCurrentFocus();
+//        if (view != null) {
+
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(INPUT_METHOD_SERVICE);
+        boolean active=imm.isActive();
+        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+
+        active=imm.isActive();
+
+
+//        }
     }
 
 }

@@ -4,6 +4,7 @@ package com.pdftron.demo.app;
 // Consult legal.txt regarding legal and license information.
 //---------------------------------------------------------------------------------------
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.ViewModelProviders;
@@ -42,8 +43,10 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.pdftron.common.PDFNetException;
@@ -226,6 +229,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
     public static String usersNameFileName="UserName.txt";
     public String currentUser="";
+
+    private ArrayList<FragmentTouchListener> mFragmentTouchListeners = new ArrayList<>();
 
 
     /**
@@ -2704,4 +2709,38 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         selectNavItem(id);
     }
+
+
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        if(null != this.getCurrentFocus()){
+            /**
+             * 点击空白位置 隐藏软键盘
+             */
+            InputMethodManager mInputMethodManager = (InputMethodManager)this.getSystemService(INPUT_METHOD_SERVICE);
+            return mInputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+        }
+        return this.onTouchEvent(event);
+
+    }
+
+    public void registerFragmentTouchListener(FragmentTouchListener listener) {
+        mFragmentTouchListeners.add(listener);
+    }
+
+
+    public void unRegisterFragmentTouchListener(FragmentTouchListener listener) {
+        mFragmentTouchListeners.remove(listener);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        for (FragmentTouchListener listener : mFragmentTouchListeners) {
+            listener.onTouchEvent(event);
+        }
+
+        return super.dispatchTouchEvent(event);
+    }
+
+
 }
