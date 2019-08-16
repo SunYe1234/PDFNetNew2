@@ -5,6 +5,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -211,11 +212,12 @@ public  class EaseFragment extends Fragment {
 //                Dot boomPiece=(Dot)PiecePlaceManager.createPiece(menuButton,buttonBuilder);
 //                relativeLayout.addView(boomPiece);
                 String name=file.getName();
-                Button button=new Button(getContext());
+                final Button button=new Button(getContext());
                 button.setBackgroundColor(Color.TRANSPARENT);
-                Drawable icon=getResources().getDrawable(R.drawable.ic_file_blank_white_24dp);
-                icon.setBounds(0, 0, icon.getIntrinsicWidth()*2, icon.getIntrinsicHeight()*2);
+                Drawable icon=getResources().getDrawable(R.drawable.file_icon_button);
+                icon.setBounds(0, 0, icon.getIntrinsicWidth()*3, icon.getIntrinsicHeight()*3);
                 button.setCompoundDrawables(button.getCompoundDrawables()[0],icon,button.getCompoundDrawables()[2],button.getCompoundDrawables()[0]);
+
 
                 button.setPadding(0,0,0,0);
                 button.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -230,8 +232,10 @@ public  class EaseFragment extends Fragment {
                 TextView textView=new TextView(getContext());
                 textView.setText(name);
                 textView.setGravity(Gravity.CENTER_HORIZONTAL);
-                textView.setPadding(20,0,20,0);
+                textView.setPadding(0,0,0,0);
                 textView.setWidth(250);
+                textView.setTypeface(Typeface.SERIF);
+
                 if (file.getName().length()>8)
                 {
 //                    textView .setEllipsize(TextUtils.TruncateAt.MARQUEE);
@@ -261,68 +265,9 @@ public  class EaseFragment extends Fragment {
 
                 continue;
             }
-//            //if it's a new row, create a TableRow
-//            if (indexInRow==0)  tableRow=new TableRow(this);
-//            //create the button corresponding with name btnContent
-//            // and set its text and background color which will be transparent
-//            Button codeBtn = new Button( this );
-//            codeBtn.setText(btnContent);
-//            codeBtn.setBackgroundColor(Color.TRANSPARENT);
-//            //set the animation of a button when it's clicked
-//            codeBtn.setOnTouchListener(new View.OnTouchListener() {
-//                @Override
-//                public boolean onTouch(View v, MotionEvent event) {
-//                    switch (event.getAction()) {
-//                        case MotionEvent.ACTION_DOWN:
-//                            Animation animation = AnimationUtils.loadAnimation(showDireActivity.this, R.anim.nomal_to_large);
-//                            v.startAnimation(animation);
-//                            break;
-//                    }
-//                    return false;
-//                }
-//
-//            });
+
             BoomMenuButton menuButton=new BoomMenuButton(getContext());
-//            Drawable icon;
-//            //use different images for directory and pdf
-//            if (isFolder(filesPath+btnContent))
-//                icon=getResources().getDrawable(R.drawable.folder);
-//            else
-//                icon=getResources().getDrawable(R.drawable.pdf);
-            //set bound of icons, otherwise it won't be displayed
-//            icon.setBounds(0, 0, icon.getIntrinsicWidth(), icon.getIntrinsicHeight());
-//            codeBtn.setCompoundDrawables(codeBtn.getCompoundDrawables()[0],icon,codeBtn.getCompoundDrawables()[2],codeBtn.getCompoundDrawables()[0]);
-//            codeBtn.setOnClickListener( new View.OnClickListener( ) {
-//                @Override
-//                public void onClick(View v) {
-//                    if (isFolder(filesPath+btnContent))
-//                        startShowFolderActivity(filesPath+btnContent+"/");
-//                    else
-//                        startShowPdfActivity(filesPath+btnContent);                }
-//            });
 
-//            index++;
-
-//            tableRow.addView(codeBtn);
-//            //if it's the 3rd button of one row, add this row to the table
-//            if (indexInRow==2)  mButnsLayout.addView(tableRow);
-//            indexInRow=(indexInRow+1)%3;
-
-//            menuButton.setButtonBottomMargin(500);
-//            menuButton.setPieceHorizontalMargin(5000);
-//            menuButton.setLayoutParams(gl);
-
-//            ArrayList<BoomButtonBuilder> builders=new ArrayList<BoomButtonBuilder>();
-//            builders.add(BuilderManager.getSimpleCircleButtonBuilder());
-//            menuButton.setBuilders(builders);
-//            menuButton.setButtonHorizontalMargin(800);
-//            menuButton.setBoomEnum(PARABOLA_2 );
-//            menuButton.setButtonEnum(TextOutsideCircle);
-//            menuButton.setPiecePlaceEnum( DOT_3_3);
-//            menuButton.setOrderEnum(DEFAULT);
-//            menuButton.setHideEaseEnum(EaseOutSine);
-//            menuButton.setShowEaseEnum(EaseOutSine);
-//            menuButton.setButtonPlaceEnum(SC_4_2);
             Log.v("EaseActivity","creating the button ****************");
             menuButton.setButtonEnum(TextOutsideCircle);
             menuButton.setSubFiles(file.listFiles());
@@ -336,6 +281,10 @@ public  class EaseFragment extends Fragment {
             TextView textView=new TextView(getContext());
             textView.setText(file.getName());
             textView.setGravity(Gravity.CENTER_HORIZONTAL);
+            textView.setTypeface(Typeface.MONOSPACE);
+            textView.setPadding(0,10,0,0);
+            textView.setTextSize(18);
+
             LinearLayout linearLayout=new LinearLayout(getContext());
             linearLayout.addView(menuButton);
             linearLayout.addView(textView);
@@ -348,10 +297,7 @@ public  class EaseFragment extends Fragment {
             gl.leftMargin = 20;
 
 
-//            for (int i = 0; i < 9; i++)
-//                menuButton.addBuilder(BuilderManager.getSimpleCircleButtonBuilder());
 
-            //initBmb(menuButton);
             if(linearLayout.getParent() != null) {
                 ((ViewGroup)linearLayout.getParent()).removeView(linearLayout); // <- fix
             }

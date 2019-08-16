@@ -1817,6 +1817,7 @@ drawable fab_add
 drawable fab_menu_label_background
 drawable fastscroller_handle
 drawable file_generic
+drawable file_icon_button
 drawable goto_sd_card
 drawable graphpage2_135dp
 drawable graphpage2_regular
@@ -1905,6 +1906,7 @@ drawable ic_edit_black_24dp
 drawable ic_exit_to_app_white_24dp
 drawable ic_file_black_24dp
 drawable ic_file_blank_black_24dp
+drawable ic_file_blank_pink
 drawable ic_file_blank_white_24dp
 drawable ic_file_locked_black_24dp
 drawable ic_file_locked_white_24dp

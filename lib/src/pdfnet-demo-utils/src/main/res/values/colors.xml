@@ -39,7 +39,7 @@
     <!--<color name="colorPrimary">#3F51B5</color>-->
     <color name="colorPrimary">#70F3FF</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#177CB0</color>
     <color name="windowBackground">#f2f4f5</color>
 
     <color name="main_normal_black_color">#666666</color>

@@ -17,11 +17,12 @@
     <dimen name="default_bmb_shadow_offset_y">3dp</dimen>
 
     <!--Button-->
-    <dimen name="default_bmb_button_radius">28dp</dimen>
+    <dimen name="default_bmb_button_radius">32dp</dimen>
     <integer name="default_bmb_button_enum">-1</integer>
     <bool name="default_bmb_background_effect">true</bool>
     <bool name="default_bmb_ripple_effect">true</bool>
-    <color name="default_bmb_normal_color">#00ff4081</color>
+    <!--<color name="default_bmb_normal_color">#00ff4081</color>-->
+    <color name="default_bmb_normal_color">#00177CB0</color>
     <color name="default_bmb_highlighted_color">#00000000</color>
     <color name="default_bmb_unable_color">#00000000</color>
     <bool name="default_bmb_draggable">false</bool>
