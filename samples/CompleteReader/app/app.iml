@@ -192,5 +192,9 @@
     <orderEntry type="module" module-name="PDFViewCtrlTools" />
     <orderEntry type="module" module-name="pdfnet-demo-utils" />
     <orderEntry type="module" module-name="PDFViewCtrlTools" />
+    <orderEntry type="module" module-name="pdfnet-demo-utils" />
+    <orderEntry type="module" module-name="PDFViewCtrlTools" />
+    <orderEntry type="module" module-name="pdfnet-demo-utils" />
+    <orderEntry type="module" module-name="PDFViewCtrlTools" />
   </component>
 </module>

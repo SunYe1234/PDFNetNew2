@@ -116,7 +116,6 @@ public class EaseActivityWithFragment extends Fragment implements
         mSearchView=view.findViewById(R.id.searchView);
         mSearchView.setOnQueryTextListener(this);
 
-
         mSearchView.clearFocus();
 //        viewCreated.getBackground().setAlpha(130);
 //        if (getActivity().getIntent().getStringExtra("path")!=null)

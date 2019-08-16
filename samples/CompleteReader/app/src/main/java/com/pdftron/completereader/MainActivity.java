@@ -13,8 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -88,12 +91,16 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }*/
 
+//        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+//        Transition fade = TransitionInflater.from(this).inflateTransition(R.transition.fade);
+//        getWindow().setExitTransition(fade);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         setContentView(R.layout.activity_main1);
 //        TextView textView=(TextView)findViewById(R.id.loginText);
 //        textView.setTextSize(30);
 
-
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
         //extSdcardPath is the path of the external SD card which depends on the exact SD card we use
@@ -424,9 +431,10 @@ public class MainActivity extends AppCompatActivity {
         if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
             // 获得当前得到焦点的View，一般情况下就是EditText（特殊情况就是轨迹球或者实体按键会移动焦点）
             View view = this.getCurrentFocus();
-            if (isShouldHideInput(view, motionEvent)) {
+//            if (isShouldHideInput(view, motionEvent)) {
                 closeKeyboard(view);
-            }
+//            }
+            view.clearFocus();
         }
         return super.dispatchTouchEvent(motionEvent);
     }

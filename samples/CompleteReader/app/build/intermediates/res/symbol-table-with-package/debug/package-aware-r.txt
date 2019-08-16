@@ -1055,6 +1055,7 @@ color gray97
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color hint_text_color
 color light_gray
 color main_black_color
 color main_blue_color
@@ -1770,7 +1771,9 @@ drawable breadcrumb_bg
 drawable btn_borderless
 drawable button
 drawable button_hollow_rectangle
+drawable button_hollow_rectangle_pressed
 drawable button_text_color_selector
+drawable button_txt_color
 drawable checker_background
 drawable checker_pattern
 drawable collapsing_toolbar_bottom_scrim
@@ -2052,6 +2055,7 @@ drawable permissions
 drawable permissions_land
 drawable piece
 drawable piece_dot
+drawable press_button
 drawable quickmenu_bg_rect
 drawable quickmenu_bg_rect_old_api
 drawable radio_checked_default
@@ -4871,6 +4875,7 @@ style HighlightPresetStyle2
 style HighlightPresetStyle3
 style HighlightPresetStyle4
 style MaterialProgressBarStyle
+style MyEditText
 style NavigationViewStyle
 style NoTitleTheme
 style Platform_AppCompat
@@ -5310,6 +5315,7 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+transition fade
 xml pdfnet_config
 xml provider_paths
 xml settings

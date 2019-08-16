@@ -5,10 +5,15 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -36,8 +41,14 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+//        Transition fade = TransitionInflater.from(this).inflateTransition(R.transition.fade);
+//        getWindow().setEnterTransition(fade);
+
         setContentView(R.layout.activity_register);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
 
 
         Register = (Button) findViewById(R.id.buttonRegister);
