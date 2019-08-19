@@ -28,12 +28,14 @@ import com.pdftron.demo.utils.FileListFilter;
 import com.pdftron.pdf.controls.PdfViewCtrlTabFragment;
 import com.pdftron.pdf.controls.PdfViewCtrlTabHostFragment;
 import com.pdftron.pdf.model.FileInfo;
+import com.pdftron.pdf.utils.FontAdapter;
 import com.pdftron.pdf.utils.PdfViewCtrlSettingsManager;
 import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 
 import static android.content.Context.INPUT_METHOD_SERVICE;
@@ -274,6 +276,14 @@ public class EaseActivityWithFragment extends Fragment implements
 
     @Override
     public boolean onQueryTextSubmit(String query) {
+
+
+        if (isInTheDirectory(query))
+        {
+            Toast.makeText(getActivity().getApplicationContext(), "You are already in its directory", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
         mFilterText=query;
         mPopulateFolderTask = new PopulateFolderTask(getContext(), new File(filesPath),
                 mFileInfoList, mFileListLock, getSortMode(), true, true, true, mSdCardFolderCache, this);
@@ -303,6 +313,24 @@ public class EaseActivityWithFragment extends Fragment implements
         handleResultsSearched(searchResult);
         return false;
     }
+
+    private boolean isInTheDirectory(String query)
+    {
+
+        EaseFragment currentFragment=(EaseFragment)getCurrentFragment();
+        String currentPath=currentFragment.getFilesPath();
+        ArrayList<String> files=new ArrayList<String>(Arrays.asList(new File(currentPath).list()));
+        for (String s :files)
+        {
+            //s=s.toLowerCase();
+            files.set(files.indexOf(s),s.toLowerCase());
+        }
+        return files.contains(query.toLowerCase());
+
+    }
+
+
+
     private Comparator<FileInfo> getSortMode(
     ) {
 
