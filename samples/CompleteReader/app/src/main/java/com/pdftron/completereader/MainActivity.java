@@ -31,6 +31,7 @@ import com.pdftron.completereader.loginSignup.RegisterActivity;
 import com.pdftron.completereader.loginSignup.SQLiteHelper;
 import com.pdftron.demo.app.AdvancedReaderActivity;
 import com.pdftron.demo.app.SimpleReaderActivity;
+import com.pdftron.demo.app.SysApplication;
 import com.pdftron.pdf.PDFNet;
 import com.pdftron.pdf.config.PDFViewCtrlConfig;
 import com.pdftron.pdf.config.ToolManagerBuilder;
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SysApplication.getInstance().addActivity(this);
+
         /*Intent intent = getIntent();
         Uri uri = intent.getData();
         try {

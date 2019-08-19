@@ -2,7 +2,9 @@ package com.pdftron.demo.boomMenu;
 
 import android.Manifest;
 //import android.app.Fragment;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -34,6 +36,7 @@ import android.widget.Toast;
 
 import com.pdftron.demo.R;
 import com.pdftron.demo.app.AdvancedReaderActivity;
+import com.pdftron.demo.app.MainActivity;
 import com.pdftron.demo.asynctask.PopulateFolderTask;
 import com.pdftron.demo.navigation.adapter.BaseFileAdapter;
 import com.pdftron.demo.navigation.adapter.LocalFileAdapter;
@@ -49,16 +52,21 @@ import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Comparator;
 
 import static android.content.Context.INPUT_METHOD_SERVICE;
 import static com.pdftron.demo.boomMenu.ButtonEnum.TextOutsideCircle;
 import static com.pdftron.pdf.controls.AnnotStyleDialogFragment.TAG;
+import static com.pdftron.pdf.controls.PdfViewCtrlTabHostFragment.currentUsersNameFileName;
 
 public  class EaseFragment extends Fragment {
 
     private static final int CACHED_SD_CARD_FOLDER_LIMIT = 25;
+    public static File UsersFile=null;
+    public static String usersNameFileName="UserName.txt";
 
     private GridLayout relativeLayout;
     private String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
@@ -203,6 +211,11 @@ public  class EaseFragment extends Fragment {
         int indexInRow=0;
         int index = 0;
         TableRow tableRow=null;
+        if (files==null||files.length==0)
+        {
+            Toast.makeText(getActivity().getApplicationContext(), "Sorry, you haven't any saved copies yet.", Toast.LENGTH_SHORT).show();
+
+        }
         for( final File file : files )
         {
             if (!file.isDirectory())
@@ -225,6 +238,26 @@ public  class EaseFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         onFileSelected(file,"",true);
+                    }
+                });
+                button.setOnLongClickListener(new View.OnLongClickListener()
+                {
+                    public boolean onLongClick(View v)
+                    {
+
+                        File parent=file.getParentFile();
+                        if (parent.getName().equals(getUserNameFromFile())) {
+                            dialog(file);
+//                            button.setVisibility(View.INVISIBLE);
+                            return true;
+                        }
+                        else
+                        {
+                            Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't delete the original file.", Toast.LENGTH_SHORT).show();
+
+                            return true;
+                        }
+
                     }
                 });
 //                MarqueeTextView textView=(MarqueeTextView)findViewById(R.id.textview);
@@ -587,6 +620,72 @@ public  class EaseFragment extends Fragment {
 
     }
 
+    private void dialog(final File file)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setMessage("Do you want to delete this document?");
+
+        builder.setTitle("");
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                boolean deleted=file.delete();
+
+
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
+
+
+    }
+    /*
+        get the  user name stored in username.txt under Files
+         */
+    public  String getUserNameFromFile()
+    {
+        File fileDir = getActivity().getFilesDir();
+
+        try {
+            File UsersName=new File(getActivity().getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
+            if (!UsersName.exists())
+                UsersName.createNewFile();
+            FileInputStream inputStream = getActivity().openFileInput(usersNameFileName);
+            UsersFile=new File(getActivity().getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
+//            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
+            // 一次读一个字符
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String usName="";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
+                // 但如果这两个字符分开显示时，会换两次行。
+                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    usName+=(char)tempchar;
+                }
+
+            }
+            reader.close();
+            return usName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
 
 
 

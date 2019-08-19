@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.pdftron.common.PDFNetException;
 import com.pdftron.demo.app.AdvancedReaderActivity;
 import com.pdftron.demo.app.SimpleReaderActivity;
+import com.pdftron.demo.app.SysApplication;
 import com.pdftron.pdf.PDFNet;
 import com.pdftron.pdf.config.PDFViewCtrlConfig;
 import com.pdftron.pdf.config.ToolManagerBuilder;
@@ -29,6 +30,8 @@ public class CompleteReaderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SysApplication.getInstance().addActivity(this);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 

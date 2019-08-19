@@ -247,6 +247,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         Logger.INSTANCE.LogV("LifeCycle", "Main.onCreate");
         super.onCreate(savedInstanceState);
+        SysApplication.getInstance().addActivity(this);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
@@ -1594,8 +1595,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 //            startActivityForResult(new Intent().setClass(this, SettingsActivity.class), RequestCode.SETTINGS);
 //        }
         else if (navItemId == R.id.item_exit) {
-            backToLogin();
-            finish();
+            //backToLogin();
+//            SysApplication.getInstance().exit();
+            dialog();
         }
         //if the button "Delete Account" is clicked
         else if (navItemId == R.id.item_delete_account) {
@@ -2742,6 +2744,37 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         return super.dispatchTouchEvent(event);
     }
+
+    private void dialog()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Do you want to exit?");
+
+        builder.setTitle("");
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                SysApplication.getInstance().exit();
+
+
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
+
+
+    }
+
 
 
 }

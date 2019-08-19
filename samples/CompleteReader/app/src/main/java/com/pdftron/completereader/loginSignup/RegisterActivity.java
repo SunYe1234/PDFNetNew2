@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.pdftron.completereader.MainActivity;
 import com.pdftron.completereader.R;
+import com.pdftron.demo.app.SysApplication;
 
 //import com.example.shiva.loginsignup.RegisterActivity
 
@@ -41,6 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SysApplication.getInstance().addActivity(this);
+
 
 //        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
