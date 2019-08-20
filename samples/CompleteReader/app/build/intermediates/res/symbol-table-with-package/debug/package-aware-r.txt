@@ -2739,6 +2739,7 @@ id layout_presets
 id layout_progress_label
 id layout_root
 id layout_thickness_group
+id ledbtscroll
 id left
 id line1
 id line3

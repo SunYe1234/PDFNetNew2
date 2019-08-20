@@ -22,6 +22,7 @@ import android.support.transition.Transition;
 import android.support.transition.TransitionManager;
 import android.support.v7.widget.AppCompatImageButton;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -40,6 +41,9 @@ import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.utils.ViewerUtils;
 
 import java.util.ArrayList;
+
+import static com.pdftron.pdf.controls.AnnotStyleDialogFragment.TAG;
+import static com.pdftron.pdf.controls.PdfViewCtrlTabFragment.sDebug;
 
 /**
  * The EditToolbar allows to edit/create an annotation such as freehand, polyline, polygon and cloud
@@ -161,11 +165,40 @@ public class EditToolbar extends InsectHandlerToolbar {
         mSelectedButtonId = R.id.controls_edit_toolbar_tool_style1;
         updateExpanded(getResources().getConfiguration().orientation);
     }
+    protected void hideSystemUI() {
+//        Activity activity = getActivity();
+//        final PdfViewCtrlTabFragment currentFragment = getCurrentPdfViewCtrlFragment();
+        View view = getRootView();
+//        if (activity == null || currentFragment == null || view == null) {
+//            return;
+//        }
 
+        // Set the IMMERSIVE flag.
+        // Set the content to appear under the system bars so that the content
+        // doesn't resize when the system bars hide and show.
+//        if (Utils.isKitKat() && PdfViewCtrlSettingsManager.getFullScreenMode(activity)) {
+        int oldFlags = view.getSystemUiVisibility();
+        int newFlags = oldFlags;
+
+        // Add the fullscreen system UI flags.
+        newFlags |= (View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                | View.SYSTEM_UI_FLAG_IMMERSIVE);
+
+        if (newFlags != oldFlags) {
+            view.setSystemUiVisibility(newFlags);
+            view.requestLayout(); // Force a layout invalidation.
+        }
+//        }
+
+        if (sDebug)
+            Log.d(TAG, "hide system UI called");
+    }
     /**
      * Shows the edit toolbar.
      */
     public void show() {
+        hideSystemUI();
         if (getWidth() != 0) {
             // otherwise the layout has not been yet set, wait for onLayout
             initViews();

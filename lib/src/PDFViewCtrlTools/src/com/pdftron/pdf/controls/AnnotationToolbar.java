@@ -5,6 +5,8 @@
 
 package com.pdftron.pdf.controls;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -29,6 +31,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.TooltipCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.SparseIntArray;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -71,6 +74,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import static com.pdftron.pdf.controls.AnnotStyleDialogFragment.TAG;
+import static com.pdftron.pdf.controls.PdfViewCtrlTabFragment.sDebug;
 import static com.pdftron.pdf.tools.ToolManager.ToolMode.INK_CREATE;
 import static com.pdftron.pdf.tools.ToolManager.ToolMode.RUBBER_STAMPER;
 import static com.pdftron.pdf.tools.ToolManager.ToolMode.SIGNATURE;
@@ -646,7 +651,43 @@ public class AnnotationToolbar extends InsectHandlerToolbar implements
         mDismissAfterExitEdit = false;
     }
 
+    /**
+     * Hides the system UI.
+     */
+    // This snippet hides the system bars.
+    // http://stackoverflow.com/a/33551538
+    @TargetApi(Build.VERSION_CODES.KITKAT)
+    protected void hideSystemUI() {
+//        Activity activity = getActivity();
+//        final PdfViewCtrlTabFragment currentFragment = getCurrentPdfViewCtrlFragment();
+        View view = getRootView();
+//        if (activity == null || currentFragment == null || view == null) {
+//            return;
+//        }
+
+        // Set the IMMERSIVE flag.
+        // Set the content to appear under the system bars so that the content
+        // doesn't resize when the system bars hide and show.
+//        if (Utils.isKitKat() && PdfViewCtrlSettingsManager.getFullScreenMode(activity)) {
+            int oldFlags = view.getSystemUiVisibility();
+            int newFlags = oldFlags;
+
+            // Add the fullscreen system UI flags.
+            newFlags |= (View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE);
+
+            if (newFlags != oldFlags) {
+                view.setSystemUiVisibility(newFlags);
+                view.requestLayout(); // Force a layout invalidation.
+            }
+//        }
+
+        if (sDebug)
+            Log.d(TAG, "hide system UI called");
+    }
     private void showAnnotationToolbar() {
+//        hideSystemUI();
         Transition slide = new Slide(Gravity.TOP).setDuration(ANIMATION_DURATION);
         slide.addListener(new Transition.TransitionListener() {
             @Override

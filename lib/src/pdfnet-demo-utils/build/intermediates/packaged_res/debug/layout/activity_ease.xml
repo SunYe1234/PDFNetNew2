@@ -11,6 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal"
     tools:context="com.pdftron.demo.boomMenu.EaseActivity">
 
     <!--<com.nightonke.boommenu.BoomMenuButton-->
@@ -194,10 +195,25 @@
         <!--android:queryHint="please input the file or directory name"-->
         <!--app:layout_constraintTop_toTopOf="parent"-->
         <!--tools:layout_editor_absoluteX="0dp" />-->
+    <ScrollView
+        android:id="@+id/ledbtscroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:scrollbars="vertical"
+        android:padding="10dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="80dp"
+        android:layout_gravity="center_horizontal"
+       >
     <GridLayout
         android:id="@+id/show_menu_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:columnCount="4"
@@ -233,4 +249,5 @@
         <!--android:alpha="0.8"/>-->
 
     </GridLayout>
+    </ScrollView>
 </RelativeLayout>

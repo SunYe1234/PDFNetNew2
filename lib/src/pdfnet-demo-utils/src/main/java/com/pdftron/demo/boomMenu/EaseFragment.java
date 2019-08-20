@@ -310,7 +310,7 @@ public  class EaseFragment extends Fragment {
                 LinearLayout linearLayout=new LinearLayout(getContext());
                 linearLayout.addView(button);
                 linearLayout.addView(textView);
-                linearLayout.setGravity(Gravity.CENTER_HORIZONTAL);
+                linearLayout.setGravity(Gravity.CENTER);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
 
 
@@ -327,6 +327,7 @@ public  class EaseFragment extends Fragment {
             menuButton.setButtonEnum(TextOutsideCircle);
             menuButton.setSubFiles(file.listFiles());
             menuButton.setBackgroundEffect(true);
+            menuButton.setForegroundGravity(Gravity.CENTER_HORIZONTAL);
             if (file.listFiles()!=null) {
 
                 menuButton.setPiecePlaceEnum(file.list().length);

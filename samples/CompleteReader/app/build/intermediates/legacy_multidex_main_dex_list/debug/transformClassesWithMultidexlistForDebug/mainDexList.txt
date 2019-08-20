@@ -315,6 +315,7 @@ com/google/gson/annotations/JsonAdapter.class
 com/google/gson/annotations/SerializedName.class
 com/google/gson/annotations/Since.class
 com/google/gson/annotations/Until.class
+com/pdftron/demo/app/SysApplication.class
 com/pdftron/demo/browser/FilesComponent.class
 com/pdftron/demo/browser/FilesUiEventBus.class
 com/pdftron/demo/utils/RecursiveFileObserver.class
