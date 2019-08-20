@@ -72,6 +72,8 @@ public  class EaseFragment extends Fragment {
     private String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
     private ArrayList<String> namesOfFiles;
     private File[] files;
+
+    private ArrayList<FileInfo> preDefinedFiles;
     private GridLayout.LayoutParams gl;
 
     private PdfViewCtrlTabHostFragment mPdfViewCtrlTabHostFragment;
@@ -155,6 +157,11 @@ public  class EaseFragment extends Fragment {
         this.filesPath=path;
     }
 
+    public void setFileList(ArrayList<FileInfo> files)
+    {
+        preDefinedFiles=files;
+    }
+
     public String getFilesPath()
     {
         return filesPath;
@@ -195,16 +202,31 @@ public  class EaseFragment extends Fragment {
 
 
         getPermission();
-        File home = new File(filesPath);//初始化File对象
-        files = home.listFiles();//噩梦结束了吗？
+        if (preDefinedFiles==null) {
+            File home = new File(filesPath);//初始化File对象
+            files = home.listFiles();//噩梦结束了吗？
 //        boolean exite=file.exists();
 //        String []names=file.list();
 //        this.namesOfFiles=new ArrayList<String>(Arrays.asList(names));
 //        numOfFile=namesOfFiles.size();
 
-        //filtrePDF();
-        generateBtnList(files);
+            //filtrePDF();
+            generateBtnList(files);
+        }
+        else {
+            generateBtnList(preDefinedFiles);
+        };
 
+    }
+    protected void generateBtnList( ArrayList<FileInfo> files ){
+        File[] preFiles=new File[files.size()];
+        int i=0;
+        for (FileInfo fileInfo:files)
+        {
+            preFiles[i]=fileInfo.getFile();
+            i++;
+        }
+        generateBtnList(preFiles);
     }
 
     protected void generateBtnList( File[] files ){

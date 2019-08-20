@@ -59,6 +59,7 @@ public class EaseActivityWithFragment extends Fragment implements
     protected ItemSelectionHelper mItemSelectionHelper;
     private FileListFilter<FileInfo> mFilter;
     private File searchResult;
+    private  ArrayList<FileInfo> searchResults;
     private PopulateFolderTask mPopulateFolderTask;
     private SearchView mSearchView;
     protected final LruCache<String, Boolean> mSdCardFolderCache = new LruCache<>(CACHED_SD_CARD_FOLDER_LIMIT);
@@ -309,8 +310,9 @@ public class EaseActivityWithFragment extends Fragment implements
             Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT).show();
             return false;
         }
-        searchResult=new File(mFilter.returnResults(query).get(0).getAbsolutePath());
-        handleResultsSearched(searchResult);
+//        searchResult=new File(mFilter.returnResults(query).get(0).getAbsolutePath());
+        searchResults=mFilter.returnResults(query);
+        handleResultsSearched(searchResults);
         return false;
     }
 
@@ -498,6 +500,28 @@ public class EaseActivityWithFragment extends Fragment implements
             return;
         EaseFragment easeFragment=new EaseFragment();
         easeFragment.setFilesPath(result.getParent());
+        changeFragment(easeFragment);
+        mSearchView.clearFocus();
+        mSearchView.setQuery("",false);
+
+
+
+    }
+    private void handleResultsSearched(ArrayList<FileInfo> results)
+    {
+//        if (results==null||results.size()==0) {
+//            Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if (results.size()>1)
+//        {
+//            Toast.makeText(getActivity().getApplicationContext(), "Several results found, please be more precise", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+        if (results==null)
+            return;
+        EaseFragment easeFragment=new EaseFragment();
+        easeFragment.setFileList(results);
         changeFragment(easeFragment);
         mSearchView.clearFocus();
         mSearchView.setQuery("",false);
