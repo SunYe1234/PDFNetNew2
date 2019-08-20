@@ -3533,12 +3533,13 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
         setToolbarsVisible(false);
         mAutoHideEnabled = autoHideEnabled;
 
-        if (Utils.isLollipop()) {
-            showSystemStatusBar();
-        } else {
-            showSystemUI();
-        }
+//        if (Utils.isLollipop()) {
+//            showSystemStatusBar();
+//        } else {
+//            showSystemUI();
+//        }
 
+        hideSystemUI();
         // Showing the annotation toolbar should be after hiding the other toolbars.
         final Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {
