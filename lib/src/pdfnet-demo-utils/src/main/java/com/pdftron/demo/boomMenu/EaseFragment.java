@@ -656,6 +656,7 @@ public  class EaseFragment extends Fragment {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 boolean deleted=file.delete();
+                reload();
 
 
             }
@@ -672,6 +673,20 @@ public  class EaseFragment extends Fragment {
         builder.create().show();
 
 
+    }
+
+    private void reload()
+    {
+        relativeLayout.removeAllViews();
+        File home = new File(filesPath);//初始化File对象
+        files = home.listFiles();//噩梦结束了吗？
+//        boolean exite=file.exists();
+//        String []names=file.list();
+//        this.namesOfFiles=new ArrayList<String>(Arrays.asList(names));
+//        numOfFile=namesOfFiles.size();
+
+        //filtrePDF();
+        generateBtnList(files);
     }
     /*
         get the  user name stored in username.txt under Files
