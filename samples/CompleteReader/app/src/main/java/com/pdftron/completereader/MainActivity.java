@@ -1,5 +1,6 @@
 package com.pdftron.completereader;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -19,6 +20,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dd.CircularProgressButton;
 import com.pdftron.common.PDFNetException;
 import com.pdftron.completereader.loginSignup.RegisterActivity;
 import com.pdftron.completereader.loginSignup.SQLiteHelper;
@@ -60,6 +63,8 @@ import java.util.Base64;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+
     Button LogInButton, RegisterButton ;
     EditText Email, Password ;
     String EmailHolder, PasswordHolder;
@@ -77,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     //public static String PDFcps="/storage/emulated/0/Download/PDFcps/";
     public static String PDFcps;
-    public static String cpsHome="/Download/PDFcps/";
+    public static String cpsHome;
     //public static String cpsHome;
 
     @Override
@@ -108,19 +113,26 @@ public class MainActivity extends AppCompatActivity {
 
         //extSdcardPath is the path of the external SD card which depends on the exact SD card we use
         String extSdcardPath = getExtSDCardPath();
+//        cpsHome=getFilesDir();
 
         //intnStoragePath is the path of the internal storage of the tablet
         String intnStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
 
         //create the path of PDFcps of all users, cpsHome is the name of root directory where we save users directories
         //cpsHome is "/Download/PDFcps/" by default, it needs to be modified manually if we want to change it
-        PDFcps=intnStoragePath+cpsHome;
+//        PDFcps=intnStoragePath+cpsHome;
+        PDFcps=getFilesDir().getAbsolutePath()+"/PDFcps";
+        File cps=new File(PDFcps);
+        if (!cps.exists())
+        {
+            cps.mkdir();
+        }
 
         View viewCreated =findViewById(R.id.activity_main);
         viewCreated.getBackground().setAlpha(200);
-        LogInButton = (Button)findViewById(R.id.buttonLogin);
+        LogInButton = (Button) findViewById(R.id.buttonLogin);
 
-        RegisterButton = (Button)findViewById(R.id.buttonRegister);
+        RegisterButton = (Button) findViewById(R.id.buttonRegister);
 
         Email = (EditText)findViewById(R.id.editEmail);
         Password = (EditText)findViewById(R.id.editPassword);
@@ -162,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
     /*
     save the current user name to username.txt under Files and create user folder if it doesn't exist yet

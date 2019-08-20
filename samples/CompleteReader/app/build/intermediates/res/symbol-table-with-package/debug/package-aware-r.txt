@@ -361,6 +361,20 @@ attr counterEnabled
 attr counterMaxLength
 attr counterOverflowTextAppearance
 attr counterTextAppearance
+attr cpb_colorIndicator
+attr cpb_colorIndicatorBackground
+attr cpb_colorProgress
+attr cpb_cornerRadius
+attr cpb_iconComplete
+attr cpb_iconError
+attr cpb_paddingProgress
+attr cpb_selectorComplete
+attr cpb_selectorError
+attr cpb_selectorIdle
+attr cpb_textComplete
+attr cpb_textError
+attr cpb_textIdle
+attr cpb_textProgress
 attr customNavigationLayout
 attr defaultQueryHint
 attr dialogCornerRadius
@@ -728,6 +742,16 @@ attr ruler_precision
 attr ruler_presets
 attr ruler_translate_unit
 attr ruler_translate_value
+attr rv_alpha
+attr rv_centered
+attr rv_color
+attr rv_framerate
+attr rv_rippleDuration
+attr rv_ripplePadding
+attr rv_type
+attr rv_zoom
+attr rv_zoomDuration
+attr rv_zoomScale
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -1005,6 +1029,17 @@ color controls_thumbnails_view_current_indicator
 color controls_thumbnails_view_image_foreground
 color controls_thumbnails_view_page_label_background
 color controls_thumbnails_view_toolbar_bg
+color cpb_blue
+color cpb_blue_dark
+color cpb_complete_state_selector
+color cpb_error_state_selector
+color cpb_green
+color cpb_green_dark
+color cpb_grey
+color cpb_idle_state_selector
+color cpb_red
+color cpb_red_dark
+color cpb_white
 color dark_gray
 color default_bmb_dimColor
 color default_bmb_highlighted_color
@@ -1122,6 +1157,7 @@ color purple
 color qm_item_color
 color recyclerview_header_bg
 color red
+color rippelColor
 color ripple_material_dark
 color ripple_material_light
 color scrim_insets_frame_layout_foreground
@@ -1331,6 +1367,7 @@ dimen controls_thumbnail_slider_scrubber_height
 dimen controls_thumbnail_slider_scrubber_width
 dimen controls_thumbnails_view_grid_spacing
 dimen controls_thumbnails_view_image_width
+dimen cpb_stroke_width
 dimen crop_dialog_margin
 dimen default_bmb_bottomHamButtonTopMargin
 dimen default_bmb_buttonBottomMargin
@@ -1810,6 +1847,7 @@ drawable controls_toolbar_spinner_selected_blue
 drawable controls_toolbar_spinner_selected_dark
 drawable corner6_gray
 drawable corner_gray
+drawable cpb_background
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -2072,6 +2110,7 @@ drawable rect_fill_transparent_24dp
 drawable reflow_mode
 drawable restore
 drawable ring_stroke_preview
+drawable ripple_foreground
 drawable rounded_corners
 drawable rounded_corners_left
 drawable rounded_corners_right
@@ -2543,6 +2582,7 @@ id doc_tabs
 id document_content_view
 id done_button
 id dot_layout
+id doubleRipple
 id down
 id drawer_layout
 id drawing_view
@@ -3056,6 +3096,7 @@ id record_icon_label
 id record_length
 id record_preview
 id record_preview_label
+id rectangle
 id recycler_view
 id recycler_view_form_fill
 id recyclerview_control_annotation
@@ -3137,6 +3178,7 @@ id simpleCircle
 id simpleReaderButton
 id simpleReaderImage
 id simpleReaderLayout
+id simpleRipple
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -3908,6 +3950,7 @@ string custom_stamp_pointing_right
 string custom_stamp_rounded_rectangle
 string custom_stamp_text_hint
 string date
+string define_circularprogressbutton
 string delete
 string deleting_file_wait
 string dialog_about_body
@@ -4154,6 +4197,15 @@ string import_webpage_error_message_content
 string import_webpage_error_message_title
 string import_webpage_wait
 string invalid_number
+string library_circularprogressbutton_author
+string library_circularprogressbutton_authorWebsite
+string library_circularprogressbutton_isOpenSource
+string library_circularprogressbutton_libraryDescription
+string library_circularprogressbutton_libraryName
+string library_circularprogressbutton_libraryVersion
+string library_circularprogressbutton_libraryWebsite
+string library_circularprogressbutton_licenseId
+string library_circularprogressbutton_repositoryLink
 string list_example
 string list_loading_res_name
 string listener_example
@@ -5241,6 +5293,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipStartPadding chipStrokeColor chipStrokeWidth closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible hideMotionSpec iconEndPadding iconStartPadding rippleColor showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
+styleable CircularProgressButton cpb_colorIndicator cpb_colorIndicatorBackground cpb_colorProgress cpb_cornerRadius cpb_iconComplete cpb_iconError cpb_paddingProgress cpb_selectorComplete cpb_selectorError cpb_selectorIdle cpb_textComplete cpb_textError cpb_textIdle cpb_textProgress
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorHuePickerWheel ring_color ring_shadow_radius value_pointer_radius wheel_width
@@ -5294,6 +5347,7 @@ styleable QuickMenuItem android_background android_tint android_textAllCaps icon
 styleable RectGroupAnnotEdit fillColor fillOpacity
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
+styleable RippleView rv_alpha rv_centered rv_color rv_framerate rv_rippleDuration rv_ripplePadding rv_type rv_zoom rv_zoomDuration rv_zoomScale
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon

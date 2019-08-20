@@ -111,7 +111,6 @@
         android:textColor="@drawable/button_txt_color"
         android:textSize="15dp"
         />
-
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="fill_parent"

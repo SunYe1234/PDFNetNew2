@@ -236,6 +236,7 @@ public  class EaseFragment extends Fragment {
         if (files==null||files.length==0)
         {
             Toast.makeText(getActivity().getApplicationContext(), "Sorry, you haven't any saved copies yet.", Toast.LENGTH_SHORT).show();
+            return;
 
         }
         for( final File file : files )

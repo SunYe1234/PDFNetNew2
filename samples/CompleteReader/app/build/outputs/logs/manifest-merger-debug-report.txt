@@ -11,6 +11,8 @@ ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteRead
 INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-406:12
 INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-406:12
 INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:2:1-406:12
+MERGED from [com.github.traex.rippleeffect:library:1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/689746dfdc692935798cd5d268461609/AndroidManifest.xml:2:1-14:12
+MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/992e7c42aeb8fbf24bbecfd5c50332c3/AndroidManifest.xml:2:1-14:12
 MERGED from [com.android.support:multidex:1.0.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/48798f2807d5f1a959c5a7d1db1904ad/AndroidManifest.xml:17:1-22:12
 MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-38:12
 MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
@@ -25,7 +27,6 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/yezi
 MERGED from [android.arch.lifecycle:extensions:1.1.1] /Users/yezi/.gradle/caches/transforms-2/files-2.1/fb0dc07c20f083f1549d34360f1aa474/AndroidManifest.xml:17:1-30:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/cc4524038507bbdf013879f241c2b1a1/AndroidManifest.xml:15:1-20:12
 MERGED from [com.facebook.fresco:fresco:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/82160cd7adc06d5d97365eed4cd7a5df/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/842fbb0ebd053544987bd03232011b22/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/aa29f5a96f9d7953a1300cd96f6cde1b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/2cf1a1d685f86ccde1fecdb4f30873c8/AndroidManifest.xml:17:1-22:12
@@ -54,6 +55,7 @@ MERGED from [com.android.support:documentfile:28.0.0] /Users/yezi/.gradle/caches
 MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/ac4638cd182112993333ff17516aad0a/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:print:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6164a9509c28d5e14271855fd6592d65/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3683265b4736a89332962b0b4d1b1f03/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:drawee:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/b3f457611cb7cb1cf1ae3913356f6252/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:animated-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bdfb94a383e4032d1e610aa692c12944/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3a0ade860334f809d9323ff7d7367bd7/AndroidManifest.xml:2:1-9:12
@@ -102,6 +104,10 @@ ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteRead
 		ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:10:22-77
 application
 ADDED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml:12:5-404:19
+MERGED from [com.github.traex.rippleeffect:library:1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/689746dfdc692935798cd5d268461609/AndroidManifest.xml:12:5-20
+MERGED from [com.github.traex.rippleeffect:library:1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/689746dfdc692935798cd5d268461609/AndroidManifest.xml:12:5-20
+MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/992e7c42aeb8fbf24bbecfd5c50332c3/AndroidManifest.xml:12:5-20
+MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/992e7c42aeb8fbf24bbecfd5c50332c3/AndroidManifest.xml:12:5-20
 MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-36:19
 MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-36:19
 MERGED from [:PDFViewCtrlTools] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-28:19
@@ -246,6 +252,10 @@ uses-sdk
 INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
 INJECTED from /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/src/main/AndroidManifest.xml
+MERGED from [com.github.traex.rippleeffect:library:1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/689746dfdc692935798cd5d268461609/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.traex.rippleeffect:library:1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/689746dfdc692935798cd5d268461609/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/992e7c42aeb8fbf24bbecfd5c50332c3/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/992e7c42aeb8fbf24bbecfd5c50332c3/AndroidManifest.xml:8:5-10:41
 MERGED from [com.android.support:multidex:1.0.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/48798f2807d5f1a959c5a7d1db1904ad/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.3] /Users/yezi/.gradle/caches/transforms-2/files-2.1/48798f2807d5f1a959c5a7d1db1904ad/AndroidManifest.xml:20:5-43
 MERGED from [:pdfnet-demo-utils] /Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/library_manifest/debug/AndroidManifest.xml:6:5-8:41
@@ -274,8 +284,6 @@ MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/yezi/.gradle/caches/tr
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/cc4524038507bbdf013879f241c2b1a1/AndroidManifest.xml:18:5-43
 MERGED from [com.facebook.fresco:fresco:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/82160cd7adc06d5d97365eed4cd7a5df/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fresco:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/82160cd7adc06d5d97365eed4cd7a5df/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/842fbb0ebd053544987bd03232011b22/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/842fbb0ebd053544987bd03232011b22/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/aa29f5a96f9d7953a1300cd96f6cde1b/AndroidManifest.xml:20:5-44
@@ -332,6 +340,8 @@ MERGED from [com.android.support:print:28.0.0] /Users/yezi/.gradle/caches/transf
 MERGED from [com.android.support:print:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/6164a9509c28d5e14271855fd6592d65/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3683265b4736a89332962b0b4d1b1f03/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/3683265b4736a89332962b0b4d1b1f03/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/be243685aebe35b73b412cb76e126e08/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:drawee:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/b3f457611cb7cb1cf1ae3913356f6252/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:drawee:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/b3f457611cb7cb1cf1ae3913356f6252/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-base:1.2.0] /Users/yezi/.gradle/caches/transforms-2/files-2.1/bdfb94a383e4032d1e610aa692c12944/AndroidManifest.xml:5:5-7:41

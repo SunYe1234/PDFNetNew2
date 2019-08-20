@@ -1666,7 +1666,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     }
     private void deleteUserCopies()
     {
-        File currentUserCpsDirec=new File(usersFolderParentPath+getUserNameFromFile());
+        File currentUserCpsDirec=new File(getFilesDir().getAbsolutePath()+"/"+getUserNameFromFile());
         if (currentUserCpsDirec.isDirectory())
         {
             deleteAllFiles(currentUserCpsDirec);

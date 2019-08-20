@@ -194,7 +194,8 @@ public class EaseActivityWithFragment extends Fragment implements
 
     public String  getUserDirectory(String user)
     {
-        String usersFolderParentPath= Environment.getExternalStorageDirectory().getAbsolutePath()+cpsHome;
+//        String usersFolderParentPath= Environment.getExternalStorageDirectory().getAbsolutePath()+cpsHome;
+        String usersFolderParentPath=getActivity().getFilesDir().getAbsolutePath()+"/PDFcps/";
         String userFolder= usersFolderParentPath+user;
         return userFolder;
 //        EaseFragment parentFrag=new EaseFragment();

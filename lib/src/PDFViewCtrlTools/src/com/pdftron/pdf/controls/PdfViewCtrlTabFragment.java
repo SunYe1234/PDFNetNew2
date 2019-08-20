@@ -5163,7 +5163,12 @@ public class PdfViewCtrlTabFragment extends Fragment implements
     private File getExportDirectory() {
         //File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         String userName=getUserNameFromFile();
-        File folder = new File("/storage/emulated/0/Download/PDFcps/"+userName);
+//        File folder = new File("/storage/emulated/0/Download/PDFcps/"+userName);
+        File folder=new File(getActivity().getFilesDir().getAbsolutePath()+"/PDFcps/"+userName);
+        if (!folder.exists())
+        {
+            folder.mkdir();
+        }
         if (mViewerConfig != null && !Utils.isNullOrEmpty(mViewerConfig.getSaveCopyExportPath())) {
             File tempFolder = new File(mViewerConfig.getSaveCopyExportPath());
             if (tempFolder.exists() && tempFolder.isDirectory()) {
