@@ -51,6 +51,7 @@ public class EaseActivityWithFragment extends Fragment implements
 //    private static String cpsHome="/Download/PDFcps/";
     private  String user;
     public static String filesPath="/DOC SAT digitalisée/";
+    private String filesPathName="DOC SAT digitalisée";
 //    private String filesPath2="/DOC SAT digitalisée/";
 
 
@@ -166,7 +167,7 @@ public class EaseActivityWithFragment extends Fragment implements
             if (file != null) {
                 // File parent=new File(file.getParent());
                 String name = file.getName();
-                if (file.getName().equals("DOC SAT digitalisée") || (user != null && file.getName().equals(user))) {
+                if (file.getName().equals(filesPathName) || (user != null && file.getName().equals(user))) {
                     Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
 
                     return;
@@ -190,7 +191,7 @@ public class EaseActivityWithFragment extends Fragment implements
         {
             File file=currentPdfFragment.getCurrentFile();
             String name = file.getName();
-            if (file.getName().equals("DOC SAT digitalisée") || (user != null && file.getName().equals(user))) {
+            if (file.getName().equals(filesPathName) || (user != null && file.getName().equals(user))) {
                 Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
 
                 return;
