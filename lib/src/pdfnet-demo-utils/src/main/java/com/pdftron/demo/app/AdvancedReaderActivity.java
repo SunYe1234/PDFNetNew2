@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.storage.StorageManager;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -120,6 +121,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.lang.annotation.Target;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -184,8 +188,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     private static final int SELECT_NAVIGATION_ITEM_DELAY = 250; // ms
     private static final int TEACH_NAVIGATION_DRAWER_DELAY = 500; // ms
 
-    private static final String exPdfsPath="/storage/0403-0201/PDFs/";
-    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps/";
+    public static  String exPdfsPath="/DOC SAT digitalisée/";
+    public static boolean exPdfsPathFlag=false;
+//    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps/";
 
 
     private Fragment mCurrentFragment;
@@ -249,6 +254,11 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         SysApplication.getInstance().addActivity(this);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        if (!exPdfsPathFlag) {
+            exPdfsPath = getExtSDCardPath() + exPdfsPath;
+            exPdfsPathFlag=true;
+        }
 
 
         mDisposables = new CompositeDisposable();
@@ -2756,7 +2766,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                SysApplication.getInstance().exit();
+//                System.exit(0);
+               SysApplication.getInstance().exit();
 
 
             }
@@ -2776,5 +2787,45 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     }
 
 
+    public   String getExtSDCardPath()
+    {
+        StorageManager mStorageManager = (StorageManager) getSystemService(Context.STORAGE_SERVICE);
+        Class<?> storageVolumeClazz = null;
+        try {
+            storageVolumeClazz = Class.forName("android.os.storage.StorageVolume");
+            Method getVolumeList = mStorageManager.getClass().getMethod("getVolumeList");
+            Method getPath = storageVolumeClazz.getMethod("getPath");
+            Method isRemovable = storageVolumeClazz.getMethod("isRemovable");
+            Object result = getVolumeList.invoke(mStorageManager);
+            final int length = Array.getLength(result);
+            for (int i = 0; i < length; i++) {
+                Object storageVolumeElement = Array.get(result, i);
+                String path = (String) getPath.invoke(storageVolumeElement);
+                boolean removable = (Boolean) isRemovable.invoke(storageVolumeElement);
+                if (true == removable) {
+                    return path;
+                }
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+
+
+
+    }
+
+
+    public String getExPdfsPath()
+    {
+        return exPdfsPath;
+    }
 
 }

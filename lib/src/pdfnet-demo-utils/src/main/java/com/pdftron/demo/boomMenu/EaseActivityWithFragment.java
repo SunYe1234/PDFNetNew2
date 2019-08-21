@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.storage.StorageManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
@@ -34,6 +35,9 @@ import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 
 import java.io.File;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -44,9 +48,11 @@ public class EaseActivityWithFragment extends Fragment implements
         BaseFileAdapter.AdapterListener, PopulateFolderTask.Callback,
         SearchView.OnQueryTextListener {
     private EaseFragment formerFragment;
-    private static String cpsHome="/Download/PDFcps/";
+//    private static String cpsHome="/Download/PDFcps/";
     private  String user;
-    private String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
+    public static String filesPath="/DOC SAT digitalisée/";
+//    private String filesPath2="/DOC SAT digitalisée/";
+
 
 
     private static final int CACHED_SD_CARD_FOLDER_LIMIT = 25;
@@ -88,8 +94,13 @@ public class EaseActivityWithFragment extends Fragment implements
         super.onCreate(savedInstanceState);
 //        closeKeybord(getActivity());
         //setContentView(R.layout.activity_ease_fragment);
+        filesPath=getExtSDCardPath()+filesPath;
         if (savedInstanceState == null) {
             EaseFragment easeFragment=new EaseFragment();
+            easeFragment.setFilesPath(AdvancedReaderActivity.exPdfsPath);
+//            Toast.makeText(getActivity().getApplicationContext(), "In the EaseActivity: exPdfsPath="+AdvancedReaderActivity.exPdfsPath, Toast.LENGTH_SHORT).show();
+
+//            EaseFragment easeFragment=EaseFragment.newInstance();
             if (user!=null)
                 easeFragment.setFilesPath(getUserDirectory(user));
 //            getSupportFragmentManager().beginTransaction()
@@ -158,6 +169,16 @@ public class EaseActivityWithFragment extends Fragment implements
                 if (file.getName().equals("DOC SAT digitalisée") || (user != null && file.getName().equals(user))) {
                     Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
 
+                    return;
+                }
+                if (currentFragment.getFilesPath().equals("searched results"))
+                {
+//                    String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
+                    EaseFragment parentFrag = new EaseFragment();
+                    parentFrag.setFilesPath(AdvancedReaderActivity.exPdfsPath);
+//                    EaseFragment parentFrag=EaseFragment.newInstance();
+
+                    getChildFragmentManager().beginTransaction().replace(R.id.frameLayout, parentFrag).commit();
                     return;
                 }
                 EaseFragment parentFrag = new EaseFragment();
@@ -287,7 +308,7 @@ public class EaseActivityWithFragment extends Fragment implements
         }
 
         mFilterText=query;
-        mPopulateFolderTask = new PopulateFolderTask(getContext(), new File(filesPath),
+        mPopulateFolderTask = new PopulateFolderTask(getContext(), new File(AdvancedReaderActivity.exPdfsPath),
                 mFileInfoList, mFileListLock, getSortMode(), true, true, true, mSdCardFolderCache, this);
         mPopulateFolderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         mFilter=(FileListFilter<FileInfo>) mAdapter.getFilter();
@@ -523,12 +544,54 @@ public class EaseActivityWithFragment extends Fragment implements
             return;
         EaseFragment easeFragment=new EaseFragment();
         easeFragment.setFileList(results);
+        easeFragment.setFilesPath("searched results");
         changeFragment(easeFragment);
         mSearchView.clearFocus();
         mSearchView.setQuery("",false);
 
 
 
+    }
+
+
+    public   String getExtSDCardPath()
+    {
+        StorageManager mStorageManager = (StorageManager) getActivity().getSystemService(Context.STORAGE_SERVICE);
+        Class<?> storageVolumeClazz = null;
+        try {
+            storageVolumeClazz = Class.forName("android.os.storage.StorageVolume");
+            Method getVolumeList = mStorageManager.getClass().getMethod("getVolumeList");
+            Method getPath = storageVolumeClazz.getMethod("getPath");
+            Method isRemovable = storageVolumeClazz.getMethod("isRemovable");
+            Object result = getVolumeList.invoke(mStorageManager);
+            final int length = Array.getLength(result);
+            for (int i = 0; i < length; i++) {
+                Object storageVolumeElement = Array.get(result, i);
+                String path = (String) getPath.invoke(storageVolumeElement);
+                boolean removable = (Boolean) isRemovable.invoke(storageVolumeElement);
+                if (true == removable) {
+                    return path;
+                }
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+
+
+
+    }
+
+    public String getFilesPath()
+    {
+        return filesPath;
     }
 
 

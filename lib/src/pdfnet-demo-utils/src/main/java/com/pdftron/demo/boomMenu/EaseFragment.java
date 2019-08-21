@@ -11,6 +11,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.storage.StorageManager;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -54,6 +55,9 @@ import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -69,7 +73,8 @@ public  class EaseFragment extends Fragment {
     public static String usersNameFileName="UserName.txt";
 
     private GridLayout relativeLayout;
-    private String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
+//    private String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
+    private  String filesPath;
     private ArrayList<String> namesOfFiles;
     private File[] files;
 
@@ -94,12 +99,22 @@ public  class EaseFragment extends Fragment {
 
     private  static  EaseActivityWithFragment parentFragment;
 
+    private static boolean firstRun;
+
+
+//    public static EaseFragment newInstance(){
+//        EaseFragment easeFragment=new EaseFragment();
+//        easeFragment.filesPath2=easeFragment.getExtSDCardPath()+easeFragment.filesPath2;
+//        return easeFragment;
+//    }
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         parentFragment=(EaseActivityWithFragment) getParentFragment();
+//        filesPath=parentFragment.getExtSDCardPath()+filesPath;
+//        filesPath=getExtSDCardPath()+filesPath;
        // setContentView(R.layout.activity_ease);
 //        View view=findViewById(R.id.activity_ease);
 //        view.getBackground().setAlpha(130);
@@ -235,7 +250,10 @@ public  class EaseFragment extends Fragment {
         TableRow tableRow=null;
         if (files==null||files.length==0)
         {
+
             Toast.makeText(getActivity().getApplicationContext(), "Sorry, you haven't any saved copies yet.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity().getApplicationContext(), filesPath, Toast.LENGTH_SHORT).show();
+
             return;
 
         }
