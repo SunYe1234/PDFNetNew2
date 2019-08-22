@@ -344,6 +344,8 @@ public class EaseActivityWithFragment extends Fragment implements
 
         EaseFragment currentFragment=(EaseFragment)getCurrentFragment();
         String currentPath=currentFragment.getFilesPath();
+        if (currentPath.equals("searched results"))
+            currentPath=getExtSDCardPath()+"/"+filesPathName;
         ArrayList<String> files=new ArrayList<String>(Arrays.asList(new File(currentPath).list()));
         for (String s :files)
         {
