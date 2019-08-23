@@ -493,7 +493,7 @@ public  class EaseFragment extends Fragment {
                     int height = display.getHeight();
 
                     Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT);
-                    toast.setGravity(Gravity.TOP, 0, 3*height / 4);
+//                    toast.setGravity(Gravity.TOP, 0, 3*height / 4);
                     toast.setDuration(Toast.LENGTH_LONG);
                     toast.show();
 

@@ -368,19 +368,19 @@ public class PiecePlaceManager {
                 pos.add(point(0, vm*2 + r*4));
                 break;
             case DOT_12:
-                pos.add(point(-hm - r_2_0, -vm - r_2_0));
-                pos.add(point(0, -vm - r_2_0));
-                pos.add(point(+hm + r_2_0, -vm - r_2_0));
-                pos.add(point(-hm - r_2_0, 0));
-                pos.add(point(0, 0));
-                pos.add(point(+hm + r_2_0, 0));
-                pos.add(point(-hm - r_2_0, +vm + r_2_0));
-                pos.add(point(0, +vm + r_2_0));
-                pos.add(point(+hm + r_2_0, +vm + r_2_0));
+                pos.add(point(-hm - r_2_0, -vm - r_2_0 -r));
+                pos.add(point(0, -vm - r_2_0 - r));
+                pos.add(point(+hm + r_2_0, -vm - r_2_0 -r));
+                pos.add(point(-hm - r_2_0, 0 -r));
+                pos.add(point(0, 0-r));
+                pos.add(point(+hm + r_2_0, 0-r));
+                pos.add(point(-hm - r_2_0, +vm + r_2_0 -r));
+                pos.add(point(0, +vm + r_2_0 - r));
+                pos.add(point(+hm + r_2_0, +vm + r_2_0 -r));
 
-                pos.add(point(-hm - r_2_0, +vm*2 +r*4));
-                pos.add(point(0, vm*2 + r*4));
-                pos.add(point(hm + r_2_0, +vm*2 +r*4));
+                pos.add(point(-hm - r_2_0, +vm*2 +r*4 -r));
+                pos.add(point(0, vm*2 + r*4 - r));
+                pos.add(point(hm + r_2_0, +vm*2 +r*4 -r));
                 break;
 
             case Custom:
