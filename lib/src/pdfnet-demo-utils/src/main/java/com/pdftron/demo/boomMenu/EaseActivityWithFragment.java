@@ -317,7 +317,7 @@ public class EaseActivityWithFragment extends Fragment implements
         mFilter=(FileListFilter<FileInfo>) mAdapter.getFilter();
         mFilter.filter(query);
         try {
-            Thread.sleep(200);
+            Thread.sleep(1000);
         }
         catch (Exception e)
         {

@@ -357,7 +357,13 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
             public void onClick(View v) {
                 if (subFiles==null||subFiles.length==0)
                     Toast.makeText(getContext(), "no documents inside", Toast.LENGTH_SHORT).show();
-                else boom();
+                else if (subFiles.length<12)
+                    boom();
+                else {
+                    EaseFragment easeFragment=new EaseFragment();
+                    easeFragment.setFilesPath(subFiles[0].getParentFile().getAbsolutePath());
+                    ((EaseActivityWithFragment)(EaseFragment.getFatherFragment())).changeFragment(easeFragment);
+                }
             }
         });
         initDraggableTouchListener();
@@ -441,7 +447,7 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
         checkAutoBoom();
     }
 
-    private void doLayoutJobs() {
+    public void doLayoutJobs() {
         if (uninitializedBoomButtons()) return;
         clearPieces();
         createPieces();
@@ -1082,7 +1088,8 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
 //        else return piecePlaceEnum.pieceNumber();
         if (subFiles==null)
             return 0;
-        else return subFiles.length;
+        else if (subFiles.length<12)return subFiles.length;
+        else return 12;
     }
 
     @Override

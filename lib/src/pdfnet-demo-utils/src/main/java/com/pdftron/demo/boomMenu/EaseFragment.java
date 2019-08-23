@@ -40,6 +40,8 @@ import com.pdftron.demo.R;
 import com.pdftron.demo.app.AdvancedReaderActivity;
 import com.pdftron.demo.app.MainActivity;
 import com.pdftron.demo.asynctask.PopulateFolderTask;
+import com.pdftron.demo.boomMenu.BoomButtons.ButtonPlaceEnum;
+import com.pdftron.demo.boomMenu.Piece.PiecePlaceEnum;
 import com.pdftron.demo.navigation.adapter.BaseFileAdapter;
 import com.pdftron.demo.navigation.adapter.LocalFileAdapter;
 import com.pdftron.demo.utils.FileInfoComparator;
@@ -365,6 +367,13 @@ public  class EaseFragment extends Fragment {
             Log.v("EaseActivity","creating the button ****************");
             menuButton.setButtonEnum(TextOutsideCircle);
             menuButton.setSubFiles(file.listFiles());
+            if (file.listFiles().length>12)
+            {
+                menuButton.setPiecePlaceEnum(PiecePlaceEnum.DOT_12);
+                menuButton.setButtonPlaceEnum(ButtonPlaceEnum.SC_12);
+                menuButton.doLayoutJobs();
+            }
+
             menuButton.setBackgroundEffect(true);
             menuButton.setForegroundGravity(Gravity.CENTER_HORIZONTAL);
             if (file.listFiles()!=null) {
