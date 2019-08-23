@@ -1,8 +1,11 @@
 package com.pdftron.completereader;
 
 import android.animation.ValueAnimator;
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
@@ -16,6 +19,7 @@ import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -85,10 +89,14 @@ public class MainActivity extends AppCompatActivity {
     public static String cpsHome;
     //public static String cpsHome;
 
+    public static final int FLAG_HOMEKEY_DISPATCHED = 0x80000000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SysApplication.getInstance().addActivity(this);
+
+
 
         /*Intent intent = getIntent();
         Uri uri = intent.getData();
@@ -100,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
 //        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 //        Transition fade = TransitionInflater.from(this).inflateTransition(R.transition.fade);
 //        getWindow().setExitTransition(fade);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -487,6 +495,69 @@ public class MainActivity extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager) currentFocus.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         boolean active=imm.isActive();
+    }
+
+
+//    @Override
+//    public void onAttachedToWindow()
+//    {
+//        this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+//        super.onAttachedToWindow();
+//    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+        Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
+            return true;
+        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
+            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
+                    Toast.LENGTH_LONG).show();
+// 屏蔽Home键
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void onPause()
+    {
+        super.onPause();
+        new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                Process logcatProcess = null;
+                BufferedReader bufferedReader = null;
+                try
+                {
+/** 获取系统logcat日志信息 */
+                    logcatProcess = Runtime.getRuntime().exec(new String[] {"logcat", "ActivityManager:I *:S"});
+                    bufferedReader = new BufferedReader(new InputStreamReader(logcatProcess.getInputStream()));
+
+                    String line;
+
+                    while ((line = bufferedReader.readLine()) != null)
+                    {
+                        if (line.indexOf("cat=[android.intent.category.HOME]") > 0)
+                        {
+/** 这里可以处理你对点击Home的操作哦 我这里是完全退出应用*/
+                            Toast.makeText(getApplicationContext(), "found HOME Key log",Toast.LENGTH_LONG);
+
+
+                        }
+                    }
+
+                }
+                catch (Exception e)
+                {
+
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
 

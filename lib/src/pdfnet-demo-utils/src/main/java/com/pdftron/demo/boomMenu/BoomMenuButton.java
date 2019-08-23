@@ -19,6 +19,8 @@ import android.os.Build;
 import android.os.PowerManager;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -1086,7 +1088,11 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
     @Override
     public void onButtonClick(int index, BoomButton boomButton) {
         if (subFiles==null||subFiles.length==0) {
-            Toast.makeText(getContext(), "no documents inside", Toast.LENGTH_SHORT).show();
+            Toast toast=Toast.makeText(getContext(), "no documents inside", Toast.LENGTH_SHORT);
+//            toast.setGravity(Gravity.CLIP_HORIZONTAL,0,0);
+            toast.show();
+
+
             return;
         }
         if (isAnimating()) return;

@@ -31247,8 +31247,9 @@ public final class R {
     public static final int fade=0x7f150000;
   }
   public static final class xml {
-    public static final int pdfnet_config=0x7f160000;
-    public static final int provider_paths=0x7f160001;
-    public static final int settings=0x7f160002;
+    public static final int device=0x7f160000;
+    public static final int pdfnet_config=0x7f160001;
+    public static final int provider_paths=0x7f160002;
+    public static final int settings=0x7f160003;
   }
 }

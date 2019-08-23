@@ -9,6 +9,8 @@ import android.os.storage.StorageManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -330,7 +332,15 @@ public class EaseActivityWithFragment extends Fragment implements
         ArrayList<FileInfo> results=mFilter.returnResults(query);
         if (results==null||results.size()==0)
         {
-            Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT).show();
+
+            Display display = getActivity().getWindowManager().getDefaultDisplay();
+            int height = display.getHeight();
+            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.TOP, 0, 3*height / 4);
+            toast.setDuration(Toast.LENGTH_LONG);
+            toast.show();
+
             return false;
         }
 //        searchResult=new File(mFilter.returnResults(query).get(0).getAbsolutePath());

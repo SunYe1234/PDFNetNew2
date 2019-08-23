@@ -5385,6 +5385,6 @@ public final class R {
     public static final class xml {
         private xml() {}
 
-        public static final int provider_paths = 0x7f160001;
+        public static final int provider_paths = 0x7f160002;
     }
 }

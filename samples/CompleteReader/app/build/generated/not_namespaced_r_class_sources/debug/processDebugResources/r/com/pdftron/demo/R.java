@@ -6452,8 +6452,8 @@ public final class R {
     public static final class xml {
         private xml() {}
 
-        public static final int pdfnet_config = 0x7f160000;
-        public static final int provider_paths = 0x7f160001;
-        public static final int settings = 0x7f160002;
+        public static final int pdfnet_config = 0x7f160001;
+        public static final int provider_paths = 0x7f160002;
+        public static final int settings = 0x7f160003;
     }
 }

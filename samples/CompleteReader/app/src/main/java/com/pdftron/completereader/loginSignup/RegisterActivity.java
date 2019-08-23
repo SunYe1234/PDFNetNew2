@@ -11,6 +11,7 @@ import android.text.TextUtils;
 
 import android.transition.Transition;
 import android.transition.TransitionInflater;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -332,7 +333,21 @@ public class RegisterActivity extends AppCompatActivity {
         boolean active=imm.isActive();
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
 
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
+            return true;
+        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
+            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
+                    Toast.LENGTH_LONG).show();
+// 屏蔽Home键
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
 
 }

@@ -20,6 +20,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.util.LruCache;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -251,8 +252,19 @@ public  class EaseFragment extends Fragment {
         if (files==null||files.length==0)
         {
 
-            Toast.makeText(getActivity().getApplicationContext(), "Sorry, you haven't any saved copies yet.", Toast.LENGTH_SHORT).show();
-            Toast.makeText(getActivity().getApplicationContext(), filesPath, Toast.LENGTH_SHORT).show();
+//            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, you haven't any saved copies yet.", Toast.LENGTH_SHORT);
+//            toast.setGravity(Gravity.CENTER, 0, 0);
+//            toast.setDuration(Toast.LENGTH_LONG);
+//            toast.show();
+
+            Display display = getActivity().getWindowManager().getDefaultDisplay();
+//            int height = display.getHeight();
+
+            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Oups, you haven't any saved copies yet.", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+//            toast.setDuration(Toast.LENGTH_LONG);
+            toast.show();
+//            Toast.makeText(getActivity().getApplicationContext(), filesPath, Toast.LENGTH_SHORT).show();
 
             return;
 
@@ -294,7 +306,15 @@ public  class EaseFragment extends Fragment {
                         }
                         else
                         {
-                            Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't delete the original file.", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't delete the original file.", Toast.LENGTH_SHORT).show();
+                            Display display = getActivity().getWindowManager().getDefaultDisplay();
+                            int height = display.getHeight();
+
+                            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't delete the original file.", Toast.LENGTH_SHORT);
+//                            toast.setGravity(Gravity.TOP, 0, 3*height / 4);
+                            toast.setGravity(Gravity.CENTER,0,0);
+                            toast.setDuration(Toast.LENGTH_LONG);
+                            toast.show();
 
                             return true;
                         }
@@ -458,7 +478,16 @@ public  class EaseFragment extends Fragment {
                 String name=file.getName();
                 String type=name.substring(name.lastIndexOf(".") + 1);
                 if (!type.equals("pdf")) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT).show();
+
+                    Display display = getActivity().getWindowManager().getDefaultDisplay();
+                    int height = display.getHeight();
+
+                    Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.TOP, 0, 3*height / 4);
+                    toast.setDuration(Toast.LENGTH_LONG);
+                    toast.show();
+
                     return;
                 }
             }
