@@ -50,8 +50,10 @@ import com.pdftron.pdf.config.ViewerBuilder;
 import com.pdftron.pdf.controls.PdfViewCtrlTabHostFragment;
 import com.pdftron.pdf.model.BaseFileInfo;
 import com.pdftron.pdf.model.FileInfo;
+import com.pdftron.pdf.model.PdfViewCtrlTabInfo;
 import com.pdftron.pdf.utils.Logger;
 import com.pdftron.pdf.utils.PdfViewCtrlSettingsManager;
+import com.pdftron.pdf.utils.PdfViewCtrlTabsManager;
 import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 
@@ -581,12 +583,44 @@ public  class EaseFragment extends Fragment {
 
 //        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 //        ft.setCustomAnimations(R.anim.tab_fragment_slide_in_bottom, R.anim.tab_fragment_slide_out_bottom);
-        mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
-        mPdfViewCtrlTabHostFragment.setCurrentFile(file);
-        mPdfViewCtrlTabHostFragment.addHostListener((AdvancedReaderActivity)EaseFragment.getFatherFragment().getActivity());
+        PdfViewCtrlTabsManager.getInstance().addDocument(getActivity(), file.getAbsolutePath());
 
+
+//        mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
+
+        PdfViewCtrlTabInfo info = PdfViewCtrlTabsManager.getInstance().getPdfFViewCtrlTabInfo(getActivity(), file.getAbsolutePath());
+        int itemSource = BaseFileInfo.FILE_TYPE_UNKNOWN;
+        String title = "";
+        String fileExtension = null;
+        String password = "";
+
+        if (info != null) {
+            itemSource = info.tabSource;
+            title = info.tabTitle;
+            fileExtension = info.fileExtension;
+            password = Utils.decryptIt(getActivity(), info.password);
+        }
+//        mPdfViewCtrlTabHostFragment=PdfViewCtrlTabHostFragment.getInstance();
+//        mPdfViewCtrlTabHostFragment.addTab( null, file.getAbsolutePath(), title, fileExtension, password, itemSource);
+//       if (PdfViewCtrlTabHostFragment.getInstance()==null) {
+//           mPdfViewCtrlTabHostFragment = PdfViewCtrlTabHostFragment.getInstance();
+//        mPdfViewCtrlTabHostFragment.add
+           mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
+           mPdfViewCtrlTabHostFragment.setCurrentFile(file);
+           mPdfViewCtrlTabHostFragment.addHostListener((AdvancedReaderActivity) EaseFragment.getFatherFragment().getActivity());
+//           PdfViewCtrlTabHostFragment.setInstance(mPdfViewCtrlTabHostFragment,viewerBuilder);
+//           Toast.makeText(getActivity().getApplicationContext(), "called setInstance()", Toast.LENGTH_SHORT).show();
+//
+//       }
+//       else {
+//           mPdfViewCtrlTabHostFragment = PdfViewCtrlTabHostFragment.getInstance();
+//           mPdfViewCtrlTabHostFragment.addTab( null, file.getAbsolutePath(), title, fileExtension, password, itemSource);
+//           Toast.makeText(getActivity().getApplicationContext(), "called getInstance()", Toast.LENGTH_SHORT).show();
+
+//       }
         Logger.INSTANCE.LogD(TAG, "replace with " + mPdfViewCtrlTabHostFragment);
 //        ft.replace(R.id.container, mPdfViewCtrlTabHostFragment, null);
+
         ((EaseActivityWithFragment)(EaseFragment.getFatherFragment())).changeFragment(mPdfViewCtrlTabHostFragment);
 //        ft.commit();
 

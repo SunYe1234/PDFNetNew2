@@ -46,6 +46,7 @@ import com.pdftron.pdf.config.ViewerConfig;
 import com.pdftron.pdf.controls.DiffActivity;
 import com.pdftron.pdf.utils.AppUtils;
 import com.pdftron.pdf.utils.PdfViewCtrlSettingsManager;
+import com.pdftron.pdf.utils.PdfViewCtrlTabsManager;
 import com.pdftron.pdf.utils.Utils;
 
 import java.io.BufferedReader;
@@ -157,7 +158,10 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if(LoginFunction()) {
+//                    PdfViewCtrlTabsManager.getInstance().cleanup();
+                    saveFormerUserName();
                     saveUserNameToFile();
+                    String formerUser=getFormerUserNameFromFile();
                     if (sqLiteDatabaseObj.isOpen())
                         sqLiteDatabaseObj.close();
                     openAdvancedReaderActivity();

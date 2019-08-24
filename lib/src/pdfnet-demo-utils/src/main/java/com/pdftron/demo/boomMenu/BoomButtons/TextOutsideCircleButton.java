@@ -457,6 +457,7 @@ public class TextOutsideCircleButton extends BoomButton {
 
 //        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 //        ft.setCustomAnimations(R.anim.tab_fragment_slide_in_bottom, R.anim.tab_fragment_slide_out_bottom);
+        PdfViewCtrlTabsManager.getInstance().addDocument(getContext(), file.getAbsolutePath());
         mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
         mPdfViewCtrlTabHostFragment.setCurrentFile(file);
         mPdfViewCtrlTabHostFragment.addHostListener((AdvancedReaderActivity)EaseFragment.getFatherFragment().getActivity());

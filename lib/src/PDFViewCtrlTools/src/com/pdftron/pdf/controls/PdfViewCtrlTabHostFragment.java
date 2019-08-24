@@ -72,6 +72,7 @@ import com.pdftron.pdf.PDFViewCtrl;
 import com.pdftron.pdf.Page;
 import com.pdftron.pdf.PageSet;
 import com.pdftron.pdf.TextSearchResult;
+import com.pdftron.pdf.config.ViewerBuilder;
 import com.pdftron.pdf.config.ViewerConfig;
 import com.pdftron.pdf.dialog.BookmarksDialogFragment;
 import com.pdftron.pdf.dialog.CustomColorModeDialogFragment;
@@ -146,6 +147,7 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
         View.OnSystemUiVisibilityChangeListener {
 
     private static final String TAG = PdfViewCtrlTabHostFragment.class.getName();
+    private static boolean cleanedTabs=false;
 
     public static final String BUNDLE_TAB_HOST_NAV_ICON = "bundle_tab_host_nav_icon";
     public static final String BUNDLE_TAB_HOST_TOOLBAR_MENU = "bundle_tab_host_toolbar_menu";
@@ -235,6 +237,19 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
     protected int mSystemWindowInsetTop = 0;
 
     private File currentFile;
+
+    private static class LazyHolder {
+        private static  PdfViewCtrlTabHostFragment INSTANCE ;
+    }
+
+    public static PdfViewCtrlTabHostFragment getInstance() {
+        return PdfViewCtrlTabHostFragment.LazyHolder.INSTANCE;
+    }
+    public static void setInstance(PdfViewCtrlTabHostFragment pdfViewCtrlTabHostFragment,ViewerBuilder viewerBuilder) {
+        PdfViewCtrlTabHostFragment.LazyHolder.INSTANCE=viewerBuilder.build(pdfViewCtrlTabHostFragment.getContext());
+        PdfViewCtrlTabHostFragment.LazyHolder.INSTANCE.setCurrentFile(pdfViewCtrlTabHostFragment.currentFile);
+        PdfViewCtrlTabHostFragment.LazyHolder.INSTANCE.addHostListener(pdfViewCtrlTabHostFragment.mTabHostListeners.get(0));
+    }
 
     // Disposables
     protected CompositeDisposable mDisposables;
@@ -581,7 +596,7 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
         } catch (Exception ignored) {
         }
 
-        PdfViewCtrlTabsManager.getInstance().cleanup();
+//        PdfViewCtrlTabsManager.getInstance().cleanup();
 
         // Dispose of all observables
         if (mDisposables != null && !mDisposables.isDisposed()) {
@@ -1001,11 +1016,12 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
         }
 
         setTabLayoutVisible(mMultiTabModeEnabled);
-//        if (userChanged()) {
+        if (!cleanedTabs) {
 //
             PdfViewCtrlTabsManager.getInstance().cleanup();
             PdfViewCtrlTabsManager.getInstance().clearAllPdfViewCtrlTabInfo(activity);
-//        }
+            cleanedTabs=true;
+        }
 
         // if single tab remove all current tabs
         if (!mMultiTabModeEnabled) {
@@ -1039,7 +1055,7 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
 
             }
         }
-//        if (userChanged()) {
+//        if (userChanged()&&PdfViewCtrlTabsManager.getInstance().getDocuments(activity).size()>1) {
 //            PdfViewCtrlTabsManager.getInstance().cleanup();
 //            PdfViewCtrlTabsManager.getInstance().clearAllPdfViewCtrlTabInfo(activity);
 ////            PdfViewCtrlTabsManager.getInstance().up();
@@ -2201,6 +2217,8 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
      * @return The tab
      */
     protected TabLayout.Tab createTab(final String tag, final String title, final String fileExtension, final int itemSource) {
+        if (mTabLayout==null)
+            initViews();
         TabLayout.Tab tab = mTabLayout.newTab().setTag(tag).setCustomView(R.layout.controls_fragment_tabbed_pdfviewctrl_tab);
         setTabView(tab.getCustomView(), tag, title, fileExtension, itemSource);
         return tab;

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
@@ -28,11 +30,15 @@ import com.pdftron.demo.navigation.adapter.BaseFileAdapter;
 import com.pdftron.demo.navigation.adapter.LocalFileAdapter;
 import com.pdftron.demo.utils.FileInfoComparator;
 import com.pdftron.demo.utils.FileListFilter;
+import com.pdftron.pdf.config.ViewerBuilder;
 import com.pdftron.pdf.controls.PdfViewCtrlTabFragment;
 import com.pdftron.pdf.controls.PdfViewCtrlTabHostFragment;
+import com.pdftron.pdf.model.BaseFileInfo;
 import com.pdftron.pdf.model.FileInfo;
+import com.pdftron.pdf.model.PdfViewCtrlTabInfo;
 import com.pdftron.pdf.utils.FontAdapter;
 import com.pdftron.pdf.utils.PdfViewCtrlSettingsManager;
+import com.pdftron.pdf.utils.PdfViewCtrlTabsManager;
 import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 
@@ -213,7 +219,27 @@ public class EaseActivityWithFragment extends Fragment implements
 
     public void changeFragment(PdfViewCtrlTabHostFragment easeFragment)
     {
-        getChildFragmentManager().beginTransaction().replace(R.id.frameLayout,easeFragment).commit();
+
+//        if (PdfViewCtrlTabHostFragment.getInstance()==null) {
+//            Toast.makeText(getActivity().getApplicationContext(), "Instance is null", Toast.LENGTH_SHORT).show();
+////            PdfViewCtrlTabHostFragment.setInstance(easeFragment,viewerBuilder);
+//            Toast.makeText(getActivity().getApplicationContext(), "init Instance ", Toast.LENGTH_SHORT).show();
+//
+//        }
+//        easeFragment=PdfViewCtrlTabHostFragment.getInstance();
+//
+////        PdfViewCtrlTabInfo info = PdfViewCtrlTabsManager.getInstance().getPdfFViewCtrlTabInfo(getActivity(), file.getAbsolutePath());
+//        int itemSource = BaseFileInfo.FILE_TYPE_UNKNOWN;
+//        String title = "";
+//        String fileExtension = null;
+//        String password = "";
+//
+//        Toast.makeText(getActivity().getApplicationContext(), "getInstance() called: "+easeFragment.toString(), Toast.LENGTH_SHORT).show();
+
+        FragmentManager fragmentManager=getChildFragmentManager();
+        FragmentTransaction transaction=fragmentManager.beginTransaction();
+        transaction.replace(R.id.frameLayout,easeFragment).commit();
+
     }
 
     public String  getUserDirectory(String user)

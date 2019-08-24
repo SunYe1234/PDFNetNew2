@@ -1,10 +1,16 @@
-#Fri Aug 23 13:16:57 CEST 2019
-path.2=classes3.dex
-path.1=classes2.dex
+#Sat Aug 24 09:34:29 CEST 2019
+path.3=classes_0.dex
+path.2=classes2.dex
+path.1=classes.dex
+renamed.4=classes5.dex
 path.0=classes.dex
+renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
+base.4=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeLibDexDebug/out
 renamed.0=classes.dex
-base.2=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeDexDebug/out
-base.1=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeDexDebug/out
-base.0=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeDexDebug/out
+base.3=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeLibDexDebug/out
+base.2=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+base.1=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+base.0=/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+path.4=classes_1.dex
