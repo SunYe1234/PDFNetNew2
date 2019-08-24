@@ -1159,9 +1159,10 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
 
     }
 
+
     private  String getCurrentUserNameFromFile()
     {
-        File fileDir = new File("/data/user/0/com.pdftron.completereader/files");
+        File fileDir = getActivity().getFilesDir();
 
         try {
             File currentUsersName=new File(fileDir.getAbsolutePath()+"/"+currentUsersNameFileName);
@@ -1196,7 +1197,7 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
 
     private  String getFormerUserNameFromFile()
     {
-        File fileDir = new File("/data/user/0/com.pdftron.completereader/files");
+        File fileDir = getActivity().getFilesDir();
 
         try {
             File FormerUsersName=new File(fileDir.getAbsolutePath()+"/"+formerUserNameFileName);

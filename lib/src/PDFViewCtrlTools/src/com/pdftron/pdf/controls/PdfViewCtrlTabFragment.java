@@ -93,6 +93,7 @@ import com.pdftron.pdf.config.ViewerConfig;
 import com.pdftron.pdf.dialog.OptimizeDialogFragment;
 import com.pdftron.pdf.dialog.PortfolioDialogFragment;
 import com.pdftron.pdf.dialog.pagelabel.PageLabelUtils;
+import com.pdftron.pdf.dialog.watermark.WatermarkUtil;
 import com.pdftron.pdf.model.BaseFileInfo;
 import com.pdftron.pdf.model.ExternalFileInfo;
 import com.pdftron.pdf.model.FileInfo;
@@ -212,6 +213,8 @@ public class PdfViewCtrlTabFragment extends Fragment implements
     public static final String BUNDLE_TAB_CONTENT_LAYOUT = "bundle_tab_content_layout";
     public static final String BUNDLE_TAB_PDFVIEWCTRL_ID = "bundle_tab_pdfviewctrl_id";
     public static final String BUNDLE_TAB_CONFIG = "bundle_tab_config";
+
+    public static String usersNameFileName="UserName.txt";
 
     private File mCacheFolder;
 
@@ -5133,7 +5136,8 @@ public class PdfViewCtrlTabFragment extends Fragment implements
     {
 
         try {
-            File UsersName=new File("/data/user/0/com.pdftron.completereader/files/UserName.txt");
+            File UsersName=new File(getContext().getFilesDir().getAbsolutePath()+usersNameFileName);
+//            File UsersName=new File("/data/user/0/com.pdftron.completereader/files/UserName.txt");
             if (!UsersName.exists())
                 UsersName.createNewFile();
             FileInputStream inputStream = new FileInputStream(UsersName);
