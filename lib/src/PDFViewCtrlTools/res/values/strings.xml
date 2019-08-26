@@ -732,9 +732,9 @@
     <string name="snack_bar_tab_closed">Document has been closed.</string>
     <string name="snack_bar_tab_saved_and_closed">Document has been saved and closed.</string>
 
-    <string name="document_read_only_warning_title">Read-Only Document</string>
-    <string name="document_read_only_warning_message">Save a copy on your device to modify this document.</string>
-    <string name="document_read_only_warning_negative">View Read-Only</string>
+    <string name="document_read_only_warning_title">Document en lecture seule</string>
+    <string name="document_read_only_warning_message">Enregistrez une copie pour modifier ce document, s\'il vous plaît.</string>
+    <string name="document_read_only_warning_negative">Afficher en lecture seule</string>
 
     <!--Save Options-->
     <string name="save_as_wait">Saving a copy&#8230;</string>

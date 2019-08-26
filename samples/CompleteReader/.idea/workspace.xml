@@ -43,34 +43,6 @@
       <change afterPath="$PROJECT_DIR$/app/src/main/res/font/arizonia.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/values/font_certs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_library_classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/full_jar/debug/createFullJarDebug/full.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/merged.dir/values/values.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/app/AdvancedReaderActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/demo/boomMenu/EaseFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/runtime_library_classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/runtime_library_classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/build/intermediates/symbols/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/AdvancedReaderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/AdvancedReaderActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/boomMenu/EaseFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileChanges/last-build.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" />
@@ -120,7 +92,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/cardview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/cardview/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/recyclerview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/recyclerview/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/viewpager/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/android/support/v7/viewpager/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/dd/circular/progress/button/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/dd/circular/progress/button/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/edmodo/cropper/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/edmodo/cropper/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/facebook/drawee/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/facebook/drawee/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/facebook/drawee/backends/pipeline/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/facebook/drawee/backends/pipeline/R.java" afterDir="false" />
@@ -277,7 +248,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/9Wi5m_L92arIBM21SNMkLd0EdSY=" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/BzvTJ0Pm_vZTkhoofIpoXHOyjvg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/PLd35j2COaVKFkH2neCtXgia4Uc=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/PLd35j2COaVKFkH2neCtXgia4Uc=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/processDebugResources/resources-list-for-resources-debug.ap_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/processDebugResources/resources-list-for-resources-debug.ap_.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/arch/lifecycle/extensions/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/arch/lifecycle/extensions/R$attr.class" afterDir="false" />
@@ -488,7 +458,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/viewpager/R$string.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/viewpager/R$string.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/viewpager/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/viewpager/R$style.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/viewpager/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/android/support/v7/viewpager/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/dd/circular/progress/button/R$string.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/dd/circular/progress/button/R$string.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/edmodo/cropper/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/edmodo/cropper/R$attr.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/edmodo/cropper/R$dimen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/edmodo/cropper/R$dimen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/edmodo/cropper/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/edmodo/cropper/R$id.class" afterDir="false" />
@@ -539,7 +508,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$string.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$string.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$style.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$styleable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$transition.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$transition.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$xml.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R$xml.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/R.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/loginSignup/DashboardActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/pdftron/completereader/loginSignup/DashboardActivity$1.class" afterDir="false" />
@@ -1626,7 +1594,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/viewpager/R$string.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/viewpager/R$string.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/viewpager/R$style.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/viewpager/R$style.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/viewpager/R$styleable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/android/support/v7/viewpager/R$styleable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/dd/circular/progress/button/R$string.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/dd/circular/progress/button/R$string.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/edmodo/cropper/R$attr.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/edmodo/cropper/R$attr.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/edmodo/cropper/R$dimen.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/edmodo/cropper/R$dimen.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/edmodo/cropper/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/edmodo/cropper/R$id.dex" afterDir="false" />
@@ -1677,7 +1644,6 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$string.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$string.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$style.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$style.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$styleable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$styleable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$transition.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$transition.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$xml.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R$xml.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/R.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/loginSignup/DashboardActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/pdftron/completereader/loginSignup/DashboardActivity$1.dex" afterDir="false" />
@@ -1777,21 +1743,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/menu/fragment_viewer.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="89" column="39" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="219" column="75" selection-start-line="219" selection-start-column="75" selection-end-line="219" selection-end-column="75" />
+            <state relative-caret-position="154">
+              <caret line="734" column="70" selection-start-line="734" selection-start-column="52" selection-end-line="734" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -1832,7 +1788,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/java/com/pdftron/demo/app/AdvancedReaderActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
@@ -1841,6 +1797,15 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#116835#116867#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/values-ar/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="442" column="18" selection-start-line="442" selection-start-column="18" selection-end-line="442" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -1887,8 +1852,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>newIn</find>
-      <find>change</find>
       <find>clean</find>
       <find>onBa</find>
       <find>createTabs</find>
@@ -1917,6 +1880,8 @@
       <find>Preset</find>
       <find>Edit</find>
       <find>on</find>
+      <find>delete</find>
+      <find>read_only</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src</dir>
@@ -2095,6 +2060,12 @@
             <path>
               <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
               <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CompleteReader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PDFViewCtrlTools" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -2248,9 +2219,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2932761" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2932761" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -2260,7 +2230,7 @@
       <window_info id="Designer" order="7" />
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.2986369" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.2986369" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36183396" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25402725" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -3058,13 +3028,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/src/com/pdftron/pdf/widget/CustomViewPager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/proguard-rules.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -3371,13 +3334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="219" column="75" selection-start-line="219" selection-start-column="75" selection-end-line="219" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../lib/src/pdfnet-demo-utils/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -3432,6 +3388,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#116835#116867#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/values-ar/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="442" column="18" selection-start-line="442" selection-start-column="18" selection-end-line="442" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lib/src/PDFViewCtrlTools/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="734" column="70" selection-start-line="734" selection-start-column="52" selection-end-line="734" selection-end-column="70" />
         </state>
       </provider>
     </entry>

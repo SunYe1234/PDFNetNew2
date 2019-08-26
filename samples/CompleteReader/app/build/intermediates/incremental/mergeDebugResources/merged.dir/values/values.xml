@@ -1755,9 +1755,9 @@
     <string name="document_notify_failed_commit_message">Saved document in %1$s folder.</string>
     <string name="document_read_only_error_message">This document is Read-Only.</string>
     <string name="document_read_only_sd_card_warning_message">Open this document using the \"SD Card\" tab located in the side navigation drawer to modify this document.</string>
-    <string name="document_read_only_warning_message">Save a copy on your device to modify this document.</string>
-    <string name="document_read_only_warning_negative">View Read-Only</string>
-    <string name="document_read_only_warning_title">Read-Only Document</string>
+    <string name="document_read_only_warning_message">Enregistrez une copie pour modifier ce document, s\'il vous plaît.</string>
+    <string name="document_read_only_warning_negative">Afficher en lecture seule</string>
+    <string name="document_read_only_warning_title">Document en lecture seule</string>
     <string name="document_save_error_toast_message">Failed to save document.</string>
     <string name="document_saved_toast_message">Document saved.</string>
     <string name="done">Done</string>
