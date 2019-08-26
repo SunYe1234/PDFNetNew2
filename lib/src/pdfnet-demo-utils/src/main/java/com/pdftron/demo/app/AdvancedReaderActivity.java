@@ -1619,7 +1619,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             deleteUserCopies();
             //delete his account in the database
             deleteUserAccount();
-            backToLogin();
+            SysApplication.getInstance().exit();
+//            backToLogin();
 
         }
         else {
@@ -1680,7 +1681,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     }
     private void deleteUserCopies()
     {
-        File currentUserCpsDirec=new File(getFilesDir().getAbsolutePath()+"/"+getUserNameFromFile());
+        File currentUserCpsDirec=new File(getFilesDir().getAbsolutePath()+"/PDFcps/"+getUserNameFromFile());
         if (currentUserCpsDirec.isDirectory())
         {
             deleteAllFiles(currentUserCpsDirec);
@@ -1742,7 +1743,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         // Printing toast message after done inserting.
         Toast.makeText(AdvancedReaderActivity.this,currentUser+getString(R.string.delete_account_success), Toast.LENGTH_LONG).show();
-//         c=sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME,null,null,null,null,null,null);
+
+
+        //         c=sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME,null,null,null,null,null,null);
 //        ArrayList<String> usersAfter=new ArrayList<String>();
 //        while(c.moveToNext()){
 //
@@ -2761,11 +2764,11 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     private void dialog()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want to exit?");
+        builder.setMessage(getString(R.string.dialoge_exit));
 
         builder.setTitle("");
 
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -2776,7 +2779,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             }
         });
 
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {

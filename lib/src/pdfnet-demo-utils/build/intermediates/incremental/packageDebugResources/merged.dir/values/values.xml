@@ -216,7 +216,7 @@
     </plurals>
     <string name="about">About</string>
     <string name="action_add_to_favorites">Add to Favorites</string>
-    <string name="action_delete_account">Supprimer votre compte</string>
+    <string name="action_delete_account">Supprimer mon compte</string>
     <string name="action_exit">Se déconnecter</string>
     <string name="action_favorite">Favorite</string>
     <string comment="Filter files by various properties" name="action_file_filter">Filter</string>
@@ -308,6 +308,8 @@
     <string name="dialog_webpage_pdf_convert">Convert</string>
     <string name="dialog_webpage_pdf_explain">In your web browser, open the ⋮ menu, select Share…, and choose Convert to PDF.</string>
     <string name="dialog_webpage_pdf_title">Create PDF from webpage</string>
+    <string name="dialoge_delete_cp">Voulez-vous supprimer ce document?</string>
+    <string name="dialoge_exit">Vous voulez vous déconnecter?</string>
     <string name="diff_msg">Quickly spot differences between pages</string>
     <string name="diff_title">Compare files</string>
     <string name="document_read_only_sd_card_warning_message">Open this document using the \"SD Card\" tab located in the side navigation drawer to modify this document.</string>

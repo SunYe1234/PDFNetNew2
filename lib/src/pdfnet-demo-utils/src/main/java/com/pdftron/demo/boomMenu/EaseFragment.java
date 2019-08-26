@@ -738,11 +738,11 @@ public static String usersNameFileName;
     private void dialog(final File file)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMessage("Do you want to delete this document?");
+        builder.setMessage(getString(R.string.dialoge_delete_cp));
 
         builder.setTitle("");
 
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -754,7 +754,7 @@ public static String usersNameFileName;
             }
         });
 
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {

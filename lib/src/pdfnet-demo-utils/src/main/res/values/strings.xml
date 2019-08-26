@@ -7,6 +7,9 @@
     <string name="toast_search_already_there">Vous êtes déjà dans son répertoire</string>
     <string name="toast_root_directory">Vous êtes déjà dans le répertoire racine</string>
 
+    <string name="dialoge_delete_cp">Voulez-vous supprimer ce document?</string>
+    <string name="dialoge_exit">Vous voulez vous déconnecter?</string>
+
     <string name="title_item_viewer">Viewer</string>
     <string name="title_item_local_folder_list" translatable="false">@string/local_folders</string>
     <string name="title_item_local_file_list">All Documents</string>

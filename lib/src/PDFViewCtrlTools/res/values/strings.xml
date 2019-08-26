@@ -217,7 +217,7 @@
 
     <!-- Controls -->
     <string name="controls_annotation_dialog_listview_imageview_icon_description">Annotation Icon</string>
-    <string name="controls_annotation_dialog_empty">This document has no annotations</string>
+    <string name="controls_annotation_dialog_empty">Ce document n\'a pas d\'annotation</string>
     <string name="controls_annotation_dialog_loading">Loading Annotations&#8230;</string>
     <string name="controls_annotation_dialog_page">Page %1$d</string>
     <string name="controls_annotation_dialog_author">Author:</string>

@@ -208,7 +208,7 @@ public final class R {
         private string() {}
 
         public static final int app_name = 0x7f120090;
-        public static final int status_bar_notification_info_overflow = 0x7f1202ec;
+        public static final int status_bar_notification_info_overflow = 0x7f1202ee;
     }
     public static final class style {
         private style() {}
