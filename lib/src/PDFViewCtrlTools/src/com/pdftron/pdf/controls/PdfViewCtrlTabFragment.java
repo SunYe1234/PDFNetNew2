@@ -5136,7 +5136,7 @@ public class PdfViewCtrlTabFragment extends Fragment implements
     {
 
         try {
-            File UsersName=new File(getContext().getFilesDir().getAbsolutePath()+usersNameFileName);
+            File UsersName=new File(getContext().getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
 //            File UsersName=new File("/data/user/0/com.pdftron.completereader/files/UserName.txt");
             if (!UsersName.exists())
                 UsersName.createNewFile();
