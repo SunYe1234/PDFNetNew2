@@ -2166,7 +2166,6 @@ id CropOverlayView
 id FUNCTION
 id ImageView_image
 id META
-id PDF_doc
 id SHIFT
 id SYM
 id account_layout
@@ -3756,6 +3755,7 @@ string action_add_to_favorites
 string action_annotation_toolbar
 string action_close_tab
 string action_delete
+string action_delete_account
 string action_delete_current_page
 string action_delete_multiple
 string action_editpages_more
@@ -3774,10 +3774,12 @@ string action_file_filter
 string action_file_move
 string action_file_print
 string action_file_share
+string action_folders
 string action_grid_size
 string action_list_all
 string action_list_view
 string action_match_case
+string action_mycps
 string action_outline
 string action_pdf_layers
 string action_reload
@@ -3952,6 +3954,7 @@ string custom_stamp_text_hint
 string date
 string define_circularprogressbutton
 string delete
+string delete_account_success
 string deleting_file_wait
 string dialog_about_body
 string dialog_add_new_blank_pdf_title
@@ -4130,6 +4133,8 @@ string duplicate_file_max_error_message
 string duplicating_wait
 string ease_example
 string empty_title
+string enter_name
+string enter_password
 string enter_value
 string error
 string error_corrupt_file_message
@@ -4156,7 +4161,9 @@ string file
 string file_added_to_favorites
 string file_attachments
 string file_attachments_non_pdf_saved
+string file_current_username
 string file_does_not_exist_message
+string file_former_username
 string file_info_document_attr_not_available
 string file_info_document_author
 string file_info_document_creator
@@ -4168,6 +4175,7 @@ string file_info_document_producer
 string file_info_document_protected
 string file_info_document_size
 string file_info_document_title
+string file_pdf_home
 string file_removed_from_favorites
 string file_type_docx
 string file_type_external_file
@@ -4187,6 +4195,7 @@ string freetext_restore_cache_message
 string grid_loading_res_name
 string ham_button_example
 string hide_bottom_view_on_scroll_behavior
+string hint_searchbar
 string image_attachment_error_msg
 string image_stamper_error
 string image_stamper_file_not_found_error
@@ -4213,6 +4222,9 @@ string loading
 string loading_files_wait
 string local_folders
 string local_storage
+string log_in
+string log_in_failed
+string log_in_success
 string measure_calibrate_body
 string measure_calibrate_title
 string menu_add_options
@@ -4428,6 +4440,7 @@ string share_example
 string show_all_tools
 string show_fewer_tools
 string show_password_option
+string sign_up
 string signature_dialog_delete_message
 string signature_dialog_delete_title
 string signature_new_guide
@@ -4483,7 +4496,14 @@ string title_item_local_file_list
 string title_item_local_folder_list
 string title_item_recent
 string title_item_viewer
+string toast_delete_original_file
+string toast_enter_name
 string toast_file_info_message
+string toast_not_pdf
+string toast_root_directory
+string toast_search_already_there
+string toast_search_no_result
+string toast_zero_cps
 string tool_bar_example
 string tools_annot_style_preview_text
 string tools_annotation_property_restore_warning_message

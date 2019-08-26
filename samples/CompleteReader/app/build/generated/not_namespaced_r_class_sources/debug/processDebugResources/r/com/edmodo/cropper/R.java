@@ -33,10 +33,10 @@ public final class R {
 
         public static final int CropOverlayView = 0x7f0a0002;
         public static final int ImageView_image = 0x7f0a0004;
-        public static final int bitmap_margin = 0x7f0a005f;
-        public static final int off = 0x7f0a02b8;
-        public static final int on = 0x7f0a02ba;
-        public static final int onTouch = 0x7f0a02bb;
+        public static final int bitmap_margin = 0x7f0a005e;
+        public static final int off = 0x7f0a02b7;
+        public static final int on = 0x7f0a02b9;
+        public static final int onTouch = 0x7f0a02ba;
     }
     public static final class layout {
         private layout() {}
@@ -46,7 +46,7 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f12008d;
+        public static final int app_name = 0x7f120090;
     }
     public static final class style {
         private style() {}

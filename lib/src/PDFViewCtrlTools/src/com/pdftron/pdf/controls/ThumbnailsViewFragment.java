@@ -414,35 +414,37 @@ public class ThumbnailsViewFragment extends DialogFragment implements Thumbnails
                 }
             }
         });
-
-        FloatingActionButton pdfDocButton = mFabMenu.findViewById(R.id.PDF_doc);
-        pdfDocButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mFabMenu.close(true);
-                if (mIsReadOnly) {
-                    if (mOnThumbnailsEditAttemptWhileReadOnlyListener != null)
-                        mOnThumbnailsEditAttemptWhileReadOnlyListener.onThumbnailsEditAttemptWhileReadOnly();
-                    return;
-                }
-                launchAndroidFilePicker();
-            }
-        });
-
-        FloatingActionButton imagePdfButton = mFabMenu.findViewById(R.id.image_PDF);
-        imagePdfButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mFabMenu.close(true);
-                if (mIsReadOnly) {
-                    if (mOnThumbnailsEditAttemptWhileReadOnlyListener != null)
-                        mOnThumbnailsEditAttemptWhileReadOnlyListener.onThumbnailsEditAttemptWhileReadOnly();
-                    return;
-                }
-
-                mOutputFileUri = ViewerUtils.openImageIntent(ThumbnailsViewFragment.this);
-            }
-        });
+//
+//        FloatingActionButton pdfDocButton = mFabMenu.findViewById(R.id.PDF_doc);
+//        pdfDocButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mFabMenu.close(true);
+//                if (mIsReadOnly) {
+//                    if (mOnThumbnailsEditAttemptWhileReadOnlyListener != null)
+//                        mOnThumbnailsEditAttemptWhileReadOnlyListener.onThumbnailsEditAttemptWhileReadOnly();
+//                    return;
+//                }
+//                launchAndroidFilePicker();
+//            }
+//        });
+//
+//        FloatingActionButton imagePdfButton = mFabMenu.findViewById(R.id.image_PDF);
+//        imagePdfButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mFabMenu.close(true);
+//                if (mIsReadOnly) {
+//                    if (mOnThumbnailsEditAttemptWhileReadOnlyListener != null)
+//                        mOnThumbnailsEditAttemptWhileReadOnlyListener.onThumbnailsEditAttemptWhileReadOnly();
+//                    return;
+//                }
+//
+//                mOutputFileUri = ViewerUtils.openImageIntent(ThumbnailsViewFragment.this);
+//            }
+//        });
+//        pdfDocButton.setVisibility(View.INVISIBLE);
+//        imagePdfButton.setVisibility(View.INVISIBLE);
 
         // adjust scroll position
         if (mRecyclerView != null && mAdapter != null && mPdfViewCtrl != null) {

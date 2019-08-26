@@ -69,25 +69,25 @@
             app:fab_size="mini"
             app:fab_label="@string/dialog_add_new_page_pdf_title"/>
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/image_PDF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_add_image_white"
-            app:fab_colorNormal="?attr/colorAccent"
-            app:fab_colorPressed="?attr/colorAccent"
-            app:fab_size="mini"
-            app:fab_label="@string/dialog_add_new_photo_pdf_title"/>
+        <!--<com.github.clans.fab.FloatingActionButton-->
+            <!--android:id="@+id/image_PDF"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:srcCompat="@drawable/ic_add_image_white"-->
+            <!--app:fab_colorNormal="?attr/colorAccent"-->
+            <!--app:fab_colorPressed="?attr/colorAccent"-->
+            <!--app:fab_size="mini"-->
+            <!--app:fab_label="@string/dialog_add_new_photo_pdf_title"/>-->
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/PDF_doc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_add_blank_page_white"
-            app:fab_colorNormal="?attr/colorAccent"
-            app:fab_colorPressed="?attr/colorAccent"
-            app:fab_size="mini"
-            app:fab_label="@string/dialog_add_pdf_doc_title"/>
+        <!--<com.github.clans.fab.FloatingActionButton-->
+            <!--android:id="@+id/PDF_doc"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:srcCompat="@drawable/ic_add_blank_page_white"-->
+            <!--app:fab_colorNormal="?attr/colorAccent"-->
+            <!--app:fab_colorPressed="?attr/colorAccent"-->
+            <!--app:fab_size="mini"-->
+            <!--app:fab_label="@string/dialog_add_pdf_doc_title"/>-->
 
     </com.github.clans.fab.FloatingActionMenu>
 

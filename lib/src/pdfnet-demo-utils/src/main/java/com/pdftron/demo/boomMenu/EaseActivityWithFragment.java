@@ -58,8 +58,11 @@ public class EaseActivityWithFragment extends Fragment implements
     private EaseFragment formerFragment;
 //    private static String cpsHome="/Download/PDFcps/";
     private  String user;
-    public static String filesPath="/DOC SAT digitalisée/";
-    private String filesPathName="DOC SAT digitalisée";
+    public static String filesPath;
+//    private String filesPathName="DOC SAT digitalisée";
+
+//    public static String filesPath;
+    private String filesPathName;
 //    private String filesPath2="/DOC SAT digitalisée/";
 
 
@@ -103,10 +106,12 @@ public class EaseActivityWithFragment extends Fragment implements
         super.onCreate(savedInstanceState);
 //        closeKeybord(getActivity());
         //setContentView(R.layout.activity_ease_fragment);
-        filesPath=getExtSDCardPath()+filesPath;
+        filesPath=getExtSDCardPath()+getString(R.string.file_pdf_home);
+        filesPathName=this.getString(R.string.file_pdf_home);
         if (savedInstanceState == null) {
             EaseFragment easeFragment=new EaseFragment();
-            easeFragment.setFilesPath(AdvancedReaderActivity.exPdfsPath);
+//            easeFragment.setFilesPath(AdvancedReaderActivity.exPdfsPath);
+            easeFragment.setFilesPath(filesPath);
 //            Toast.makeText(getActivity().getApplicationContext(), "In the EaseActivity: exPdfsPath="+AdvancedReaderActivity.exPdfsPath, Toast.LENGTH_SHORT).show();
 
 //            EaseFragment easeFragment=EaseFragment.newInstance();
@@ -175,8 +180,9 @@ public class EaseActivityWithFragment extends Fragment implements
             if (file != null) {
                 // File parent=new File(file.getParent());
                 String name = file.getName();
-                if (file.getName().equals(filesPathName) || (user != null && file.getName().equals(user))) {
-                    Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
+
+                if (file.getName().equals(filesPathName.replace("/","")) || (user != null && file.getName().equals(user))) {
+                    Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_root_directory), Toast.LENGTH_SHORT).show();
 
                     return;
                 }
@@ -184,7 +190,8 @@ public class EaseActivityWithFragment extends Fragment implements
                 {
 //                    String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
                     EaseFragment parentFrag = new EaseFragment();
-                    parentFrag.setFilesPath(AdvancedReaderActivity.exPdfsPath);
+//                    parentFrag.setFilesPath(AdvancedReaderActivity.exPdfsPath);
+                    parentFrag.setFilesPath(filesPath);
 //                    EaseFragment parentFrag=EaseFragment.newInstance();
 
                     getChildFragmentManager().beginTransaction().replace(R.id.frameLayout, parentFrag).commit();
@@ -200,7 +207,7 @@ public class EaseActivityWithFragment extends Fragment implements
             File file=currentPdfFragment.getCurrentFile();
             String name = file.getName();
             if (file.getName().equals(filesPathName) || (user != null && file.getName().equals(user))) {
-                Toast.makeText(getActivity().getApplicationContext(), "You are already in the root directory", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_root_directory), Toast.LENGTH_SHORT).show();
 
                 return;
             }
@@ -332,12 +339,14 @@ public class EaseActivityWithFragment extends Fragment implements
 
         if (isInTheDirectory(query))
         {
-            Toast.makeText(getActivity().getApplicationContext(), "You are already in its directory", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_search_already_there), Toast.LENGTH_SHORT).show();
             return true;
         }
 
+        query=query.replace(" ","");
         mFilterText=query;
-        mPopulateFolderTask = new PopulateFolderTask(getContext(), new File(AdvancedReaderActivity.exPdfsPath),
+
+        mPopulateFolderTask = new PopulateFolderTask(getContext(), new File(filesPath),
                 mFileInfoList, mFileListLock, getSortMode(), true, true, true, mSdCardFolderCache, this);
         mPopulateFolderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         mFilter=(FileListFilter<FileInfo>) mAdapter.getFilter();
@@ -362,7 +371,7 @@ public class EaseActivityWithFragment extends Fragment implements
 
             Display display = getActivity().getWindowManager().getDefaultDisplay();
             int height = display.getHeight();
-            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, no such file or directory", Toast.LENGTH_SHORT);
+            Toast toast=Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_search_no_result), Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.TOP, 0, 3*height / 4);
             toast.setDuration(Toast.LENGTH_LONG);
             toast.show();

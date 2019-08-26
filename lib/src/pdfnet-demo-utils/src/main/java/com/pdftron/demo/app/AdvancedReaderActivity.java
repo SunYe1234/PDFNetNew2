@@ -188,8 +188,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     private static final int SELECT_NAVIGATION_ITEM_DELAY = 250; // ms
     private static final int TEACH_NAVIGATION_DRAWER_DELAY = 500; // ms
 
-    public static  String exPdfsPath="/DOC SAT digitalisée/";
+//    public static  String exPdfsPath="/DOC SAT digitalisée/";
     public static boolean exPdfsPathFlag=false;
+    public static  String exPdfsPath;
 //    private static final String usersFolderParentPath="/storage/emulated/0/Download/PDFcps/";
 
 
@@ -232,7 +233,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     private CompositeDisposable mDisposables;
 
 
-    public static String usersNameFileName="UserName.txt";
+//    public static String usersNameFileName="UserName.txt";
+    public static String usersNameFileName;
     public String currentUser="";
 
     private ArrayList<FragmentTouchListener> mFragmentTouchListeners = new ArrayList<>();
@@ -262,6 +264,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
 
         mDisposables = new CompositeDisposable();
+        usersNameFileName=this.getString(R.string.file_current_username);
+        exPdfsPath=getString(R.string.file_pdf_home);
 
         if (Utils.applyDayNight(this)) {
             return;
@@ -1707,7 +1711,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         sqLiteDatabaseObj.close();
 
         // Printing toast message after done inserting.
-        Toast.makeText(AdvancedReaderActivity.this,currentUser+" is deleted Successfully", Toast.LENGTH_LONG).show();
+        Toast.makeText(AdvancedReaderActivity.this,currentUser+getString(R.string.delete_account_success), Toast.LENGTH_LONG).show();
 
 
 
@@ -1737,7 +1741,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         //sqLiteDatabaseObj.close();
 
         // Printing toast message after done inserting.
-        Toast.makeText(AdvancedReaderActivity.this,currentUser+" is deleted Successfully", Toast.LENGTH_LONG).show();
+        Toast.makeText(AdvancedReaderActivity.this,currentUser+getString(R.string.delete_account_success), Toast.LENGTH_LONG).show();
 //         c=sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME,null,null,null,null,null,null);
 //        ArrayList<String> usersAfter=new ArrayList<String>();
 //        while(c.moveToNext()){
@@ -1757,7 +1761,6 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             if (!currentUserNameFile.exists())
                 currentUserNameFile.createNewFile();
             FileInputStream inputStream = openFileInput(usersNameFileName);
-            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
             // 一次读一个字符
             InputStreamReader reader = new InputStreamReader(inputStream);
             String usName="";

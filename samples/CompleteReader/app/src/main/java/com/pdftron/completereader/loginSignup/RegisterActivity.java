@@ -300,7 +300,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     /**
-     * 根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏 stone
+     * Decide whether need to hide the keyboard by the coordination of the clicked point
      *
      * @param view
      * @param motionEvent
@@ -314,13 +314,11 @@ public class RegisterActivity extends AppCompatActivity {
                     + view.getWidth();
             if (motionEvent.getX() > left && motionEvent.getX() < right
                     && motionEvent.getY() > top && motionEvent.getY() < bottom) {
-                // 点击EditText的事件，忽略它
                 return false;
             } else {
                 return true;
             }
         }
-        // 如果焦点不是EditText则忽略，这个发生在视图刚绘制完，第一个焦点不在EditView上，和用户用轨迹球选择其他的焦点
         return false;
     }
 
@@ -333,21 +331,21 @@ public class RegisterActivity extends AppCompatActivity {
         boolean active=imm.isActive();
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
-            return true;
-        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
-            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
-                    Toast.LENGTH_LONG).show();
-// 屏蔽Home键
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//
+//
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
+//            return true;
+//        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
+//            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
+//                    Toast.LENGTH_LONG).show();
+//// 屏蔽Home键
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
 
 }

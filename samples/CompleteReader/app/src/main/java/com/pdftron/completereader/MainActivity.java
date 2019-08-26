@@ -82,8 +82,10 @@ public class MainActivity extends AppCompatActivity {
     URL url;
     public static  File UserFolder=null;
     public static File UsersFile=null;
-    public static String usersNameFileName="UserName.txt";
-    public static String formerUserNameFileName="FormerUserName.txt";
+//    public static String usersNameFileName="UserName.txt";
+    public static String usersNameFileName;
+//    public static String formerUserNameFileName="FormerUserName.txt";
+    public static String formerUserNameFileName;
 
     //public static String PDFcps="/storage/emulated/0/Download/PDFcps/";
     public static String PDFcps;
@@ -122,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
 
         //extSdcardPath is the path of the external SD card which depends on the exact SD card we use
         String extSdcardPath = getExtSDCardPath();
+        usersNameFileName=this.getString(R.string.file_current_username);
+        formerUserNameFileName=this.getString(R.string.file_former_username);
 //        cpsHome=getFilesDir();
 
         //intnStoragePath is the path of the internal storage of the tablet
@@ -161,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
 //                    PdfViewCtrlTabsManager.getInstance().cleanup();
                     saveFormerUserName();
                     saveUserNameToFile();
+                    createCpDirectory();
                     String formerUser=getFormerUserNameFromFile();
                     if (sqLiteDatabaseObj.isOpen())
                         sqLiteDatabaseObj.close();
@@ -184,6 +189,23 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+
+    /*
+    create user's own copy folder and the parent folder of all of the user folders if they don't exist yet
+     */
+
+    private void createCpDirectory()
+    {
+        File cpHome=new File(PDFcps);
+        if (!cpHome.exists())
+            cpHome.mkdir();
+        File myCpHome=new File(cpHome.getAbsolutePath()+"/"+UserName);
+        if (!myCpHome.exists())
+            myCpHome.mkdir();
+        return;
 
     }
 
@@ -238,7 +260,6 @@ public class MainActivity extends AppCompatActivity {
                 UsersName.createNewFile();
             FileInputStream inputStream = openFileInput(usersNameFileName);
             UsersFile=new File(getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
-            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
             // 一次读一个字符
             InputStreamReader reader = new InputStreamReader(inputStream);
             String usName="";
@@ -363,7 +384,7 @@ public class MainActivity extends AppCompatActivity {
         else {
 
             //If any of login EditText empty then this block will be executed.
-            Toast.makeText(MainActivity.this,"Please Enter UserName or Password.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,getString(R.string.toast_enter_name), Toast.LENGTH_LONG).show();
             return false;
         }
 
@@ -395,7 +416,7 @@ public class MainActivity extends AppCompatActivity {
         if(TempPassword.equalsIgnoreCase(PasswordHolder))
         {
 
-            Toast.makeText(MainActivity.this,"Login Successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,getString(R.string.log_in_success), Toast.LENGTH_LONG).show();
 
             // Going to Dashboard activity after login success message.
             Intent intent = new Intent(MainActivity.this, AdvancedReaderActivity.class);
@@ -412,7 +433,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
 
-            Toast.makeText(MainActivity.this,"UserName or Password is Wrong, Please Try Again.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,getString(R.string.log_in_failed), Toast.LENGTH_LONG).show();
             return false;
         }
         //TempPassword = "NOT_FOUND" ;
@@ -509,21 +530,21 @@ public class MainActivity extends AppCompatActivity {
 //        super.onAttachedToWindow();
 //    }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-        Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
-            return true;
-        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
-            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
-                    Toast.LENGTH_LONG).show();
-// 屏蔽Home键
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//
+//
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//        Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
+//            return true;
+//        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
+//            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
+//                    Toast.LENGTH_LONG).show();
+//// 屏蔽Home键
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
     public void onPause()
     {

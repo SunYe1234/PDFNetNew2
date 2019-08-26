@@ -64,7 +64,7 @@
         android:ems="10"
         android:fontFamily="monospace"
         android:gravity="center"
-        android:hint="Enter Name"
+        android:hint="@string/enter_name"
         android:inputType="textEmailAddress"
         android:textColor="@android:color/white"
         android:textColorHint="@color/hint_text_color"
@@ -87,7 +87,7 @@
         android:ems="10"
         android:fontFamily="monospace"
         android:gravity="center"
-        android:hint="Enter Password"
+        android:hint="@string/enter_password"
         android:inputType="textPassword"
         android:textColor="@android:color/white"
         android:textColorHint="@color/hint_text_color"
@@ -107,7 +107,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/press_button"
-        android:text="Log IN "
+        android:text="@string/log_in"
         android:textColor="@drawable/button_txt_color"
         android:textSize="15dp"
         />
@@ -120,7 +120,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:background="@drawable/press_button"
-        android:text="NOT A USER? | SIGN UP"
+        android:text="@string/sign_up"
         android:textColor="@drawable/button_txt_color"
         android:textSize="15dp"/>
 

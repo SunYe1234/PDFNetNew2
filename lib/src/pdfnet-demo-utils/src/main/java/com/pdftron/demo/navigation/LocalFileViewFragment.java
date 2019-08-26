@@ -945,14 +945,14 @@ public class LocalFileViewFragment extends FileBrowserViewFragment
                 }
             });
 
-            FloatingActionButton imagePDFButton = mFabMenu.findViewById(R.id.image_PDF);
-            imagePDFButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mFabMenu.close(true);
-                    mOutputFileUri = ViewerUtils.openImageIntent(LocalFileViewFragment.this);
-                }
-            });
+//            FloatingActionButton imagePDFButton = mFabMenu.findViewById(R.id.image_PDF);
+//            imagePDFButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    mFabMenu.close(true);
+//                    mOutputFileUri = ViewerUtils.openImageIntent(LocalFileViewFragment.this);
+//                }
+//            });
 
             FloatingActionButton officePDFButton = mFabMenu.findViewById(R.id.office_PDF);
             officePDFButton.setOnClickListener(new View.OnClickListener() {

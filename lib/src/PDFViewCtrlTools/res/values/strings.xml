@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="file_current_username">UserName.txt</string>
+    <string name="file_former_username">FormerUserName.txt</string>
+
+
+
     <!-- Tools -->
     <string name="tools_qm_note">Note</string>
     <string name="tools_qm_add_note">Add Comment</string>
@@ -7,12 +13,12 @@
     <string name="tools_qm_appearance">Style</string>
     <string name="tools_qm_textmarkup_type">Type</string>
     <string name="pref_colormode_custom_text_color">Text color</string>
-    <string name="tools_qm_color">Color</string>
-    <string name="tools_qm_stroke_color">Border color</string>
-    <string name="tools_qm_fill_color">Fill color</string>
-    <string name="tools_qm_thickness">Thickness</string>
+    <string name="tools_qm_color">Couleur</string>
+    <string name="tools_qm_stroke_color">Couleur de la bordure</string>
+    <string name="tools_qm_fill_color">Couleur de remplissage</string>
+    <string name="tools_qm_thickness">Épaisseur</string>
     <string name="tools_qm_opacity">Opacity</string>
-    <string name="tools_qm_reply">Reply</string>
+    <string name="tools_qm_reply">Opacité</string>
     <string name="tools_qm_copy_to_clipboard">Copy to Clipboard</string>
     <string name="tools_qm_sign_and_save">Sign and Save</string>
     <string name="tools_qm_field_signed">Field is digitally signed</string>
@@ -61,13 +67,13 @@
     <string name="tools_qm_rubber_stamp" translatable="false">@string/annot_stamp</string>
     <string name="tools_qm_rotate">Rotate</string>
     <string name="tools_qm_paste">Paste</string>
-    <string name="tools_qm_edit">Edit</string>
+    <string name="tools_qm_edit">Modifier</string>
     <string name="tools_qm_open_link">Go</string>
     <string name="tools_qm_tools">Tools</string>
     <string name="tools_qm_back">Back</string>
     <string name="tools_annot_style_preview_text">Abcde</string>
-    <string name="tools_copy_confirmation">Copied to clipboard</string>
-    <string name="tools_copy_annot_confirmation">Copied annotation to clipboard</string>
+    <string name="tools_copy_confirmation">Copié dans le presse-papier</string>
+    <string name="tools_copy_annot_confirmation">Annotation copiée dans le presse-papier</string>
     <string name="tools_copy_annot_teach">Press Ctrl+V to paste where the cursor is</string>
     <string name="tools_copy_annot_waiting">Copying annotation to clipboard, please wait&#8230;</string>
     <string name="tools_paste_annot_waiting">Pasting annotation from clipboard, please wait&#8230;</string>
@@ -181,11 +187,11 @@
     <string name="tools_dialog_open_web_page_title">Open Web Page</string>
     <string name="tools_dialog_open_web_page_message">Do you want to open the page at %1$s?</string>
     <string name="tools_recent_color_grid_hint">The colors you recently used will appear here</string>
-    <string name="tools_dialog_annotation_popup_text_hint">Write some text here&#8230;</string>
-    <string name="tools_dialog_annotation_popup_note_hint">Write a note here&#8230;</string>
-    <string name="tools_dialog_annotation_popup_view_mode_hint">Tap to edit text.</string>
+    <string name="tools_dialog_annotation_popup_text_hint">Écrivez du texte ici&#8230;</string>
+    <string name="tools_dialog_annotation_popup_note_hint">Écrivez une note ici&#8230;</string>
+    <string name="tools_dialog_annotation_popup_view_mode_hint">Appuyez pour modifier le texte.</string>
     <string name="tools_dialog_annotation_popup_readonly_hint">This annotation is read-only.</string>
-    <string name="tools_annotation_style_presets">Presets</string>
+    <string name="tools_annotation_style_presets">Préréglages</string>
     <string name="tools_annotation_property_tab_presets">Basic</string>
     <string name="tools_annotation_property_tab_custom">Advanced</string>
     <string name="tools_annotation_property_tab_stroke">Stroke</string>
@@ -219,12 +225,12 @@
     <string name="controls_add_advanced_color">Add this color</string>
     <string name="controls_outline_dialog_imageview_back_description">Navigate Back</string>
     <string name="controls_outline_dialog_imageview_forward_description">Go To Next Level</string>
-    <string name="controls_outline_dialog_empty">This document has no outline</string>
+    <string name="controls_outline_dialog_empty">Ce document n\'a pas de grandes lignes. </string>
     <string name="controls_fav_color_editor_edit_color">Edit color</string>
     <string name="controls_fav_color_editor_select_color">Select this color</string>
-    <string name="controls_bookmark_dialog_empty">This document has no bookmarks</string>
+    <string name="controls_bookmark_dialog_empty">Ce document n\'a pas de marque-page.</string>
     <string name="controls_bookmark_dialog_default_title">Page&#160;</string>
-    <string name="controls_bookmark_dialog_delete_all_message">Are you sure you want to delete all bookmarks?</string>
+    <string name="controls_bookmark_dialog_delete_all_message">Êtes-vous sûr de vouloir supprimer tous les marque-pages?</string>
 
     <string name="controls_thumbnail_slider_thumbview_thumb_description">Thumbnail</string>
 
@@ -232,7 +238,7 @@
     <string name="controls_thumbnails_view_selected"><![CDATA[%1$s selected]]></string>
     <string name="controls_thumbnails_view_selected_hint">Selected: </string>
     <string name="controls_thumbnails_view_confirm_delete_hint">Delete Page(s)?</string>
-    <string name="controls_thumbnails_view_delete_msg_all_pages">You can not delete all pages in the document.</string>
+    <string name="controls_thumbnails_view_delete_msg_all_pages">Vous ne pouvez pas supprimer toutes les pages du document.</string>
 
     <string name="add_pdf_wait">Adding PDF&#8230;</string>
     <string name="add_image_wait">Adding image&#8230;</string>
@@ -664,11 +670,11 @@
     <string name="action_list_all">List all</string>
     <string name="action_file_print">Print</string>
     <string name="action_close_tab">Close document</string>
-    <string name="action_export_options">Save a copy</string>
-    <string name="action_export_original">Identical copy</string>
+    <string name="action_export_options">Sauvegarder une copie</string>
+    <string name="action_export_original">Copie identique</string>
     <string name="action_export_flatten">Flattened copy</string>
     <string name="action_export_optimize">Reduced file size copy</string>
-    <string name="action_export_password">Password protected copy</string>
+    <string name="action_export_password">Copie protégée par mot de passe</string>
     <string name="action_export_password_existing">Changed/removed password copy</string>
     <string name="action_export_cropped">Permanently cropped copy</string>
 

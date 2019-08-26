@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:iconifiedByDefault="false"
-        android:queryHint="please input the file or directory name"
+        android:queryHint="@string/hint_searchbar"
         android:searchIcon="@drawable/ic_search_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintTop_toTopOf="@+id/frameLayout"

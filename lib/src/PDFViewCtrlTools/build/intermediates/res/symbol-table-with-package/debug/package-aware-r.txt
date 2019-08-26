@@ -1798,7 +1798,6 @@ drawable viewpager_point_selected
 drawable white_square
 id CropOverlayView
 id ImageView_image
-id PDF_doc
 id action0
 id action_addpage
 id action_annotation_toolbar
@@ -2154,7 +2153,6 @@ id icon_layout
 id icon_preview
 id icon_textview
 id image
-id image_PDF
 id image_crop_border
 id image_crop_view
 id image_view_preview
@@ -3236,7 +3234,9 @@ string fab_transformation_sheet_behavior
 string favorites
 string file_attachments
 string file_attachments_non_pdf_saved
+string file_current_username
 string file_does_not_exist_message
+string file_former_username
 string free_text_font
 string free_text_fonts_loading
 string free_text_fonts_prompt

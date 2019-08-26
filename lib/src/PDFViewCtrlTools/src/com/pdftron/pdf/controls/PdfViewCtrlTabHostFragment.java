@@ -167,8 +167,10 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
     private static final String KEY_IS_RESTARTED = "is_fragment_restarted";
 
 
-    public static String formerUserNameFileName="FormerUserName.txt";
-    public static String currentUsersNameFileName="UserName.txt";
+//    public static String formerUserNameFileName="FormerUserName.txt";
+//    public static String currentUsersNameFileName="UserName.txt";
+    public static String formerUserNameFileName;
+    public static String currentUsersNameFileName;
 
     public static final int ANIMATE_DURATION_SHOW = 250;
     public static final int ANIMATE_DURATION_HIDE = 250;
@@ -421,6 +423,8 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
         super.onCreate(savedInstanceState);
         getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+        currentUsersNameFileName=this.getString(R.string.file_current_username);
+        formerUserNameFileName=this.getString(R.string.file_former_username);
 
         mDisposables = new CompositeDisposable();
 
@@ -4664,6 +4668,9 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
                 exitSearchMode();
             }
             return true;
+        }
+        else{
+
         }
         return false;
     }

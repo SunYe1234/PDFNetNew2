@@ -75,8 +75,8 @@ public  class EaseFragment extends Fragment {
 
     private static final int CACHED_SD_CARD_FOLDER_LIMIT = 25;
     public static File UsersFile=null;
-    public static String usersNameFileName="UserName.txt";
-
+//    public static String usersNameFileName="UserName.txt";
+public static String usersNameFileName;
     private GridLayout relativeLayout;
 //    private String filesPath="/storage/0403-0201/DOC SAT digitalisée/";
     private  String filesPath;
@@ -118,6 +118,7 @@ public  class EaseFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         parentFragment=(EaseActivityWithFragment) getParentFragment();
+        usersNameFileName=this.getString(R.string.file_current_username);
 //        filesPath=parentFragment.getExtSDCardPath()+filesPath;
 //        filesPath=getExtSDCardPath()+filesPath;
        // setContentView(R.layout.activity_ease);
@@ -264,7 +265,7 @@ public  class EaseFragment extends Fragment {
             Display display = getActivity().getWindowManager().getDefaultDisplay();
 //            int height = display.getHeight();
 
-            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Oups, you haven't any saved copies yet.", Toast.LENGTH_SHORT);
+            Toast toast=Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_zero_cps), Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER, 0, 0);
 //            toast.setDuration(Toast.LENGTH_LONG);
             toast.show();
@@ -314,7 +315,7 @@ public  class EaseFragment extends Fragment {
                             Display display = getActivity().getWindowManager().getDefaultDisplay();
                             int height = display.getHeight();
 
-                            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't delete the original file.", Toast.LENGTH_SHORT);
+                            Toast toast=Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_delete_original_file), Toast.LENGTH_SHORT);
 //                            toast.setGravity(Gravity.TOP, 0, 3*height / 4);
                             toast.setGravity(Gravity.CENTER,0,0);
                             toast.setDuration(Toast.LENGTH_LONG);
@@ -494,7 +495,7 @@ public  class EaseFragment extends Fragment {
                     Display display = getActivity().getWindowManager().getDefaultDisplay();
                     int height = display.getHeight();
 
-                    Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't open this type of file, it's not a pdf.", Toast.LENGTH_SHORT);
+                    Toast toast=Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_not_pdf), Toast.LENGTH_SHORT);
 //                    toast.setGravity(Gravity.TOP, 0, 3*height / 4);
                     toast.setDuration(Toast.LENGTH_LONG);
                     toast.show();
