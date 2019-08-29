@@ -308,6 +308,7 @@
     <string name="dialog_webpage_pdf_convert">Convert</string>
     <string name="dialog_webpage_pdf_explain">In your web browser, open the ⋮ menu, select Share…, and choose Convert to PDF.</string>
     <string name="dialog_webpage_pdf_title">Create PDF from webpage</string>
+    <string name="dialoge_delete_account">Vous voulez supprimer votre compte?</string>
     <string name="dialoge_delete_cp">Voulez-vous supprimer ce document?</string>
     <string name="dialoge_exit">Vous voulez vous déconnecter?</string>
     <string name="diff_msg">Quickly spot differences between pages</string>

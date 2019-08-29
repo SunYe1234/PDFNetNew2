@@ -9,6 +9,7 @@
 
     <string name="dialoge_delete_cp">Voulez-vous supprimer ce document?</string>
     <string name="dialoge_exit">Vous voulez vous déconnecter?</string>
+    <string name="dialoge_delete_account">Vous voulez supprimer votre compte?</string>
 
     <string name="title_item_viewer">Viewer</string>
     <string name="title_item_local_folder_list" translatable="false">@string/local_folders</string>

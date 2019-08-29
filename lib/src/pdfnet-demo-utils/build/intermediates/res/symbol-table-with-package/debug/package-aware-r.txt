@@ -3966,6 +3966,7 @@ string dialog_webpage_pdf_alternation
 string dialog_webpage_pdf_convert
 string dialog_webpage_pdf_explain
 string dialog_webpage_pdf_title
+string dialoge_delete_account
 string dialoge_delete_cp
 string dialoge_exit
 string diff_annotations_off

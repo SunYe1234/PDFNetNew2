@@ -80,7 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
                 CheckEditTextStatus();
 
                 // Method to check Email is already exists or not.
-                CheckingEmailAlreadyExistsOrNot();
+                CheckingUserAlreadyExistsOrNot();
                 //Sending confirmation email.
                 Confirm();
 
@@ -170,14 +170,14 @@ public class RegisterActivity extends AppCompatActivity {
             sqLiteDatabaseObj.close();
 
             // Printing toast message after done inserting.
-            Toast.makeText(RegisterActivity.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, getString(R.string.register_success), Toast.LENGTH_LONG).show();
 
         }
         // This block will execute if any of the registration EditText is empty.
         else {
 
             // Printing toast message if any of EditText is empty.
-            Toast.makeText(RegisterActivity.this, "Please Fill All The Required Fields.", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, getString(R.string.fill_all_blank), Toast.LENGTH_LONG).show();
 
         }
 
@@ -231,7 +231,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     // Checking Email is already exists or not.
-    public void CheckingEmailAlreadyExistsOrNot() {
+    public void CheckingUserAlreadyExistsOrNot() {
 
         // Opening SQLite database write permission.
        // sqLiteDatabaseObj = sqLiteHelper.getWritableDatabase();
@@ -268,7 +268,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (F_Result.equalsIgnoreCase("Email Found")) {
 
             // If email is exists then toast msg will display.
-            Toast.makeText(RegisterActivity.this, "Email Already Exists", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, getString(R.string.user_exits), Toast.LENGTH_LONG).show();
 
         } else {
 

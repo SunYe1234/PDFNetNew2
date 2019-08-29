@@ -980,6 +980,7 @@ public class PdfViewCtrlTabFragment extends Fragment implements
         getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 
+
         mDisposables = new CompositeDisposable();
 
         Activity activity = getActivity();

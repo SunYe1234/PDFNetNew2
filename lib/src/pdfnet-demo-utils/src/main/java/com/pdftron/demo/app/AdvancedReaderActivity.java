@@ -1540,27 +1540,11 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             }
         }
         else if (navItemId == R.id.item_folder_list) {
-//            if (!(mCurrentFragment instanceof LocalFolderViewFragment)) {
-//                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
-//                    fragment = mLastAddedBrowserFragment;
-//                } else {
-//                     Load last used folder, if set
-                    //fragment = LocalFolderViewFragment.newInstance();
+
             fragment=new EaseActivityWithFragment();
-//                    ((EaseActivityWithFragment) fragment).setLocalFolderViewFragmentListener(
-//                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
-//                                @Override
-//                                public void onLocalFolderShown() {
-//                                }
-//
-//                                @Override
-//                                public void onLocalFolderHidden() {
-//                                }
-//                            });
-//                }
+
                 replaceFragment = true;
                 setTitle(R.string.title_item_local_folder_list);
-//            }
         }
 
         else if (navItemId == R.id.item_my_cps) {
@@ -1615,11 +1599,13 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         }
         //if the button "Delete Account" is clicked
         else if (navItemId == R.id.item_delete_account) {
+
+            dialogDeleteAccount();
             //delete his saved copies first
-            deleteUserCopies();
-            //delete his account in the database
-            deleteUserAccount();
-            SysApplication.getInstance().exit();
+//            deleteUserCopies();
+//            //delete his account in the database
+//            deleteUserAccount();
+//            SysApplication.getInstance().exit();
 //            backToLogin();
 
         }
@@ -2774,6 +2760,39 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             public void onClick(DialogInterface dialog, int which) {
 //                System.exit(0);
                SysApplication.getInstance().exit();
+
+
+            }
+        });
+
+        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
+
+
+    }
+    private void dialogDeleteAccount()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(getString(R.string.dialoge_delete_account));
+
+        builder.setTitle("");
+
+        builder.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+//                System.exit(0);
+                deleteUserCopies();
+                //delete his account in the database
+                deleteUserAccount();
+                SysApplication.getInstance().exit();
 
 
             }

@@ -29,5 +29,9 @@
     <string name="log_in_failed">Nom d\'utilisateur ou mot de passe incorrect, veuillez réessayer</string>
     <string name="delete_account_success">est supprimé avec succès</string>
 
+    <string name="register_success">Utilisateur enregistré avec succès</string>
+    <string name="fill_all_blank">Remplir tous les champs obligatoires, s\'il vous plaît </string>
+    <string name="user_exits">Ce nom est déjà utilisé.</string>
+
 
 </resources>

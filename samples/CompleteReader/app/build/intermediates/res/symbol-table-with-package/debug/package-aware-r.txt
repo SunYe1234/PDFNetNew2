@@ -4079,6 +4079,7 @@ string dialog_webpage_pdf_alternation
 string dialog_webpage_pdf_convert
 string dialog_webpage_pdf_explain
 string dialog_webpage_pdf_title
+string dialoge_delete_account
 string dialoge_delete_cp
 string dialoge_exit
 string diff_annotations_off
@@ -4185,6 +4186,7 @@ string file_type_image
 string file_type_pdf
 string file_type_show_all
 string files
+string fill_all_blank
 string fit_page
 string fit_page_height
 string fit_page_width
@@ -4408,6 +4410,7 @@ string recycler_view_example
 string redo
 string reflow_disable_markup_clicked
 string reflow_disable_search_clicked
+string register_success
 string registered_trademark
 string removing_access_wait
 string reopen
@@ -4698,6 +4701,7 @@ string user_crop_selection_auto_crop
 string user_crop_selection_description
 string user_crop_selection_manual_crop
 string user_crop_selection_remove_crop
+string user_exits
 string version
 string watermark_title
 style AlertDialog_AppCompat

@@ -3537,6 +3537,7 @@ public class PdfViewCtrlTabHostFragment extends Fragment implements
      */
     protected boolean showAnnotationToolbar(final int mode, final Annot inkAnnot, final ToolMode toolMode) {
         Activity activity = getActivity();
+
         final PdfViewCtrlTabFragment currentFragment = getCurrentPdfViewCtrlFragment();
         if (activity == null || currentFragment == null) {
             return false;
