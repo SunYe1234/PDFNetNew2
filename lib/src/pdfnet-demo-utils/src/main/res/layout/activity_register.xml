@@ -23,7 +23,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/editNNI"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
@@ -51,7 +51,7 @@
         android:id="@+id/editPassword"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editName"
+        android:layout_below="@+id/editNNI"
         android:layout_marginTop="70dp"
         android:ems="10"
         android:gravity="center"

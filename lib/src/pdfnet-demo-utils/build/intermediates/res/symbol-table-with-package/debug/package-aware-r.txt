@@ -2066,6 +2066,7 @@ drawable rounded_corners
 drawable rounded_corners_left
 drawable rounded_corners_right
 drawable rtl
+drawable scroll_view_background
 drawable search_next_normal
 drawable search_next_press
 drawable search_prev_normal
@@ -2156,6 +2157,7 @@ id action_text
 id action_viewmode
 id action_whole_word
 id actions
+id activity_admin
 id activity_chooser_view_content
 id activity_ease
 id activity_main
@@ -2293,6 +2295,7 @@ id center
 id centerCrop
 id centerInside
 id chains
+id change_pdfhome
 id checkBoxAnnots
 id checkBoxDocument
 id checkBoxSummary
@@ -2462,6 +2465,7 @@ id custom_tab_host
 id date_switch
 id decor_content_parent
 id default_activity_button
+id delete_users
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2511,7 +2515,7 @@ id down
 id drawer_layout
 id drawing_view
 id editEmail
-id editName
+id editNNI
 id editPassword
 id editText
 id edit_btn
@@ -2832,6 +2836,8 @@ id password_input
 id password_layout
 id pdfViewCtrlHost
 id pdf_layer_view
+id pdfhome
+id pdfhome_titre
 id pdfviewctrl
 id pdfviewctrl_tab_host
 id percent
@@ -3043,6 +3049,7 @@ id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
 id screen
+id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
@@ -3253,6 +3260,8 @@ id undo_title
 id uniform
 id unlabeled
 id up
+id users_list
+id users_list_titre
 id valueView
 id video_view
 id viewMode_scrollView
@@ -3338,6 +3347,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout actionbar_indeterminate_progress
+layout activity_admin
 layout activity_complete_reader
 layout activity_complete_reader_settings
 layout activity_diff_tool
@@ -3503,6 +3513,7 @@ layout recyclerview_header_item
 layout recyclerview_item_colorpreset_list
 layout recyclerview_item_form
 layout recyclerview_item_rubber_stamp
+layout scroll_view_background
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3967,6 +3978,7 @@ string dialog_webpage_pdf_convert
 string dialog_webpage_pdf_explain
 string dialog_webpage_pdf_title
 string dialoge_delete_account
+string dialoge_delete_all_account_cp
 string dialoge_delete_cp
 string dialoge_exit
 string diff_annotations_off
@@ -4022,6 +4034,7 @@ string duplicate_file_error_message_no_space
 string duplicate_file_max_error_message
 string duplicating_wait
 string ease_example
+string emplty_pdfhome_file
 string empty_title
 string enter_value
 string error
@@ -4065,6 +4078,7 @@ string file_info_document_size
 string file_info_document_title
 string file_pdf_home
 string file_removed_from_favorites
+string file_save_pdf_home
 string file_type_docx
 string file_type_external_file
 string file_type_image
@@ -4373,6 +4387,7 @@ string title_item_recent
 string title_item_viewer
 string toast_delete_original_file
 string toast_file_info_message
+string toast_no_home_directory
 string toast_not_pdf
 string toast_root_directory
 string toast_search_already_there
@@ -4822,6 +4837,7 @@ style HighlightPresetStyle2
 style HighlightPresetStyle3
 style HighlightPresetStyle4
 style MaterialProgressBarStyle
+style MyEditText
 style NavigationViewStyle
 style NoTitleTheme
 style Platform_AppCompat

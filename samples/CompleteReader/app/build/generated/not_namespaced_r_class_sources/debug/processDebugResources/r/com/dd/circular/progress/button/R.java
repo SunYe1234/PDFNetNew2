@@ -55,16 +55,16 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int define_circularprogressbutton = 0x7f1200f2;
-        public static final int library_circularprogressbutton_author = 0x7f1201f4;
-        public static final int library_circularprogressbutton_authorWebsite = 0x7f1201f5;
-        public static final int library_circularprogressbutton_isOpenSource = 0x7f1201f6;
-        public static final int library_circularprogressbutton_libraryDescription = 0x7f1201f7;
-        public static final int library_circularprogressbutton_libraryName = 0x7f1201f8;
-        public static final int library_circularprogressbutton_libraryVersion = 0x7f1201f9;
-        public static final int library_circularprogressbutton_libraryWebsite = 0x7f1201fa;
-        public static final int library_circularprogressbutton_licenseId = 0x7f1201fb;
-        public static final int library_circularprogressbutton_repositoryLink = 0x7f1201fc;
+        public static final int define_circularprogressbutton = 0x7f1200f3;
+        public static final int library_circularprogressbutton_author = 0x7f1201f8;
+        public static final int library_circularprogressbutton_authorWebsite = 0x7f1201f9;
+        public static final int library_circularprogressbutton_isOpenSource = 0x7f1201fa;
+        public static final int library_circularprogressbutton_libraryDescription = 0x7f1201fb;
+        public static final int library_circularprogressbutton_libraryName = 0x7f1201fc;
+        public static final int library_circularprogressbutton_libraryVersion = 0x7f1201fd;
+        public static final int library_circularprogressbutton_libraryWebsite = 0x7f1201fe;
+        public static final int library_circularprogressbutton_licenseId = 0x7f1201ff;
+        public static final int library_circularprogressbutton_repositoryLink = 0x7f120200;
     }
     public static final class styleable {
         private styleable() {}

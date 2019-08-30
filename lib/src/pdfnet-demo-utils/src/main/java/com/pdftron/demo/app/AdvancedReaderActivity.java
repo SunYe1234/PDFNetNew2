@@ -265,8 +265,8 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         mDisposables = new CompositeDisposable();
         usersNameFileName=this.getString(R.string.file_current_username);
-        exPdfsPath=getString(R.string.file_pdf_home);
-
+//        exPdfsPath=getString(R.string.file_pdf_home);
+        exPdfsPath=getPdfhomeName();
         if (Utils.applyDayNight(this)) {
             return;
         }
@@ -1300,24 +1300,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             // first check if we need to dismiss the permission screen
             dismissDialogFragment(FRAG_TAG_PERMISSION_SCREEN);
 
-            // So, if this is the first time and the getting started file was
-            // copied properly, we launch the viewer with the document.
-            boolean isFirst=isFirstTimeRun();
-            isFirst=false;
-//            if (isFirst) {
-//                copyTutorialFile();
-//            }
-
-           // copyTutorialFile();
-            //TODO: Remove the following if no Getting Started, and wish to use onboarding
-            if (isFirst && mGettingStartedFile != null) {
-                // Open navigation drawer the next time onResume is called
-                mTeachNavDrawer = true;
-                onFileSelected(mGettingStartedFile, "");
-            } else {
-                // Try to update fragment since underlying data has changed
             reloadBrowser();
-            }
         }
     }
 
@@ -1344,22 +1327,12 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
             mViewerBuilder = null;
         } else if (mNavigationDrawerView != null && mNavigationDrawerView.getMenu() != null) {
             MenuItem menuItem = null;
-//            if (isFirstTimeRun()) {
-//            //if(true){
-//                mIsFirstTimeRunConsumed = false; // consumed
-//                menuItem = mNavigationDrawerView.getMenu().findItem(R.id.item_file_list);
-//
-//                copyTutorialFile();
-//                mTeachNavDrawer = true;
-//                onFileSelected(mGettingStartedFile, "");
-//            } else
+
 
                 if (mProcessedFragmentViewId != MENU_ITEM_NONE) {
                 menuItem = mNavigationDrawerView.getMenu().findItem(mProcessedFragmentViewId);
             }
-//            if (menuItem != null) {
                 selectNavigationItem(menuItem);
-//            }
         }
 
         if (mReturnFromSettings) {
@@ -1549,84 +1522,29 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
         else if (navItemId == R.id.item_my_cps) {
             if (Utils.isLollipop()) {
-//                if (mLastAddedBrowserFragment instanceof LocalFolderViewFragment) {
-//                    //fragment = mLastAddedBrowserFragment;
-//                    fragment=LocalFolderViewFragment.newInstance(getUserNameFromFile());
-//                } else {
-////                     Load last used folder, if set
-//                    fragment = LocalFolderViewFragment.newInstance(getUserNameFromFile());
-//                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
-//                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
-//                                @Override
-//                                public void onLocalFolderShown() {
-//                                }
-//
-//                                @Override
-//                                public void onLocalFolderHidden() {
-//                                }
-//                            });
-//                }
+
                 fragment=EaseActivityWithFragment.newInstance(getUserNameFromFile());
                 replaceFragment = true;
-//                setTitle(R.string.title_item_local_folder_list);
             }
         }
 
 
-//        else if (navItemId == R.id.item_system_file_picker) {
-//            if (Utils.isKitKat()) {
-//                Intent intent = MiscUtils.createSystemPickerIntent();
-//                startActivityForResult(intent, RequestCode.SYSTEM_PICKER);
-//                AnalyticsHandlerAdapter.getInstance().sendTimedEvent(AnalyticsHandlerAdapter.EVENT_SCREEN_SYSTEM_PICKER);
-//            }
-//        }
-//        else if (navItemId == R.id.item_settings) {
-//            // some settings like multi-tap, full-screen mode might have been updated, so we have
-//            // to create Host Fragment from scratch
-//            if (mPdfViewCtrlTabHostFragment != null) {
-//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-//                Logger.INSTANCE.LogD(TAG, "remove " + mPdfViewCtrlTabHostFragment);
-//                ft.remove(mPdfViewCtrlTabHostFragment);
-//                ft.commit();
-//                mPdfViewCtrlTabHostFragment = null;
-//            }
-//            startActivityForResult(new Intent().setClass(this, SettingsActivity.class), RequestCode.SETTINGS);
-//        }
+
         else if (navItemId == R.id.item_exit) {
-            //backToLogin();
-//            SysApplication.getInstance().exit();
+
             dialog();
         }
         //if the button "Delete Account" is clicked
         else if (navItemId == R.id.item_delete_account) {
 
             dialogDeleteAccount();
-            //delete his saved copies first
-//            deleteUserCopies();
-//            //delete his account in the database
-//            deleteUserAccount();
-//            SysApplication.getInstance().exit();
-//            backToLogin();
 
         }
         else {
-//
-//                    fragment = LocalFolderViewFragment.newInstance();
-//                    ((LocalFolderViewFragment) fragment).setLocalFolderViewFragmentListener(
-//                            new LocalFolderViewFragment.LocalFolderViewFragmentListener() {
-//                                @Override
-//                                public void onLocalFolderShown() {
-//                                }
-//
-//                                @Override
-//                                public void onLocalFolderHidden() {
-//                                }
-//                            });
+
             fragment=new EaseActivityWithFragment();
-//                }
                 replaceFragment = true;
                 setTitle(R.string.title_item_local_folder_list);
-//            }
         }
 
         if (replaceFragment) {
@@ -1675,51 +1593,20 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
     }
 
-    private void backToLogin()
-    {
-        Intent intent=new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-    // delete user account in the SQLite database .
-    public  void DeleteAccountInSQLiteDatabase(){
 
-        String SQLiteDataBaseQueryHolder ;
-        SQLiteHelper sqLiteHelper=new SQLiteHelper(this);
-        Cursor cursor;
-        SQLiteDatabase sqLiteDatabaseObj= openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);;
-
-        // SQLite query to insert data into table.
-        SQLiteDataBaseQueryHolder = "DELETE FROM "+SQLiteHelper.TABLE_NAME+" WHERE "+SQLiteHelper.Table_Column_1_Name+" = '"+currentUser+"';";
-
-        // Executing query.
-        sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
-
-        // Closing SQLite database object.
-        sqLiteDatabaseObj.close();
-
-        // Printing toast message after done inserting.
-        Toast.makeText(AdvancedReaderActivity.this,currentUser+getString(R.string.delete_account_success), Toast.LENGTH_LONG).show();
-
-
-
-    }
+    /**
+     * Delete the current user account record in the database
+     */
     private void deleteUserAccount()
     {
         String SQLiteDataBaseQueryHolder ;
         SQLiteHelper sqLiteHelper=new SQLiteHelper(this);
         currentUser=getUserNameFromFile();
         SQLiteDatabase sqLiteDatabaseObj= SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);;
-//        Cursor c = sqLiteDatabaseObj.rawQuery("select name from sqlite_master where type='table' order by name", null);
-//        ArrayList<String> usersBefore=new ArrayList<String>();
-//        while(c.moveToNext()){
-//
-//            String name = c.getString(c.getColumnIndex("name"));
-//            usersBefore.add(name);
-//
-//        }
+
 
         // SQLite query to insert data into table.
-        SQLiteDataBaseQueryHolder = "DELETE FROM "+SQLiteHelper.TABLE_NAME+" WHERE "+SQLiteHelper.Table_Column_1_Name+" = '"+currentUser+"';";
+        SQLiteDataBaseQueryHolder = "DELETE FROM "+SQLiteHelper.TABLE_NAME+" WHERE "+SQLiteHelper.Table_Column_1_NNI+" = '"+currentUser+"';";
 
         // Executing query.
         sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
@@ -1731,17 +1618,14 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         Toast.makeText(AdvancedReaderActivity.this,currentUser+getString(R.string.delete_account_success), Toast.LENGTH_LONG).show();
 
 
-        //         c=sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME,null,null,null,null,null,null);
-//        ArrayList<String> usersAfter=new ArrayList<String>();
-//        while(c.moveToNext()){
-//
-//            String name = c.getString(c.getColumnIndex("name"));
-//            usersAfter.add(name);
-//
-//        }
 
     }
 
+
+    /**
+     * get the current username which is saved in the file
+     * @return
+     */
     private   String getUserNameFromFile()
     {
 
@@ -2720,7 +2604,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     {
         if(null != this.getCurrentFocus()){
             /**
-             * 点击空白位置 隐藏软键盘
+             * hide the keyboard when click on the blank area
              */
             InputMethodManager mInputMethodManager = (InputMethodManager)this.getSystemService(INPUT_METHOD_SERVICE);
             return mInputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
@@ -2747,6 +2631,9 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
         return super.dispatchTouchEvent(event);
     }
 
+    /**
+     * show an alert dialog when user try to exit
+     */
     private void dialog()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -2758,7 +2645,7 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-//                System.exit(0);
+
                SysApplication.getInstance().exit();
 
 
@@ -2777,6 +2664,10 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
 
 
     }
+
+    /**
+     * show an alert dialog when user try to delete his account
+     */
     private void dialogDeleteAccount()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -2812,6 +2703,10 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     }
 
 
+    /**
+     * get the absolute storage path of the SD card
+     * @return  the absolute storage path of the SD card
+     */
     public   String getExtSDCardPath()
     {
         StorageManager mStorageManager = (StorageManager) getSystemService(Context.STORAGE_SERVICE);
@@ -2852,5 +2747,42 @@ public class AdvancedReaderActivity extends AppCompatActivity implements
     {
         return exPdfsPath;
     }
+
+
+    private String getPdfhomeName()
+    {
+        File pdfHomeNameFile=new File(getFilesDir().getAbsolutePath()+"/"+getString(R.string.file_save_pdf_home));
+        if (!pdfHomeNameFile.exists())
+        {
+//            pdfHomeNameFile.mkdir();
+            return getString(R.string.emplty_pdfhome_file);
+        }
+        try {
+            FileInputStream inputStream = openFileInput(getString(R.string.file_save_pdf_home));
+            // read a character each time
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            String pdfhome = "/";
+            int tempchar;
+            while ((tempchar = reader.read()) != -1) {
+
+                if (((char) tempchar) != '\r') {
+                    System.out.print((char) tempchar);
+                    pdfhome += (char) tempchar;
+                }
+
+            }
+            reader.close();
+            return pdfhome+"/";
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return  null;
+    }
+
+
+
+
 
 }

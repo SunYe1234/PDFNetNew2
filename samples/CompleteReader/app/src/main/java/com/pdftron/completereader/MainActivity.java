@@ -36,6 +36,7 @@ import com.dd.CircularProgressButton;
 import com.pdftron.common.PDFNetException;
 import com.pdftron.completereader.loginSignup.RegisterActivity;
 import com.pdftron.completereader.loginSignup.SQLiteHelper;
+import com.pdftron.demo.app.AdminActivity;
 import com.pdftron.demo.app.AdvancedReaderActivity;
 import com.pdftron.demo.app.SimpleReaderActivity;
 import com.pdftron.demo.app.SysApplication;
@@ -71,14 +72,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button LogInButton, RegisterButton ;
-    EditText Email, Password ;
-    String EmailHolder, PasswordHolder;
+    EditText NNI ;
+    String NNIHolder;
     Boolean EditTextEmptyHolder;
     SQLiteDatabase sqLiteDatabaseObj;
     SQLiteHelper sqLiteHelper;
     Cursor cursor;
     String TempPassword = "NOT_FOUND" ;
-    public static String UserName;
+    public static String NNIofCurrentUser;
     URL url;
     public static  File UserFolder=null;
     public static File UsersFile=null;
@@ -90,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
     //public static String PDFcps="/storage/emulated/0/Download/PDFcps/";
     public static String PDFcps;
     public static String cpsHome;
+
+    public boolean isAdmin=false;
     //public static String cpsHome;
 
     public static final int FLAG_HOMEKEY_DISPATCHED = 0x80000000;
@@ -100,40 +103,17 @@ public class MainActivity extends AppCompatActivity {
         SysApplication.getInstance().addActivity(this);
 
 
-
-        /*Intent intent = getIntent();
-        Uri uri = intent.getData();
-        try {
-             url = new URL(uri.getScheme(), uri.getHost(), uri.getPath());
-        } catch (MalformedURLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }*/
-
-//        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-//        Transition fade = TransitionInflater.from(this).inflateTransition(R.transition.fade);
-//        getWindow().setExitTransition(fade);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_main1);
-//        TextView textView=(TextView)findViewById(R.id.loginText);
-//        textView.setTextSize(30);
 
-
-
-        //extSdcardPath is the path of the external SD card which depends on the exact SD card we use
         String extSdcardPath = getExtSDCardPath();
         usersNameFileName=this.getString(R.string.file_current_username);
         formerUserNameFileName=this.getString(R.string.file_former_username);
-//        cpsHome=getFilesDir();
 
-        //intnStoragePath is the path of the internal storage of the tablet
         String intnStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
 
-        //create the path of PDFcps of all users, cpsHome is the name of root directory where we save users directories
-        //cpsHome is "/Download/PDFcps/" by default, it needs to be modified manually if we want to change it
-//        PDFcps=intnStoragePath+cpsHome;
+
         PDFcps=getFilesDir().getAbsolutePath()+"/PDFcps";
         File cps=new File(PDFcps);
         if (!cps.exists())
@@ -147,8 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
         RegisterButton = (Button) findViewById(R.id.buttonRegister);
 
-        Email = (EditText)findViewById(R.id.editEmail);
-        Password = (EditText)findViewById(R.id.editPassword);
+        NNI = (EditText)findViewById(R.id.editNNI);
 
         sqLiteHelper = new SQLiteHelper(this);
 
@@ -161,8 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 CheckEditTextStatus();
 
 
-                if(LoginFunction()) {
-//                    PdfViewCtrlTabsManager.getInstance().cleanup();
+                if(LoginFunction()&&!isAdmin) {
                     saveFormerUserName();
                     saveUserNameToFile();
                     createCpDirectory();
@@ -171,6 +149,9 @@ public class MainActivity extends AppCompatActivity {
                         sqLiteDatabaseObj.close();
                     openAdvancedReaderActivity();
                 }
+                if (isAdmin)
+                    openAdminActivity();
+
 
 
 
@@ -202,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         File cpHome=new File(PDFcps);
         if (!cpHome.exists())
             cpHome.mkdir();
-        File myCpHome=new File(cpHome.getAbsolutePath()+"/"+UserName);
+        File myCpHome=new File(cpHome.getAbsolutePath()+"/"+NNIofCurrentUser);
         if (!myCpHome.exists())
             myCpHome.mkdir();
         return;
@@ -215,21 +196,15 @@ public class MainActivity extends AppCompatActivity {
      */
     private void saveUserNameToFile() {
 
-        File fileDir = getFilesDir();
-        String destFileName=UserName+".txt";
-        File destFile=new File(destFileName);
-        long size=destFile.length();
-
-
         try {
 
             FileOutputStream outStream=this.openFileOutput(usersNameFileName,Context.MODE_PRIVATE);
-            outStream.write(new String(UserName).getBytes());
+            outStream.write(new String(NNIofCurrentUser).getBytes());
             outStream.flush();
             outStream.close();
             //getUserNameFromFile();
 
-             UserFolder=new File(PDFcps+UserName);
+             UserFolder=new File(PDFcps+NNIofCurrentUser);
              boolean exits=UserFolder.exists();
             if (!UserFolder.exists()) {
                 File PDFcpsFolder=new File(this.PDFcps);
@@ -237,7 +212,6 @@ public class MainActivity extends AppCompatActivity {
                     PDFcpsFolder.mkdir();
                 UserFolder.mkdir();
             }
-            exits=UserFolder.exists();
             getUserNameFromFile();
         } catch (IOException e)
         {
@@ -260,14 +234,12 @@ public class MainActivity extends AppCompatActivity {
                 UsersName.createNewFile();
             FileInputStream inputStream = openFileInput(usersNameFileName);
             UsersFile=new File(getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
-            // 一次读一个字符
+            // read a character each time
             InputStreamReader reader = new InputStreamReader(inputStream);
             String usName="";
             int tempchar;
             while ((tempchar = reader.read()) != -1) {
-                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
-                // 但如果这两个字符分开显示时，会换两次行。
-                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+
                 if (((char) tempchar) != '\r') {
                     System.out.print((char) tempchar);
                     usName+=(char)tempchar;
@@ -293,7 +265,6 @@ public class MainActivity extends AppCompatActivity {
                 outStream.write(new String(formerUserName).getBytes());
                 outStream.flush();
                 outStream.close();
-                //getUserNameFromFile();
 
 
             } catch (IOException e)
@@ -312,16 +283,11 @@ public class MainActivity extends AppCompatActivity {
             if (!UsersName.exists())
                 UsersName.createNewFile();
             FileInputStream inputStream = openFileInput(formerUserNameFileName);
-//            UsersFile=new File(getFilesDir().getAbsolutePath()+"/"+formerUserNameFileName);
-            System.out.println("读取前一个用户账户名：");
-            // 一次读一个字符
             InputStreamReader reader = new InputStreamReader(inputStream);
             String usName="";
             int tempchar;
             while ((tempchar = reader.read()) != -1) {
-                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
-                // 但如果这两个字符分开显示时，会换两次行。
-                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+
                 if (((char) tempchar) != '\r') {
                     System.out.print((char) tempchar);
                     usName+=(char)tempchar;
@@ -343,42 +309,74 @@ public class MainActivity extends AppCompatActivity {
         AdvancedReaderActivity.setDebug(BuildConfig.DEBUG);
         AdvancedReaderActivity.open(this);
     }
-    // Login function starts from here.
+
+    private void openAdminActivity() {
+//        AdminActivity.open(this);
+        Intent intent=new Intent(this,AdminActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * LoginFunction check whether the username exist and whether the password is correct
+     * @return
+     *  true if log in successfully
+     *  false if not
+     */
+
     public boolean LoginFunction(){
 
         if(EditTextEmptyHolder) {
 
-            // Opening SQLite database write permission.
-            //sqLiteDatabaseObj =  openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);
+            //if it's administrator who try to login
+            if (NNIHolder.toLowerCase().equals(getString(R.string.admin_NNI)))
+            {
+                Toast.makeText(MainActivity.this,getString(R.string.log_in_admin), Toast.LENGTH_LONG).show();
+                isAdmin=true;
+
+                return true;
+            }
+
+
             if (sqLiteDatabaseObj==null||!sqLiteDatabaseObj.isOpen())
                 sqLiteDatabaseObj = SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);
-            //openOrCreateDatabase(SQLiteHelper.DATABASE_NAME, Context.MODE_PRIVATE, null);
 
-            // Adding search email query to cursor.
-           //cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_1_Name + "=?", new String[]{EmailHolder}, null, null, null);
-            //cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, null, null, null, null, null);
-            //String sql="select * from UserTable";
-            String sql = "select * from "+SQLiteHelper.TABLE_NAME+"  where name ='" + EmailHolder + "'; ";
-            cursor = sqLiteDatabaseObj.rawQuery(sql, null);
+
+            String sql = "select * from "+SQLiteHelper.TABLE_NAME+"  where "+SQLiteHelper.Table_Column_1_NNI+" ='" + NNIHolder + "'; ";
+            try{
+                cursor = sqLiteDatabaseObj.rawQuery(sql, null);
+                //if there is no such NNI in the database, show alert message and return false
+                if (cursor.getCount()==0)
+                {
+                    Toast.makeText(MainActivity.this,getString(R.string.log_in_failed), Toast.LENGTH_LONG).show();
+                    return false;
+
+                }
             while (cursor.moveToNext()) {
 
                 if (cursor.isFirst()) {
 
                     cursor.moveToFirst();
 
-                    // Storing Password associated with entered email.
-                    TempPassword = cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_3_Password));
-                    UserName=cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_1_Name));
+                    NNIofCurrentUser=cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_1_NNI));
 
                     // Closing cursor.
                     cursor.close();
                 }
             }
+            }catch (Exception e)
+            {
+                Toast.makeText(MainActivity.this,getString(R.string.log_in_failed), Toast.LENGTH_LONG).show();
+                return false;
+
+            }
+
 
             // Calling method to check final result ..
-            if (!CheckFinalResult())
-                return false;
-            else return true;
+//            if (!CheckFinalResult())
+//                return false;
+//            else
+                return true;
 
         }
         else {
@@ -394,12 +392,11 @@ public class MainActivity extends AppCompatActivity {
     public void CheckEditTextStatus(){
 
         // Getting value from All EditText and storing into String Variables.
-        EmailHolder = Email.getText().toString();
-        PasswordHolder = Password.getText().toString();
-        UserName=Email.getText().toString();
+        NNIHolder = NNI.getText().toString();
+        NNIofCurrentUser=NNI.getText().toString();
 
         // Checking EditText is empty or no using TextUtils.
-        if( TextUtils.isEmpty(EmailHolder) || TextUtils.isEmpty(PasswordHolder)){
+        if( TextUtils.isEmpty(NNIHolder) ){
 
             EditTextEmptyHolder = false ;
 
@@ -411,34 +408,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Checking entered password from SQLite database email associated password.
-    public boolean CheckFinalResult(){
-
-        if(TempPassword.equalsIgnoreCase(PasswordHolder))
-        {
-
-            Toast.makeText(MainActivity.this,getString(R.string.log_in_success), Toast.LENGTH_LONG).show();
-
-            // Going to Dashboard activity after login success message.
-            Intent intent = new Intent(MainActivity.this, AdvancedReaderActivity.class);
-            //Intent intent = new Intent(MainActivity.this, AdvancedReaderActivity.class);
-
-            // Sending Email to Dashboard Activity using intent.
-            intent.putExtra("userName",UserName );
-            intent.setClass(this,AdvancedReaderActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            return true;
-
-
-        }
-        else {
-
-            Toast.makeText(MainActivity.this,getString(R.string.log_in_failed), Toast.LENGTH_LONG).show();
-            return false;
-        }
-        //TempPassword = "NOT_FOUND" ;
-
-    }
+//    public boolean CheckFinalResult(){
+//
+//        if(TempPassword.equalsIgnoreCase(PasswordHolder))
+//        {
+//
+//            Toast.makeText(MainActivity.this,getString(R.string.log_in_success), Toast.LENGTH_LONG).show();
+//
+//            // Going to Dashboard activity after login success message.
+//            Intent intent = new Intent(MainActivity.this, AdvancedReaderActivity.class);
+//            //Intent intent = new Intent(MainActivity.this, AdvancedReaderActivity.class);
+//
+//            // Sending Email to Dashboard Activity using intent.
+//            intent.putExtra("userName",NNIofCurrentUser );
+//            intent.setClass(this,AdvancedReaderActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            startActivity(intent);
+//            return true;
+//
+//
+//        }
+//        else {
+//
+//            Toast.makeText(MainActivity.this,getString(R.string.log_in_failed), Toast.LENGTH_LONG).show();
+//            return false;
+//        }
+//        //TempPassword = "NOT_FOUND" ;
+//
+//    }
 
     private String getExtSDCardPath()
     {
@@ -478,7 +475,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent motionEvent) {
         if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-            // 获得当前得到焦点的View，一般情况下就是EditText（特殊情况就是轨迹球或者实体按键会移动焦点）
+            // get the current view which has the focus
             View view = this.getCurrentFocus();
 //            if (isShouldHideInput(view, motionEvent)) {
                 closeKeyboard(view);
@@ -489,11 +486,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 根据EditText所在坐标和用户点击的坐标相对比，来判断是否隐藏键盘，因为当用户点击EditText时没必要隐藏 stone
-     *
+     * decide whether we need to hide the keyboard or not according to the coordiation of the click point
      * @param view
      * @param motionEvent
      * @return
+     *  true if we can ignore the click event
+     *  false if not
      */
     private boolean isShouldHideInput(View view, MotionEvent motionEvent) {
         if (view != null && (view instanceof EditText)) {
@@ -503,13 +501,11 @@ public class MainActivity extends AppCompatActivity {
                     + view.getWidth();
             if (motionEvent.getX() > left && motionEvent.getX() < right
                     && motionEvent.getY() > top && motionEvent.getY() < bottom) {
-                // 点击EditText的事件，忽略它
                 return false;
             } else {
                 return true;
             }
         }
-        // 如果焦点不是EditText则忽略，这个发生在视图刚绘制完，第一个焦点不在EditView上，和用户用轨迹球选择其他的焦点
         return false;
     }
 
@@ -523,67 +519,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//    @Override
-//    public void onAttachedToWindow()
-//    {
-//        this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-//        super.onAttachedToWindow();
-//    }
-
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//
-//
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//        Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
-//            return true;
-//        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
-//            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
-//                    Toast.LENGTH_LONG).show();
-//// 屏蔽Home键
-//            return true;
-//        }
-//        return super.onKeyDown(keyCode, event);
-//    }
-
-    public void onPause()
-    {
-        super.onPause();
-        new Thread(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                Process logcatProcess = null;
-                BufferedReader bufferedReader = null;
-                try
-                {
-/** 获取系统logcat日志信息 */
-                    logcatProcess = Runtime.getRuntime().exec(new String[] {"logcat", "ActivityManager:I *:S"});
-                    bufferedReader = new BufferedReader(new InputStreamReader(logcatProcess.getInputStream()));
-
-                    String line;
-
-                    while ((line = bufferedReader.readLine()) != null)
-                    {
-                        if (line.indexOf("cat=[android.intent.category.HOME]") > 0)
-                        {
-/** 这里可以处理你对点击Home的操作哦 我这里是完全退出应用*/
-                            Toast.makeText(getApplicationContext(), "found HOME Key log",Toast.LENGTH_LONG);
 
 
-                        }
-                    }
-
-                }
-                catch (Exception e)
-                {
-
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
 
 
 

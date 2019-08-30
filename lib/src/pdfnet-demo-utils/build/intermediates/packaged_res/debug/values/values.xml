@@ -309,6 +309,7 @@
     <string name="dialog_webpage_pdf_explain">In your web browser, open the ⋮ menu, select Share…, and choose Convert to PDF.</string>
     <string name="dialog_webpage_pdf_title">Create PDF from webpage</string>
     <string name="dialoge_delete_account">Vous voulez supprimer votre compte?</string>
+    <string name="dialoge_delete_all_account_cp">Vous voulez supprimer tous les compte et copies?</string>
     <string name="dialoge_delete_cp">Voulez-vous supprimer ce document?</string>
     <string name="dialoge_exit">Vous voulez vous déconnecter?</string>
     <string name="diff_msg">Quickly spot differences between pages</string>
@@ -321,6 +322,7 @@
     <string name="duplicate_file_max_error_message">Maximum number of duplicated files reached. Please delete unnecessary files and try again.</string>
     <string name="duplicating_wait">Duplicating…</string>
     <string name="ease_example">Ease Example</string>
+    <string name="emplty_pdfhome_file">Vous n\'avez pas configuré le répertoire racine de consignes.</string>
     <string name="error_corrupt_file_message">This file has been damaged. %1$s tried to repair it but could not, so it cannot be opened. Sorry!</string>
     <string name="error_failed_to_open_document_tree">Failed to open folder. Please try again.</string>
     <string name="error_opening_file">Could not open the file</string>
@@ -343,8 +345,9 @@
     <string name="file_info_document_protected"><![CDATA[This document is password protected.]]></string>
     <string name="file_info_document_size"><![CDATA[<b>Size</b><br>%1$s<br>]]></string>
     <string name="file_info_document_title"><![CDATA[<b>Title</b><br>%1$s<br>]]></string>
-    <string name="file_pdf_home">/DOC SAT digitalisée/</string>
+    <string name="file_pdf_home">%1$s</string>
     <string name="file_removed_from_favorites">\"%1$s\" removed from Favorites</string>
+    <string name="file_save_pdf_home">pdfhome.txt</string>
     <string comment="Used to filter by file type" name="file_type_docx">Office Documents</string>
     <string name="file_type_external_file">External</string>
     <string comment="Used to filter by file type" name="file_type_image">Images</string>
@@ -485,6 +488,7 @@
     <string name="title_item_recent">Recent</string>
     <string name="title_item_viewer">Viewer</string>
     <string name="toast_delete_original_file">Désolé, vous ne pouvez pas supprimer le fichier original.</string>
+    <string name="toast_no_home_directory">Oups, le repertoire racine de consigne est vide ou mal configuré.</string>
     <string name="toast_not_pdf">Désolé, ce n\'est pas un fichier pdf. Vous ne pouvez pas l\'ouvrir.</string>
     <string name="toast_root_directory">Vous êtes déjà dans le répertoire racine</string>
     <string name="toast_search_already_there">Vous êtes déjà dans son répertoire</string>
@@ -494,7 +498,7 @@
     <string name="updating_file_list_wait">Updating file list…</string>
     <string name="version">Version</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -519,12 +523,17 @@
     <style name="FragmentAppBarStyle" parent="Base.FragmentAppBarStyle"/>
     <style name="FragmentToolbarStyle" parent="Base.FragmentToolbarStyle"/>
     <style name="FragmentToolbarStyle.NoAppBar" parent="Base.FragmentToolbarStyle.NoAppBar"/>
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@color/app_color_accent</item>
+        <item name="android:textSize">22dp</item>
+    </style>
     <style name="NavigationViewStyle">
         <item name="listPreferredItemPaddingLeft">@dimen/navigation_drawer_horizontal_margin</item>
         <item name="listPreferredItemPaddingRight">@dimen/navigation_drawer_horizontal_margin</item>
         <item name="listPreferredItemHeightSmall">@dimen/navigation_drawer_list_item_height</item>
 
-        
+        <!-- Use a light separator and highlight colour on the dark background -->
         <item name="android:listDivider">@color/navigation_drawer_separator</item>
         <item name="colorControlHighlight">#66ffffff</item>
     </style>

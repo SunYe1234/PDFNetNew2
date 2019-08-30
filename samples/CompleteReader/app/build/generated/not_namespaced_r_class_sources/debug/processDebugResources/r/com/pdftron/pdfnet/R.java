@@ -19,6 +19,6 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f120090;
+        public static final int app_name = 0x7f120091;
     }
 }

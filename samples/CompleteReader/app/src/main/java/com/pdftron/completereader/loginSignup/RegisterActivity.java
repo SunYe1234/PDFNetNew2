@@ -25,15 +25,18 @@ import com.pdftron.completereader.MainActivity;
 import com.pdftron.completereader.R;
 import com.pdftron.demo.app.SysApplication;
 
+import java.util.regex.Pattern;
+
 //import com.example.shiva.loginsignup.RegisterActivity
 
 public class RegisterActivity extends AppCompatActivity {
 
     //public static boolean NameHolder;
-    EditText Email, Password, Name;
+    EditText NNI;
     Button Register;
-    String NameHolder, PasswordHolder;
-    Boolean EditTextEmptyHolder;
+    String NameHolder;
+    Boolean EditTextEmptyHolder=false;
+    Boolean wrongEditTextFormat;
     SQLiteDatabase sqLiteDatabaseObj;
     String SQLiteDataBaseQueryHolder;
     SQLiteHelper sqLiteHelper;
@@ -45,21 +48,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SysApplication.getInstance().addActivity(this);
 
-
-//        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-//        Transition fade = TransitionInflater.from(this).inflateTransition(R.transition.fade);
-//        getWindow().setEnterTransition(fade);
-
         setContentView(R.layout.activity_register);
 
 
 
         Register = (Button) findViewById(R.id.buttonRegister);
 
-        Email = (EditText) findViewById(R.id.editEmail);
-        Password = (EditText) findViewById(R.id.editPassword);
-        Name = (EditText) findViewById(R.id.editName);
+        NNI = (EditText) findViewById(R.id.editNNI);
 
         sqLiteHelper = new SQLiteHelper(this);
 
@@ -86,7 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 // Empty EditText After done inserting process.
                 EmptyEditTextAfterDataInsert();
-                if (F_Result.equalsIgnoreCase("Not_Found"))
+                if (F_Result.equalsIgnoreCase("Not_Found")&&!wrongEditTextFormat)
                     goBackToLoginPage();
 
 
@@ -136,36 +131,27 @@ public class RegisterActivity extends AppCompatActivity {
 
         //sqLiteDatabaseObj.execSQL("CREATE TABLE IF NOT EXISTS " + SQLiteHelper.TABLE_NAME + "(" + SQLiteHelper.Table_Column_ID + "  PRIMARY KEY  NOT NULL, " + SQLiteHelper.Table_Column_1_Name + " VARCHAR, " + SQLiteHelper.Table_Column_2_Email + " VARCHAR, " + SQLiteHelper.Table_Column_3_Password + " VARCHAR);");
         // sqLiteDatabaseObj.execSQL("DROP TABLE if exists "+SQLiteHelper.TABLE_NAME+";");
-        sqLiteDatabaseObj.execSQL("CREATE TABLE IF NOT EXISTS " + SQLiteHelper.TABLE_NAME + "(" + SQLiteHelper.Table_Column_1_Name + " VARCHAR PRIMARY KEY, " + SQLiteHelper.Table_Column_3_Password + " VARCHAR);");
+        sqLiteDatabaseObj.execSQL("CREATE TABLE IF NOT EXISTS " + SQLiteHelper.TABLE_NAME + "(" + SQLiteHelper.Table_Column_1_NNI + " VARCHAR PRIMARY KEY); " );
 
     }
+
+
+
+
+
 
     // Insert data into SQLite database method.
     public void InsertDataIntoSQLiteDatabase() {
 
         // If editText is not empty then this block will executed.
-        if (EditTextEmptyHolder == true) {
+        if (EditTextEmptyHolder == true&&!wrongEditTextFormat) {
 
             // SQLite query to insert data into table.
-            SQLiteDataBaseQueryHolder = "INSERT INTO " + SQLiteHelper.TABLE_NAME + " (name,password) VALUES('" + NameHolder + "', '" + PasswordHolder + "');";
+            SQLiteDataBaseQueryHolder = "INSERT INTO " + SQLiteHelper.TABLE_NAME + " ("+SQLiteHelper.Table_Column_1_NNI+") VALUES('" + NameHolder + "'); " ;
 
             // Executing query.
             sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
-//            cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, null, null, null, null, null);
-//
-//            while (cursor.moveToNext()) {
-//
-//                if (cursor.isFirst()) {
-//
-//                    cursor.moveToFirst();
-//
-//                    // If Email is already exists then Result variable value set as Email Found.
-//                    F_Result = "Email Found";
-//
-//                    // Closing cursor.
-//                    cursor.close();
-//                }
-//            }
+
             // Closing SQLite database object.
             sqLiteDatabaseObj.close();
 
@@ -173,8 +159,14 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(RegisterActivity.this, getString(R.string.register_success), Toast.LENGTH_LONG).show();
 
         }
+        if (wrongEditTextFormat)
+        {
+            Toast.makeText(RegisterActivity.this, "Désolé, mauvais format de NNI. Réessayez s'il vous plaît. ", Toast.LENGTH_LONG).show();
+            return;
+
+        }
         // This block will execute if any of the registration EditText is empty.
-        else {
+        if (!EditTextEmptyHolder){
 
             // Printing toast message if any of EditText is empty.
             Toast.makeText(RegisterActivity.this, getString(R.string.fill_all_blank), Toast.LENGTH_LONG).show();
@@ -183,33 +175,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    // delete data in the SQLite database .
-    public void DeleteDataInSQLiteDatabase() {
-
-
-        // SQLite query to insert data into table.
-        SQLiteDataBaseQueryHolder = "DELETE FROM " + SQLiteHelper.TABLE_NAME + " WHERE " + SQLiteHelper.Table_Column_1_Name + " = '" + NameHolder + "';";
-
-        // Executing query.
-        sqLiteDatabaseObj.execSQL(SQLiteDataBaseQueryHolder);
-
-        // Closing SQLite database object.
-        sqLiteDatabaseObj.close();
-
-        // Printing toast message after done inserting.
-        Toast.makeText(RegisterActivity.this, "User deleted Successfully", Toast.LENGTH_LONG).show();
-
-
-    }
 
 
     // Empty edittext after done inserting process method.
     public void EmptyEditTextAfterDataInsert() {
 
-        Name.getText().clear();
+        NNI.getText().clear();
 
 
-        Password.getText().clear();
 
     }
 
@@ -217,17 +190,28 @@ public class RegisterActivity extends AppCompatActivity {
     public void CheckEditTextStatus() {
 
         // Getting value from All EditText and storing into String Variables.
-        NameHolder = Name.getText().toString();
-        PasswordHolder = Password.getText().toString();
+        NameHolder = NNI.getText().toString();
 
-        if (TextUtils.isEmpty(NameHolder) || TextUtils.isEmpty(PasswordHolder)) {
+        if (TextUtils.isEmpty(NameHolder) ) {
 
             EditTextEmptyHolder = false;
 
-        } else {
+        }
+
+
+        else {
 
             EditTextEmptyHolder = true;
         }
+        if(NameHolder.toCharArray().length!=6||!CheckEditTextPattern(NameHolder))
+            wrongEditTextFormat=true;
+        else wrongEditTextFormat=false;
+    }
+
+    private boolean CheckEditTextPattern(String s)
+    {
+        Pattern pattern = Pattern.compile("^[a-zA-Z][0-9]{5}$");
+        return pattern.matcher(s).matches();
     }
 
     // Checking Email is already exists or not.
@@ -238,22 +222,25 @@ public class RegisterActivity extends AppCompatActivity {
         //sqLiteDatabaseObj=SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);
 
         // Adding search email query to cursor.
-        cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_1_Name + "=?", new String[]{NameHolder}, null, null, null);
+        cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_1_NNI + "=?", new String[]{NameHolder}, null, null, null);
         //cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, null, null, null, null, null);
 
-        while (cursor.moveToNext()) {
+//        while (cursor.moveToNext()) {
+//
+//            if (cursor.isFirst()) {
+//
+//                cursor.moveToFirst();
 
-            if (cursor.isFirst()) {
-
-                cursor.moveToFirst();
-
+        int count=cursor.getCount();
+            if (cursor.getCount()>0) {
                 // If Email is already exists then Result variable value set as Email Found.
-                F_Result = "Email Found";
+                F_Result = "NNI Found";
 
                 // Closing cursor.
                 cursor.close();
             }
-        }
+//            }
+//        }
 
         // Calling method to check final result and insert data into SQLite database.
         CheckFinalResult();
@@ -265,10 +252,11 @@ public class RegisterActivity extends AppCompatActivity {
     public void CheckFinalResult() {
 
         // Checking whether email is already exists or not.
-        if (F_Result.equalsIgnoreCase("Email Found")) {
+        if (F_Result.equalsIgnoreCase("NNI Found")) {
 
             // If email is exists then toast msg will display.
             Toast.makeText(RegisterActivity.this, getString(R.string.user_exits), Toast.LENGTH_LONG).show();
+            F_Result="Not_Found";
 
         } else {
 
@@ -330,22 +318,6 @@ public class RegisterActivity extends AppCompatActivity {
         imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         boolean active=imm.isActive();
     }
-
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//
-//
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            Toast.makeText(getApplicationContext(), "BACK key is forbidden",Toast.LENGTH_LONG).show();
-//            return true;
-//        }  else if (keyCode == KeyEvent.KEYCODE_HOME) {
-//            Toast.makeText(getApplicationContext(), "HOME key is forbidden",
-//                    Toast.LENGTH_LONG).show();
-//// 屏蔽Home键
-//            return true;
-//        }
-//        return super.onKeyDown(keyCode, event);
-//    }
 
 
 }

@@ -33,10 +33,6 @@
         </provider>
 
         <activity
-            android:name="com.pdftron.demo.app.MainActivity"
-            android:windowSoftInputMode="stateHidden" />
-        <activity android:name="com.pdftron.demo.app.RegisterActivity" />
-        <activity
             android:name="com.pdftron.demo.app.CompleteReaderActivity"
             android:windowSoftInputMode="stateHidden" />
 

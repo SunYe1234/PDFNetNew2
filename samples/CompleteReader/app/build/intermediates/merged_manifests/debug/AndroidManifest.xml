@@ -61,6 +61,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
             android:theme="@style/CustomAppTheme"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.pdftron.demo.app.AdminActivity" />
         <activity
             android:name="com.pdftron.demo.app.AdvancedReaderActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
@@ -421,10 +422,6 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity
-            android:name="com.pdftron.demo.app.MainActivity"
-            android:windowSoftInputMode="stateHidden" />
-        <activity android:name="com.pdftron.demo.app.RegisterActivity" />
         <activity
             android:name="com.pdftron.demo.app.CompleteReaderActivity"
             android:windowSoftInputMode="stateHidden" />

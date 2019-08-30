@@ -1,5 +1,6 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <string name="toast_no_home_directory">Oups, le repertoire racine de consigne est vide ou mal configuré.</string>
     <string name="toast_zero_cps">Oups, vous n\'avez pas de copie pour le moment</string>
     <string name="toast_delete_original_file">Désolé, vous ne pouvez pas supprimer le fichier original.</string>
     <string name="toast_not_pdf">Désolé, ce n\'est pas un fichier pdf. Vous ne pouvez pas l\'ouvrir.</string>
@@ -10,6 +11,7 @@
     <string name="dialoge_delete_cp">Voulez-vous supprimer ce document?</string>
     <string name="dialoge_exit">Vous voulez vous déconnecter?</string>
     <string name="dialoge_delete_account">Vous voulez supprimer votre compte?</string>
+    <string name="dialoge_delete_all_account_cp">Vous voulez supprimer tous les compte et copies?</string>
 
     <string name="title_item_viewer">Viewer</string>
     <string name="title_item_local_folder_list" translatable="false">@string/local_folders</string>
@@ -39,9 +41,12 @@
     <string name="file_info_document_creator"><![CDATA[<b>Creator</b><br>%1$s<br>]]></string>
     <string name="file_info_document_attr_not_available"><![CDATA[<i>Not available</i>]]></string>
 
+
+    <string name="file_save_pdf_home">pdfhome.txt</string>
     <string name="file_current_username">UserName.txt</string>
     <string name="file_former_username">FormerUserName.txt</string>
-    <string name="file_pdf_home">/DOC SAT digitalisée/</string>
+    <!--<string name="file_pdf_home">/DOC SAT digitalisée/</string>-->
+    <string name="file_pdf_home">%1$s</string>
     <string name="delete_account_success">est supprimé avec succès</string>
     <string name="hint_searchbar">Entrez le nom du classeur ou de la consigne</string>
 
@@ -57,6 +62,8 @@
     <string name="title_item_recent">Recent</string>
     <string name="title_item_favorites">Favorites</string>
     <string name="root_folder">Root</string>
+
+    <string name="emplty_pdfhome_file">Vous n\'avez pas configuré le répertoire racine de consignes.</string>
 
     <string name="dialog_create_new_folder_title">Folder</string>
     <string name="dialog_create_new_blank_pdf_title">New PDF</string>

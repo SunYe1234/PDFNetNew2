@@ -191,28 +191,7 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
 
 
     private static int imageResourceIndex = 0;
-//    private static int[] imageResources = new int[]{
-//            R.drawable.bat,
-//            R.drawable.bear,
-//            R.drawable.bee,
-//            R.drawable.butterfly,
-//            R.drawable.cat,
-//            R.drawable.deer,
-//            R.drawable.dolphin,
-//            R.drawable.eagle,
-//            R.drawable.horse,
-//            R.drawable.elephant,
-//            R.drawable.owl,
-//            R.drawable.peacock,
-//            R.drawable.pig,
-//            R.drawable.rat,
-//            R.drawable.snake,
-//            R.drawable.squirrel
-//    };
-//    static int getImageResource() {
-////        if (imageResourceIndex >= imageResources.length) imageResourceIndex = 0;
-////        return imageResources[imageResourceIndex++];
-//    }
+
 
     private void ____________________________Initialization() {}
     //region Constructor and Initializer
@@ -386,11 +365,6 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
                         ColorStateList.valueOf(highlightedColor),
                         Util.getOvalDrawable(button, normalColor),
                         null);
-//                RippleDrawable rippleDrawable = new RippleDrawable(
-//                        ColorStateList.valueOf(highlightedColor),
-//                        Util.getSystemDrawable(getContext(), R.drawable.empty_directory),
-//                        null);
-//                //RippleDrawable drawable=(RippleDrawable)Util.getSystemDrawable(getContext(),R.drawable.background);
                 Util.setDrawable(button, rippleDrawable);
             } else {
                 StateListDrawable stateListDrawable = Util.getOvalStateListBitmapDrawable(
@@ -472,7 +446,6 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
             boomButtonBuilders.add(BuilderManager.getTextOutsideCircleButtonBuilder(subFiles[i].getAbsolutePath()));
 
         for (int i = 0; i < pieceNumber; i++) {
-//            BoomButtonBuilder button=boomButtonBuilders.get(i);
             pieces.add(PiecePlaceManager.createPiece(this, boomButtonBuilders.get(i)));
         }
     }

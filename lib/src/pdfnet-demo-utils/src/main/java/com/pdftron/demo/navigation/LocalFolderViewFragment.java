@@ -52,15 +52,11 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.app.Fragment;
-import com.github.clans.fab.FloatingActionButton;
+
 import com.github.clans.fab.FloatingActionMenu;
 import com.pdftron.common.PDFNetException;
 import com.pdftron.demo.R;
-import com.pdftron.demo.app.AdvancedReaderActivity;
-import com.pdftron.demo.app.MainActivity;
 import com.pdftron.demo.asynctask.PopulateFolderTask;
-import com.pdftron.demo.boomMenu.EaseActivity;
 import com.pdftron.demo.boomMenu.EaseFragment;
 import com.pdftron.demo.dialog.FilePickerDialogFragment;
 import com.pdftron.demo.dialog.MergeDialogFragment;
@@ -73,7 +69,6 @@ import com.pdftron.demo.navigation.callbacks.MainActivityListener;
 import com.pdftron.demo.navigation.component.html2pdf.Html2PdfComponent;
 import com.pdftron.demo.navigation.component.html2pdf.HtmlConversionComponent;
 import com.pdftron.demo.navigation.viewmodel.FilterMenuViewModel;
-import com.pdftron.demo.utils.AddDocPdfHelper;
 import com.pdftron.demo.utils.FileInfoComparator;
 import com.pdftron.demo.utils.FileListFilter;
 import com.pdftron.demo.utils.FileManager;
@@ -86,7 +81,6 @@ import com.pdftron.demo.widget.ImageViewTopCrop;
 import com.pdftron.pdf.PDFDoc;
 import com.pdftron.pdf.PDFDocInfo;
 import com.pdftron.pdf.PreviewHandler;
-import com.pdftron.pdf.controls.AddPageDialogFragment;
 import com.pdftron.pdf.model.BaseFileInfo;
 import com.pdftron.pdf.model.ExternalFileInfo;
 import com.pdftron.pdf.model.FileInfo;
@@ -2533,14 +2527,14 @@ public class LocalFolderViewFragment extends FileBrowserViewFragment implements
                     rootDir = rootDir.getParentFile();
                 }
             }
-            if (mCurrentFolder.equals(rootDir))
-            {
-                Intent intent=new Intent();
-                intent.setClass(getActivity(), MainActivity.class);
-                startActivity(intent);
-
-
-            }
+//            if (mCurrentFolder.equals(rootDir))
+//            {
+//                Intent intent=new Intent();
+//                intent.setClass(getActivity(), MainActivity.class);
+//                startActivity(intent);
+//
+//
+//            }
             if(mCurrentFolder.getAbsolutePath().equals(PdfHomeCard))
             {
                 Toast.makeText(getActivity(),"You are already in the root folder of PDFs", Toast.LENGTH_LONG).show();

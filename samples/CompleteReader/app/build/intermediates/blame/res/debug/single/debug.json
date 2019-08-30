@@ -3060,6 +3060,10 @@
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/PDFViewCtrlTools/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/linedpage_135dp.png"
     },
     {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_scroll_view_background.xml.flat",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/layout/scroll_view_background.xml"
+    },
+    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/color_selector_color_drawer_text.xml.flat",
         "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/color/selector_color_drawer_text.xml"
     },
@@ -3660,6 +3664,10 @@
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/layout_activity_admin.xml.flat",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/layout/activity_admin.xml"
+    },
+    {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/color_cpb_error_state_selector.xml.flat",
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/992e7c42aeb8fbf24bbecfd5c50332c3/res/color/cpb_error_state_selector.xml"
     },
@@ -4038,6 +4046,10 @@
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/yezi/.gradle/caches/transforms-2/files-2.1/f2fdbab210be88a4180a0c4a18fdb136/res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_scroll_view_background.xml.flat",
+        "source": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/lib/src/pdfnet-demo-utils/build/intermediates/packaged_res/debug/drawable/scroll_view_background.xml"
     },
     {
         "merged": "/Users/yezi/Documents/stage_edf/PDFNetAndroidNew/samples/CompleteReader/app/build/intermediates/res/merged/debug/drawable_background.xml.flat",

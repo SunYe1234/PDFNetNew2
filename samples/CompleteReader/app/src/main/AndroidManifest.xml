@@ -64,12 +64,14 @@
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
             android:theme="@style/CustomAppTheme"
             android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.pdftron.demo.app.AdminActivity"/>
 
         <activity
             android:name="com.pdftron.demo.app.AdvancedReaderActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
             android:theme="@style/CustomAppTheme"
             android:windowSoftInputMode="adjustPan">
+
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

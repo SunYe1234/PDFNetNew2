@@ -20,12 +20,15 @@
     <string name="diff_msg">Quickly spot differences between pages</string>
 
 
+    <string name="admin_NNI">admin</string>
     <string name="log_in">Se Connecter</string>
     <string name="sign_up">Créer un compte</string>
-    <string name="enter_name">Entrez votre nom</string>
+    <string name="enter_name">Entrez votre numéro de NNI</string>
     <string name="enter_password">Entrez votre mot de passe</string>
-    <string name="toast_enter_name">Entrez votre nom ou mot de passe, s\'il vous plaît</string>
+    <string name="toast_enter_name">Entrez votre numéro de NNI, s\'il vous plaît</string>
+
     <string name="log_in_success">se connecter avec succès</string>
+    <string name="log_in_admin">Administrateur se connecte avec succès</string>
     <string name="log_in_failed">Nom d\'utilisateur ou mot de passe incorrect, veuillez réessayer</string>
     <string name="delete_account_success">est supprimé avec succès</string>
 

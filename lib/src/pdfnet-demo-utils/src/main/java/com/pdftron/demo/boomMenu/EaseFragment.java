@@ -11,23 +11,17 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.storage.StorageManager;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.util.LruCache;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
@@ -38,11 +32,9 @@ import android.widget.Toast;
 
 import com.pdftron.demo.R;
 import com.pdftron.demo.app.AdvancedReaderActivity;
-import com.pdftron.demo.app.MainActivity;
 import com.pdftron.demo.asynctask.PopulateFolderTask;
 import com.pdftron.demo.boomMenu.BoomButtons.ButtonPlaceEnum;
 import com.pdftron.demo.boomMenu.Piece.PiecePlaceEnum;
-import com.pdftron.demo.navigation.adapter.BaseFileAdapter;
 import com.pdftron.demo.navigation.adapter.LocalFileAdapter;
 import com.pdftron.demo.utils.FileInfoComparator;
 import com.pdftron.demo.utils.FileListFilter;
@@ -52,7 +44,6 @@ import com.pdftron.pdf.model.BaseFileInfo;
 import com.pdftron.pdf.model.FileInfo;
 import com.pdftron.pdf.model.PdfViewCtrlTabInfo;
 import com.pdftron.pdf.utils.Logger;
-import com.pdftron.pdf.utils.PdfViewCtrlSettingsManager;
 import com.pdftron.pdf.utils.PdfViewCtrlTabsManager;
 import com.pdftron.pdf.utils.Utils;
 import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
@@ -60,16 +51,11 @@ import com.pdftron.pdf.widget.recyclerview.ItemSelectionHelper;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-import static android.content.Context.INPUT_METHOD_SERVICE;
 import static com.pdftron.demo.boomMenu.ButtonEnum.TextOutsideCircle;
 import static com.pdftron.pdf.controls.AnnotStyleDialogFragment.TAG;
-import static com.pdftron.pdf.controls.PdfViewCtrlTabHostFragment.currentUsersNameFileName;
 
 public  class EaseFragment extends Fragment {
 
@@ -203,35 +189,13 @@ public static String usersNameFileName;
 
     private void init()
     {
-        //if it's not the first time to start showDireActivity, than the filesPath is not the initial filesPath,
-        //set it to the value received
-//        if (getIntent().getStringExtra("path")!=null) {
-//            Log.d("****received path value",filesPath);
-//            filesPath = getIntent().getStringExtra("path");
-//        }
-//        if (getIntent().getStringExtra("userName")!=null) {
-//            Log.d("****received path value",filesPath);
-//            userName = getIntent().getStringExtra("userName");
-//        }
-//        filesPath="/storage/";
-        //create the file object using the filesPath which is the parent of all the pdfs we want to read
-//        File file = new File(filesPath);
-//        //get the number of pdfs under filesPath
-//        //numOfFile=FileInfoUtils.getFileSize(file);
-//        //get the list of pdf names
-//        File flist[] = file.listFiles();
 
 
         getPermission();
         if (preDefinedFiles==null) {
             File home = new File(filesPath);//初始化File对象
             files = home.listFiles();//噩梦结束了吗？
-//        boolean exite=file.exists();
-//        String []names=file.list();
-//        this.namesOfFiles=new ArrayList<String>(Arrays.asList(names));
-//        numOfFile=namesOfFiles.size();
 
-            //filtrePDF();
             generateBtnList(files);
         }
         else {
@@ -257,19 +221,20 @@ public static String usersNameFileName;
         if (files==null||files.length==0)
         {
 
-//            Toast toast=Toast.makeText(getActivity().getApplicationContext(), "Sorry, you haven't any saved copies yet.", Toast.LENGTH_SHORT);
-//            toast.setGravity(Gravity.CENTER, 0, 0);
-//            toast.setDuration(Toast.LENGTH_LONG);
-//            toast.show();
+
 
             Display display = getActivity().getWindowManager().getDefaultDisplay();
-//            int height = display.getHeight();
 
-            Toast toast=Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_zero_cps), Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-//            toast.setDuration(Toast.LENGTH_LONG);
-            toast.show();
-//            Toast.makeText(getActivity().getApplicationContext(), filesPath, Toast.LENGTH_SHORT).show();
+            if (new File(filesPath).getName().equals(getUserNameFromFile())) {
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_zero_cps), Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
+            else {
+                Toast toast = Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_no_home_directory), Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
 
             return;
 
@@ -278,10 +243,7 @@ public static String usersNameFileName;
         {
             if (!file.isDirectory())
             {
-//                BoomMenuButton menuButton=new BoomMenuButton(this);
-//                BoomButtonBuilder buttonBuilder=BuilderManager.getSimpleCircleButtonBuilder();
-//                Dot boomPiece=(Dot)PiecePlaceManager.createPiece(menuButton,buttonBuilder);
-//                relativeLayout.addView(boomPiece);
+
                 String name=file.getName();
                 final Button button=new Button(getContext());
                 button.setBackgroundColor(Color.TRANSPARENT);
@@ -306,17 +268,14 @@ public static String usersNameFileName;
                         File parent=file.getParentFile();
                         if (parent.getName().equals(getUserNameFromFile())) {
                             dialog(file);
-//                            button.setVisibility(View.INVISIBLE);
                             return true;
                         }
                         else
                         {
-//                            Toast.makeText(getActivity().getApplicationContext(), "Sorry, can't delete the original file.", Toast.LENGTH_SHORT).show();
                             Display display = getActivity().getWindowManager().getDefaultDisplay();
                             int height = display.getHeight();
 
                             Toast toast=Toast.makeText(getActivity().getApplicationContext(), getString(R.string.toast_delete_original_file), Toast.LENGTH_SHORT);
-//                            toast.setGravity(Gravity.TOP, 0, 3*height / 4);
                             toast.setGravity(Gravity.CENTER,0,0);
                             toast.setDuration(Toast.LENGTH_LONG);
                             toast.show();
@@ -326,8 +285,7 @@ public static String usersNameFileName;
 
                     }
                 });
-//                MarqueeTextView textView=(MarqueeTextView)findViewById(R.id.textview);
-//                textView.setText(name);
+
                 TextView textView=new TextView(getContext());
                 textView.setText(name);
                 textView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -337,19 +295,11 @@ public static String usersNameFileName;
 
                 if (file.getName().length()>8)
                 {
-//                    textView .setEllipsize(TextUtils.TruncateAt.MARQUEE);
-//                    textView .setSingleLine(true);
-//                    textView .setMarqueeRepeatLimit(6);
-////                    textView.setMarqueeRepeatLimit(-1);
-//                    textView.setHorizontallyScrolling(true);
-//                    textView.setFocusable(true);
+
                     textView.setSingleLine(false);
 
-//                    textView.setFocusableInTouchMode(true);
-//                    textView.setFreezesText(true);
+
                 }
-//                textView.setFocusableInTouchMode(true);
-//                textView.setFreezesText(true);
 
                 LinearLayout linearLayout=new LinearLayout(getContext());
                 linearLayout.addView(button);
@@ -418,14 +368,6 @@ public static String usersNameFileName;
 
 
 
-        //add the row which has less than 3 buttons to the table
-        //before adding it, remove its parent view if it already has one
-//        if (tableRow != null) {
-//            ViewGroup parentViewGroup = (ViewGroup) tableRow.getParent();
-//            if (parentViewGroup != null ) {
-//                parentViewGroup.removeView(tableRow);
-//            }
-//        }
 
 
     }
@@ -507,88 +449,25 @@ public static String usersNameFileName;
                 password = Utils.getPassword(getContext(), file.getAbsolutePath());
             }
 
-//            if (Utils.isOfficeDocument(file.getAbsolutePath())) {
-//                startTabHostFragment(
-//                        ViewerBuilder.withFile(file, password)
-//                                .usingFileType(BaseFileInfo.FILE_TYPE_FILE)
-//                );
-//
-//                return;
-//            }
 
-//            CheckDifferentFileTypeResult result = checkDifferentFileType(file, password, BaseFileInfo.FILE_TYPE_FILE, "", skipPasswordCheck);
-//
-//            if (result.getOpenDocument()) {
-//                // Perform any operation needed on the current fragment before launching the viewer.
-//                if (mCurrentFragment != null && hasMainActivityListener(mCurrentFragment)) {
-//                    ((MainActivityListener) mCurrentFragment).onPreLaunchViewer();
-//                }
-//            }
-
-//            if (result.getOpenDocument() // PDF document
-//                    || FileManager.checkIfFileTypeIsInList(file.getAbsolutePath())) { // non-PDF document
             startTabHostFragment(
                     ViewerBuilder.withFile(file, password)
                             .usingFileType(BaseFileInfo.FILE_TYPE_FILE),file
             );
             openedSucessfully = true;
-//            }
-//        } else {
-//            Utils.showAlertDialog(this, R.string.file_does_not_exist_message, R.string.error_opening_file);
-//        }
 
-//        if (!openedSucessfully) {
-//            // Update recent and favorite files lists
-//            FileInfo fileInfo = new FileInfo(BaseFileInfo.FILE_TYPE_FILE, file);
-//            RecentFilesManager.getInstance().removeFile(this, fileInfo);
-//            FavoriteFilesManager.getInstance().removeFile(this, fileInfo);
-//            if (file != null) {
-//                PdfViewCtrlTabsManager.getInstance().removePdfViewCtrlTabInfo(this, file.getAbsolutePath());
-//            }
-//
-//            // Try to update fragment since underlying data has changed
-//            reloadBrowser();
-//
-//            onOpenDocError();
-//        }
         }
     }
 
 
     private void startTabHostFragment(@Nullable ViewerBuilder viewerBuilder, File file) {
-//        if (isFinishing()) {
-//            return;
-//        }
-//        if (null == findViewById(R.id.frameLayout)) {
-//            // wrong states
-//            return;
-//        }
+
 
         if (viewerBuilder == null) {
             viewerBuilder = ViewerBuilder.withUri(null, "");
         }
 
-//        viewerBuilder.usingCacheFolder(mUseCacheDir)
-//                .usingQuitAppMode(mQuitAppWhenDoneViewing);
-//
-//        Bundle args = viewerBuilder.createBundle(this);
-//        if (args.containsKey(BUNDLE_TAB_TITLE)) {
-//            String title = args.getString(BUNDLE_TAB_TITLE);
-//            if (mLastAddedBrowserFragment != null && mLastAddedBrowserFragment instanceof FileBrowserViewFragment) {
-//                ((FileBrowserViewFragment) mLastAddedBrowserFragment).setCurrentFile(title);
-//            }
-//        }
-//        mProcessedFragmentViewId = R.id.item_viewer;
-//        selectNavItem(mProcessedFragmentViewId);
-
-
-//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-//        ft.setCustomAnimations(R.anim.tab_fragment_slide_in_bottom, R.anim.tab_fragment_slide_out_bottom);
         PdfViewCtrlTabsManager.getInstance().addDocument(getActivity(), file.getAbsolutePath());
-
-
-//        mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
-
         PdfViewCtrlTabInfo info = PdfViewCtrlTabsManager.getInstance().getPdfFViewCtrlTabInfo(getActivity(), file.getAbsolutePath());
         int itemSource = BaseFileInfo.FILE_TYPE_UNKNOWN;
         String title = "";
@@ -601,139 +480,23 @@ public static String usersNameFileName;
             fileExtension = info.fileExtension;
             password = Utils.decryptIt(getActivity(), info.password);
         }
-//        mPdfViewCtrlTabHostFragment=PdfViewCtrlTabHostFragment.getInstance();
-//        mPdfViewCtrlTabHostFragment.addTab( null, file.getAbsolutePath(), title, fileExtension, password, itemSource);
-//       if (PdfViewCtrlTabHostFragment.getInstance()==null) {
-//           mPdfViewCtrlTabHostFragment = PdfViewCtrlTabHostFragment.getInstance();
-//        mPdfViewCtrlTabHostFragment.add
+
            mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
            mPdfViewCtrlTabHostFragment.setCurrentFile(file);
            mPdfViewCtrlTabHostFragment.addHostListener((AdvancedReaderActivity) EaseFragment.getFatherFragment().getActivity());
-//           PdfViewCtrlTabHostFragment.setInstance(mPdfViewCtrlTabHostFragment,viewerBuilder);
-//           Toast.makeText(getActivity().getApplicationContext(), "called setInstance()", Toast.LENGTH_SHORT).show();
-//
-//       }
-//       else {
-//           mPdfViewCtrlTabHostFragment = PdfViewCtrlTabHostFragment.getInstance();
-//           mPdfViewCtrlTabHostFragment.addTab( null, file.getAbsolutePath(), title, fileExtension, password, itemSource);
-//           Toast.makeText(getActivity().getApplicationContext(), "called getInstance()", Toast.LENGTH_SHORT).show();
 
-//       }
         Logger.INSTANCE.LogD(TAG, "replace with " + mPdfViewCtrlTabHostFragment);
-//        ft.replace(R.id.container, mPdfViewCtrlTabHostFragment, null);
 
         ((EaseActivityWithFragment)(EaseFragment.getFatherFragment())).changeFragment(mPdfViewCtrlTabHostFragment);
-//        ft.commit();
-
-//        setCurrentFragment(mPdfViewCtrlTabHostFragment);
-
-//        updateNavTab(); // update navigation tab in case the activity will be resumed
-//
-//        toggleInfoDrawer(false);
-    }
-
-
-//    protected LocalFileAdapter createAdapter() {
-//        return new LocalFileAdapter(getContext(), mFileInfoList, mFileListLock,
-//                mSpanCount, this, mItemSelectionHelper);
-//    }
-
-    public void onShowFileInfo(int position) {
-//        if (mFileUtilCallbacks != null) {
-//            mSelectedFile = mAdapter.getItem(position);
-//            mFileInfoDrawer = mFileUtilCallbacks.showFileInfoDrawer(mFileInfoDrawerCallback);
-//        }
-    }
-    public void onFilterResultsPublished(int resultCode) {
 
     }
 
-    public boolean onQueryTextChange(String newText) {
-//        // prevent clearing filter text when the fragment is hidden
-//        if (mAdapter != null && Utils.isNullOrEmpty(mFilterText)) {
-//            mAdapter.cancelAllThumbRequests(true);
-//            mFilter=(FileListFilter<FileInfo>) mAdapter.getFilter();
-//            mFilter.filter(newText);
-//            searchResults=mFilter.returnResults();
-//            boolean isEmpty = Utils.isNullOrEmpty(newText);
-//            mAdapter.setInSearchMode(!isEmpty);
-//        }
-        return true;
-    }
 
-    public boolean onQueryTextSubmit(String query) {
-        mFilterText=query;
-        mPopulateFolderTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        mFilter=(FileListFilter<FileInfo>) mAdapter.getFilter();
-        mFilter.filter(query);
-        searchResults=mFilter.returnResults(query);
-        return false;
-    }
-    private Comparator<FileInfo> getSortMode(
-    ) {
 
-        if (mSortMode != null) {
-            return mSortMode;
-        }
 
-        return FileInfoComparator.folderPathOrder();
 
-    }
 
-    public void onPopulateFolderTaskStarted(
-    ) {
 
-        Context context = getContext();
-        if (context == null) {
-            return;
-        }
-
-        synchronized (mFileListLock) {
-            mFileInfoList.clear();
-        }
-        updateFileListFilter();
-    }
-    public void onPopulateFolderTaskProgressUpdated(File currentFolder) {
-
-        showPopulatedFolder(currentFolder);
-        updateFileListFilter();
-//        setReloadActionButtonState(false);
-
-    }
-    public void onPopulateFolderTaskFinished() {
-
-//        mIsFullSearchDone = true;
-        updateFileListFilter();
-
-    }
-
-    private void updateFileListFilter() {
-        if (mAdapter == null) {
-            return;
-        }
-
-        String constraint = getFilterText();
-        if (constraint == null) {
-            constraint = "";
-        }
-        mAdapter.getFilter().filter(constraint);
-        boolean isEmpty = Utils.isNullOrEmpty(constraint);
-        mAdapter.setInSearchMode(!isEmpty);
-    }
-    public String getFilterText() {
-        if (!Utils.isNullOrEmpty(mFilterText)) {
-            return mFilterText;
-        }
-
-        String filterText = "";
-            SearchView searchView = mSearchView;
-            filterText = searchView.getQuery().toString();
-        return filterText;
-    }
-
-    void showPopulatedFolder(File currentFolder) {
-
-    }
 
     private void dialog(final File file)
     {
@@ -772,12 +535,6 @@ public static String usersNameFileName;
         relativeLayout.removeAllViews();
         File home = new File(filesPath);//初始化File对象
         files = home.listFiles();//噩梦结束了吗？
-//        boolean exite=file.exists();
-//        String []names=file.list();
-//        this.namesOfFiles=new ArrayList<String>(Arrays.asList(names));
-//        numOfFile=namesOfFiles.size();
-
-        //filtrePDF();
         generateBtnList(files);
     }
     /*
@@ -793,15 +550,11 @@ public static String usersNameFileName;
                 UsersName.createNewFile();
             FileInputStream inputStream = getActivity().openFileInput(usersNameFileName);
             UsersFile=new File(getActivity().getFilesDir().getAbsolutePath()+"/"+usersNameFileName);
-//            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
-            // 一次读一个字符
             InputStreamReader reader = new InputStreamReader(inputStream);
             String usName="";
             int tempchar;
             while ((tempchar = reader.read()) != -1) {
-                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
-                // 但如果这两个字符分开显示时，会换两次行。
-                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
+
                 if (((char) tempchar) != '\r') {
                     System.out.print((char) tempchar);
                     usName+=(char)tempchar;

@@ -53,11 +53,11 @@
         android:textSize="30dp" />
 
     <EditText
-        android:id="@+id/editEmail"
+        android:id="@+id/editNNI"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="88dp"
@@ -73,34 +73,34 @@
 
         />
 
-    <EditText
-        android:id="@+id/editPassword"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editEmail"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="108dp"
-        android:ems="10"
-        android:fontFamily="monospace"
-        android:gravity="center"
-        android:hint="@string/enter_password"
-        android:inputType="textPassword"
-        android:textColor="@android:color/white"
-        android:textColorHint="@color/hint_text_color"
-        android:theme="@style/MyEditText"
+    <!--<EditText-->
+        <!--android:id="@+id/editPassword"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/editEmail"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginBottom="108dp"-->
+        <!--android:ems="10"-->
+        <!--android:fontFamily="monospace"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="@string/enter_password"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textColorHint="@color/hint_text_color"-->
+        <!--android:theme="@style/MyEditText"-->
 
-       />
+       <!--/>-->
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editPassword"
-        android:layout_marginTop="150dp"
+        android:layout_below="@+id/editNNI"
+        android:layout_marginTop="280dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"

@@ -380,97 +380,31 @@ public class TextOutsideCircleButton extends BoomButton {
                 password = Utils.getPassword(getContext(), file.getAbsolutePath());
             }
 
-//            if (Utils.isOfficeDocument(file.getAbsolutePath())) {
-//                startTabHostFragment(
-//                        ViewerBuilder.withFile(file, password)
-//                                .usingFileType(BaseFileInfo.FILE_TYPE_FILE)
-//                );
-//
-//                return;
-//            }
 
-//            CheckDifferentFileTypeResult result = checkDifferentFileType(file, password, BaseFileInfo.FILE_TYPE_FILE, "", skipPasswordCheck);
-//
-//            if (result.getOpenDocument()) {
-//                // Perform any operation needed on the current fragment before launching the viewer.
-//                if (mCurrentFragment != null && hasMainActivityListener(mCurrentFragment)) {
-//                    ((MainActivityListener) mCurrentFragment).onPreLaunchViewer();
-//                }
-//            }
-
-//            if (result.getOpenDocument() // PDF document
-//                    || FileManager.checkIfFileTypeIsInList(file.getAbsolutePath())) { // non-PDF document
             startTabHostFragment(
                     ViewerBuilder.withFile(file, password)
                             .usingFileType(BaseFileInfo.FILE_TYPE_FILE),file
             );
             openedSucessfully = true;
-//            }
-//        } else {
-//            Utils.showAlertDialog(this, R.string.file_does_not_exist_message, R.string.error_opening_file);
-//        }
 
-//        if (!openedSucessfully) {
-//            // Update recent and favorite files lists
-//            FileInfo fileInfo = new FileInfo(BaseFileInfo.FILE_TYPE_FILE, file);
-//            RecentFilesManager.getInstance().removeFile(this, fileInfo);
-//            FavoriteFilesManager.getInstance().removeFile(this, fileInfo);
-//            if (file != null) {
-//                PdfViewCtrlTabsManager.getInstance().removePdfViewCtrlTabInfo(this, file.getAbsolutePath());
-//            }
-//
-//            // Try to update fragment since underlying data has changed
-//            reloadBrowser();
-//
-//            onOpenDocError();
-//        }
         }
     }
 
 
     private void startTabHostFragment(@Nullable ViewerBuilder viewerBuilder,File file) {
-//        if (isFinishing()) {
-//            return;
-//        }
-//        if (null == findViewById(R.id.frameLayout)) {
-//            // wrong states
-//            return;
-//        }
 
         if (viewerBuilder == null) {
             viewerBuilder = ViewerBuilder.withUri(null, "");
         }
 
-//        viewerBuilder.usingCacheFolder(mUseCacheDir)
-//                .usingQuitAppMode(mQuitAppWhenDoneViewing);
-//
-//        Bundle args = viewerBuilder.createBundle(this);
-//        if (args.containsKey(BUNDLE_TAB_TITLE)) {
-//            String title = args.getString(BUNDLE_TAB_TITLE);
-//            if (mLastAddedBrowserFragment != null && mLastAddedBrowserFragment instanceof FileBrowserViewFragment) {
-//                ((FileBrowserViewFragment) mLastAddedBrowserFragment).setCurrentFile(title);
-//            }
-//        }
-//        mProcessedFragmentViewId = R.id.item_viewer;
-//        selectNavItem(mProcessedFragmentViewId);
 
-
-//        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-//        ft.setCustomAnimations(R.anim.tab_fragment_slide_in_bottom, R.anim.tab_fragment_slide_out_bottom);
         PdfViewCtrlTabsManager.getInstance().addDocument(getContext(), file.getAbsolutePath());
         mPdfViewCtrlTabHostFragment = viewerBuilder.build(getContext());
         mPdfViewCtrlTabHostFragment.setCurrentFile(file);
         mPdfViewCtrlTabHostFragment.addHostListener((AdvancedReaderActivity)EaseFragment.getFatherFragment().getActivity());
 
         Logger.INSTANCE.LogD(TAG, "replace with " + mPdfViewCtrlTabHostFragment);
-//        ft.replace(R.id.container, mPdfViewCtrlTabHostFragment, null);
         ((EaseActivityWithFragment)(EaseFragment.getFatherFragment())).changeFragment(mPdfViewCtrlTabHostFragment);
-//        ft.commit();
 
-//        setCurrentFragment(mPdfViewCtrlTabHostFragment);
-
-//        updateNavTab(); // update navigation tab in case the activity will be resumed
-//
-//        toggleInfoDrawer(false);
     }
 }

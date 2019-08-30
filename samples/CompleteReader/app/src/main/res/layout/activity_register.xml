@@ -44,11 +44,11 @@
         <!--android:textSize="20dp" />-->
 
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/editNNI"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="88dp"
@@ -89,27 +89,27 @@
         <!--android:id="@+id/editEmail"-->
         <!--android:gravity="center"/>-->
 
-    <EditText
-        android:id="@+id/editPassword"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editName"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="108dp"
-        android:ems="10"
-        android:fontFamily="monospace"
-        android:gravity="center"
-        android:hint="@string/enter_password"
-        android:textColorHint="@color/hint_text_color"
-        android:inputType="textPassword"
-        android:textColor="@android:color/white"
-        android:theme="@style/MyEditText"
-        android:focusable="true"
-        android:focusableInTouchMode="true"/>
+    <!--<EditText-->
+        <!--android:id="@+id/editPassword"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/editName"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginBottom="108dp"-->
+        <!--android:ems="10"-->
+        <!--android:fontFamily="monospace"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="@string/enter_password"-->
+        <!--android:textColorHint="@color/hint_text_color"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:theme="@style/MyEditText"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"/>-->
     <!--<EditText-->
         <!--android:id="@+id/editPassword"-->
         <!--android:layout_width="fill_parent"-->
@@ -126,8 +126,8 @@
         android:id="@+id/buttonRegister"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editPassword"
-        android:layout_marginTop="150dp"
+        android:layout_below="@+id/editNNI"
+        android:layout_marginTop="380dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:background="@drawable/press_button"
