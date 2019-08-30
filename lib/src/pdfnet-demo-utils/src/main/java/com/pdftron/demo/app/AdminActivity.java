@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -149,9 +150,11 @@ public class AdminActivity extends AppCompatActivity {
             sqLiteDatabaseObj = SQLiteDatabase.openOrCreateDatabase(getFilesDir()+"/my.db",null);
 
 
+        sqLiteDatabaseObj.execSQL("CREATE TABLE IF NOT EXISTS " + SQLiteHelper.TABLE_NAME + "(" + SQLiteHelper.Table_Column_1_NNI + " VARCHAR PRIMARY KEY); " );
         String sql = "select * from "+SQLiteHelper.TABLE_NAME+"; ";
         try{
             cursor = sqLiteDatabaseObj.rawQuery(sql, null);
+
 
             while (cursor.moveToNext()) {
 
@@ -168,6 +171,8 @@ public class AdminActivity extends AppCompatActivity {
 
         }
     }
+
+
 
     /**
      * Opens the AdminActivity demo app.
@@ -348,6 +353,48 @@ public class AdminActivity extends AppCompatActivity {
         Toast.makeText(AdminActivity.this, "Vous avez supprimé tous les comptes d'utilisateur.", Toast.LENGTH_LONG).show();
 
 
+
+    }
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            handleBackPressed();
+            return false;
+        }else {
+            return super.onKeyDown(keyCode, event);
+        }
+
+    }
+
+    public void handleBackPressed()
+    {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(getString(R.string.dialoge_exit));
+
+        builder.setTitle("");
+
+        builder.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                SysApplication.getInstance().exit();
+
+
+            }
+        });
+
+        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
 
     }
 
